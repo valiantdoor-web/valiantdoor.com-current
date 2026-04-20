@@ -2039,6 +2039,10 @@ a {
   border-radius: 14px;
   background: linear-gradient(145deg, rgba(199, 163, 75, 0.08), rgba(10, 10, 11, 0.9));
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote-service-area-card h3 {
@@ -2048,6 +2052,7 @@ a {
 
 .quote-service-area-card p {
   margin: 0;
+  text-align: center;
   color: var(--muted);
 }
 
