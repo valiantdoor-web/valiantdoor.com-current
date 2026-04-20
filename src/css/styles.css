@@ -1845,7 +1845,7 @@ a {
 
 .hcp-inline-booking-label {
   margin: 0 0 8px;
-  font-size: 0.74rem;
+  font-size: 30px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-soft);
@@ -1873,12 +1873,64 @@ a {
   opacity: 0.95;
 }
 
-.hcp-inline-booking-link {
-  margin: 10px auto;
-  font-size: 20px;
-  letter-spacing: 2px;
+/* Hide specific paragraphs */
+.form-section:nth-of-type(1) > .form-card > p:nth-of-type(4) {
+  font-size: 0;
+  line-height: 0;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 1);
+}
+
+.form-section:nth-of-type(2) > .form-card > p:nth-of-type(2) {
+  font-size: 0;
+  line-height: 0;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 1);
+  border-style: none;
+  border-color: rgba(0, 0, 0, 1);
+}
+
+.form-meta-contact {
+  border-width: 1px;
+  border-style: none;
+  font-size: 0;
+  line-height: 0;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 1);
+}
+
+#hcp-lead-iframe {
+  border-radius: 12px;
+  width: 100%;
+  align-self: center;
+  height: 1200px;
+}
+
+.hcp-lead-embed {
   display: flex;
+  justify-content: flex-start;
   align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.hcp-inline-booking-link {
+  height: auto;
+  font-family: "Island Moments", sans-serif;
+  font-size: 34px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: auto;
+  align-self: stretch;
+  flex-grow: 0;
+  border-width: 5px;
+  overflow: hidden;
+  border-color: rgba(95, 89, 10, 1);
+  border-style: double;
+  border-radius: 13px;
+  margin: 10px auto;
+  display: flex;
 }
 
 .hcp-inline-booking-link a {
@@ -1886,9 +1938,17 @@ a {
   text-decoration: underline;
   text-decoration-color: rgba(199, 163, 75, 0.62);
   text-underline-offset: 0.16em;
-  font-size: 40px;
+  height: auto;
+  object-position: 50% 75%;
+  scale: auto;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-grow: 0;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .page-quote .form-card {
@@ -1906,6 +1966,26 @@ a {
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--gold-soft);
+  border-style: solid;
+  border-color: rgba(240, 179, 13, 1);
+  border-width: 5px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+#service-locator-title {
+  color: rgba(0, 0, 0, 1);
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-decoration: underline;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgba(224, 206, 35, 1);
+  border-radius: 1217px;
+  overflow: hidden;
+  background-color: rgba(160, 130, 29, 0.73);
 }
 
 .page-quote .form-card > p {
@@ -1914,8 +1994,37 @@ a {
   margin-right: auto;
 }
 
+.form-section:nth-of-type(1) > .form-card > p:nth-of-type(2) {
+  font-size: 44px;
+  color: rgba(172, 135, 62, 1);
+  font-weight: 900;
+  text-decoration: underline;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 1px 3px 0 rgba(255, 255, 255, 1);
+  border-style: groove;
+  border-width: 1px;
+}
+
 .quote-service-area-note {
   margin: 0 0 14px;
+  font-size: 0;
+  line-height: 0;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 1);
+}
+
+.form-section:nth-of-type(2) {
+  font-family: "Jolly Lodger", display;
+}
+
+.form-section:nth-of-type(2) .form-card {
+  border-style: none;
+  height: auto;
+  flex-grow: 0;
+  width: auto;
+  align-self: center;
 }
 
 .quote-service-area-grid {
@@ -1956,7 +2065,7 @@ a {
   min-width: 0 !important;
   min-height: 820px;
   margin: 0 auto;
-  border: 0 !important;
+  border: 1px solid rgba(236, 245, 243, 1) !important;
   background: transparent;
 }
 
@@ -2031,6 +2140,13 @@ textarea {
   color: rgba(0, 0, 0, 1);
 }
 
+.form-section:nth-of-type(1) > .form-card > .form-meta:nth-of-type(1) {
+  font-size: 0;
+  line-height: 0;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 1);
+}
+
 .form-actions {
   margin-top: 16px;
   text-align: center;
@@ -2087,6 +2203,7 @@ textarea {
 .footer-links a {
   color: rgba(245, 242, 236, 0.82);
   text-decoration: none;
+  font-size: 20px;
 }
 
 .footer-links a:hover,
@@ -2099,11 +2216,11 @@ textarea {
 }
 
 .footer-legal p:first-child {
-  font-size: clamp(1.08rem, 2.1vw, 1.5rem);
+  font-size: 30px;
+  letter-spacing: 2px;
   font-family: "Brush Script MT", "Snell Roundhand", "Segoe Script", cursive;
   font-weight: 500;
   color: rgba(233, 211, 157, 0.92);
-  letter-spacing: 0.04em;
   text-shadow:
     0 1px 0 rgba(0, 0, 0, 0.6),
     0 0 10px rgba(199, 163, 75, 0.2);
@@ -2111,12 +2228,9 @@ textarea {
 
 .footer-service-area {
   margin-top: 2px;
-  font-size: clamp(0.72rem, 1.2vw, 0.9rem);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-weight: 600;
+  font-size: 20px;
+  font-family: "Jacques Francois", serif;
   color: rgba(245, 242, 236, 0.78);
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 .page-sitemap .page-hero {
@@ -3824,8 +3938,12 @@ textarea {
   right: 22px;
   bottom: 90px;
   z-index: 2147483600;
-  background: #0e6fbe;
-  color: #fff;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(https://cdn.builder.io/api/v1/image/assets%2Fb2436361d20a48f2985dda1b54b0b953%2Fdd521992741f471a9bc9f5164b113e07);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: rgba(2, 2, 2, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
   padding: 8px 14px;
