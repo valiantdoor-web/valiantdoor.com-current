@@ -265,6 +265,23 @@ a {
   font-size: 0.65rem;
 }
 
+/* Button background images */
+.home-seo-actions a.btn.outline:nth-child(1) {
+  background-color: #ae1723;
+  background-image: url(https://cdn.builder.io/api/v1/image/assets%2Fb2436361d20a48f2985dda1b54b0b953%2F206a906ba92c4ab681aaed190d2f1066);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.home-seo-actions a.btn.outline:nth-child(2),
+.founder-preview-actions a.btn.outline:nth-child(2) {
+  background-image: url(https://cdn.builder.io/api/v1/image/assets%2Fb2436361d20a48f2985dda1b54b0b953%2F206a906ba92c4ab681aaed190d2f1066);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /* Home page */
 .page-home .hero-home,
 .page-services .services-hero {
@@ -2211,6 +2228,67 @@ textarea {
   font-size: 20px;
 }
 
+.footer-links a:nth-child(1) {
+  font-family: "Almendra Display", display;
+  border-width: 1px;
+  border-style: none;
+  border-color: rgba(211, 161, 23, 1);
+  color: rgba(244, 187, 4, 0.89);
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.footer-links a:nth-child(2),
+.footer-links a:nth-child(3),
+.footer-links a:nth-child(4),
+.footer-links a:nth-child(5),
+.footer-links a:nth-child(6),
+.footer-links a:nth-child(7) {
+  border-width: 1px;
+  border-style: none;
+  color: rgba(249, 179, 6, 0.96);
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.footer-links a:nth-child(2) {
+  border-color: rgba(245, 166, 35, 1);
+  color: rgba(249, 179, 6, 0.96);
+}
+
+.footer-links a:nth-child(3) {
+  color: rgba(246, 177, 6, 0.96);
+}
+
+.footer-links a:nth-child(4) {
+  font-weight: 800;
+  color: rgba(249, 178, 7, 0.96);
+}
+
+.footer-links a:nth-child(5),
+.footer-links a:nth-child(6),
+.footer-links a:nth-child(7) {
+  color: rgba(246, 176, 4, 0.96);
+}
+
+.footer-links a:nth-child(8) {
+  font-family: "Irish Grover", display;
+  color: rgba(245, 166, 35, 1);
+  font-weight: 900;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.footer-links a:nth-child(9) {
+  font-family: "Irish Grover", display;
+  color: rgba(245, 166, 35, 1);
+  font-weight: 900;
+  font-style: italic;
+  text-decoration: underline;
+}
+
 .footer-links a:hover,
 .footer-links a:focus-visible {
   color: rgba(233, 211, 157, 0.96);
@@ -2225,7 +2303,7 @@ textarea {
   letter-spacing: 2px;
   font-family: "Brush Script MT", "Snell Roundhand", "Segoe Script", cursive;
   font-weight: 500;
-  color: rgba(233, 211, 157, 0.92);
+  color: rgba(208, 2, 27, 1);
   text-shadow:
     0 1px 0 rgba(0, 0, 0, 0.6),
     0 0 10px rgba(199, 163, 75, 0.2);
@@ -2234,8 +2312,8 @@ textarea {
 .footer-service-area {
   margin-top: 2px;
   font-size: 20px;
-  font-family: "Jacques Francois", serif;
-  color: rgba(245, 242, 236, 0.78);
+  font-family: "Garamond", serif;
+  color: rgba(208, 2, 27, 1);
 }
 
 .page-sitemap .page-hero {
@@ -3943,12 +4021,12 @@ textarea {
   right: 22px;
   bottom: 90px;
   z-index: 2147483600;
-  background-color: rgba(255, 255, 255, 1);
-  background-image: url(https://cdn.builder.io/api/v1/image/assets%2Fb2436361d20a48f2985dda1b54b0b953%2Fdd521992741f471a9bc9f5164b113e07);
+  background-color: rgba(245, 166, 35, 1);
+  background-image: url(https://cdn.builder.io/api/v1/image/assets%2Fb2436361d20a48f2985dda1b54b0b953%2F5ce3172617e04f7aae9e488c2f65e7f0);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: rgba(2, 2, 2, 0.82);
+  color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
   padding: 8px 14px;
@@ -3958,6 +4036,7 @@ textarea {
   line-height: 1;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
   cursor: pointer;
+  font-family: "Georgia", serif;
 }
 
 .hcp-chat-prompt:hover,
@@ -4231,7 +4310,7 @@ textarea {
   grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
   gap: 18px;
   align-items: center;
-  border: 1px solid rgba(199, 163, 75, 0.34);
+  border: 1px solid rgba(235, 162, 18, 0.86);
   border-radius: 20px;
   padding: clamp(18px, 3vw, 28px);
   background:
@@ -4257,6 +4336,10 @@ textarea {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  background-image: url(https://cdn.builder.io/api/v1/image/assets%2Fb2436361d20a48f2985dda1b54b0b953%2F5ce3172617e04f7aae9e488c2f65e7f0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .founder-preview-highlights {
@@ -4283,13 +4366,15 @@ textarea {
   margin: 0;
   padding: 16px;
   border-radius: 18px;
-  border: 1px solid rgba(199,163,75,0.34);
+  border: 1px solid rgba(248, 179, 10, 0.34);
   background: rgba(6,6,8,0.76);
 }
 
 .founder-preview-media img {
   width: 100%;
   margin: 0 auto;
+  object-fit: scale-down;
+  object-position: center top;
 }
 
 @media (max-width: 980px) {
