@@ -11,9 +11,11 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@builder.io/react": "^9.3.0",
+    "@builder.io/sdk": "^6.3.0",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
