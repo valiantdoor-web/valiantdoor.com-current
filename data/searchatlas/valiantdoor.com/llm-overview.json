@@ -1,0 +1,42 @@
+{
+  "domain": "valiantdoor.com",
+  "platforms": [
+    {
+      "platform": "openai",
+      "brand_topics_count": 1,
+      "total_topics_count": 5,
+      "sentiment_percentage": 68
+    },
+    {
+      "platform": "gemini",
+      "brand_topics_count": 0,
+      "total_topics_count": 5,
+      "sentiment_percentage": 85
+    },
+    {
+      "platform": "perplexity",
+      "brand_topics_count": 0,
+      "total_topics_count": 5,
+      "sentiment_percentage": 57
+    },
+    {
+      "platform": "copilot",
+      "brand_topics_count": 2,
+      "total_topics_count": 5,
+      "sentiment_percentage": 67
+    },
+    {
+      "platform": "google_ai_mode",
+      "brand_topics_count": 3,
+      "total_topics_count": 5,
+      "sentiment_percentage": 75
+    },
+    {
+      "platform": "grok",
+      "brand_topics_count": 0,
+      "total_topics_count": 5,
+      "sentiment_percentage": 83
+    }
+  ],
+  "project_public_hash": "a9cfeec4-1f27-4373-8569-975a204fe5ec"
+}

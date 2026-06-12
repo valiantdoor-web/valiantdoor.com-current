@@ -14,11 +14,10 @@ TITLE_RE = re.compile(r'<title>(.*?)</title>', re.I | re.S)
 H1_RE = re.compile(r'<h1\b', re.I)
 BUSINESS_NAME = 'Valiant Garage Door'
 BUSINESS_URL = 'https://www.valiantdoor.com/'
-BUSINESS_PHONE = '(925) 409-4974'
+BUSINESS_PHONE = '9254094974'
 BUSINESS_DESCRIPTIONS = {
-    'Garage door repair, spring replacement, garage door opener repair, garage door opener installation, and emergency service in Pleasanton and the Tri-Valley.',
-    'Garage door repair, spring replacement, garage door opener repair, and emergency service in Pleasanton and the Tri-Valley.',
-    'Garage door repair, spring replacement, opener repair, custom fabrication, and emergency garage door service in Pleasanton and the Tri-Valley.',
+    'Founder-led garage door service for repair, spring replacement, opener repair, maintenance, commercial service, and emergency response across Pleasanton and nearby East Bay communities.',
+    'Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement,Openers,Complex Systems, And Precision System Upgrades. We’re Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service.',
 }
 
 

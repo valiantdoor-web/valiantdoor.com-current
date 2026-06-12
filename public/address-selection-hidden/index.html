@@ -1,0 +1,486 @@
+<!--
+    Copyright 2023 Google LLC
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Address Selection | Valiant Garage Door</title>
+    <meta name="description" content="Address selection utility page for Valiant Garage Door website visitors." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://www.valiantdoor.com/address-selection-hidden" />
+    <style>
+      body {
+        margin: 0;
+      }
+
+      body.has-sticky-call {
+        padding-top: 64px;
+      }
+
+      .home-sticky-call {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        padding: 10px 16px;
+        background: rgba(8, 9, 13, 0.96);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+      }
+
+      .home-sticky-call-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 24px;
+        border-radius: 999px;
+        background: #f5b942;
+        color: #111;
+        font-weight: 800;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        box-shadow: 0 10px 22px rgba(245, 185, 66, 0.35);
+      }
+
+      .home-sticky-call-button:hover,
+      .home-sticky-call-button:focus-visible {
+        background: #ffd267;
+        color: #111;
+      }
+
+      @media (max-width: 640px) {
+        body.has-sticky-call {
+          padding-top: 74px;
+        }
+
+        .home-sticky-call-button {
+          width: 100%;
+          text-align: center;
+          font-size: 0.95rem;
+        }
+      }
+
+      .sb-title {
+        position: relative;
+        top: -12px;
+        font-family: Roboto, sans-serif;
+        font-weight: 500;
+      }
+
+      .sb-title-icon {
+        position: relative;
+        top: -5px;
+      }
+
+      gmpx-split-layout {
+        height: 500px;
+        width: 600px;
+      }
+
+      gmpx-split-layout:not(:defined) {
+        visibility: hidden;
+      }
+
+      .panel {
+        background: white;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .half-input-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .half-input {
+        max-width: 120px;
+      }
+
+      h2 {
+        margin: 0;
+        font-family: Roboto, sans-serif;
+      }
+
+      input {
+        height: 30px;
+      }
+
+      input {
+        border: 0;
+        border-bottom: 1px solid black;
+        font-size: 14px;
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+      }
+
+      input:focus::placeholder {
+        color: white;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+    <script type="module">
+      "use strict";
+
+      // This loads helper components from the Extended Component Library,
+      // https://github.com/googlemaps/extended-component-library.
+      import {APILoader} from 'https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js';
+
+      const CONFIGURATION = {
+        "ctaTitle": "Book Free Estimate Instantly",
+        "mapOptions": {"center":{"lat":37.4221,"lng":-122.0841},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":true,"zoom":13,"zoomControl":true,"maxZoom":22,"mapId":""},
+        "mapsApiKey": "YOUR_API_KEY_HERE",
+        "capabilities": {"addressAutocompleteControl":true,"mapDisplayControl":true,"ctaControl":true}
+      };
+
+      const SHORT_NAME_ADDRESS_COMPONENT_TYPES =
+          new Set(['street_number', 'administrative_area_level_1', 'postal_code']);
+
+      const ADDRESS_COMPONENT_TYPES_IN_FORM = [
+        'location',
+        'locality',
+        'administrative_area_level_1',
+        'postal_code',
+        'country',
+      ];
+
+      function getFormInputElement(componentType) {
+        return document.getElementById(`${componentType}-input`);
+      }
+
+      function fillInAddress(place) {
+        function getComponentName(componentType) {
+          for (const component of place.address_components || []) {
+            if (component.types[0] === componentType) {
+              return SHORT_NAME_ADDRESS_COMPONENT_TYPES.has(componentType) ?
+                  component.short_name :
+                  component.long_name;
+            }
+          }
+          return '';
+        }
+
+        function getComponentText(componentType) {
+          return (componentType === 'location') ?
+              `${getComponentName('street_number')} ${getComponentName('route')}` :
+              getComponentName(componentType);
+        }
+
+        for (const componentType of ADDRESS_COMPONENT_TYPES_IN_FORM) {
+          getFormInputElement(componentType).value = getComponentText(componentType);
+        }
+      }
+
+      function renderAddress(place) {
+        const mapEl = document.querySelector('gmp-map');
+        const markerEl = document.querySelector('gmp-advanced-marker');
+
+        if (place.geometry && place.geometry.location) {
+          mapEl.center = place.geometry.location;
+          markerEl.position = place.geometry.location;
+        } else {
+          markerEl.position = null;
+        }
+      }
+
+      async function initMap() {
+        const {Autocomplete} = await APILoader.importLibrary('places');
+
+        const mapOptions = CONFIGURATION.mapOptions;
+        mapOptions.mapId = mapOptions.mapId || 'DEMO_MAP_ID';
+        mapOptions.center = mapOptions.center || {lat: 37.4221, lng: -122.0841};
+
+        await customElements.whenDefined('gmp-map');
+        document.querySelector('gmp-map').innerMap.setOptions(mapOptions);
+        const autocomplete = new Autocomplete(getFormInputElement('location'), {
+          fields: ['address_components', 'geometry', 'name'],
+          types: ['address'],
+        });
+
+        autocomplete.addListener('place_changed', () => {
+          const place = autocomplete.getPlace();
+          if (!place.geometry) {
+            // User entered the name of a Place that was not suggested and
+            // pressed the Enter key, or the Place Details request failed.
+            window.alert(`No details available for input: '${place.name}'`);
+            return;
+          }
+          renderAddress(place);
+          fillInAddress(place);
+        });
+      }
+
+      initMap();
+    </script>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T74PV8L5');
+</script>
+<meta name="google-site-verification" content="VXT725p0jjN_ThMK3nusayRLUZaGuhZ7Oun1LD6KtOU" />
+<script async src="//594683.tctm.co/t.js"></script>
+<script nowprocket nitro-exclude type="text/javascript" id="sa-dynamic-optimization" data-uuid="d9a71fe5-2db0-4f05-828b-2ae02031da04" src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gImQ5YTcxZmU1LTJkYjAtNGYwNS04MjhiLTJhZTAyMDMxZGEwNCI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="></script>
+      <script>
+    (function(w, d, t, u, o) {
+        w[u] = w[u] || [], o.ts = (new Date).getTime();
+        var n = d.createElement(t);
+        n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : ""),
+        n.async = 1, n.onload = n.onreadystatechange = function() {
+            var s = this.readyState;
+            s && "loaded" !== s && "complete" !== s ||
+            (o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),
+            n.onload = n.onreadystatechange = null)
+    };
+        var i = d.getElementsByTagName(t)[0];
+        i.parentNode.insertBefore(n, i);
+    })(window, document, "script", "uetq", {
+        ti:"187249335",
+        enableAutoSpaTracking: true
+    });
+</script>
+<!-- You can set default Consent Mode right after the UET tag -->
+<script>
+   window.uetq = window.uetq || [];
+   window.uetq.push('consent', 'default', {
+     'ad_storage': 'denied'
+   });
+</script>
+<!-- Implement a cookie banner or another method to collect user consent. When a user grants consent (e.g., selects 'Accept' on your banner), update the consent settings using the command below. -->
+<script>
+   window.uetq = window.uetq || [];
+   window.uetq.push('consent', 'update', {
+     'ad_storage': 'granted'
+   });
+</script>
+<script id="valiant-microsoft-ads-webhook-tracking">
+      (function () {
+        var endpoint = "https://webhook.botpress.cloud/beb5c93d-f23f-4fed-a204-fe2186a1fd9c";
+        var payload = JSON.stringify({
+          event: "microsoft_ads_page_view",
+          page_url: window.location.href,
+          page_path: window.location.pathname,
+          page_title: document.title,
+          referrer: document.referrer || "",
+          timestamp: new Date().toISOString()
+        });
+        try {
+          if (navigator.sendBeacon && navigator.sendBeacon(endpoint, payload)) return;
+          fetch(endpoint, { method: "POST", mode: "no-cors", keepalive: true, body: payload }).catch(function () {});
+        } catch (error) {}
+      })();
+    </script>
+<script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@graph": [
+            {
+                  "@type": [
+                        "HomeAndConstructionBusiness",
+                        "LocalBusiness"
+                  ],
+                  "@id": "https://www.valiantdoor.com/#business",
+                  "name": "Valiant Garage Door",
+                  "alternateName": "Valiant",
+                  "url": "https://www.valiantdoor.com/",
+                  "telephone": "9254094974",
+                  "email": "vm@valiantdoor.com",
+                  "description": "Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement,Openers,Complex Systems, And Precision System Upgrades. We’re Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service.",
+                  "priceRange": "$$",
+                  "logo": "https://www.valiantdoor.com/assets/logo/valiant-logo-gold.png",
+                  "image": "https://www.valiantdoor.com/assets/home-optimized/shield-192.webp",
+                  "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "3588 Pimlico Dr",
+                        "addressLocality": "Pleasanton",
+                        "addressRegion": "CA",
+                        "postalCode": "94588",
+                        "addressCountry": "US"
+                  },
+                  "areaServed": [
+                        {
+                              "@type": "City",
+                              "name": "Pleasanton, CA"
+                        },
+                        {
+                              "@type": "City",
+                              "name": "Dublin, CA"
+                        },
+                        {
+                              "@type": "City",
+                              "name": "Livermore, CA"
+                        },
+                        {
+                              "@type": "City",
+                              "name": "Fremont, CA"
+                        },
+                        {
+                              "@type": "City",
+                              "name": "San Ramon, CA"
+                        },
+                        {
+                              "@type": "City",
+                              "name": "Danville, CA"
+                        },
+                        {
+                              "@type": "City",
+                              "name": "Sunol, CA"
+                        }
+                  ],
+                  "sameAs": [
+                        "https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w",
+                        "https://www.yelp.com/biz/valiant-garage-door-pleasanton",
+                        "https://www.tiktok.com/@valiantdoor"
+                  ],
+                  "contactPoint": [
+                        {
+                              "@type": "ContactPoint",
+                              "telephone": "9254094974",
+                              "contactType": "customer service",
+                              "areaServed": "US-CA",
+                              "availableLanguage": [
+                                    "English"
+                              ]
+                        }
+                  ],
+                  "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 37.676357,
+                        "longitude": -121.894745
+                  },
+                  "hasMap": "https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w",
+                  "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5.0",
+                        "reviewCount": "34",
+                        "bestRating": "5",
+                        "worstRating": "1"
+                  }
+            },
+            {
+                  "@type": "WebSite",
+                  "@id": "https://www.valiantdoor.com/#website",
+                  "url": "https://www.valiantdoor.com/",
+                  "name": "Valiant Garage Door",
+                  "publisher": {
+                        "@id": "https://www.valiantdoor.com/#business"
+                  }
+            },
+            {
+                  "@type": "WebPage",
+                  "@id": "https://www.valiantdoor.com/address-selection-hidden#webpage",
+                  "url": "https://www.valiantdoor.com/address-selection-hidden",
+                  "name": "Address Selection | Valiant Garage Door",
+                  "description": "Address selection utility page for Valiant Garage Door website visitors.",
+                  "inLanguage": "en-US",
+                  "isPartOf": {
+                        "@id": "https://www.valiantdoor.com/#website"
+                  },
+                  "about": {
+                        "@id": "https://www.valiantdoor.com/#business"
+                  },
+                  "breadcrumb": {
+                        "@id": "https://www.valiantdoor.com/address-selection-hidden#breadcrumb"
+                  },
+                  "dateModified": "2026-05-06"
+            },
+            {
+                  "@type": "BreadcrumbList",
+                  "@id": "https://www.valiantdoor.com/address-selection-hidden#breadcrumb",
+                  "itemListElement": [
+                        {
+                              "@type": "ListItem",
+                              "position": 1,
+                              "name": "Home",
+                              "item": "https://www.valiantdoor.com/"
+                        },
+                        {
+                              "@type": "ListItem",
+                              "position": 2,
+                              "name": "Address Selection",
+                              "item": "https://www.valiantdoor.com/address-selection-hidden"
+                        }
+                  ]
+            }
+      ]
+}
+    </script>
+<!-- Microsoft Ads UET tracking tag -->
+<script>(function(w, d, t, u, o) {w[u] = w[u] || [], o.ts = (new Date).getTime();var n = d.createElement(t);n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : ""),n.async = 1, n.onload = n.onreadystatechange = function() {var s = this.readyState;s && "loaded" !== s && "complete" !== s ||(o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),n.onload = n.onreadystatechange = null)};var i = d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n, i);})(window, document, "script", "uetq", {ti: "187250229",enableAutoSpaTracking: true});</script><!-- You can set default Consent Mode right after the UET tag --><script>window.uetq = window.uetq || [];window.uetq.push('consent', 'default', {'ad_storage': 'denied'});</script><!-- Implement a cookie banner or another method to collect user consent. When a user grants consent (e.g., selects 'Accept' on your banner), update the consent settings using the command below. --><script>window.uetq = window.uetq || [];window.uetq.push('consent', 'update', {'ad_storage': 'granted'});</script>
+<!-- End Microsoft Ads UET tracking tag -->
+<script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"JBzHfzVvqm4VbGoHRAJtoP",debug:true});</script>
+</head>
+  <body class="has-sticky-call">
+    <div class="home-sticky-call" role="region" aria-label="Emergency repair call button">
+      <a class="home-sticky-call-button" href="tel:9254094974">Tap to Call for Emergency Repair.</a>
+    </div>
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T74PV8L5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="visually-hidden" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/address-selection-hidden">Address Selection</a></nav>
+    <h1 class="visually-hidden">Address Selection</h1>
+    <gmpx-api-loader key="YOUR_API_KEY_HERE" solution-channel="GMP_QB_addressselection_v4_cABC">
+    </gmpx-api-loader>
+    <gmpx-split-layout row-layout-min-width="600">
+      <div class="panel" slot="fixed">
+        <div>
+          <img class="sb-title-icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/location_pin/v5/24px.svg" alt="">
+          <span class="sb-title">Address Selection</span>
+        </div>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Valiant%20Garage%20Door%20Pleasanton%20CA&amp;query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer">Valiant Garage Door Google Business Profile</a></p>
+        <input type="text" placeholder="Address" id="location-input"/>
+        <input type="text" placeholder="Apt, Suite, etc (optional)"/>
+        <input type="text" placeholder="City" id="locality-input"/>
+        <div class="half-input-container">
+          <input type="text" class="half-input" placeholder="State/Province" id="administrative_area_level_1-input"/>
+          <input type="text" class="half-input" placeholder="Zip/Postal code" id="postal_code-input"/>
+        </div>
+        <input type="text" placeholder="Country" id="country-input"/>
+        <gmpx-icon-button variant="filled">Book Free Estimate Instantly</gmpx-icon-button>
+      </div>
+      <gmp-map slot="main">
+        <gmp-advanced-marker></gmp-advanced-marker>
+      </gmp-map>
+    </gmpx-split-layout>
+    <script src="/js/main.min.js?v=20260612-current"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="/js/surefire-local-lead-manager.js?v=20260612-current"></script>
+  </body>
+</html>

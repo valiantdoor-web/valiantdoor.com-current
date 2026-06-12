@@ -5,7 +5,7 @@ Business: Valiant Garage Door
 
 ## Ready-to-use business profile data
 - Name: Valiant Garage Door
-- Address: 3588 Pimlico Dr, Pleasanton, CA 94588
+- Address: 2883 Hopyard Rd #1056, Pleasanton, CA 94588
 - Phone: (925) 409-4974
 - Website: https://www.valiantdoor.com/
 - Booking URL: https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true
@@ -37,7 +37,7 @@ Pleasanton, Dublin, Livermore, Fremont
 - Canonical tags switched to valiantdoor.com
 - robots.txt and sitemap.xml switched to valiantdoor.com
 - LocalBusiness schema added on main pages + service pages
-- Schema address set to 3588 Pimlico Dr, Pleasanton, CA 94588
+- Schema address set to 2883 Hopyard Rd #1056, Pleasanton, CA 94588
 - Footer now displays your full address
 
 ## 10-minute launch checklist

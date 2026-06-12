@@ -5,7 +5,7 @@
 - Website: https://www.valiantdoor.com/
 - Main Phone: (925) 409-4974
 - Email: vm@valiantdoor.com
-- Address: 3588 Pimlico Dr, Pleasanton, CA 94588
+- Address: 2883 Hopyard Rd #1056, Pleasanton, CA 94588
 - Primary Service Area: Pleasanton, CA 94588 + 20-mile radius
 - Services:
   - Garage Door Repair

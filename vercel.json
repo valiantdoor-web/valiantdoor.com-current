@@ -1,89 +1,93 @@
 {
   "version": 2,
-  "builds": [
+  "headers": [
     {
-      "src": "server/server.js",
-      "use": "@vercel/node"
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
-      "src": "public/**",
-      "use": "@vercel/static"
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/mastertech",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate, max-age=0"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self' https://book.housecallpro.com; script-src https://bat.bing.net 'self' https://code.jquery.com https://594683.tctm.co https://www.surefirelocal.com 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://scripts.clarity.ms https://chat.housecallpro.com https://book.housecallpro.com https://client.housecallpro.com https://maps.googleapis.com https://ajax.googleapis.com https://js.stripe.com https://fast.appcues.com https://cdn.segment.com https://segment-cdn-proxy.housecallpro.com https://www.google.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://app.800.com https://cdn.botpress.cloud https://files.bpcontent.cloud; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.surefirelocal.com https://www.gstatic.com https://fast.appcues.com; img-src 'self' data: blob: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src https://bat.bing.com https://bat.bing.net 'self' https://api.promio.com https://594683.tctm.co https://www.surefirelocal.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://chat.housecallpro.com https://book.housecallpro.com https://client.housecallpro.com https://app.housecallpro.com https://pro.housecallpro.com https://segment-cdn-proxy.housecallpro.com https://segment-tracking-proxy.housecallpro.com https://cdn.segment.com https://api.segment.io https://cdn.amplitude.com https://api.amplitude.com https://amplitude.housecallpro.com https://fast.appcues.com https://api.appcues.net wss://api.appcues.net https://js.stripe.com https://m.stripe.network https://maps.googleapis.com https://maps.gstatic.com https://www.googleapis.com https://storage.googleapis.com https://www.google.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://o284669.ingest.sentry.io https://api.800.com https://cdn.botpress.cloud https://files.bpcontent.cloud https://webchat.botpress.cloud https://webhook.botpress.cloud; frame-src 'self' https://www.googletagmanager.com https://www.surefirelocal.com https://book.housecallpro.com https://client.housecallpro.com https://messages.housecallpro.com https://js.stripe.com https://hooks.stripe.com https://www.google.com https://www.gstatic.com https://webchat.botpress.cloud https://trusty.app; media-src 'self' blob: https:; worker-src 'self' blob:; manifest-src 'self'; upgrade-insecure-requests"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
     }
   ],
-  "routes": [
+  "redirects": [
     {
-      "src": "^/(.*)$",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "valiantdoor.com"
         }
       ],
-      "status": 308,
-      "headers": {
-        "Location": "https://www.valiantdoor.com/$1"
-      }
+      "destination": "https://www.valiantdoor.com/:path*",
+      "permanent": true
     },
     {
-      "src": "^/(.+)/$",
-      "status": 308,
-      "headers": {
-        "Location": "/$1"
-      }
+      "source": "/services/garage-door-maintenence",
+      "destination": "/services/garage-door-maintenance",
+      "permanent": true
     },
     {
-      "src": "^/api/(.*)$",
-      "dest": "server/server.js"
-    },
-    {
-      "src": "^/services/emergency/?$",
-      "status": 308,
-      "headers": {
-        "Location": "/emergency-garage-door-repair"
-      }
-    },
-    {
-      "src": "^/services/installations/?$",
-      "status": 308,
-      "headers": {
-        "Location": "/garage-door-installation"
-      }
-    },
-    {
-      "src": "^/$",
-      "dest": "public/index.html"
-    },
-    {
-      "src": "^/services$",
-      "dest": "public/services/index.html"
-    },
-    {
-      "src": "^/mission$",
-      "dest": "public/mission/index.html"
-    },
-    {
-      "src": "^/mastertech$",
-      "dest": "public/mastertech/index.html"
-    },
-    {
-      "src": "^/quote$",
-      "dest": "public/quote/index.html"
-    },
-    {
-      "src": "^/garage-door-installation$",
-      "dest": "public/garage-door-installation/index.html"
-    },
-    {
-      "src": "^/gallery$",
-      "dest": "public/gallery/index.html"
-    },
-    {
-      "src": "^/thank-you$",
-      "dest": "public/thank-you/index.html"
-    },
-    {
-      "src": "^/(.*)$",
-      "dest": "public/$1"
+      "source": "/services/garage-door-maintenence/",
+      "destination": "/services/garage-door-maintenance",
+      "permanent": true
     }
   ],
   "trailingSlash": false
