@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-06-14",
+  "source": "Search Atlas llm visibility plus user-approved Valiant expansion brief",
+  "implemented": [
+    "community page",
+    "founder page",
+    "case studies hub and categories",
+    "nine city pages",
+    "ten problem library articles",
+    "instant estimate page",
+    "partners page",
+    "homepage trust additions",
+    "global navigation links",
+    "sitemap and llms expansion"
+  ],
+  "css_files_changed": false,
+  "css_approval_required_before_future_polish": true
+}

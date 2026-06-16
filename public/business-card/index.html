@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#0b0b0d" />
+    <title>Valiant Digital Business Card</title>
+    <meta name="description" content="Save and share the Valiant Garage Door digital business card for service requests, referrals, reviews, and booking." />
+    <link rel="canonical" href="https://www.valiantdoor.com/business-card" />
+    <link rel="alternate" type="text/vcard" href="/business-card/contact.vcf" title="Valiant Garage Door vCard" />
+    <meta property="og:title" content="Valiant Garage Door Digital Business Card" />
+    <meta property="og:description" content="Save Valiant Garage Door for same-day repair, springs, openers, maintenance, and referrals." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://www.valiantdoor.com/business-card" />
+    <meta property="og:image" content="https://www.valiantdoor.com/assets/valiant-business-card.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Valiant Garage Door Digital Business Card" />
+    <meta name="twitter:description" content="Save Valiant Garage Door for service requests, reviews, booking, and referrals." />
+    <meta name="twitter:image" content="https://www.valiantdoor.com/assets/valiant-business-card.png" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07070a;
+        --panel: rgba(16, 17, 22, 0.88);
+        --panel-strong: rgba(23, 24, 31, 0.96);
+        --gold: #e9c46a;
+        --gold-2: #f5d78a;
+        --text: #f8f4ea;
+        --muted: rgba(248, 244, 234, 0.74);
+        --line: rgba(233, 196, 106, 0.32);
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.48);
+      }
+      * { box-sizing: border-box; }
+      html { min-height: 100%; background: var(--bg); }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 18% 0%, rgba(233, 196, 106, 0.20), transparent 34rem),
+          radial-gradient(circle at 84% 12%, rgba(145, 113, 48, 0.18), transparent 32rem),
+          linear-gradient(145deg, #050507 0%, #101017 52%, #07070a 100%);
+      }
+      a { color: inherit; }
+      .wrap {
+        width: min(980px, calc(100% - 28px));
+        margin: 0 auto;
+        padding: 24px 0 max(30px, env(safe-area-inset-bottom));
+      }
+      .card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        background: linear-gradient(160deg, rgba(21,22,29,0.96), rgba(8,8,12,0.94));
+        box-shadow: var(--shadow);
+      }
+      .hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 24px;
+        padding: clamp(24px, 5vw, 46px);
+        isolation: isolate;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,0.48), rgba(0,0,0,0.10)), url('/assets/valiant-business-card.png') center/cover no-repeat;
+        opacity: 0.18;
+        z-index: -2;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent, rgba(7,7,10,0.76));
+        z-index: -1;
+      }
+      .brand-row { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+      .shield {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+        filter: drop-shadow(0 10px 22px rgba(0,0,0,0.45));
+      }
+      .brand-kicker { margin: 0 0 4px; color: var(--gold-2); text-transform: uppercase; letter-spacing: .18em; font-size: .74rem; font-weight: 800; }
+      .brand-name { margin: 0; font-size: clamp(1.9rem, 7vw, 4.1rem); line-height: .92; letter-spacing: -.045em; }
+      .owner { margin: 12px 0 0; color: var(--muted); font-size: 1.04rem; }
+      .owner strong { color: var(--text); }
+      .summary { margin: 20px 0 0; max-width: 54ch; color: var(--muted); line-height: 1.65; }
+      .primary-actions { display: grid; gap: 12px; align-content: center; }
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 54px;
+        padding: 14px 18px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255,255,255,.06);
+        text-decoration: none;
+        font-weight: 800;
+        letter-spacing: .01em;
+        transition: transform .16s ease, border-color .16s ease, background .16s ease;
+      }
+      .button:hover, .button:focus-visible { transform: translateY(-1px); border-color: rgba(245,215,138,.72); background: rgba(255,255,255,.10); }
+      .button.primary { background: linear-gradient(135deg, var(--gold), #fff0b8); color: #12100a; border-color: transparent; box-shadow: 0 14px 28px rgba(233,196,106,.26); }
+      .button.dark { background: rgba(0,0,0,.28); }
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(233,196,106,.18); border-top: 1px solid var(--line); }
+      .tile { min-height: 150px; padding: 22px; background: var(--panel); }
+      .tile h2 { margin: 0 0 10px; color: var(--gold-2); font-size: .84rem; text-transform: uppercase; letter-spacing: .14em; }
+      .tile p { margin: 0; color: var(--muted); line-height: 1.55; }
+      .tile a { color: var(--text); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .share-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 22px; border-top: 1px solid var(--line); background: rgba(0,0,0,.18); }
+      .share-copy { padding: 18px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel-strong); }
+      .share-copy h2 { margin: 0 0 8px; font-size: 1.04rem; }
+      .share-copy p { margin: 0; color: var(--muted); line-height: 1.55; }
+      .nfc-url {
+        display: block;
+        margin-top: 10px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(233,196,106,.10);
+        color: var(--gold-2);
+        overflow-wrap: anywhere;
+        font-weight: 800;
+      }
+      .mini-actions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .mini-actions .button { min-height: 48px; padding: 12px; font-size: .92rem; }
+      .status { min-height: 20px; margin: 10px 0 0; color: var(--gold-2); font-size: .9rem; }
+      .footer { padding: 18px 22px 24px; color: rgba(248,244,234,.58); font-size: .84rem; text-align: center; }
+      .footer a { color: var(--muted); }
+      @media (max-width: 760px) {
+        .hero { grid-template-columns: 1fr; }
+        .grid { grid-template-columns: 1fr; }
+        .share-panel { grid-template-columns: 1fr; }
+        .mini-actions { grid-template-columns: 1fr; }
+        .brand-row { align-items: flex-start; }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.valiantdoor.com/#business",
+        "name": "Valiant Garage Door",
+        "url": "https://www.valiantdoor.com/",
+        "telephone": "9254094974",
+        "email": "vm@valiantdoor.com",
+        "image": "https://www.valiantdoor.com/assets/valiant-business-card.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Valentino Ramirez",
+          "jobTitle": "Founder & Master Technician"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3588 Pimlico Dr",
+          "addressLocality": "Pleasanton",
+          "addressRegion": "CA",
+          "postalCode": "94588",
+          "addressCountry": "US"
+        },
+        "areaServed": ["Pleasanton, CA", "Dublin, CA", "Livermore, CA", "Fremont, CA", "San Ramon, CA", "Danville, CA", "Sunol, CA"],
+        "description": "Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement,Openers,Complex Systems, And Precision System Upgrades. We’re Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service."
+      }
+    </script>
+  </head>
+  <body>
+    <main class="wrap" aria-labelledby="card-title">
+      <section class="card">
+        <div class="hero">
+          <div>
+            <div class="brand-row">
+              <img class="shield" src="/assets/Valiant%20Shield%20Final.png" alt="Valiant Garage Door shield logo" width="709" height="984" />
+              <div>
+                <p class="brand-kicker">Digital nFC business card</p>
+                <h1 id="card-title" class="brand-name">Valiant Garage Door</h1>
+              </div>
+            </div>
+            <p class="owner"><strong>Valentino Ramirez</strong> · founder __p0__ master technician</p>
+            <p class="summary">Save this contact for same-day garage door repair, broken springs, opener problems, maintenance, emergency help, and trusted referrals across Pleasanton and the Tri-Valley.</p>
+          </div>
+          <div class="primary-actions" aria-label="Primary contact actions">
+            <a class="button primary" href="/business-card/contact.vcf" download="valiant-garage-door.vcf">Save Contact</a>
+            <a class="button" href="tel:+19254094974">Call (925) 409-4974</a>
+            <a class="button" href="sms:+19254094974">Text Valiant</a>
+            <a class="button dark" href="https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Free Estimate</a>
+          </div>
+        </div>
+
+        <section class="grid" aria-label="Business card details">
+          <article class="tile">
+            <h2>Service</h2>
+            <p>Garage door repair, springs, cables, openers, tune-ups, maintenance, and emergency support.</p>
+          </article>
+          <article class="tile">
+            <h2>Service Area</h2>
+            <p>Pleasanton, Dublin, Livermore, Fremont, San Ramon, Danville, Sunol, and nearby East Bay communities.</p>
+          </article>
+          <article class="tile">
+            <h2>Contact</h2>
+            <p><a href="tel:+19254094974">(925) 409-4974</a><br /><a href="mailto:vm@valiantdoor.com">vm@valiantdoor.com</a><br /><a href="https://www.valiantdoor.com/">valiantdoor.com</a></p>
+          </article>
+          <article class="tile">
+            <h2>Reviews</h2>
+            <p><a href="https://search.google.com/local/writereview?placeid=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer">Leave a Google review</a> after service or <a href="https://www.google.com/maps/search/?api=1&amp;query=Valiant%20Garage%20Door%20Pleasanton%20CA&amp;query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer">open the Google profile</a>.</p>
+          </article>
+          <article class="tile">
+            <h2>References</h2>
+            <p>Share this card with homeowners, property managers, neighbors, and references who need a reliable garage door technician.</p>
+          </article>
+          <article class="tile">
+            <h2>Location</h2>
+            <p>Valiant Garage Door LLC<br />3588 Pimlico Dr<br />Pleasanton, CA 94588</p>
+          </article>
+        </section>
+
+        <section class="share-panel" aria-label="Share and NFC setup">
+          <div class="share-copy">
+            <h2>NFC tag / QR destination</h2>
+            <p>Program this URL into an NFC card, NFC sticker, QR code, invoice note, or customer follow-up text.</p>
+            <code class="nfc-url">https://www.valiantdoor.com/business-card</code>
+            <p id="copy-status" class="status" role="status" aria-live="polite"></p>
+          </div>
+          <div class="mini-actions">
+            <button class="button" type="button" id="copy-link">Copy Card Link</button>
+            <button class="button" type="button" id="share-card">Share Card</button>
+            <a class="button" href="sms:?&body=I%20recommend%20Valiant%20Garage%20Door%20for%20garage%20door%20repair%3A%20https%3A%2F%2Fwww.valiantdoor.com%2Fbusiness-card">Send Referral Text</a>
+            <a class="button" href="mailto:?subject=Valiant%20Garage%20Door%20contact&body=I%20recommend%20Valiant%20Garage%20Door%20for%20garage%20door%20repair%3A%20https%3A%2F%2Fwww.valiantdoor.com%2Fbusiness-card">Email Referral</a>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <p>Use this page for direct sharing. For search and service details, visit <a href="/garage-door-repair-pleasanton">Pleasanton garage door repair</a> or <a href="/quote">request service</a>.</p>
+        </footer>
+      </section>
+    </main>
+    <script>
+      (function () {
+        var cardUrl = 'https://www.valiantdoor.com/business-card';
+        var status = document.getElementById('copy-status');
+        var copyButton = document.getElementById('copy-link');
+        var shareButton = document.getElementById('share-card');
+        function setStatus(message) {
+          if (!status) return;
+          status.textContent = message;
+        }
+        if (copyButton) {
+          copyButton.addEventListener('click', function () {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(cardUrl).then(function () {
+                setStatus('Card link copied.');
+              }).catch(function () {
+                setStatus(cardUrl);
+              });
+            } else {
+              setStatus(cardUrl);
+            }
+          });
+        }
+        if (shareButton) {
+          shareButton.addEventListener('click', function () {
+            if (navigator.share) {
+              navigator.share({
+                title: 'Valiant Garage Door',
+                text: 'Save Valiant Garage Door for repair, springs, openers, and referrals.',
+                url: cardUrl
+              }).catch(function () {});
+            } else {
+              setStatus(cardUrl);
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

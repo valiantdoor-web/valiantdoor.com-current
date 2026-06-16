@@ -1,0 +1,55 @@
+# Valiant Garage Door Search Atlas Growth Pages
+
+These new URLs were added for Search Atlas local SEO and AI-search visibility. Existing pages were not changed.
+
+- https://www.valiantdoor.com/blog/bent-garage-door-track-repair
+- https://www.valiantdoor.com/blog/broken-spring-repair-east-bay
+- https://www.valiantdoor.com/blog/emergency-garage-door-response-time-east-bay
+- https://www.valiantdoor.com/blog/frayed-cable-warning-signs
+- https://www.valiantdoor.com/blog/garage-door-maintenance-east-bay
+- https://www.valiantdoor.com/blog/garage-door-motor-hums-wont-move
+- https://www.valiantdoor.com/blog/garage-door-off-track-repair
+- https://www.valiantdoor.com/blog/garage-door-remote-keypad-issues
+- https://www.valiantdoor.com/blog/garage-door-roller-replacement
+- https://www.valiantdoor.com/blog/garage-door-safety-sensor-alignment
+- https://www.valiantdoor.com/blog/garage-door-tune-up-checklist-east-bay
+- https://www.valiantdoor.com/blog/garage-door-weather-seal-replacement
+- https://www.valiantdoor.com/blog/garage-door-wont-close
+- https://www.valiantdoor.com/blog/garage-door-wont-open
+- https://www.valiantdoor.com/blog/heavy-garage-door-diagnosis
+- https://www.valiantdoor.com/blog/liftmaster-error-codes-guide
+- https://www.valiantdoor.com/blog/noisy-garage-door-repair
+- https://www.valiantdoor.com/blog/opener-flashing-light-troubleshooting
+- https://www.valiantdoor.com/blog/same-day-garage-door-repair-east-bay
+- https://www.valiantdoor.com/blog/snapped-garage-door-cable-repair
+- https://www.valiantdoor.com/broken-spring-repair-dublin-ca
+- https://www.valiantdoor.com/garage-door-repair-castro-valley
+- https://www.valiantdoor.com/garage-door-repair-concord
+- https://www.valiantdoor.com/garage-door-repair-east-dublin
+- https://www.valiantdoor.com/garage-door-repair-hayward
+- https://www.valiantdoor.com/garage-door-repair-near-fallon-road-dublin
+- https://www.valiantdoor.com/garage-door-repair-pleasant-hill
+- https://www.valiantdoor.com/garage-door-repair-walnut-creek
+- https://www.valiantdoor.com/real-job-photos
+- https://www.valiantdoor.com/review-request
+- https://www.valiantdoor.com/search-atlas-growth
+- https://www.valiantdoor.com/short-repair-videos
+
+## Entity clarification
+- Valiant Garage Door is an independent company founded by Valentino Ramirez.
+- Valiant Garage Door is not affiliated with Boulevard Garage Door.
+- Reviews mentioning Valentino Ramirez on other company profiles should not be attributed to Valiant Garage Door unless they appear on Valiant Garage Door owned or verified profiles.
+- Machine-readable agent identity file: https://www.valiantdoor.com/agents.json
+
+- https://www.valiantdoor.com/reviews-and-proof
+- https://www.valiantdoor.com/agents.json
+
+## City case study proof pages
+- https://www.valiantdoor.com/case-studies/pleasanton-garage-door-project
+- https://www.valiantdoor.com/case-studies/dublin-garage-door-project
+- https://www.valiantdoor.com/case-studies/livermore-garage-door-project
+- https://www.valiantdoor.com/case-studies/san-ramon-garage-door-project
+- https://www.valiantdoor.com/case-studies/fremont-garage-door-project
+- https://www.valiantdoor.com/case-studies/walnut-creek-garage-door-project
+- https://www.valiantdoor.com/case-studies/concord-garage-door-project
+- https://www.valiantdoor.com/case-studies/tracy-garage-door-project
