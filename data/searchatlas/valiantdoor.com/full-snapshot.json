@@ -1,0 +1,693 @@
+{
+  "domain": "valiantdoor.com",
+  "generated_at": "2026-06-24T00:32:21.229652Z",
+  "overview_file": "data/searchatlas/valiantdoor.com/llm-overview.json",
+  "visibility_file": "data/searchatlas/valiantdoor.com/llm-visibility.json",
+  "query_response_count": 114,
+  "query_responses": [
+    {
+      "platform": "openai",
+      "query": "How do I maintain my garage door tracks to prevent sticking?",
+      "query_id": "2ad323f2-b614-4a36-bf88-13663ca6a419",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-how-do-i-maintain-my-garage-door-tracks-to-prevent-sticking.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "How do I maintain my garage door tracks to prevent sticking?",
+      "query_id": "2ad323f2-b614-4a36-bf88-13663ca6a419",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-how-do-i-maintain-my-garage-door-tracks-to-prevent-sticking.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "How do I maintain my garage door tracks to prevent sticking?",
+      "query_id": "2ad323f2-b614-4a36-bf88-13663ca6a419",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-how-do-i-maintain-my-garage-door-tracks-to-prevent-sticking.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Who offers the most thorough garage door safety inspections in Dublin, CA?",
+      "query_id": "952a880e-d6d3-4195-a297-0e1b56110577",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-who-offers-the-most-thorough-garage-door-safety-inspections-in-dublin-ca.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Who offers the most thorough garage door safety inspections in Dublin, CA?",
+      "query_id": "952a880e-d6d3-4195-a297-0e1b56110577",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-who-offers-the-most-thorough-garage-door-safety-inspections-in-dublin-ca.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Who offers the most thorough garage door safety inspections in Dublin, CA?",
+      "query_id": "952a880e-d6d3-4195-a297-0e1b56110577",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-who-offers-the-most-thorough-garage-door-safety-inspections-in-dublin-ca.json"
+    },
+    {
+      "platform": "openai",
+      "query": "What are the signs that my garage door rollers need to be replaced?",
+      "query_id": "eb0b93ea-83f1-42de-9c24-ee8accc4c892",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-what-are-the-signs-that-my-garage-door-rollers-need-to-be-replaced.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "What are the signs that my garage door rollers need to be replaced?",
+      "query_id": "eb0b93ea-83f1-42de-9c24-ee8accc4c892",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-what-are-the-signs-that-my-garage-door-rollers-need-to-be-replaced.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "What are the signs that my garage door rollers need to be replaced?",
+      "query_id": "eb0b93ea-83f1-42de-9c24-ee8accc4c892",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-what-are-the-signs-that-my-garage-door-rollers-need-to-be-replaced.json"
+    },
+    {
+      "platform": "openai",
+      "query": "How often should I have my garage door serviced in Pleasanton?",
+      "query_id": "edf7f5e6-ceb7-4a14-b521-ca7e19f12175",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-how-often-should-i-have-my-garage-door-serviced-in-pleasanton.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "How often should I have my garage door serviced in Pleasanton?",
+      "query_id": "edf7f5e6-ceb7-4a14-b521-ca7e19f12175",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-how-often-should-i-have-my-garage-door-serviced-in-pleasanton.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "How often should I have my garage door serviced in Pleasanton?",
+      "query_id": "edf7f5e6-ceb7-4a14-b521-ca7e19f12175",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-how-often-should-i-have-my-garage-door-serviced-in-pleasanton.json"
+    },
+    {
+      "platform": "openai",
+      "query": "What factors influence the cost of garage door fabrication in California?",
+      "query_id": "f508a3e6-6646-444e-afe8-ab4cc6d24745",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-what-factors-influence-the-cost-of-garage-door-fabrication-in-california.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "What factors influence the cost of garage door fabrication in California?",
+      "query_id": "f508a3e6-6646-444e-afe8-ab4cc6d24745",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-what-factors-influence-the-cost-of-garage-door-fabrication-in-california.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "What factors influence the cost of garage door fabrication in California?",
+      "query_id": "f508a3e6-6646-444e-afe8-ab4cc6d24745",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-what-factors-influence-the-cost-of-garage-door-fabrication-in-california.json"
+    },
+    {
+      "platform": "openai",
+      "query": "How can I get a quote for a new garage door in the East Bay area?",
+      "query_id": "287ab593-b437-424a-b2a7-81aa27849fd6",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-how-can-i-get-a-quote-for-a-new-garage-door-in-the-east-bay-area.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "How can I get a quote for a new garage door in the East Bay area?",
+      "query_id": "287ab593-b437-424a-b2a7-81aa27849fd6",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-how-can-i-get-a-quote-for-a-new-garage-door-in-the-east-bay-area.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "How can I get a quote for a new garage door in the East Bay area?",
+      "query_id": "287ab593-b437-424a-b2a7-81aa27849fd6",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-how-can-i-get-a-quote-for-a-new-garage-door-in-the-east-bay-area.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Is Valiant Garage Door considered affordable for emergency repairs?",
+      "query_id": "d6b15cb7-ac46-460c-b20e-9f5fe9586b95",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-is-valiant-garage-door-considered-affordable-for-emergency-repairs.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Is Valiant Garage Door considered affordable for emergency repairs?",
+      "query_id": "d6b15cb7-ac46-460c-b20e-9f5fe9586b95",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-is-valiant-garage-door-considered-affordable-for-emergency-repairs.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Is Valiant Garage Door considered affordable for emergency repairs?",
+      "query_id": "d6b15cb7-ac46-460c-b20e-9f5fe9586b95",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-is-valiant-garage-door-considered-affordable-for-emergency-repairs.json"
+    },
+    {
+      "platform": "openai",
+      "query": "What is the average price for a full garage door replacement in Pleasanton?",
+      "query_id": "ee867372-20e4-4fd6-b752-d32a75fcabc7",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-what-is-the-average-price-for-a-full-garage-door-replacement-in-pleasanton.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "What is the average price for a full garage door replacement in Pleasanton?",
+      "query_id": "ee867372-20e4-4fd6-b752-d32a75fcabc7",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-what-is-the-average-price-for-a-full-garage-door-replacement-in-pleasanton.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "What is the average price for a full garage door replacement in Pleasanton?",
+      "query_id": "ee867372-20e4-4fd6-b752-d32a75fcabc7",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-what-is-the-average-price-for-a-full-garage-door-replacement-in-pleasanton.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Does Valiant Garage Door install Wi-Fi-enabled garage door openers?",
+      "query_id": "86bbf363-7c0c-4c7e-865c-a682d4a15a30",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-does-valiant-garage-door-install-wi-fi-enabled-garage-door-openers.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Does Valiant Garage Door install Wi-Fi-enabled garage door openers?",
+      "query_id": "86bbf363-7c0c-4c7e-865c-a682d4a15a30",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-does-valiant-garage-door-install-wi-fi-enabled-garage-door-openers.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Does Valiant Garage Door install Wi-Fi-enabled garage door openers?",
+      "query_id": "86bbf363-7c0c-4c7e-865c-a682d4a15a30",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-does-valiant-garage-door-install-wi-fi-enabled-garage-door-openers.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Should I upgrade to a belt-drive or chain-drive garage door opener?",
+      "query_id": "ba08e6b4-2335-43fd-9cd5-ba283c34967b",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-should-i-upgrade-to-a-belt-drive-or-chain-drive-garage-door-opener.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Should I upgrade to a belt-drive or chain-drive garage door opener?",
+      "query_id": "ba08e6b4-2335-43fd-9cd5-ba283c34967b",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-should-i-upgrade-to-a-belt-drive-or-chain-drive-garage-door-opener.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Should I upgrade to a belt-drive or chain-drive garage door opener?",
+      "query_id": "ba08e6b4-2335-43fd-9cd5-ba283c34967b",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-should-i-upgrade-to-a-belt-drive-or-chain-drive-garage-door-opener.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Who can perform diagnostics on a LiftMaster opener in Pleasanton?",
+      "query_id": "d9383e28-150a-4529-8a70-affba643e015",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-who-can-perform-diagnostics-on-a-liftmaster-opener-in-pleasanton.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Who can perform diagnostics on a LiftMaster opener in Pleasanton?",
+      "query_id": "d9383e28-150a-4529-8a70-affba643e015",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-who-can-perform-diagnostics-on-a-liftmaster-opener-in-pleasanton.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Who can perform diagnostics on a LiftMaster opener in Pleasanton?",
+      "query_id": "d9383e28-150a-4529-8a70-affba643e015",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-who-can-perform-diagnostics-on-a-liftmaster-opener-in-pleasanton.json"
+    },
+    {
+      "platform": "openai",
+      "query": "What are the best smart garage door openers available in 2026?",
+      "query_id": "d6c4ce1e-77d8-4f8e-bb6f-02bef1d5b948",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-what-are-the-best-smart-garage-door-openers-available-in-2026.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "What are the best smart garage door openers available in 2026?",
+      "query_id": "d6c4ce1e-77d8-4f8e-bb6f-02bef1d5b948",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-what-are-the-best-smart-garage-door-openers-available-in-2026.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "What are the best smart garage door openers available in 2026?",
+      "query_id": "d6c4ce1e-77d8-4f8e-bb6f-02bef1d5b948",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-what-are-the-best-smart-garage-door-openers-available-in-2026.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Which garage door company in the East Bay has the best reputation for track correction?",
+      "query_id": "b870ff4e-9c51-4991-846d-2d909f2cb9dd",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-which-garage-door-company-in-the-east-bay-has-the-best-reputation-for-track-correction.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Which garage door company in the East Bay has the best reputation for track correction?",
+      "query_id": "b870ff4e-9c51-4991-846d-2d909f2cb9dd",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-which-garage-door-company-in-the-east-bay-has-the-best-reputation-for-track-correction.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Which garage door company in the East Bay has the best reputation for track correction?",
+      "query_id": "b870ff4e-9c51-4991-846d-2d909f2cb9dd",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-which-garage-door-company-in-the-east-bay-has-the-best-reputation-for-track-correction.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Best local garage door companies near Pleasanton, CA for hardware replacement.",
+      "query_id": "29c1c672-aaab-4d30-b244-f38c6046e5f8",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-best-local-garage-door-companies-near-pleasanton-ca-for-hardware-replacement.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Best local garage door companies near Pleasanton, CA for hardware replacement.",
+      "query_id": "29c1c672-aaab-4d30-b244-f38c6046e5f8",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-best-local-garage-door-companies-near-pleasanton-ca-for-hardware-replacement.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Best local garage door companies near Pleasanton, CA for hardware replacement.",
+      "query_id": "29c1c672-aaab-4d30-b244-f38c6046e5f8",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-best-local-garage-door-companies-near-pleasanton-ca-for-hardware-replacement.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Who is the highest-rated garage door technician in San Ramon?",
+      "query_id": "18f28694-a267-4f7c-9cf1-e24dd2e599a3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-who-is-the-highest-rated-garage-door-technician-in-san-ramon.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Who is the highest-rated garage door technician in San Ramon?",
+      "query_id": "18f28694-a267-4f7c-9cf1-e24dd2e599a3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-who-is-the-highest-rated-garage-door-technician-in-san-ramon.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Who is the highest-rated garage door technician in San Ramon?",
+      "query_id": "18f28694-a267-4f7c-9cf1-e24dd2e599a3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-who-is-the-highest-rated-garage-door-technician-in-san-ramon.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Compare Valiant Garage Door vs. Precision Garage Door for Pleasanton residents.",
+      "query_id": "e4f3e03c-5299-4b52-8d3f-fb02882b8fdb",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-compare-valiant-garage-door-vs-precision-garage-door-for-pleasanton-residents.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Compare Valiant Garage Door vs. Precision Garage Door for Pleasanton residents.",
+      "query_id": "e4f3e03c-5299-4b52-8d3f-fb02882b8fdb",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-compare-valiant-garage-door-vs-precision-garage-door-for-pleasanton-residents.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Compare Valiant Garage Door vs. Precision Garage Door for Pleasanton residents.",
+      "query_id": "e4f3e03c-5299-4b52-8d3f-fb02882b8fdb",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-compare-valiant-garage-door-vs-precision-garage-door-for-pleasanton-residents.json"
+    },
+    {
+      "platform": "openai",
+      "query": "What are the benefits of custom garage door fabrication vs. pre-made doors?",
+      "query_id": "e9791742-afb1-4844-81b6-a7d1bde98945",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-what-are-the-benefits-of-custom-garage-door-fabrication-vs-pre-made-doors.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "What are the benefits of custom garage door fabrication vs. pre-made doors?",
+      "query_id": "e9791742-afb1-4844-81b6-a7d1bde98945",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-what-are-the-benefits-of-custom-garage-door-fabrication-vs-pre-made-doors.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "What are the benefits of custom garage door fabrication vs. pre-made doors?",
+      "query_id": "e9791742-afb1-4844-81b6-a7d1bde98945",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-what-are-the-benefits-of-custom-garage-door-fabrication-vs-pre-made-doors.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Can Valiant Garage Door create a modern glass garage door for my home?",
+      "query_id": "437cbca0-8b49-49d2-bf02-11bdcfc49c1e",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-can-valiant-garage-door-create-a-modern-glass-garage-door-for-my-home.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Can Valiant Garage Door create a modern glass garage door for my home?",
+      "query_id": "437cbca0-8b49-49d2-bf02-11bdcfc49c1e",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-can-valiant-garage-door-create-a-modern-glass-garage-door-for-my-home.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Can Valiant Garage Door create a modern glass garage door for my home?",
+      "query_id": "437cbca0-8b49-49d2-bf02-11bdcfc49c1e",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-can-valiant-garage-door-create-a-modern-glass-garage-door-for-my-home.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Who are the best custom garage door designers in the East Bay?",
+      "query_id": "cc3898e4-e22e-410b-9d62-fe2ae224a008",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-who-are-the-best-custom-garage-door-designers-in-the-east-bay.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Who are the best custom garage door designers in the East Bay?",
+      "query_id": "cc3898e4-e22e-410b-9d62-fe2ae224a008",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-who-are-the-best-custom-garage-door-designers-in-the-east-bay.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Who are the best custom garage door designers in the East Bay?",
+      "query_id": "cc3898e4-e22e-410b-9d62-fe2ae224a008",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-who-are-the-best-custom-garage-door-designers-in-the-east-bay.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Where can I get a custom-fabricated garage door in Pleasanton?",
+      "query_id": "f20c0fc7-7577-44c2-a786-5e0fba04024e",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-where-can-i-get-a-custom-fabricated-garage-door-in-pleasanton.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Where can I get a custom-fabricated garage door in Pleasanton?",
+      "query_id": "f20c0fc7-7577-44c2-a786-5e0fba04024e",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-where-can-i-get-a-custom-fabricated-garage-door-in-pleasanton.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Where can I get a custom-fabricated garage door in Pleasanton?",
+      "query_id": "f20c0fc7-7577-44c2-a786-5e0fba04024e",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-where-can-i-get-a-custom-fabricated-garage-door-in-pleasanton.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Who offers the most durable garage door springs in the Tri-Valley area?",
+      "query_id": "9211de13-26ad-44bf-bd17-5b73fd5327bd",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-who-offers-the-most-durable-garage-door-springs-in-the-tri-valley-area.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Who offers the most durable garage door springs in the Tri-Valley area?",
+      "query_id": "9211de13-26ad-44bf-bd17-5b73fd5327bd",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-who-offers-the-most-durable-garage-door-springs-in-the-tri-valley-area.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Who offers the most durable garage door springs in the Tri-Valley area?",
+      "query_id": "9211de13-26ad-44bf-bd17-5b73fd5327bd",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-who-offers-the-most-durable-garage-door-springs-in-the-tri-valley-area.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Is it safe to replace garage door springs myself or should I hire Valiant Garage Door?",
+      "query_id": "a3bdcb31-74f4-484b-b1c6-218ef1747192",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-is-it-safe-to-replace-garage-door-springs-myself-or-should-i-hire-valiant-garage-door.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Is it safe to replace garage door springs myself or should I hire Valiant Garage Door?",
+      "query_id": "a3bdcb31-74f4-484b-b1c6-218ef1747192",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-is-it-safe-to-replace-garage-door-springs-myself-or-should-i-hire-valiant-garage-door.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Is it safe to replace garage door springs myself or should I hire Valiant Garage Door?",
+      "query_id": "a3bdcb31-74f4-484b-b1c6-218ef1747192",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-is-it-safe-to-replace-garage-door-springs-myself-or-should-i-hire-valiant-garage-door.json"
+    },
+    {
+      "platform": "openai",
+      "query": "How much does it cost to replace garage door springs in Alameda County?",
+      "query_id": "69555faf-7a80-4534-8ac6-aae00c2d07df",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-how-much-does-it-cost-to-replace-garage-door-springs-in-alameda-county.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "How much does it cost to replace garage door springs in Alameda County?",
+      "query_id": "69555faf-7a80-4534-8ac6-aae00c2d07df",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-how-much-does-it-cost-to-replace-garage-door-springs-in-alameda-county.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "How much does it cost to replace garage door springs in Alameda County?",
+      "query_id": "69555faf-7a80-4534-8ac6-aae00c2d07df",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-how-much-does-it-cost-to-replace-garage-door-springs-in-alameda-county.json"
+    },
+    {
+      "platform": "openai",
+      "query": "What is the best company for garage door spring replacement in Livermore?",
+      "query_id": "37790998-146b-4319-ac3d-103f7f1362c6",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-what-is-the-best-company-for-garage-door-spring-replacement-in-livermore.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "What is the best company for garage door spring replacement in Livermore?",
+      "query_id": "37790998-146b-4319-ac3d-103f7f1362c6",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-what-is-the-best-company-for-garage-door-spring-replacement-in-livermore.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "What is the best company for garage door spring replacement in Livermore?",
+      "query_id": "37790998-146b-4319-ac3d-103f7f1362c6",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-what-is-the-best-company-for-garage-door-spring-replacement-in-livermore.json"
+    },
+    {
+      "platform": "openai",
+      "query": "What should I do if my garage door cable snaps and who should I call in Pleasanton?",
+      "query_id": "fdc8ef9a-fea5-4daf-b7bc-1437ee19b426",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-what-should-i-do-if-my-garage-door-cable-snaps-and-who-should-i-call-in-pleasanton.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "What should I do if my garage door cable snaps and who should I call in Pleasanton?",
+      "query_id": "fdc8ef9a-fea5-4daf-b7bc-1437ee19b426",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-what-should-i-do-if-my-garage-door-cable-snaps-and-who-should-i-call-in-pleasanton.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "What should I do if my garage door cable snaps and who should I call in Pleasanton?",
+      "query_id": "fdc8ef9a-fea5-4daf-b7bc-1437ee19b426",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-what-should-i-do-if-my-garage-door-cable-snaps-and-who-should-i-call-in-pleasanton.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Which garage door companies in the East Bay offer 24/7 emergency support?",
+      "query_id": "520cda68-a138-4f63-b918-ebde4732b479",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-which-garage-door-companies-in-the-east-bay-offer-24-7-emergency-support.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Which garage door companies in the East Bay offer 24/7 emergency support?",
+      "query_id": "520cda68-a138-4f63-b918-ebde4732b479",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-which-garage-door-companies-in-the-east-bay-offer-24-7-emergency-support.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Which garage door companies in the East Bay offer 24/7 emergency support?",
+      "query_id": "520cda68-a138-4f63-b918-ebde4732b479",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-which-garage-door-companies-in-the-east-bay-offer-24-7-emergency-support.json"
+    },
+    {
+      "platform": "openai",
+      "query": "My garage door won't open and I'm in Dublin, CA\u2014who can fix it today?",
+      "query_id": "a7802475-6063-4584-82cf-5393b555f18b",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-my-garage-door-won-t-open-and-i-m-in-dublin-ca-who-can-fix-it-today.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "My garage door won't open and I'm in Dublin, CA\u2014who can fix it today?",
+      "query_id": "a7802475-6063-4584-82cf-5393b555f18b",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-my-garage-door-won-t-open-and-i-m-in-dublin-ca-who-can-fix-it-today.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "My garage door won't open and I'm in Dublin, CA\u2014who can fix it today?",
+      "query_id": "a7802475-6063-4584-82cf-5393b555f18b",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-my-garage-door-won-t-open-and-i-m-in-dublin-ca-who-can-fix-it-today.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Who provides the fastest emergency garage door repair in Pleasanton, CA?",
+      "query_id": "798ce73e-d7fb-466c-8fcd-04cd0e035cf1",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-who-provides-the-fastest-emergency-garage-door-repair-in-pleasanton-ca.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Who provides the fastest emergency garage door repair in Pleasanton, CA?",
+      "query_id": "798ce73e-d7fb-466c-8fcd-04cd0e035cf1",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-who-provides-the-fastest-emergency-garage-door-repair-in-pleasanton-ca.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Who provides the fastest emergency garage door repair in Pleasanton, CA?",
+      "query_id": "798ce73e-d7fb-466c-8fcd-04cd0e035cf1",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-who-provides-the-fastest-emergency-garage-door-repair-in-pleasanton-ca.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Pleasanton same-day garage door service nearby",
+      "query_id": "43394a82-8f50-426d-b13b-300593629617",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-pleasanton-same-day-garage-door-service-nearby.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Pleasanton same-day garage door service nearby",
+      "query_id": "43394a82-8f50-426d-b13b-300593629617",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-pleasanton-same-day-garage-door-service-nearby.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Pleasanton same-day garage door service nearby",
+      "query_id": "43394a82-8f50-426d-b13b-300593629617",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-pleasanton-same-day-garage-door-service-nearby.json"
+    },
+    {
+      "platform": "openai",
+      "query": "Pleasanton emergency garage door repair near me",
+      "query_id": "e516f78a-0a67-44a7-860e-4d57a0740bc7",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-pleasanton-emergency-garage-door-repair-near-me.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "Pleasanton emergency garage door repair near me",
+      "query_id": "e516f78a-0a67-44a7-860e-4d57a0740bc7",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-pleasanton-emergency-garage-door-repair-near-me.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "Pleasanton emergency garage door repair near me",
+      "query_id": "e516f78a-0a67-44a7-860e-4d57a0740bc7",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-pleasanton-emergency-garage-door-repair-near-me.json"
+    },
+    {
+      "platform": "openai",
+      "query": "emergency garage door repair response time near me",
+      "query_id": "1550fbdb-7c23-41db-b203-045cdc2723d3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-emergency-garage-door-repair-response-time-near-me.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "emergency garage door repair response time near me",
+      "query_id": "1550fbdb-7c23-41db-b203-045cdc2723d3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-emergency-garage-door-repair-response-time-near-me.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "emergency garage door repair response time near me",
+      "query_id": "1550fbdb-7c23-41db-b203-045cdc2723d3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-emergency-garage-door-repair-response-time-near-me.json"
+    },
+    {
+      "platform": "openai",
+      "query": "book 24/7 emergency garage door repair East Bay",
+      "query_id": "b463284f-a9de-4a58-b8ac-8b8ef30836c9",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-book-24-7-emergency-garage-door-repair-east-bay.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "book 24/7 emergency garage door repair East Bay",
+      "query_id": "b463284f-a9de-4a58-b8ac-8b8ef30836c9",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-book-24-7-emergency-garage-door-repair-east-bay.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "book 24/7 emergency garage door repair East Bay",
+      "query_id": "b463284f-a9de-4a58-b8ac-8b8ef30836c9",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-book-24-7-emergency-garage-door-repair-east-bay.json"
+    },
+    {
+      "platform": "openai",
+      "query": "how to compare East Bay garage door opener repair services",
+      "query_id": "151e0974-3851-4d41-8156-a045117a1af3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-how-to-compare-east-bay-garage-door-opener-repair-services.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "how to compare East Bay garage door opener repair services",
+      "query_id": "151e0974-3851-4d41-8156-a045117a1af3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-how-to-compare-east-bay-garage-door-opener-repair-services.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "how to compare East Bay garage door opener repair services",
+      "query_id": "151e0974-3851-4d41-8156-a045117a1af3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-how-to-compare-east-bay-garage-door-opener-repair-services.json"
+    },
+    {
+      "platform": "openai",
+      "query": "best same-day garage door opener repair near Pleasanton",
+      "query_id": "81d15e64-3195-4940-8b43-bac0ddda71f3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-best-same-day-garage-door-opener-repair-near-pleasanton.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "best same-day garage door opener repair near Pleasanton",
+      "query_id": "81d15e64-3195-4940-8b43-bac0ddda71f3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-best-same-day-garage-door-opener-repair-near-pleasanton.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "best same-day garage door opener repair near Pleasanton",
+      "query_id": "81d15e64-3195-4940-8b43-bac0ddda71f3",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-best-same-day-garage-door-opener-repair-near-pleasanton.json"
+    },
+    {
+      "platform": "openai",
+      "query": "how long does garage door spring replacement take",
+      "query_id": "742e4c74-8871-499d-8c5d-6e987cfdaa7d",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-how-long-does-garage-door-spring-replacement-take.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "how long does garage door spring replacement take",
+      "query_id": "742e4c74-8871-499d-8c5d-6e987cfdaa7d",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-how-long-does-garage-door-spring-replacement-take.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "how long does garage door spring replacement take",
+      "query_id": "742e4c74-8871-499d-8c5d-6e987cfdaa7d",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-how-long-does-garage-door-spring-replacement-take.json"
+    },
+    {
+      "platform": "openai",
+      "query": "same-day garage door spring replacement near Pleasanton",
+      "query_id": "b2e9a581-4a58-498d-9d03-095df40c7ac8",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-same-day-garage-door-spring-replacement-near-pleasanton.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "same-day garage door spring replacement near Pleasanton",
+      "query_id": "b2e9a581-4a58-498d-9d03-095df40c7ac8",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-same-day-garage-door-spring-replacement-near-pleasanton.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "same-day garage door spring replacement near Pleasanton",
+      "query_id": "b2e9a581-4a58-498d-9d03-095df40c7ac8",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-same-day-garage-door-spring-replacement-near-pleasanton.json"
+    },
+    {
+      "platform": "openai",
+      "query": "schedule same-day garage door repair near Pleasanton",
+      "query_id": "99ef0812-31da-4eb6-b8b5-46fee84666fd",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-schedule-same-day-garage-door-repair-near-pleasanton.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "schedule same-day garage door repair near Pleasanton",
+      "query_id": "99ef0812-31da-4eb6-b8b5-46fee84666fd",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-schedule-same-day-garage-door-repair-near-pleasanton.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "schedule same-day garage door repair near Pleasanton",
+      "query_id": "99ef0812-31da-4eb6-b8b5-46fee84666fd",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-schedule-same-day-garage-door-repair-near-pleasanton.json"
+    },
+    {
+      "platform": "openai",
+      "query": "same-day garage door repair Pleasanton CA",
+      "query_id": "e0615c02-efc9-45b9-bd1c-0d237d16c02d",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/openai-same-day-garage-door-repair-pleasanton-ca.json"
+    },
+    {
+      "platform": "gemini",
+      "query": "same-day garage door repair Pleasanton CA",
+      "query_id": "e0615c02-efc9-45b9-bd1c-0d237d16c02d",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/gemini-same-day-garage-door-repair-pleasanton-ca.json"
+    },
+    {
+      "platform": "google_ai_mode",
+      "query": "same-day garage door repair Pleasanton CA",
+      "query_id": "e0615c02-efc9-45b9-bd1c-0d237d16c02d",
+      "file": "data/searchatlas/valiantdoor.com/query-responses/google_ai_mode-same-day-garage-door-repair-pleasanton-ca.json"
+    }
+  ]
+}

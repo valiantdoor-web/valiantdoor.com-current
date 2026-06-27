@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
 :root {
   --carbon: #0b0b0c;
   --coal: #111214;
@@ -89,6 +91,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -3264,7 +3267,7 @@ textarea {
   position: absolute;
   inset: -2%;
   pointer-events: none;
-  background: url("/assets/mission-layout-reference.png") center top / cover no-repeat;
+  background: radial-gradient(circle at 50% 18%, rgba(199, 163, 75, 0.18), transparent 56%);
   filter: blur(10px) brightness(0.34) saturate(0.9);
   transform: scale(1.04);
 }
@@ -3891,7 +3894,7 @@ textarea {
   }
 }
 
-/* Header social links (Google/Yelp/TikTok/Clopay/C.H.I.) */
+/* Header social links (Google/Yelp/Facebook/Instagram/YouTube/TikTok/Nextdoor/Thumbtack/C.H.I.) */
 .site-nav .nav-social {
   display: inline-flex;
   align-items: center;
@@ -3956,6 +3959,8 @@ textarea {
 .site-nav .nav-social-google { background: #4285f4; }
 .site-nav .nav-social-yelp { background: #d32323; }
 .site-nav .nav-social-facebook { background: #1877f2; }
+.site-nav .nav-social-instagram { background: linear-gradient(135deg, #f58529, #dd2a7b 45%, #8134af); }
+.site-nav .nav-social-youtube { background: #ff0000; }
 .site-nav .nav-social-thumbtack { background: #009fd9; }
 .site-nav .nav-social-tiktok { background: #111111; }
 .site-nav .nav-social-nextdoor {
@@ -4823,6 +4828,60 @@ body .footer-links a {
   color: var(--gold) !important;
 }
 
+/* Valiant script accent: use the maintenance-plan title font across recurring premium headings. */
+body .geo-breadcrumbs > :last-child,
+body .services-breadcrumbs > :last-child,
+body .services-section h2,
+body .page-geo .geo-section > h2,
+body .section-hero-script,
+body .page-gallery .gallery-script-subtitle,
+body .page-gallery .gallery-script-heading,
+body .hero-title,
+body .hero-subtitle,
+body .hero-cta-kicker {
+  font-family: "Great Vibes", "Brush Script MT", "Snell Roundhand", "Segoe Script", cursive !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-transform: none !important;
+  letter-spacing: 0.025em !important;
+  line-height: 1.02 !important;
+}
+
+body .geo-breadcrumbs > :last-child,
+body .services-breadcrumbs > :last-child {
+  display: inline-block;
+  color: rgba(224, 199, 131, 0.98);
+  font-size: clamp(1.35rem, 4.6vw, 2.05rem);
+  text-decoration: none;
+  text-shadow: 0 0 18px rgba(199, 163, 75, 0.22);
+}
+
+body .page-geo .geo-section > h2,
+body .services-section h2 {
+  font-size: clamp(2.05rem, 5.8vw, 3.95rem);
+  text-shadow: 0 0 18px rgba(199, 163, 75, 0.2);
+}
+
+/* Global photo proportion guard: photo/content images should scale without stretching. */
+body .geo-card > img,
+body figure.geo-card > img,
+body .service-media img,
+body .photo-album-slide img,
+body .photo-album-thumb img,
+body .maintenance-hero-art img,
+body .mission-proof-card img,
+body .founder-preview-media img,
+body .mastertech-card-frame img,
+body .mastertech-shield-frame img,
+body .spring-duramaster-card img,
+body .spring-premium-card img,
+body .idea-proof-media img,
+body .idea-directory-actions img,
+body .custom-video-section img {
+  object-fit: contain;
+  object-position: center;
+}
+
 /* Valiant expansion polish: approved form, expansion, nav, and mobile CSS */
 .page-geo form {
   display: grid;
@@ -5007,5 +5066,105 @@ body .footer-links a {
   .nav-dropdown-menu {
     max-height: min(66vh, 520px);
     padding-right: 18px;
+  }
+}
+
+/* Global header tweak requested for maintenance/article pages and shared nav */
+.site-nav {
+  flex-wrap: wrap;
+}
+
+.site-nav .nav-social {
+  flex: 1 0 100%;
+  order: 99;
+  width: 100%;
+  margin-left: 0;
+  padding-top: 8px;
+  justify-content: flex-end;
+}
+
+.site-nav .nav-social-clopay {
+  display: none !important;
+}
+
+/* Native CompanyCam proof blocks: crawlable images, mobile-first layout, and lightweight local proof context. */
+.valiant-companycam-native-proof {
+  margin: clamp(26px, 5vw, 56px) auto;
+  padding: clamp(18px, 3vw, 30px);
+  border: 1px solid rgba(199, 163, 75, 0.32);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(10, 10, 12, 0.96), rgba(8, 8, 10, 0.9));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+}
+
+.valiant-companycam-native-proof__intro {
+  max-width: 880px;
+  margin: 0 auto clamp(16px, 3vw, 26px);
+  text-align: center;
+}
+
+.valiant-companycam-native-proof__intro h2 {
+  margin: 6px 0 10px;
+  color: var(--gold, #c7a34b);
+  font-size: clamp(1.35rem, 3.2vw, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.valiant-companycam-native-proof__intro p:not(.geo-eyebrow) {
+  margin: 0 auto;
+  color: rgba(245, 242, 236, 0.84);
+  line-height: 1.65;
+}
+
+.valiant-companycam-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.valiant-companycam-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(199, 163, 75, 0.24);
+  border-radius: 16px;
+  background: rgba(5, 5, 7, 0.88);
+}
+
+.valiant-companycam-card a:first-child {
+  display: block;
+  background: #050507;
+}
+
+.valiant-companycam-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 36 / 25;
+  object-fit: cover;
+}
+
+.valiant-companycam-card figcaption {
+  padding: 12px 14px 14px;
+  color: rgba(245, 242, 236, 0.78);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.valiant-companycam-card figcaption a {
+  color: var(--gold, #c7a34b);
+  font-weight: 700;
+}
+
+@media (min-width: 720px) {
+  .valiant-companycam-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .valiant-companycam-native-proof--gallery .valiant-companycam-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

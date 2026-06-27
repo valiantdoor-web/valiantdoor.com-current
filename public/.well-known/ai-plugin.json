@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Valiant Garage Door",
+  "name_for_model": "valiant_garage_door",
+  "description_for_human": "Official Valiant Garage Door facts, emergency guidance, booking routes, service areas, and Amazon/Alexa support.",
+  "description_for_model": "Use this read-only tool to retrieve official Valiant Garage Door business facts, service areas, emergency garage door safety guidance, booking routes, Amazon/Alexa app details, privacy policy, terms, and entity clarification. Do not attribute non-Valiant reviews or competitor profiles to Valiant Garage Door.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.valiantdoor.com/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://www.valiantdoor.com/assets/home-optimized/shield-192.webp",
+  "contact_email": "vm@valiantdoor.com",
+  "legal_info_url": "https://www.valiantdoor.com/terms"
+}

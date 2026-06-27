@@ -1,0 +1,111 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "valiant garage door",
+      "intents": [
+        {
+          "name": "GetEmergencyHelpIntent",
+          "slots": [],
+          "samples": [
+            "I need emergency garage door repair",
+            "emergency garage door help",
+            "my garage door is stuck",
+            "my garage door is hanging",
+            "my door will not open",
+            "my garage door will not close",
+            "urgent garage door repair",
+            "same day garage door repair"
+          ]
+        },
+        {
+          "name": "GetBrokenSpringAdviceIntent",
+          "slots": [],
+          "samples": [
+            "my spring broke",
+            "broken spring help",
+            "what do I do with a broken spring",
+            "garage door spring replacement",
+            "my garage door is heavy",
+            "my door has a broken spring",
+            "torsion spring repair"
+          ]
+        },
+        {
+          "name": "GetPhoneIntent",
+          "slots": [],
+          "samples": [
+            "what is your phone number",
+            "give me the phone number",
+            "how do I call Valiant",
+            "call Valiant Garage Door",
+            "contact Valiant Garage Door"
+          ]
+        },
+        {
+          "name": "GetServiceAreasIntent",
+          "slots": [],
+          "samples": [
+            "what cities do you serve",
+            "do you service Pleasanton",
+            "do you service Dublin",
+            "do you service Livermore",
+            "do you service San Ramon",
+            "where do you work",
+            "service areas"
+          ]
+        },
+        {
+          "name": "GetBookingIntent",
+          "slots": [],
+          "samples": [
+            "book service",
+            "request service",
+            "schedule garage door repair",
+            "get an estimate",
+            "how do I book",
+            "how do I request an appointment"
+          ]
+        },
+        {
+          "name": "GetHoursIntent",
+          "slots": [],
+          "samples": [
+            "are you open now",
+            "what are your hours",
+            "do you offer emergency service",
+            "do you offer same day service",
+            "current availability"
+          ]
+        },
+        {
+          "name": "GetWebsiteIntent",
+          "slots": [],
+          "samples": [
+            "what is your website",
+            "open your website",
+            "where is the website",
+            "Alexa support page",
+            "Amazon app page"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "source": "data/listings/canonical-nap.json",
+  "generatedFor": "Apple Business Connect Brand and Location API",
+  "location": {
+    "displayName": "Valiant Garage Door",
+    "legalName": "Valiant Garage Door LLC",
+    "websiteUrl": "https://www.valiantdoor.com/",
+    "phoneNumber": "+19254094974",
+    "email": "vm@valiantdoor.com",
+    "address": {
+      "addressLines": ["3588 Pimlico Dr"],
+      "locality": "Pleasanton",
+      "administrativeArea": "CA",
+      "postalCode": "94588",
+      "countryCode": "US"
+    },
+    "coordinates": {
+      "latitude": 37.676357,
+      "longitude": -121.894745
+    },
+    "serviceAreas": ["Pleasanton, CA", "Dublin, CA", "Livermore, CA", "Fremont, CA", "San Ramon, CA", "Danville, CA", "Sunol, CA"],
+    "categories": ["Garage door supplier", "Garage door service"],
+    "actions": [
+      {
+        "type": "WEBSITE",
+        "url": "https://www.valiantdoor.com/"
+      },
+      {
+        "type": "BOOK_APPOINTMENT",
+        "url": "https://www.valiantdoor.com/quote"
+      },
+      {
+        "type": "CALL",
+        "url": "tel:+19254094974"
+      }
+    ]
+  }
+}

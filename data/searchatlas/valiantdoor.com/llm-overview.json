@@ -3,39 +3,33 @@
   "platforms": [
     {
       "platform": "openai",
-      "brand_topics_count": 1,
-      "total_topics_count": 5,
+      "brand_topics_count": 10,
+      "total_topics_count": 13,
       "sentiment_percentage": 68
     },
     {
       "platform": "gemini",
-      "brand_topics_count": 0,
-      "total_topics_count": 5,
-      "sentiment_percentage": 85
+      "brand_topics_count": 11,
+      "total_topics_count": 13,
+      "sentiment_percentage": 82
     },
     {
       "platform": "perplexity",
-      "brand_topics_count": 0,
-      "total_topics_count": 5,
-      "sentiment_percentage": 57
+      "brand_topics_count": 11,
+      "total_topics_count": 13,
+      "sentiment_percentage": 70
     },
     {
       "platform": "copilot",
-      "brand_topics_count": 2,
-      "total_topics_count": 5,
-      "sentiment_percentage": 67
-    },
-    {
-      "platform": "google_ai_mode",
-      "brand_topics_count": 3,
-      "total_topics_count": 5,
+      "brand_topics_count": 10,
+      "total_topics_count": 13,
       "sentiment_percentage": 75
     },
     {
-      "platform": "grok",
-      "brand_topics_count": 0,
-      "total_topics_count": 5,
-      "sentiment_percentage": 83
+      "platform": "google_ai_mode",
+      "brand_topics_count": 9,
+      "total_topics_count": 13,
+      "sentiment_percentage": 81
     }
   ],
   "project_public_hash": "a9cfeec4-1f27-4373-8569-975a204fe5ec"

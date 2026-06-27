@@ -470,23 +470,13 @@ const setupDeferredHomepageTracking = () => {
       window.removeEventListener(eventName, loadTracking, options);
     });
 
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-    window.gtag = window.gtag || function gtag() {
-      window.dataLayer.push(arguments);
-    };
-    window.gtag("js", new Date());
-    window.gtag("config", "G-YH9SQLKHQ2");
-    window.gtag("config", "AW-17968443655");
-
     window.clarity = window.clarity || function clarity() {
       (window.clarity.q = window.clarity.q || []).push(arguments);
     };
 
     Promise.allSettled([
       loadScriptOnce("https://www.googletagmanager.com/gtm.js?id=GTM-WPJ77LQ8"),
-      loadScriptOnce("https://www.googletagmanager.com/gtag/js?id=G-YH9SQLKHQ2"),
-      loadScriptOnce("https://www.clarity.ms/tag/w68q4ruvb0"),
+      loadScriptOnce("https://www.clarity.ms/tag/xbiv7tx2p3"),
       loadBingUet("187249335"),
       loadBingUet("187250229"),
     ]).finally(sendMicrosoftAdsWebhook);
@@ -1380,3 +1370,104 @@ const setupDeferredGoogleMapEmbeds = () => {
 };
 
 setupDeferredGoogleMapEmbeds();
+
+const setupNextdoorClickIdStorage = () => {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const clickId = params.get("ndclid");
+    if (clickId) window.localStorage.setItem("valiant_nextdoor_click_id", clickId);
+  } catch (error) {}
+};
+
+setupNextdoorClickIdStorage();
+
+const setupNextdoorCapiLead = () => {
+  if (normalizePath(window.location.pathname) !== "/thank-you") return;
+
+  const readStorage = (storage, key) => {
+    try {
+      return storage.getItem(key) || "";
+    } catch (error) {
+      return "";
+    }
+  };
+
+  const writeStorage = (storage, key, value) => {
+    try {
+      storage.setItem(key, value);
+    } catch (error) {}
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const contactInformation = params.get("contact_information") || "";
+  const name = params.get("name") || "";
+  const nameParts = name.trim().split(/\s+/).filter(Boolean);
+  const emailFromContact = /@/.test(contactInformation) ? contactInformation : "";
+  const phoneFromContact = /\d{7,}/.test(contactInformation.replace(/\D/g, "")) ? contactInformation : "";
+
+  let externalId = readStorage(window.localStorage, "valiant_nextdoor_external_id");
+  if (!externalId) {
+    externalId = window.crypto?.randomUUID ? window.crypto.randomUUID() : `valiant-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    writeStorage(window.localStorage, "valiant_nextdoor_external_id", externalId);
+  }
+
+  const eventStorageKey = `valiant_nextdoor_capi_lead:${window.location.pathname}:${window.location.search}`;
+  if (readStorage(window.sessionStorage, eventStorageKey)) return;
+
+  const eventId = window.crypto?.randomUUID ? window.crypto.randomUUID() : `lead-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  writeStorage(window.sessionStorage, eventStorageKey, eventId);
+
+  const payload = {
+    event_name: "LEAD",
+    event_id: eventId,
+    action_source: "website",
+    action_source_url: `${window.location.origin}${window.location.pathname}`,
+    customer: {
+      email: params.get("email") || emailFromContact,
+      phone_number: params.get("phone") || params.get("phone_number") || phoneFromContact,
+      first_name: params.get("first_name") || nameParts[0] || "",
+      last_name: params.get("last_name") || nameParts.slice(1).join(" ") || "",
+      date_of_birth: params.get("date_of_birth") || "",
+      gender: params.get("gender") || "",
+      street_address: params.get("street_address") || "",
+      city: params.get("city") || "",
+      state: params.get("state") || "CA",
+      zip_code: params.get("zip_code") || params.get("zip") || "",
+      country: params.get("country") || "US",
+      external_id: externalId,
+      click_id: params.get("ndclid") || readStorage(window.localStorage, "valiant_nextdoor_click_id")
+    },
+    custom: {
+      problem_type: params.get("problem_type") || "",
+      source_path: window.location.pathname
+    }
+  };
+
+  fetch("/api/nextdoor-capi", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    body: JSON.stringify(payload),
+    keepalive: true
+  }).catch(() => {});
+};
+
+setupNextdoorCapiLead();
+
+const setupGoogleAdsQuoteConversion = () => {
+  if (normalizePath(window.location.pathname) !== "/quote") return;
+
+  const fireLeadConversion = () => {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", "ads_conversion_Submit_lead_form_1");
+  };
+
+  Array.from(
+    document.querySelectorAll('a[href*="book.housecallpro.com/book/Valiant-garage-door"]')
+  ).forEach((link) => {
+    if (link.dataset.valiantAdsLeadBound === "true") return;
+    link.dataset.valiantAdsLeadBound = "true";
+    link.addEventListener("click", fireLeadConversion);
+  });
+};
+
+setupGoogleAdsQuoteConversion();

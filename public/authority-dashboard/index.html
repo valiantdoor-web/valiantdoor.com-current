@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#060607">
+  <title>Valiant Authority Command Center</title>
+  <meta name="description" content="Private Valiant Garage Door authority dashboard for Search Atlas visibility, Cheerio site audit, PR, backlinks, and authority score target tracking.">
+  <link rel="canonical" href="https://www.valiantdoor.com/authority-dashboard">
+  <link rel="icon" href="/assets/logo/valiant-logo-gold.png" type="image/png">
+  <style>
+    :root { color-scheme: dark; --bg:#050506; --panel:#0b0c0f; --panel2:#101722; --gold:#e6c879; --gold2:#f7bd3b; --line:rgba(230,200,121,.26); --text:#f7f4ee; --muted:#b9c0ca; --danger:#ff7676; --warn:#ffd276; --good:#73e1a4; --blue:#63a8ff; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at 15% 0%, rgba(247,189,59,.16), transparent 36rem), radial-gradient(circle at 85% 10%, rgba(50,112,200,.18), transparent 32rem), var(--bg); color:var(--text); }
+    a { color: var(--gold); }
+    .shell { width:min(1240px, 100%); margin:0 auto; padding: clamp(16px, 3vw, 34px); }
+    .top { display:flex; gap:16px; align-items:center; justify-content:space-between; padding:14px 0 24px; }
+    .brand { display:flex; gap:12px; align-items:center; min-width:0; }
+    .brand img { width:48px; height:48px; object-fit:contain; filter: drop-shadow(0 10px 22px rgba(0,0,0,.45)); }
+    .brand strong { display:block; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); font-size:.9rem; }
+    .brand span { display:block; color:var(--muted); font-size:.82rem; }
+    .pill { display:inline-flex; gap:8px; align-items:center; border:1px solid var(--line); border-radius:999px; padding:8px 12px; background:rgba(255,255,255,.035); color:var(--muted); font-size:.78rem; letter-spacing:.05em; text-transform:uppercase; }
+    .hero { border:1px solid var(--line); border-radius:28px; padding: clamp(20px, 5vw, 46px); background: linear-gradient(135deg, rgba(16,23,34,.92), rgba(8,8,10,.96)); box-shadow: 0 30px 80px rgba(0,0,0,.35); overflow:hidden; position:relative; }
+    .hero::after { content:""; position:absolute; inset:auto -8rem -10rem auto; width:26rem; height:26rem; background: radial-gradient(circle, rgba(247,189,59,.16), transparent 68%); pointer-events:none; }
+    h1, h2, h3 { margin:0; line-height:1.05; }
+    h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.1rem, 7vw, 5.4rem); color:#fff4cf; max-width: 920px; }
+    h2 { font-family: Georgia, "Times New Roman", serif; color:var(--gold); font-size: clamp(1.35rem, 3vw, 2rem); }
+    h3 { color:#fff; font-size:1rem; letter-spacing:.03em; }
+    p { color:var(--muted); line-height:1.65; }
+    .hero p { max-width: 820px; font-size: clamp(1rem, 1.6vw, 1.18rem); }
+    .token { margin-top:22px; display:grid; grid-template-columns:minmax(0,1fr) auto auto; gap:10px; align-items:center; max-width:860px; }
+    input { width:100%; min-height:48px; border-radius:14px; border:1px solid var(--line); background:#07080a; color:#fff; padding:13px 14px; font-size:16px; }
+    button, .button { min-height:48px; border-radius:999px; border:1px solid var(--gold); background:transparent; color:var(--gold); padding:12px 18px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; text-decoration:none; }
+    button.primary, .button.primary { background:linear-gradient(135deg, var(--gold2), var(--gold)); color:#090909; border-color:transparent; }
+    button:hover, .button:hover { transform: translateY(-1px); background:rgba(230,200,121,.1); }
+    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:16px; margin-top:18px; }
+    .card { grid-column: span 12; border:1px solid var(--line); border-radius:22px; background:rgba(9,10,12,.86); padding:20px; box-shadow: 0 18px 48px rgba(0,0,0,.24); }
+    .kpi { grid-column: span 3; }
+    .wide { grid-column: span 8; }
+    .side { grid-column: span 4; }
+    .half { grid-column: span 6; }
+    .metric { font-size: clamp(2rem, 4vw, 3.6rem); line-height:1; font-weight:900; color:#fff; margin-top:10px; }
+    .metric small { font-size:1rem; color:var(--muted); font-weight:600; }
+    .bar { height:10px; background:#151820; border-radius:999px; overflow:hidden; margin-top:14px; border:1px solid rgba(255,255,255,.07); }
+    .bar > span { display:block; height:100%; width:0%; background:linear-gradient(90deg, var(--gold2), var(--good)); border-radius:999px; }
+    .status { display:inline-flex; padding:5px 9px; border-radius:999px; font-size:.72rem; font-weight:900; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--line); color:var(--muted); }
+    .good { color:var(--good); border-color:rgba(115,225,164,.4); }
+    .warn { color:var(--warn); border-color:rgba(255,210,118,.45); }
+    .bad { color:var(--danger); border-color:rgba(255,118,118,.45); }
+    .table-wrap { overflow:auto; max-width:100%; }
+    table { width:100%; border-collapse: collapse; min-width: 720px; }
+    th, td { padding:12px 10px; border-bottom:1px solid rgba(230,200,121,.14); text-align:left; vertical-align:top; color:var(--muted); }
+    th { color:var(--gold); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+    td strong { color:#fff; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .list { display:grid; gap:10px; margin-top:12px; }
+    .item { border:1px solid rgba(230,200,121,.16); border-radius:16px; padding:13px; background:rgba(255,255,255,.025); }
+    .item strong { display:block; color:#fff; margin-bottom:3px; }
+    .slide-gallery { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:14px; margin-top:16px; }
+    .slide-card { border:1px solid rgba(230,200,121,.18); border-radius:18px; overflow:hidden; background:#050607; }
+    .slide-card img { display:block; width:100%; height:auto; }
+    .slide-card figcaption { padding:12px 14px; color:var(--muted); font-size:.86rem; line-height:1.45; }
+    .muted { color:var(--muted); }
+    .error { color:var(--danger); white-space:pre-wrap; }
+    .hide { display:none !important; }
+    .twin-shell { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:14px; align-items:start; }
+    .twin-form, .twin-output { border:1px solid rgba(230,200,121,.18); border-radius:18px; background:rgba(255,255,255,.03); box-shadow:0 18px 44px rgba(0,0,0,.22); }
+    .twin-form { display:grid; gap:12px; padding:16px; }
+    .twin-form label { display:block; color:var(--gold); font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:6px; }
+    .twin-form textarea { width:100%; min-height:150px; resize:vertical; padding:13px 14px; border-radius:14px; border:1px solid rgba(230,200,121,.26); background:#090a0d; color:#fff; font-size:16px; font:inherit; line-height:1.55; }
+    .twin-form textarea::placeholder { color: rgba(255,255,255,.42); }
+    .twin-actions { display:flex; flex-wrap:wrap; gap:8px; }
+    .twin-actions button { min-height:40px; padding:9px 12px; border-radius:999px; border:1px solid rgba(230,200,121,.28); background:rgba(230,200,121,.08); color:var(--gold); cursor:pointer; text-transform:uppercase; letter-spacing:.08em; font-weight:800; text-decoration:none; font:inherit; font-size:.76rem; }
+    .twin-actions button.is-active { background: var(--gold2); color:#090909; border-color:var(--gold2); }
+    .twin-submit { justify-self:start; min-height:44px; margin:0; padding:10px 14px; border-radius:999px; border:1px solid transparent; background:linear-gradient(135deg, var(--gold2), var(--gold)); color:#090909; cursor:pointer; text-transform:uppercase; letter-spacing:.08em; font-weight:900; text-decoration:none; font:inherit; }
+    .twin-output { padding:16px; color:#fff; }
+    .twin-output h3 { margin:0 0 10px; color:var(--gold); }
+    .twin-output pre { margin:0; white-space:pre-wrap; font:inherit; line-height:1.6; color:var(--muted); overflow:auto; }
+    .twin-meta { margin-top:12px; color:var(--muted); font-size:.86rem; line-height:1.5; }
+    footer { color:var(--muted); padding:28px 0 8px; font-size:.85rem; }
+    @media (max-width: 920px) { .kpi, .wide, .side, .half { grid-column: span 12; } .token { grid-template-columns:1fr; } .twin-shell { grid-template-columns:1fr; } table { min-width: 640px; } .slide-gallery { grid-template-columns:1fr; } }
+  </style>
+
+<meta name="valiant:primary-keyword" content="same-day garage door repair Pleasanton CA">
+<meta name="valiant:high-intent-focus" content="same-day garage door repair; high-intent garage door service; Valiant Garage Door project proof; East Bay garage door repair">
+<meta name="valiant:service-area-focus" content="Pleasanton and the East Bay">
+<script type="application/ld+json" data-valiant-page-intent="">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.valiantdoor.com/authority-dashboard#valiant-page-intent","url":"https://www.valiantdoor.com/authority-dashboard","name":"Valiant Authority Command Center","keywords":["same-day garage door repair Pleasanton CA","same-day garage door repair","high-intent garage door service","Valiant Garage Door project proof","East Bay garage door repair"],"about":[{"@type":"Service","name":"same-day garage door repair","areaServed":"Pleasanton and the East Bay"},{"@type":"LocalBusiness","name":"Valiant Garage Door","telephone":"9254094974"}],"image":["https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp","https://www.valiantdoor.com/assets/strategic-growth-review/valiant-strategic-growth-review-map.webp","https://www.valiantdoor.com/assets/strategic-growth-review/valiant-digital-foundation-upgrades.webp","https://www.valiantdoor.com/assets/strategic-growth-review/valiant-local-ranking-engine.webp","https://www.valiantdoor.com/assets/strategic-growth-review/valiant-competitor-positioning-matrix.webp","https://www.valiantdoor.com/assets/strategic-growth-review/valiant-local-visibility-spectrum.webp"],"dateModified":"2026-06-26"}</script></head>
+<body>
+  <main class="shell">
+    <div class="top">
+      <div class="brand">
+        <img src="/assets/Valiant%20Shield%20Final.webp" alt="Valiant shield" width="709" height="984">
+        <div><strong>Valiant Garage Door</strong><span>Private authority dashboard</span></div>
+      </div>
+      <span class="pill" id="load-state">Locked</span>
+    </div>
+
+    <section class="hero">
+      <span class="pill">Search Atlas + Cheerio crawler + backlink command center</span>
+      <h1>Valiant Authority Command Center</h1>
+      <p>Private live dashboard for Search Atlas visibility, site-audit crawl results, PR and backlink execution, and the authority-score target of 60.</p>
+      <div class="token">
+        <input id="token" type="password" placeholder="Enter password" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <button id="save" type="button">Save Token</button>
+        <button id="load" class="primary" type="button">Load Dashboard</button>
+      </div>
+      <p id="message" class="muted">Uses the same private password pattern as the listings control center.</p>
+    </section>
+
+    <section id="dashboard" class="hide">
+      <div class="grid">
+        <article class="card kpi"><h3>Authority Target</h3><div class="metric" id="authority-score">60<small>% target</small></div><div class="bar"><span id="authority-bar"></span></div><p id="authority-note"></p></article>
+        <article class="card kpi"><h3>AI Visibility Avg.</h3><div class="metric" id="visibility-score">—</div><div class="bar"><span id="visibility-bar"></span></div><p>Search Atlas query visibility across tracked garage door topics.</p></article>
+        <article class="card kpi"><h3>Topic Coverage</h3><div class="metric" id="topic-coverage">—</div><div class="bar"><span id="topic-bar"></span></div><p>Brand topic coverage across OpenAI, Gemini, Perplexity, Copilot, and Google AI Mode.</p></article>
+        <article class="card kpi"><h3>Site Issues</h3><div class="metric" id="issue-total">—</div><p><span id="optimization-total">—</span> image format optimization opportunities tracked separately.</p></article>
+
+        <article class="card wide">
+          <h2>Twin Codex</h2>
+          <div class="twin-shell">
+            <form id="twin-form" class="twin-form">
+              <div>
+                <label for="twin-question">Ask the twin</label>
+                <textarea id="twin-question" placeholder="Example: Build the next SEO page to push broken spring and emergency repair visibility in Pleasanton."></textarea>
+              </div>
+              <div class="twin-actions" aria-label="Quick routes">
+                <button type="button" data-topic="profile">Profile</button>
+                <button type="button" data-topic="emergency">Emergency</button>
+                <button type="button" data-topic="booking">Booking</button>
+                <button type="button" data-topic="alexa">Alexa</button>
+                <button type="button" data-topic="policies">Policies</button>
+              </div>
+              <button type="submit" class="twin-submit">Run Twin Codex</button>
+            </form>
+            <aside id="twin-output" class="twin-output" aria-live="polite">
+              <h3>Ready</h3>
+              <pre>Choose a quick route or type a question and run the twin.</pre>
+              <div class="twin-meta">Official source: /api/valiant-agent · Private command center helper only.</div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="card wide"><h2>Search Atlas priority gaps</h2><p>These are the visibility holes that should drive PR angles, internal links, backlinks, and content upgrades.</p><div class="table-wrap"><table id="gaps-table"><thead><tr><th>Topic</th><th>Query</th><th>Visibility</th><th>Citation SOV</th><th>Action</th></tr></thead><tbody></tbody></table></div></article>
+        <article class="card half"><h2>Search Atlas heat map</h2><p>Hot, warm, and cold coverage by platform and query.</p><div class="list" id="heatmap-platforms"></div></article>
+        <article class="card half"><h2>Local ranking snapshot</h2><p>Average local rank across tracked Search Atlas queries.</p><div class="list" id="local-rankings"></div></article>
+        <article class="card wide"><h2>Heat map by query</h2><div class="table-wrap"><table id="heatmap-table"><thead><tr><th>Topic</th><th>Query</th><th>Visibility</th><th>Rank</th><th>Heat</th></tr></thead><tbody></tbody></table></div></article>
+        <article class="card side"><h2>Competitors cited</h2><p>Domains appearing in Search Atlas query responses instead of or alongside Valiant.</p><div class="list" id="competitors"></div></article>
+
+        <article class="card half"><h2>PR / backlink campaigns</h2><div class="list" id="campaigns"></div></article>
+        <article class="card half"><h2>Priority link targets</h2><div class="list" id="link-targets"></div></article>
+
+        <article class="card"><h2>Cheerio site crawl: pages with the most issues</h2><div class="table-wrap"><table id="issues-table"><thead><tr><th>Page</th><th>Issues</th><th>Title</th><th>H1</th><th>Broken links</th><th>Image issues</th></tr></thead><tbody></tbody></table></div></article>
+
+        <article class="card"><h2>Immediate execution rules</h2><div class="list" id="guardrails"></div><div class="actions"><a class="button" href="/listings-admin/">Listings Center</a><a class="button" href="/search-atlas-growth/">Search Atlas Growth Hub</a><a class="button" href="/llms.txt">llms.txt</a><a class="button" href="/agents.json">agents.json</a></div></article>
+
+        <article class="card"><h2>Strategic growth review slide library</h2><p>Exported from the Valiant Strategic Growth Review deck. Public-safe slides are also placed on the matching service, proof, and partner pages; the full operational deck stays inside this private dashboard.</p><div class="slide-gallery">
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-strategic-growth-review-map.webp" alt="Valiant Garage Door strategic growth review map for Pleasanton Dublin San Ramon Livermore and Danville" width="1376" height="768" loading="lazy" decoding="async"><figcaption>Service-area growth map for Tri-Valley visibility planning.</figcaption></figure>
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-digital-foundation-upgrades.webp" alt="Digital foundation upgrades covering mobile UX technical SEO entity schema and Core Web Vitals" width="1376" height="768" loading="lazy" decoding="async"><figcaption>Mobile, technical SEO, schema, and performance upgrade summary.</figcaption></figure>
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-local-ranking-engine.webp" alt="Local ranking engine explaining distance relevance and prominence for garage door search visibility" width="1376" height="768" loading="lazy" decoding="async"><figcaption>Local search engine: distance, relevance, and prominence.</figcaption></figure>
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-competitor-positioning-matrix.webp" alt="Competitor positioning matrix comparing garage door company review and profile strength" width="1376" height="768" loading="lazy" decoding="async"><figcaption>Competitor positioning review for authority planning.</figcaption></figure>
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-local-visibility-spectrum.webp" alt="Local visibility spectrum showing dominance and tactical expansion zones for garage door searches" width="1376" height="768" loading="lazy" decoding="async"><figcaption>Visibility spectrum for current wins and expansion terms.</figcaption></figure>
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-four-week-local-seo-sprint.webp" alt="Four week local SEO sprint plan for relevance prominence authority and conversion tuning" width="1376" height="768" loading="lazy" decoding="async"><figcaption>Four-week sprint plan from relevance to conversion tuning.</figcaption></figure>
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-behavioral-review-engine.webp" alt="Behavioral review engine showing how completed garage door jobs become verified customer proof" width="1376" height="768" loading="lazy" decoding="async"><figcaption>Review acquisition loop used on the Reviews &amp; Proof page.</figcaption></figure>
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-duramaster-springs-technical-graphic.webp" alt="DuraMaster garage door spring graphic showing performance upgrade protection and warranty points" width="1376" height="768" loading="lazy" decoding="async"><figcaption>DuraMaster spring visual used on the spring replacement page.</figcaption></figure>
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-operational-revenue-dashboard.webp" alt="Operational dashboard showing dispatch volume service drivers geographic clusters and payment operations" width="1376" height="768" loading="lazy" decoding="async"><figcaption>Operations and dispatch visual used on the Partners page.</figcaption></figure>
+          <figure class="slide-card"><img src="/assets/strategic-growth-review/valiant-marketing-to-money-pipeline.webp" alt="Marketing to money pipeline from visibility to prominence conversion and revenue for garage door service" width="1376" height="768" loading="lazy" decoding="async"><figcaption>End-to-end visibility, conversion, and revenue pipeline.</figcaption></figure>
+        </div></article>
+      </div>
+    </section>
+
+    <footer>Private dashboard. Noindex. Do not share outside Valiant operations.</footer>
+  </main>
+
+  <script>
+    const API_BASE = 'https://www.valiantdoor.com';
+    const els = {
+      token: document.getElementById('token'), save: document.getElementById('save'), load: document.getElementById('load'), msg: document.getElementById('message'), state: document.getElementById('load-state'), dash: document.getElementById('dashboard'),
+      authorityScore: document.getElementById('authority-score'), authorityBar: document.getElementById('authority-bar'), authorityNote: document.getElementById('authority-note'), visibilityScore: document.getElementById('visibility-score'), visibilityBar: document.getElementById('visibility-bar'), topicCoverage: document.getElementById('topic-coverage'), topicBar: document.getElementById('topic-bar'), issueTotal: document.getElementById('issue-total'), optimizationTotal: document.getElementById('optimization-total')
+    };
+    els.token.value = localStorage.getItem('valiantAuthorityPassword') || '';
+    els.save.addEventListener('click', () => { localStorage.setItem('valiantAuthorityPassword', els.token.value.trim()); els.msg.textContent = 'Password saved in this browser.'; });
+    els.load.addEventListener('click', loadDashboard);
+    if (els.token.value) loadDashboard();
+
+    function pct(value) { return Math.max(0, Math.min(100, Number(value || 0))); }
+    function statusClass(text) { const t = String(text || '').toLowerCase(); if (t.includes('skip') || t.includes('blocked')) return 'bad'; if (t.includes('nofollow') || t.includes('sponsored') || t.includes('progress')) return 'warn'; return 'good'; }
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+    async function loadDashboard() {
+      const token = els.token.value.trim();
+      if (!token) { els.msg.textContent = 'Enter the password first.'; return; }
+      els.state.textContent = 'Loading';
+      els.msg.textContent = 'Loading Search Atlas data and running Cheerio crawl...';
+      try {
+        const res = await fetch(API_BASE + '/api/authority-dashboard', { headers: { Authorization: 'Bearer ' + token } });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'Dashboard failed to load.');
+        render(data);
+        els.dash.classList.remove('hide');
+        els.state.textContent = 'Live';
+        els.msg.textContent = 'Dashboard loaded. Data source: ' + data.searchAtlas.source + '.';
+      } catch (err) {
+        els.state.textContent = 'Error';
+        els.msg.innerHTML = '<span class="error">' + esc(err.message) + '</span>';
+      }
+    }
+
+    function render(data) {
+      const authorityCurrent = data.authority.currentScore == null ? 0 : data.authority.currentScore;
+      els.authorityScore.innerHTML = data.authority.currentScore == null ? '60<small>% target</small>' : esc(data.authority.currentScore) + '<small>/60 target</small>';
+      els.authorityBar.style.width = pct((authorityCurrent / (data.authority.targetScore || 60)) * 100) + '%';
+      els.authorityNote.textContent = data.authority.note;
+      els.visibilityScore.textContent = data.searchAtlas.summary.averageVisibility + '%';
+      els.visibilityBar.style.width = pct(data.searchAtlas.summary.averageVisibility) + '%';
+      els.topicCoverage.textContent = data.searchAtlas.summary.topicCoveragePercent + '%';
+      els.topicBar.style.width = pct(data.searchAtlas.summary.topicCoveragePercent) + '%';
+      els.issueTotal.textContent = data.siteAudit.issueTotal;
+      els.optimizationTotal.textContent = data.siteAudit.optimizationOpportunityTotal || 0;
+
+      document.querySelector('#gaps-table tbody').innerHTML = (data.searchAtlas.priorityGaps || []).map(row => `<tr><td><strong>${esc(row.topic)}</strong></td><td>${esc(row.query)}</td><td><span class="status bad">${esc(row.visibility)}%</span></td><td>${esc(row.citationShareOfVoice)}</td><td>Build citations, internal links, and PR around this answer.</td></tr>`).join('') || '<tr><td colspan="5">No zero-visibility gaps found.</td></tr>';
+      document.getElementById('competitors').innerHTML = (data.competitors || []).slice(0, 12).map(c => `<div class="item"><strong>${esc(c.domain)}</strong><span class="muted">${esc(c.mentions)} Search Atlas citation mention(s)</span></div>`).join('') || '<div class="item">No competitor citations cached.</div>';
+      document.getElementById('heatmap-platforms').innerHTML = (data.searchAtlas.heatMap.byPlatform || []).map(p => `<div class="item"><strong>${esc(p.platform)}</strong><span class="muted">Coverage ${esc(p.coverage)}% · Brand topics ${esc(p.brand_topics_count)}/${esc(p.total_topics_count)}</span><div class="bar"><span style="width:${Math.max(0, Math.min(100, p.coverage))}%"></span></div><p>Sentiment ${esc(p.sentiment_percentage)}%</p></div>`).join('') || '<div class="item">No platform heat map data.</div>';
+      document.getElementById('local-rankings').innerHTML = (data.searchAtlas.localRankings || []).map(r => `<div class="item"><strong>${esc(r.topic)}</strong><span class="muted">Average rank ${esc(r.average_rank)} · Best ${esc(r.best_rank)} · Worst ${esc(r.worst_rank)}</span><p>${esc(r.query_count)} tracked queries</p></div>`).join('') || '<div class="item">No local ranking data.</div>';
+      document.querySelector('#heatmap-table tbody').innerHTML = (data.searchAtlas.heatMap.byQuery || []).map(row => `<tr><td><strong>${esc(row.topic)}</strong></td><td>${esc(row.query)}</td><td>${esc(row.visibility_score)}%</td><td>${row.brand_rank == null ? '—' : esc(row.brand_rank)}</td><td><span class="status ${row.heat === 'hot' ? 'good' : row.heat === 'warm' ? 'warn' : 'bad'}">${esc(row.heat)}</span></td></tr>`).join('');
+      document.getElementById('campaigns').innerHTML = (data.backlinkPlan.campaigns || []).map(c => `<div class="item"><strong>${esc(c.name)}</strong><span class="status ${statusClass(c.recommendation)}">${esc(c.recommendation)}</span><p>${esc(c.nextAction)}</p><p class="muted">Type: ${esc(c.type)} · Risk: ${esc(c.risk)} · Status: ${esc(c.status)}</p></div>`).join('');
+      document.getElementById('link-targets').innerHTML = (data.backlinkPlan.linkTargets || []).map(t => `<div class="item"><strong><a href="${esc(t.url)}">${esc(t.url.replace('https://www.valiantdoor.com',''))}</a></strong><p>${esc(t.reason)}</p><p class="muted">Anchor guidance: ${esc(t.anchorGuidance)}</p></div>`).join('');
+      document.getElementById('guardrails').innerHTML = (data.backlinkPlan.guardrails || []).map(g => `<div class="item"><strong>Guardrail</strong><span class="muted">${esc(g)}</span></div>`).join('');
+      document.querySelector('#issues-table tbody').innerHTML = (data.siteAudit.topIssuePages || []).slice(0, 30).map(p => `<tr><td><a href="${esc(p.path)}">${esc(p.path)}</a></td><td><span class="status ${p.issueCount > 10 ? 'bad' : 'warn'}">${esc(p.issueCount)}</span></td><td>${esc(p.titleLength)} chars</td><td>${esc(p.h1Count)} · ${esc(p.h1).slice(0,80)}</td><td>${esc((p.brokenInternalLinks || []).length)}</td><td>alt ${esc(p.missingAlt)} / size ${esc(p.missingSize)}</td></tr>`).join('');
+    }
+
+    (function setupTwinCodex() {
+      const form = document.getElementById('twin-form');
+      const question = document.getElementById('twin-question');
+      const output = document.getElementById('twin-output');
+      const tokenInput = document.getElementById('token');
+      if (!form || !question || !output || !tokenInput) return;
+
+      const buttons = Array.from(form.querySelectorAll('[data-topic]'));
+      const topicRules = [
+        { topic: 'emergency', tests: [/emergency/i, /broken spring/i, /off track/i, /stuck/i, /unsafe/i, /won.?t close/i, /won.?t open/i] },
+        { topic: 'booking', tests: [/book/i, /appointment/i, /estimate/i, /call/i, /quote/i] },
+        { topic: 'alexa', tests: [/alexa/i, /amazon/i, /voice/i, /echo/i] },
+        { topic: 'policies', tests: [/privacy/i, /terms/i, /policy/i, /800\.com/i] },
+        { topic: 'profile', tests: [/profile/i, /about/i, /service area/i, /who/i, /business/i] }
+      ];
+      const routeCopy = {
+        profile: {
+          heading: 'Profile route',
+          nextStep: 'Use the business profile for entity clarity, service-area answers, and official facts.',
+          focus: 'keep the owner, brand, and service areas cleanly separated from competitors.'
+        },
+        emergency: {
+          heading: 'Emergency route',
+          nextStep: 'Push the emergency repair page and keep the safety-first guidance short and direct.',
+          focus: 'broken springs, off-track doors, hanging doors, and urgent calls.'
+        },
+        booking: {
+          heading: 'Booking route',
+          nextStep: 'Route the user to call first, then to the online appointment path if needed.',
+          focus: 'high-intent leads, fast contact, and quote capture.'
+        },
+        alexa: {
+          heading: 'Alexa route',
+          nextStep: 'Use the Amazon/Alexa support page for skill details, limits, and policy links.',
+          focus: 'informational support only, not door control.'
+        },
+        policies: {
+          heading: 'Policies route',
+          nextStep: 'Point the wizard at the privacy, terms, and communications pages when policy questions come up.',
+          focus: 'privacy, terms, and 800.com messaging/call references.'
+        }
+      };
+
+      function escValue(value) {
+        return String(value == null ? '' : value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+      }
+
+      function pickTopic(text, fallback = 'profile') {
+        const input = String(text || '');
+        const match = topicRules.find(rule => rule.tests.some(test => test.test(input)));
+        return match ? match.topic : fallback;
+      }
+
+      function setActiveButton(topic) {
+        buttons.forEach(button => button.classList.toggle('is-active', button.dataset.topic === topic));
+      }
+
+      async function run(topic, promptText) {
+        const token = tokenInput.value.trim();
+        if (!token) {
+          output.innerHTML = '<h3>Password required</h3><pre>Enter the password first.</pre><div class="twin-meta">Source: /api/valiant-agent</div>';
+          return;
+        }
+
+        setActiveButton(topic);
+        output.innerHTML = '<h3>Running</h3><pre>Loading model-backed Twin Codex...</pre><div class="twin-meta">Source: /api/valiant-agent</div>';
+        const res = await fetch(API_BASE + '/api/valiant-agent', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + token
+          },
+          body: JSON.stringify({ topic, prompt: promptText })
+        });
+        const payload = await res.json();
+        if (!res.ok || !payload.ok) {
+          throw new Error(payload.error || 'Twin Codex failed to load.');
+        }
+
+        const route = routeCopy[topic] || routeCopy.profile;
+        const answer = payload.answer || 'No answer returned.';
+        const modeLabel = payload.mode === 'model' ? `Model: ${payload.model || 'OpenAI Responses API'}` : 'Official data fallback';
+        const footer = `${modeLabel} · /api/valiant-agent · ${payload.mode === 'model' ? 'Official Valiant data + OpenAI' : 'Official Valiant data only'}`;
+        output.innerHTML = '<h3>' + escValue(route.heading) + '</h3><pre>' + escValue(answer) + '</pre><div class="twin-meta">' + escValue(footer) + '</div>';
+      }
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const topic = button.dataset.topic || 'profile';
+          question.value = question.value.trim();
+          run(topic, question.value).catch((error) => {
+            output.innerHTML = '<h3>Error</h3><pre>' + escValue(error.message) + '</pre><div class="twin-meta">Source: /api/valiant-agent</div>';
+          });
+        });
+      });
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const promptText = question.value.trim();
+        run(pickTopic(promptText), promptText).catch((error) => {
+          output.innerHTML = '<h3>Error</h3><pre>' + escValue(error.message) + '</pre><div class="twin-meta">Source: /api/valiant-agent</div>';
+        });
+      });
+
+      setActiveButton('profile');
+    })();
+    </script>
+
+
+
+</body></html>

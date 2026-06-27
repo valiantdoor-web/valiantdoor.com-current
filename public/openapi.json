@@ -1,0 +1,131 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Valiant Garage Door AI Agent API",
+    "version": "2026-06-23",
+    "description": "Official public, read-only API for AI agents and assistants to retrieve Valiant Garage Door business facts, emergency guidance, booking routes, Amazon/Alexa app details, policy URLs, and cached Search Atlas visibility data."
+  },
+  "servers": [
+    {
+      "url": "https://www.valiantdoor.com"
+    }
+  ],
+  "paths": {
+    "/api/valiant-agent": {
+      "get": {
+        "operationId": "getValiantAgentFacts",
+        "summary": "Get official Valiant Garage Door facts for AI agents",
+        "description": "Returns official business, service-area, emergency, booking, Alexa app, and policy facts. This endpoint is read-only and does not collect user information.",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "profile",
+                "emergency",
+                "booking",
+                "alexa",
+                "policies"
+              ],
+              "default": "profile"
+            },
+            "description": "Topic to retrieve."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Official Valiant Garage Door facts for the requested topic.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok": {
+                      "type": "boolean"
+                    },
+                    "source": {
+                      "type": "string"
+                    },
+                    "availableTopics": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "topic": {
+                      "type": "string"
+                    },
+                    "summary": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ok",
+                    "source",
+                    "availableTopics",
+                    "topic",
+                    "summary"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/searchatlas": {
+      "get": {
+        "operationId": "getSearchAtlasSnapshot",
+        "summary": "Get cached Search Atlas visibility, local ranking, and competitor data",
+        "description": "Returns cached Search Atlas overview, visibility rows, query responses, heat-map summaries, local rankings, and competitor counts for Valiant Garage Door. This endpoint is read-only.",
+        "responses": {
+          "200": {
+            "description": "Cached Search Atlas snapshot for AI agents.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok": {
+                      "type": "boolean"
+                    },
+                    "source": {
+                      "type": "string"
+                    },
+                    "summary": {
+                      "type": "object"
+                    },
+                    "heatMap": {
+                      "type": "object"
+                    },
+                    "competitorLeaderboard": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "localRankings": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "zeroVisibilityGaps": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

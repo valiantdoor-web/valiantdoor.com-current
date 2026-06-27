@@ -1,0 +1,88 @@
+{
+  "targetAuthorityScore": 60,
+  "monthlyLinkVelocityTarget": "4-8 legitimate local, niche, partner, or editorial referring domains per month",
+  "guardrails": [
+    "No PBNs, link farms, fake guest-post networks, or paid dofollow links sold only for SEO.",
+    "Paid placements must be marked sponsored/nofollow when required.",
+    "Prioritize local relevance, real readership, topical relevance, and proof pages over raw volume."
+  ],
+  "linkTargets": [
+    {
+      "url": "https://www.valiantdoor.com/garage-door-spring-replacement",
+      "anchorGuidance": "garage door spring replacement in Pleasanton; broken spring repair; Valiant Garage Door spring replacement",
+      "reason": "Search Atlas shows strong opportunity around spring timing, same-day spring replacement, and broken spring safety."
+    },
+    {
+      "url": "https://www.valiantdoor.com/emergency-garage-door-repair",
+      "anchorGuidance": "emergency garage door repair East Bay; same-day garage door repair; Valiant emergency garage door service",
+      "reason": "Search Atlas visibility is missing for emergency response-time and 24/7 East Bay booking queries."
+    },
+    {
+      "url": "https://www.valiantdoor.com/garage-door-opener-repair",
+      "anchorGuidance": "garage door opener repair East Bay; LiftMaster opener repair; opener diagnostic checklist",
+      "reason": "Search Atlas shows a comparison-query gap for East Bay opener repair services."
+    },
+    {
+      "url": "https://www.valiantdoor.com/about-valentino-ramirez",
+      "anchorGuidance": "Valentino Ramirez; founder and master technician Valentino Ramirez; Valiant Garage Door founder",
+      "reason": "Builds founder entity authority and clarifies brand/person association."
+    },
+    {
+      "url": "https://www.valiantdoor.com/community-garage-door-project",
+      "anchorGuidance": "Valiant Garage Door community project; free garage door assistance; garage door giveaway",
+      "reason": "Best PR hook for local news, community organizations, and partner mentions."
+    },
+    {
+      "url": "https://www.valiantdoor.com/reviews-and-proof",
+      "anchorGuidance": "Valiant Garage Door reviews; verified garage door company proof; local garage door project proof",
+      "reason": "Consolidates trust signals for citations, partners, and AI source validation."
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Annual Community Garage Door Project PR",
+      "type": "Local PR",
+      "targets": ["Pleasanton Weekly", "Patch Pleasanton", "East Bay Times", "Tri-Valley community newsletters", "local chambers and nonprofits"],
+      "status": "ready_to_pitch",
+      "risk": "low",
+      "recommendation": "proceed",
+      "nextAction": "Pitch the annual family-in-need project with before/after photos and a direct link to /community-garage-door-project."
+    },
+    {
+      "name": "Broken Spring Safety Expert Commentary",
+      "type": "Editorial / homeowner safety",
+      "targets": ["home improvement blogs with editorial review", "local real estate newsletters", "HOA safety bulletins"],
+      "status": "ready_to_pitch",
+      "risk": "low_to_medium",
+      "recommendation": "proceed if editorial; use nofollow/sponsored if paid",
+      "nextAction": "Offer Valentino Ramirez as the source for a 600-900 word safety article on what homeowners should do after a spring breaks."
+    },
+    {
+      "name": "Referral Partner Resource Links",
+      "type": "Partner backlinks",
+      "targets": ["Realtors", "property managers", "builders", "HOAs", "local home service partners"],
+      "status": "needs_outreach",
+      "risk": "low",
+      "recommendation": "proceed",
+      "nextAction": "Ask partners to link to /partners or /instant-estimate from vendor/resource pages."
+    },
+    {
+      "name": "Citation and Profile Authority Cleanup",
+      "type": "Listing authority",
+      "targets": ["Google Business Profile", "Bing Places", "Apple Business Connect", "Yelp", "Nextdoor", "BBB", "Angi/HomeAdvisor", "Thumbtack", "IDA/profile pages"],
+      "status": "in_progress",
+      "risk": "low",
+      "recommendation": "proceed",
+      "nextAction": "Keep NAP identical and route all verified profile links back to the strongest service or proof pages where allowed."
+    },
+    {
+      "name": "Generic Paid Guest Post Marketplaces",
+      "type": "Paid backlinks",
+      "targets": ["generic write-for-us sites", "bulk link sellers", "unrelated business blogs"],
+      "status": "blocked_by_quality_guardrail",
+      "risk": "high",
+      "recommendation": "skip unless nofollow/sponsored and real audience value exists",
+      "nextAction": "Do not buy dofollow authority links purely for ranking."
+    }
+  ]
+}

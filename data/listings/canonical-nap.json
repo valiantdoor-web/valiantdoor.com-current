@@ -1,0 +1,96 @@
+{
+  "version": "2026-06-22",
+  "business": {
+    "name": "Valiant Garage Door",
+    "legalName": "Valiant Garage Door LLC",
+    "description": "Valiant Garage Door is a Pleasanton-based garage door service company providing repair, spring replacement, opener service, emergency help, maintenance, and safety inspections across the Tri-Valley and nearby East Bay communities.",
+    "website": "https://www.valiantdoor.com/",
+    "phone": "+19254094974",
+    "displayPhone": "(925) 409-4974",
+    "email": "vm@valiantdoor.com",
+    "address": {
+      "street": "3588 Pimlico Dr",
+      "city": "Pleasanton",
+      "region": "CA",
+      "postalCode": "94588",
+      "country": "US"
+    },
+    "geo": {
+      "latitude": 37.676357,
+      "longitude": -121.894745
+    },
+    "placeIds": {
+      "google": "ChIJreu0MBcWcgMRQnyWHvhS94w"
+    },
+    "serviceAreas": [
+      "Pleasanton, CA",
+      "Dublin, CA",
+      "Livermore, CA",
+      "Fremont, CA",
+      "San Ramon, CA",
+      "Danville, CA",
+      "Sunol, CA"
+    ],
+    "services": [
+      "Garage door repair",
+      "Garage door spring replacement",
+      "Garage door opener repair",
+      "Garage door opener replacement",
+      "Emergency garage door service",
+      "Garage door maintenance",
+      "Garage door safety inspection"
+    ],
+    "sameAs": [
+      "https://www.yelp.com/biz/valiant-garage-door-pleasanton",
+      "https://www.facebook.com/ValiantGD",
+      "https://www.instagram.com/valiantgaragedoor",
+      "https://www.linkedin.com/company/valiant-garage-door",
+      "https://pin.it/96SM4clqP",
+      "https://www.tiktok.com/@valiantdoor",
+      "https://www.youtube.com/@Valiantdoor",
+      "https://x.com/vmsoslick",
+      "https://www.angi.com/companylist/us/ca/pleasanton/valiant-garage-door-llc-reviews-1.htm",
+      "https://www.valiantdoor.com/"
+    ],
+    "bookingUrl": "https://www.valiantdoor.com/quote",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w",
+    "socialProfiles": {
+      "x": {
+        "handle": "@vmsoslick",
+        "url": "https://x.com/vmsoslick"
+      },
+      "facebook": {
+        "url": "https://www.facebook.com/ValiantGD"
+      },
+      "instagram": {
+        "handle": "valiantgaragedoor",
+        "url": "https://www.instagram.com/valiantgaragedoor"
+      },
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/valiant-garage-door"
+      },
+      "pinterest": {
+        "url": "https://pin.it/96SM4clqP"
+      },
+      "tiktok": {
+        "url": "https://www.tiktok.com/@valiantdoor"
+      },
+      "youtube": {
+        "url": "https://www.youtube.com/@Valiantdoor"
+      }
+    }
+  },
+  "approvedFields": [
+    "name",
+    "legalName",
+    "website",
+    "phone",
+    "email",
+    "address",
+    "geo",
+    "serviceAreas",
+    "services",
+    "bookingUrl",
+    "socialProfiles"
+  ]
+}

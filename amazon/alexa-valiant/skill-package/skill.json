@@ -1,0 +1,63 @@
+{
+  "manifest": {
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Valiant Garage Door",
+          "summary": "Garage door repair help, emergency safety guidance, service areas, booking, and contact information for Valiant Garage Door.",
+          "description": "Valiant Garage Door is a Pleasanton-based garage door repair company serving Pleasanton, Dublin, Livermore, Fremont, San Ramon, Danville, Sunol, and nearby East Bay communities. This Alexa skill provides quick voice access to emergency garage door safety guidance, broken spring advice, service areas, booking direction, website information, and the Valiant Garage Door phone number. The skill does not open, close, or control garage doors and does not collect personal information.",
+          "examplePhrases": [
+            "Alexa, open Valiant Garage Door",
+            "Alexa, ask Valiant Garage Door for emergency help",
+            "Alexa, ask Valiant Garage Door for the phone number"
+          ],
+          "keywords": [
+            "garage door repair",
+            "Pleasanton",
+            "broken spring",
+            "emergency repair",
+            "Valiant Garage Door"
+          ],
+          "smallIconUri": "https://www.valiantdoor.com/assets/alexa/valiant-alexa-icon-108.png",
+          "largeIconUri": "https://www.valiantdoor.com/assets/alexa/valiant-alexa-icon-512.png"
+        }
+      },
+      "isAvailableWorldwide": false,
+      "distributionCountries": [
+        "US"
+      ],
+      "testingInstructions": "1) Say: Alexa, open Valiant Garage Door. 2) Say: emergency garage door help. 3) Say: broken spring help. 4) Say: what is your phone number. 5) Confirm the skill gives safety guidance and contact/booking info only; it does not collect personal data or control garage doors.",
+      "category": "BUSINESS_AND_FINANCE"
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sslCertificateType": "Trusted",
+          "uri": "https://www.valiantdoor.com/api/alexa-valiant"
+        },
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "sslCertificateType": "Trusted",
+              "uri": "https://www.valiantdoor.com/api/alexa-valiant"
+            }
+          }
+        }
+      }
+    },
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://www.valiantdoor.com/privacy",
+          "termsOfUseUrl": "https://www.valiantdoor.com/terms"
+        }
+      }
+    }
+  }
+}

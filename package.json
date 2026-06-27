@@ -1,0 +1,31 @@
+{
+  "name": "valiantdoor-live-edit-deploy",
+  "version": "1.0.0",
+  "description": "Valiant Garage Door live site and private authority dashboard.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node -e \"require('./api/authority-dashboard.js'); console.log('authority dashboard api ok')\" && npm run validate:indexing",
+    "validate:indexing": "python3 scripts/validate_indexing_contract.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valiantdoor-web/valiantdoor.com-current.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/valiantdoor-web/valiantdoor.com-current/issues"
+  },
+  "homepage": "https://github.com/valiantdoor-web/valiantdoor.com-current#readme",
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "openai": "^6.44.0"
+  },
+  "private": true
+}

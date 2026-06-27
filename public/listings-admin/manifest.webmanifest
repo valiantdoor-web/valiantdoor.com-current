@@ -1,0 +1,61 @@
+{
+  "name": "Valiant Listings Control Center",
+  "short_name": "Valiant Listings",
+  "description": "Private mobile listings, NAP, citations, AI discovery, and provider readiness app for Valiant Garage Door.",
+  "id": "/listings-admin",
+  "start_url": "/listings-admin",
+  "scope": "/listings-admin",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait",
+  "background_color": "#070708",
+  "theme_color": "#0a0a0c",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "/assets/listings-app/valiant-listings-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/listings-app/valiant-listings-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Load Status",
+      "short_name": "Status",
+      "description": "Open the private listings status dashboard.",
+      "url": "/listings-admin?action=status",
+      "icons": [
+        {
+          "src": "/assets/listings-app/valiant-listings-icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Credential Check",
+      "short_name": "Credentials",
+      "description": "Open listing credential readiness.",
+      "url": "/listings-admin?action=credentials",
+      "icons": [
+        {
+          "src": "/assets/listings-app/valiant-listings-icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

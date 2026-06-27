@@ -1,0 +1,134 @@
+{
+  "version": "2026-06-22",
+  "providers": [
+    {
+      "id": "apple-business-connect",
+      "name": "Apple Business Connect",
+      "type": "maps_voice_entity",
+      "status": "api-ready-needs-service-account-values",
+      "managedBy": "api",
+      "profileUrl": "https://businessconnect.apple.com/",
+      "fieldsTracked": [
+        "name",
+        "website",
+        "phone",
+        "email",
+        "address",
+        "geo",
+        "serviceAreas",
+        "services",
+        "bookingUrl"
+      ],
+      "notes": "Apple requires approved Brand API access and a Service Account before production publishing."
+    },
+    {
+      "id": "google-business-profile",
+      "name": "Google Business Profile",
+      "type": "maps_voice_entity",
+      "status": "manual-tracked",
+      "managedBy": "manual",
+      "profileUrl": "https://business.google.com/",
+      "fieldsTracked": [
+        "name",
+        "website",
+        "phone",
+        "address",
+        "serviceAreas",
+        "services",
+        "bookingUrl"
+      ]
+    },
+    {
+      "id": "bing-places",
+      "name": "Bing Places",
+      "type": "maps_voice_entity",
+      "status": "api-ready-needs-bing-places-auth",
+      "managedBy": "api",
+      "profileUrl": "https://www.bingplaces.com/",
+      "fieldsTracked": [
+        "name",
+        "website",
+        "phone",
+        "address",
+        "serviceAreas",
+        "services",
+        "bookingUrl"
+      ],
+      "notes": "Bing Places business ID 796146 is tracked. Live publishing still requires Bing Places API auth or an approved Yext fallback.",
+      "entityIds": {
+        "business": "796146"
+      }
+    },
+    {
+      "id": "yelp",
+      "name": "Yelp",
+      "type": "citation_reviews",
+      "status": "manual-tracked",
+      "managedBy": "manual",
+      "profileUrl": "https://www.yelp.com/biz/valiant-garage-door-pleasanton",
+      "fieldsTracked": [
+        "name",
+        "website",
+        "phone",
+        "address"
+      ]
+    },
+    {
+      "id": "angi",
+      "name": "Angi",
+      "type": "citation_reviews",
+      "status": "manual-tracked",
+      "managedBy": "manual",
+      "profileUrl": "https://www.angi.com/companylist/us/ca/pleasanton/valiant-garage-door-llc-reviews-1.htm",
+      "fieldsTracked": [
+        "name",
+        "website",
+        "phone",
+        "address",
+        "serviceAreas",
+        "services",
+        "bookingUrl"
+      ],
+      "notes": "Angi/HomeAdvisor profile is tracked as a Valiant review and citation source. Profile updates remain manual unless Angi partner or API access is connected."
+    },
+    {
+      "id": "yext",
+      "name": "Yext",
+      "type": "listings_publisher",
+      "status": "manual-tracked",
+      "managedBy": "manual",
+      "profileUrl": "https://www.yext.com/s/4677669/entity/edit3?entityIds=2056457832",
+      "entityIds": {
+        "organization": "1475786971410026793",
+        "brand": "2444398385712081416"
+      },
+      "entityRecordIds": {
+        "organization": "2056457832",
+        "brand": "2066141910"
+      },
+      "lastUpdated": "2026-06-17",
+      "fieldsTracked": [
+        "name",
+        "legalName",
+        "website",
+        "phone",
+        "email",
+        "address",
+        "serviceAreas",
+        "services",
+        "bookingUrl",
+        "socialProfiles"
+      ],
+      "socialProfilesTracked": [
+        "x",
+        "facebook",
+        "instagram",
+        "linkedin",
+        "pinterest",
+        "tiktok",
+        "youtube"
+      ],
+      "notes": "Yext Organization and Brand entities are tracked for NAP, service, booking, and social profile consistency."
+    }
+  ]
+}
