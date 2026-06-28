@@ -1055,8 +1055,11 @@ const injectBotpressFabSize = () => {
   return foundTarget;
 };
 
+const canObserveNode = (node) => typeof Node === "function" && node instanceof Node;
+
 const watchBotpressFabSize = () => {
   if (injectBotpressFabSize()) return;
+  if (!canObserveNode(document.documentElement)) return;
 
   const stopWatching = () => {
     observer.disconnect();
@@ -1325,7 +1328,7 @@ const setupBotpressFallbackAssistant = () => {
 
   const attachObserver = () => {
     const shadow = getBotpressShadowRoot();
-    if (!shadow) return false;
+    if (!canObserveNode(shadow)) return false;
 
     ensureFallbackStyles(shadow);
     const observer = new MutationObserver(scheduleFallbackIfNeeded);
@@ -1337,6 +1340,7 @@ const setupBotpressFallbackAssistant = () => {
 
   if (attachObserver()) return;
 
+  if (!canObserveNode(document.documentElement)) return;
   const observer = new MutationObserver(() => {
     if (!attachObserver()) return;
     observer.disconnect();

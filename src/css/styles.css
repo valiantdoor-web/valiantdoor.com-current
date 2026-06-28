@@ -5168,3 +5168,130 @@ body .custom-video-section img {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Sitewide mobile layout and speed safeguards: keep first screens compact, avoid nav overflow, and make embeds responsive. */
+@media (max-width: 760px) {
+  .has-sticky-call {
+    padding-top: 56px;
+  }
+
+  .home-sticky-call {
+    padding: 6px 10px;
+  }
+
+  .home-sticky-call-button {
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+  }
+
+  .site-header {
+    padding: 4px 0;
+    background: rgba(9, 9, 10, 0.94);
+  }
+
+  .logo-shield {
+    height: 54px;
+  }
+
+  .logo-wordmark {
+    height: 34px;
+    max-width: min(44vw, 180px);
+  }
+
+  .site-nav {
+    gap: 6px;
+    padding-top: 4px;
+  }
+
+  .site-nav .nav-social {
+    gap: 5px;
+    justify-content: flex-end;
+    overflow: visible;
+  }
+
+  .site-nav .nav-social-link {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+  }
+
+  .site-nav .nav-social-link img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .site-nav .nav-social-facebook,
+  .site-nav .nav-social-instagram,
+  .site-nav .nav-social-youtube {
+    display: none !important;
+  }
+
+  .site-nav .nav-social-chi {
+    min-width: 42px;
+    height: 28px;
+    padding: 0 7px;
+    font-size: 9px;
+  }
+
+  .nav-dropdown summary {
+    min-width: 88px;
+    padding: 6px 10px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .services-shell,
+  .page-geo .geo-shell {
+    width: calc(100vw - 12px);
+    margin-top: 10px;
+    padding: 12px 8px 20px;
+    border-radius: 14px;
+  }
+
+  .page-geo .geo-hero,
+  .page-geo .geo-section {
+    padding: 12px 10px;
+  }
+
+  .page-geo .geo-hero h1 {
+    font-size: clamp(1.9rem, 9.5vw, 2.8rem);
+    line-height: 1.05;
+  }
+
+  .page-geo .geo-hero p,
+  .page-geo .geo-section p,
+  .page-geo .geo-section li {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .mastertech-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .mastertech-actions .btn {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+  }
+
+  iframe,
+  video {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav .nav-social-nextdoor,
+  .site-nav .nav-social-thumbtack {
+    display: none !important;
+  }
+
+  .site-nav .nav-social {
+    gap: 4px;
+  }
+}
