@@ -324,7 +324,7 @@ const setupBotpressShell = () => {
   image.style.filter = 'drop-shadow(0 10px 22px rgba(0, 0, 0, 0.36))';
 
   const label = document.createElement('span');
-  label.textContent = 'Chat';
+  label.textContent = 'Valiant AI Assistant';
   label.style.color = '#ffcc66';
   label.style.fontSize = '0.68rem';
   label.style.fontWeight = '700';
