@@ -312,7 +312,7 @@ const setupBotpressShell = () => {
   shell.style.cursor = 'pointer';
 
   const image = document.createElement('img');
-  image.src = '/assets/home-optimized/shield-192.webp';
+  image.src = '/assets/valiant-bot-widget-static-shield-20260629.png';
   image.alt = '';
   image.width = 72;
   image.height = 72;
@@ -905,7 +905,7 @@ const loadReviews = async () => {
   }
 };
 
-const BOTPRESS_FAB_IMAGE_SRC = "/assets/valiant-botpress-shield.png";
+const BOTPRESS_FAB_IMAGE_SRC = "/assets/valiant-bot-widget-static-shield-20260629.png";
 const BOTPRESS_FAB_PATH = window.location.pathname.replace(/\/+$/, "") || "/";
 const BOTPRESS_FAB_SCALE = BOTPRESS_FAB_PATH === "/services" ? 2 : 1;
 const BOTPRESS_FAB_WRAPPER_SIZE = 192 * BOTPRESS_FAB_SCALE;
