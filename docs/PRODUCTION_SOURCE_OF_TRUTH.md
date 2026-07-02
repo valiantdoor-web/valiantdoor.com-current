@@ -25,5 +25,6 @@ Before any production push or deploy:
 
 ## Bot image source
 - Static website bot image path: /public/assets/valiant-bot-widget-static-shield-20260629.png
+- Static website bot image URL: /assets/valiant-bot-widget-static-shield-20260629.png?v=bot-lock-20260702
 - Current requested source image: /Users/vm/Pictures/image-download-2.png
 - The bot label under the image should read: Valiant AI Assistant
