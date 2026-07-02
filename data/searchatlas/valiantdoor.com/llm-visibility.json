@@ -13,8 +13,8 @@
     "query": "Who offers the most thorough garage door safety inspections in Dublin, CA?",
     "query_id": "952a880e-d6d3-4195-a297-0e1b56110577",
     "visibility_score": 20.0,
-    "brand_rank": 6,
-    "citation_share_of_voice": 17.24,
+    "brand_rank": 5,
+    "citation_share_of_voice": 0.0,
     "potential_search_volume": 0
   },
   {
@@ -30,9 +30,9 @@
     "topic": "Maintenance & Safety",
     "query": "How often should I have my garage door serviced in Pleasanton?",
     "query_id": "edf7f5e6-ceb7-4a14-b521-ca7e19f12175",
-    "visibility_score": 60.0,
+    "visibility_score": 20.0,
     "brand_rank": 2,
-    "citation_share_of_voice": 19.175,
+    "citation_share_of_voice": 26.840000000000003,
     "potential_search_volume": 0
   },
   {
@@ -50,7 +50,7 @@
     "query_id": "287ab593-b437-424a-b2a7-81aa27849fd6",
     "visibility_score": 0.0,
     "brand_rank": null,
-    "citation_share_of_voice": 0.0,
+    "citation_share_of_voice": 5.5,
     "potential_search_volume": 0
   },
   {
@@ -59,7 +59,7 @@
     "query_id": "d6b15cb7-ac46-460c-b20e-9f5fe9586b95",
     "visibility_score": 100.0,
     "brand_rank": 1,
-    "citation_share_of_voice": 31.048000000000002,
+    "citation_share_of_voice": 28.182499999999997,
     "potential_search_volume": 0
   },
   {
@@ -68,7 +68,7 @@
     "query_id": "ee867372-20e4-4fd6-b752-d32a75fcabc7",
     "visibility_score": 0.0,
     "brand_rank": null,
-    "citation_share_of_voice": 0.0,
+    "citation_share_of_voice": 16.5,
     "potential_search_volume": 0
   },
   {
@@ -77,7 +77,7 @@
     "query_id": "86bbf363-7c0c-4c7e-865c-a682d4a15a30",
     "visibility_score": 100.0,
     "brand_rank": 1,
-    "citation_share_of_voice": 52.01666666666666,
+    "citation_share_of_voice": 21.57,
     "potential_search_volume": 0
   },
   {
@@ -93,9 +93,9 @@
     "topic": "Garage Door Opener Technology",
     "query": "Who can perform diagnostics on a LiftMaster opener in Pleasanton?",
     "query_id": "d9383e28-150a-4529-8a70-affba643e015",
-    "visibility_score": 20.0,
-    "brand_rank": 2,
-    "citation_share_of_voice": 63.06,
+    "visibility_score": 40.0,
+    "brand_rank": 5,
+    "citation_share_of_voice": 20.9,
     "potential_search_volume": 0
   },
   {
@@ -121,8 +121,8 @@
     "query": "Best local garage door companies near Pleasanton, CA for hardware replacement.",
     "query_id": "29c1c672-aaab-4d30-b244-f38c6046e5f8",
     "visibility_score": 40.0,
-    "brand_rank": 2,
-    "citation_share_of_voice": 15.7,
+    "brand_rank": 3,
+    "citation_share_of_voice": 18.75,
     "potential_search_volume": 0
   },
   {
@@ -131,7 +131,7 @@
     "query_id": "18f28694-a267-4f7c-9cf1-e24dd2e599a3",
     "visibility_score": 0.0,
     "brand_rank": null,
-    "citation_share_of_voice": 0.0,
+    "citation_share_of_voice": 5.1,
     "potential_search_volume": 0
   },
   {
@@ -140,7 +140,7 @@
     "query_id": "e4f3e03c-5299-4b52-8d3f-fb02882b8fdb",
     "visibility_score": 100.0,
     "brand_rank": 1,
-    "citation_share_of_voice": 23.7975,
+    "citation_share_of_voice": 24.555,
     "potential_search_volume": 0
   },
   {
@@ -158,7 +158,7 @@
     "query_id": "437cbca0-8b49-49d2-bf02-11bdcfc49c1e",
     "visibility_score": 100.0,
     "brand_rank": 1,
-    "citation_share_of_voice": 18.79,
+    "citation_share_of_voice": 14.56,
     "potential_search_volume": 0
   },
   {
@@ -174,18 +174,18 @@
     "topic": "Custom Garage Door Fabrication",
     "query": "Where can I get a custom-fabricated garage door in Pleasanton?",
     "query_id": "f20c0fc7-7577-44c2-a786-5e0fba04024e",
-    "visibility_score": 40.0,
+    "visibility_score": 20.0,
     "brand_rank": 2,
-    "citation_share_of_voice": 27.2,
+    "citation_share_of_voice": 10.08,
     "potential_search_volume": 0
   },
   {
     "topic": "Garage Door Spring Replacement",
     "query": "Who offers the most durable garage door springs in the Tri-Valley area?",
     "query_id": "9211de13-26ad-44bf-bd17-5b73fd5327bd",
-    "visibility_score": 0.0,
-    "brand_rank": null,
-    "citation_share_of_voice": 0.0,
+    "visibility_score": 40.0,
+    "brand_rank": 1,
+    "citation_share_of_voice": 24.625,
     "potential_search_volume": 0
   },
   {
@@ -194,7 +194,7 @@
     "query_id": "a3bdcb31-74f4-484b-b1c6-218ef1747192",
     "visibility_score": 100.0,
     "brand_rank": 1,
-    "citation_share_of_voice": 41.56,
+    "citation_share_of_voice": 31.770000000000003,
     "potential_search_volume": 0
   },
   {
@@ -210,9 +210,9 @@
     "topic": "Garage Door Spring Replacement",
     "query": "What is the best company for garage door spring replacement in Livermore?",
     "query_id": "37790998-146b-4319-ac3d-103f7f1362c6",
-    "visibility_score": 20.0,
-    "brand_rank": 3,
-    "citation_share_of_voice": 10.25,
+    "visibility_score": 0.0,
+    "brand_rank": null,
+    "citation_share_of_voice": 0.0,
     "potential_search_volume": 0
   },
   {
@@ -220,17 +220,17 @@
     "query": "What should I do if my garage door cable snaps and who should I call in Pleasanton?",
     "query_id": "fdc8ef9a-fea5-4daf-b7bc-1437ee19b426",
     "visibility_score": 60.0,
-    "brand_rank": 6,
-    "citation_share_of_voice": 8.96,
+    "brand_rank": 8,
+    "citation_share_of_voice": 13.236666666666666,
     "potential_search_volume": 0
   },
   {
     "topic": "Emergency Garage Door Repair",
     "query": "Which garage door companies in the East Bay offer 24/7 emergency support?",
     "query_id": "520cda68-a138-4f63-b918-ebde4732b479",
-    "visibility_score": 40.0,
-    "brand_rank": 3,
-    "citation_share_of_voice": 0.0,
+    "visibility_score": 0.0,
+    "brand_rank": null,
+    "citation_share_of_voice": 4.015,
     "potential_search_volume": 0
   },
   {
@@ -239,25 +239,25 @@
     "query_id": "a7802475-6063-4584-82cf-5393b555f18b",
     "visibility_score": 0.0,
     "brand_rank": null,
-    "citation_share_of_voice": 10.46,
+    "citation_share_of_voice": 0.0,
     "potential_search_volume": 0
   },
   {
     "topic": "Emergency Garage Door Repair",
     "query": "Who provides the fastest emergency garage door repair in Pleasanton, CA?",
     "query_id": "798ce73e-d7fb-466c-8fcd-04cd0e035cf1",
-    "visibility_score": 60.0,
+    "visibility_score": 20.0,
     "brand_rank": 2,
-    "citation_share_of_voice": 16.25,
+    "citation_share_of_voice": 16.415,
     "potential_search_volume": 0
   },
   {
     "topic": "Pleasanton garage door repair",
     "query": "Pleasanton same-day garage door service nearby",
     "query_id": "43394a82-8f50-426d-b13b-300593629617",
-    "visibility_score": 80.0,
-    "brand_rank": 3,
-    "citation_share_of_voice": 17.455,
+    "visibility_score": 60.0,
+    "brand_rank": 1,
+    "citation_share_of_voice": 21.406666666666666,
     "potential_search_volume": 0
   },
   {
@@ -265,16 +265,16 @@
     "query": "Pleasanton emergency garage door repair near me",
     "query_id": "e516f78a-0a67-44a7-860e-4d57a0740bc7",
     "visibility_score": 80.0,
-    "brand_rank": 1,
-    "citation_share_of_voice": 21.766666666666666,
+    "brand_rank": 2,
+    "citation_share_of_voice": 17.79,
     "potential_search_volume": 0
   },
   {
     "topic": "Emergency garage door service",
     "query": "emergency garage door repair response time near me",
     "query_id": "1550fbdb-7c23-41db-b203-045cdc2723d3",
-    "visibility_score": 20.0,
-    "brand_rank": 1,
+    "visibility_score": 0.0,
+    "brand_rank": null,
     "citation_share_of_voice": 0.0,
     "potential_search_volume": 0
   },
@@ -282,9 +282,9 @@
     "topic": "Emergency garage door service",
     "query": "book 24/7 emergency garage door repair East Bay",
     "query_id": "b463284f-a9de-4a58-b8ac-8b8ef30836c9",
-    "visibility_score": 40.0,
-    "brand_rank": 3,
-    "citation_share_of_voice": 6.99,
+    "visibility_score": 0.0,
+    "brand_rank": null,
+    "citation_share_of_voice": 10.0,
     "potential_search_volume": 0
   },
   {
@@ -293,16 +293,16 @@
     "query_id": "151e0974-3851-4d41-8156-a045117a1af3",
     "visibility_score": 0.0,
     "brand_rank": null,
-    "citation_share_of_voice": 4.95,
+    "citation_share_of_voice": 6.19,
     "potential_search_volume": 0
   },
   {
     "topic": "Garage door opener repair",
     "query": "best same-day garage door opener repair near Pleasanton",
     "query_id": "81d15e64-3195-4940-8b43-bac0ddda71f3",
-    "visibility_score": 60.0,
+    "visibility_score": 40.0,
     "brand_rank": 3,
-    "citation_share_of_voice": 15.9775,
+    "citation_share_of_voice": 13.985,
     "potential_search_volume": 0
   },
   {
@@ -318,27 +318,27 @@
     "topic": "Garage door spring replacement",
     "query": "same-day garage door spring replacement near Pleasanton",
     "query_id": "b2e9a581-4a58-498d-9d03-095df40c7ac8",
-    "visibility_score": 80.0,
-    "brand_rank": 1,
-    "citation_share_of_voice": 37.81333333333333,
+    "visibility_score": 60.0,
+    "brand_rank": 5,
+    "citation_share_of_voice": 23.429999999999996,
     "potential_search_volume": 0
   },
   {
     "topic": "Same-day garage door repair",
     "query": "schedule same-day garage door repair near Pleasanton",
     "query_id": "99ef0812-31da-4eb6-b8b5-46fee84666fd",
-    "visibility_score": 100.0,
-    "brand_rank": 3,
-    "citation_share_of_voice": 19.025,
+    "visibility_score": 20.0,
+    "brand_rank": 4,
+    "citation_share_of_voice": 16.475,
     "potential_search_volume": 0
   },
   {
     "topic": "Same-day garage door repair",
     "query": "same-day garage door repair Pleasanton CA",
     "query_id": "e0615c02-efc9-45b9-bd1c-0d237d16c02d",
-    "visibility_score": 60.0,
+    "visibility_score": 40.0,
     "brand_rank": 3,
-    "citation_share_of_voice": 17.2425,
+    "citation_share_of_voice": 21.12,
     "potential_search_volume": 0
   }
 ]

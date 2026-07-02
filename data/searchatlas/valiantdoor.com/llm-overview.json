@@ -5,31 +5,31 @@
       "platform": "openai",
       "brand_topics_count": 10,
       "total_topics_count": 13,
-      "sentiment_percentage": 68
+      "sentiment_percentage": 77
     },
     {
       "platform": "gemini",
-      "brand_topics_count": 11,
+      "brand_topics_count": 7,
       "total_topics_count": 13,
-      "sentiment_percentage": 82
+      "sentiment_percentage": 84
     },
     {
       "platform": "perplexity",
-      "brand_topics_count": 11,
+      "brand_topics_count": 7,
       "total_topics_count": 13,
       "sentiment_percentage": 70
     },
     {
       "platform": "copilot",
-      "brand_topics_count": 10,
+      "brand_topics_count": 9,
       "total_topics_count": 13,
-      "sentiment_percentage": 75
+      "sentiment_percentage": 68
     },
     {
       "platform": "google_ai_mode",
-      "brand_topics_count": 9,
+      "brand_topics_count": 8,
       "total_topics_count": 13,
-      "sentiment_percentage": 81
+      "sentiment_percentage": 88
     }
   ],
   "project_public_hash": "a9cfeec4-1f27-4373-8569-975a204fe5ec"

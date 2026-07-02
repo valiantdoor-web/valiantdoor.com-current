@@ -43,6 +43,8 @@ function normalizeInternalPath(href) {
 
 function internalPathExists(urlPath) {
   const decoded = decodeURIComponent(urlPath || '/');
+  const apiBackedPaths = new Set(['/agents.json', '/api/agents', '/api/searchatlas']);
+  if (apiBackedPaths.has(decoded)) return true;
   const candidates = decoded === '/'
     ? [path.join(PUBLIC_DIR, 'index.html')]
     : [path.join(PUBLIC_DIR, decoded, 'index.html'), path.join(PUBLIC_DIR, decoded + '.html'), path.join(PUBLIC_DIR, decoded)];
