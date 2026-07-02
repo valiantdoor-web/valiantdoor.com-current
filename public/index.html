@@ -173,8 +173,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .hero-reviews-embed {
         overflow: hidden;
-        border-radius: 12px;
-        background: rgba(0, 0, 0, 0.24);
+        border: 2px solid rgba(255, 204, 102, 0.86);
+        border-radius: 18px;
+        background: rgba(0, 0, 0, 0.34);
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 30px rgba(255, 204, 102, 0.22), 0 20px 48px rgba(0, 0, 0, 0.5);
       }
 
       .hero-reviews-shell {
@@ -182,9 +184,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         gap: 12px;
         place-items: center;
         min-height: 260px;
-        padding: 28px 20px;
+        padding: 30px 22px;
         text-align: center;
-        background: linear-gradient(180deg, rgba(17, 38, 62, 0.94), rgba(9, 17, 28, 0.96));
+        background:
+          radial-gradient(circle at 50% 0, rgba(255, 204, 102, 0.18), transparent 42%),
+          linear-gradient(180deg, rgba(22, 50, 84, 0.98), rgba(7, 13, 23, 0.98));
+        outline: 1px solid rgba(255, 204, 102, 0.28);
+        outline-offset: -8px;
       }
 
       .hero-reviews-shell[hidden] {
@@ -488,7 +494,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         .hero-reviews-embed {
-          border-radius: 0;
+          border-radius: 18px;
+          margin: 0 6px;
         }
 
         .hero-reviews-iframe {
@@ -591,6 +598,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .home-faq-item a {
         color: var(--gold-soft);
+      }
+
+
+      .page-home .reviews-section .home-faq-item {
+        overflow: visible;
+        padding: clamp(16px, 3vw, 22px);
+      }
+
+      .page-home .reviews-section .home-faq-item h3 {
+        margin: 0 0 10px;
+        line-height: 1.18;
+        overflow-wrap: anywhere;
+      }
+
+      .page-home .reviews-section .home-faq-item p {
+        padding: 0;
       }
 
       @media (max-width: 640px) {
@@ -989,7 +1012,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <h2 id="home-brand-moat-title">Valiant Trust System</h2>
           <p class="reviews-intro">Founder-led garage door service with local proof, direct booking, and community commitment across Pleasanton and the East Bay.</p>
           <div class="home-faq-list">
-            <article class="home-faq-item"><h3>34+ Verified Reviews</h3><p>Review systems and Google profile links help homeowners confirm local trust before booking.</p></article>
+            <article class="home-faq-item"><h3>Live Customer Reviews</h3><p>Live review links and verified profile pages help homeowners confirm local trust before booking.</p></article>
             <article class="home-faq-item"><h3>10,000+ Doors Serviced</h3><p>Valiant positions its service around field experience, diagnosis, and practical repair-first recommendations.</p></article>
             <article class="home-faq-item"><h3>12+ Years Experience</h3><p>Founder Valentino Ramirez brings hands-on garage door repair, opener, spring, and system experience.</p></article>
             <article class="home-faq-item"><h3>1 Community Project Yearly</h3><p><a href="/community-garage-door-project">Valiant gives one complete garage door project</a> each year to a family in need.</p></article>
