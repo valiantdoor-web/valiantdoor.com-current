@@ -8,6 +8,8 @@
     "lib": "lib"
   },
   "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
     "test": "node -e \"require('./api/authority-dashboard.js'); console.log('authority dashboard api ok')\" && npm run validate:indexing",
     "validate:indexing": "python3 scripts/validate_indexing_contract.py"
   },
