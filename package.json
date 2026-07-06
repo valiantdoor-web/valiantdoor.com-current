@@ -27,7 +27,8 @@
   "homepage": "https://github.com/valiantdoor-web/valiantdoor.com-current#readme",
   "dependencies": {
     "cheerio": "^1.2.0",
-    "openai": "^6.44.0"
+    "openai": "^6.44.0",
+    "sharp": "^0.35.3"
   },
   "private": true
 }
