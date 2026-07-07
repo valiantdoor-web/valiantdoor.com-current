@@ -56,16 +56,147 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>window.uetq = window.uetq || [];window.uetq.push('consent', 'default', {'ad_storage': 'denied'});</script>
 <script>window.uetq = window.uetq || [];window.uetq.push('consent', 'update', {'ad_storage': 'granted'});</script>
 <script id="valiant-microsoft-ads-webhook-tracking">(function () {var endpoint = "https://webhook.botpress.cloud/beb5c93d-f23f-4fed-a204-fe2186a1fd9c";var payload = JSON.stringify({event: "microsoft_ads_page_view",page_url: window.location.href,page_path: window.location.pathname,page_title: document.title,referrer: document.referrer || "",timestamp: new Date().toISOString()});try {if (navigator.sendBeacon && navigator.sendBeacon(endpoint, payload)) return;fetch(endpoint, { method: "POST", mode: "no-cors", keepalive: true, body: payload }).catch(function () {});} catch (error) {}})();</script>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
-    {"@type": ["HomeAndConstructionBusiness","LocalBusiness"],"@id": "https://www.valiantdoor.com/#business","name": "Valiant Garage Door","url": "https://www.valiantdoor.com/","telephone": "9254094974","description": "Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement,Openers,Complex Systems, And Precision System Upgrades. We’re Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service.","address": {"@type": "PostalAddress","streetAddress": "3588 Pimlico Dr","addressLocality": "Pleasanton","addressRegion": "CA","postalCode": "94588","addressCountry": "US"}},
-    {"@type": "WebSite","@id": "https://www.valiantdoor.com/#website","url": "https://www.valiantdoor.com/","name": "Valiant Garage Door","publisher": {"@id": "https://www.valiantdoor.com/#business"}},
-    {"@type": "WebPage","@id": "https://www.valiantdoor.com/emergency-after-hours#webpage","url": "https://www.valiantdoor.com/emergency-after-hours","name": "After-Hours Emergency Garage Door Repair | Valiant Garage Door","description": "After-hours emergency garage door repair for stuck-open doors, broken springs, snapped cables, opener shutdowns, and unsafe garage door conditions in Pleasanton and nearby East Bay cities.","isPartOf": {"@id": "https://www.valiantdoor.com/#website"},"about": {"@id": "https://www.valiantdoor.com/#business"},"breadcrumb": {"@id": "https://www.valiantdoor.com/emergency-after-hours#breadcrumb"}},
-    {"@type": "BreadcrumbList","@id": "https://www.valiantdoor.com/emergency-after-hours#breadcrumb","itemListElement": [{"@type": "ListItem","position": 1,"name": "Home","item": "https://www.valiantdoor.com/"},{"@type": "ListItem","position": 2,"name": "Emergency After Hours Garage Door Service","item": "https://www.valiantdoor.com/emergency-after-hours"}]},
-    {"@type": "Service","@id": "https://www.valiantdoor.com/emergency-after-hours#service","name": "Emergency After Hours Garage Door Service","serviceType": "After-hours emergency garage door repair","description": "After-hours emergency garage door repair for stuck-open doors, broken springs, snapped cables, opener shutdowns, and unsafe garage door conditions in Pleasanton and nearby East Bay cities.","provider": {"@id": "https://www.valiantdoor.com/#business"},"areaServed": [{"@type": "City", "name": "Pleasanton, CA"},{"@type": "City", "name": "Dublin, CA"},{"@type": "City", "name": "Livermore, CA"},{"@type": "City", "name": "Fremont, CA"},{"@type": "City", "name": "San Ramon, CA"},{"@type": "City", "name": "Danville, CA"},{"@type": "City", "name": "Sunol, CA"}],"hoursAvailable": {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens": "00:00","closes": "23:59"},"offers": {"@type": "Offer","name": "After-Hours Emergency Service","description": "Flat-rate after-hours emergency garage door service call. 24/7 emergency service available.","price": "100","priceCurrency": "USD","availability": "https://schema.org/InStock"},"url": "https://www.valiantdoor.com/emergency-after-hours"}
+    {
+      "@type": [
+        "HomeAndConstructionBusiness",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.valiantdoor.com/#business",
+      "name": "Valiant Garage Door",
+      "url": "https://www.valiantdoor.com/",
+      "telephone": "9254094974",
+      "description": "Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement,Openers,Complex Systems, And Precision System Upgrades. We’re Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3588 Pimlico Dr",
+        "addressLocality": "Pleasanton",
+        "addressRegion": "CA",
+        "postalCode": "94588",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.valiantdoor.com/#website",
+      "url": "https://www.valiantdoor.com/",
+      "name": "Valiant Garage Door",
+      "publisher": {
+        "@id": "https://www.valiantdoor.com/#business"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.valiantdoor.com/emergency-after-hours#webpage",
+      "url": "https://www.valiantdoor.com/emergency-after-hours",
+      "name": "After-Hours Emergency Garage Door Repair | Valiant Garage Door",
+      "description": "After-hours emergency garage door repair for stuck-open doors, broken springs, snapped cables, opener shutdowns, and unsafe garage door conditions in Pleasanton and nearby East Bay cities.",
+      "isPartOf": {
+        "@id": "https://www.valiantdoor.com/#website"
+      },
+      "about": {
+        "@id": "https://www.valiantdoor.com/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://www.valiantdoor.com/emergency-after-hours#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.valiantdoor.com/emergency-after-hours#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.valiantdoor.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Emergency After Hours Garage Door Service",
+          "item": "https://www.valiantdoor.com/emergency-after-hours"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.valiantdoor.com/emergency-after-hours#service",
+      "name": "Emergency After Hours Garage Door Service",
+      "serviceType": "After-hours emergency garage door repair",
+      "description": "After-hours emergency garage door repair for stuck-open doors, broken springs, snapped cables, opener shutdowns, and unsafe garage door conditions in Pleasanton and nearby East Bay cities.",
+      "provider": {
+        "@id": "https://www.valiantdoor.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pleasanton, CA"
+        },
+        {
+          "@type": "City",
+          "name": "Dublin, CA"
+        },
+        {
+          "@type": "City",
+          "name": "Livermore, CA"
+        },
+        {
+          "@type": "City",
+          "name": "Fremont, CA"
+        },
+        {
+          "@type": "City",
+          "name": "San Ramon, CA"
+        },
+        {
+          "@type": "City",
+          "name": "Danville, CA"
+        },
+        {
+          "@type": "City",
+          "name": "Sunol, CA"
+        }
+      ],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "After-Hours Emergency Service",
+        "description": "Flat-rate after-hours emergency garage door service call. 24/7 emergency service available.",
+        "price": "100",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "url": "https://www.valiantdoor.com/emergency-after-hours",
+      "warranty": {
+        "@type": "WarrantyPromise",
+        "durationOfWarranty": {
+          "@type": "QuantitativeValue",
+          "value": 10,
+          "unitCode": "ANN"
+        },
+        "warrantyScope": "10-year warranty on garage door repairs and installed parts"
+      }
+    }
   ]
-}</script>
+}
+</script>
   <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"JBzHfzVvqm4VbGoHRAJtoP",debug:true});</script>
 <!-- Nextdoor Pixel Code -->
   <script type="text/javascript">
@@ -88,7 +219,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="valiant:primary-keyword" content="24/7 emergency garage door repair Pleasanton CA">
 <meta name="valiant:high-intent-focus" content="book 24/7 emergency garage door repair East Bay; same-day garage door repair; high-intent garage door service; Valiant Garage Door project proof; East Bay garage door repair">
 <meta name="valiant:service-area-focus" content="Pleasanton and the East Bay">
-<script type="application/ld+json" data-valiant-page-intent="">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.valiantdoor.com/emergency-after-hours#valiant-page-intent","url":"https://www.valiantdoor.com/emergency-after-hours","name":"After-Hours Garage Door Repair | Valiant","keywords":["24/7 emergency garage door repair Pleasanton CA","book 24/7 emergency garage door repair East Bay","same-day garage door repair","high-intent garage door service","Valiant Garage Door project proof","East Bay garage door repair"],"about":[{"@type":"Service","name":"24/7 emergency garage door repair","areaServed":"Pleasanton and the East Bay"},{"@type":"LocalBusiness","name":"Valiant Garage Door","telephone":"9254094974"}],"image":["https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp","https://www.valiantdoor.com/assets/logo/valiant-logo-gold.webp","https://www.valiantdoor.com/assets/icons/google.svg","https://www.valiantdoor.com/assets/icons/yelp.svg","https://www.valiantdoor.com/assets/icons/facebook.svg","https://www.valiantdoor.com/assets/icons/instagram.svg"],"dateModified":"2026-06-28"}</script></head>
+<script type="application/ld+json" data-valiant-page-intent="">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.valiantdoor.com/emergency-after-hours#valiant-page-intent",
+  "url": "https://www.valiantdoor.com/emergency-after-hours",
+  "name": "After-Hours Garage Door Repair | Valiant",
+  "keywords": [
+    "24/7 emergency garage door repair Pleasanton CA",
+    "book 24/7 emergency garage door repair East Bay",
+    "same-day garage door repair",
+    "high-intent garage door service",
+    "Valiant Garage Door project proof",
+    "East Bay garage door repair"
+  ],
+  "about": [
+    {
+      "@type": "Service",
+      "name": "24/7 emergency garage door repair",
+      "areaServed": "Pleasanton and the East Bay",
+      "warranty": {
+        "@type": "WarrantyPromise",
+        "durationOfWarranty": {
+          "@type": "QuantitativeValue",
+          "value": 10,
+          "unitCode": "ANN"
+        },
+        "warrantyScope": "10-year warranty on garage door repairs and installed parts"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Valiant Garage Door",
+      "telephone": "9254094974"
+    }
+  ],
+  "image": [
+    "https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp",
+    "https://www.valiantdoor.com/assets/logo/valiant-logo-gold.webp",
+    "https://www.valiantdoor.com/assets/icons/google.svg",
+    "https://www.valiantdoor.com/assets/icons/yelp.svg",
+    "https://www.valiantdoor.com/assets/icons/facebook.svg",
+    "https://www.valiantdoor.com/assets/icons/instagram.svg"
+  ],
+  "dateModified": "2026-06-28"
+}
+</script></head>
   <body class="page-services page-geo has-sticky-call">
     <div class="home-sticky-call" role="region" aria-label="Emergency repair call button">
       <a class="home-sticky-call-button" href="tel:9254094974">Tap to Call for Emergency Repair.</a>
