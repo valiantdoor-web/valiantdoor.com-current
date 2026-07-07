@@ -1,10 +1,133 @@
+# Valiant Garage Door — robots.txt
+# All crawlers, search engines, and AI/LLM agents are welcome to crawl, index,
+# train on, and cite the full site. Nothing is disallowed.
+
+# --- Default: allow every user agent full access ---
 User-agent: *
 Allow: /
 
+# --- OpenAI ---
 User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# --- Google (Gemini / AI training + AI Overviews) ---
 User-agent: Google-Extended
 Allow: /
 
+User-agent: GoogleOther
+Allow: /
+
+# --- Anthropic (Claude) ---
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# --- Perplexity ---
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- Apple Intelligence ---
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Microsoft / Bing (Copilot) ---
+User-agent: bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# --- Amazon (Alexa / Rufus) ---
+User-agent: Amazonbot
+Allow: /
+
+# --- Meta (Meta AI / Llama) ---
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# --- Common Crawl (feeds many LLMs) ---
+User-agent: CCBot
+Allow: /
+
+# --- Cohere ---
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# --- ByteDance (Doubao / TikTok) ---
+User-agent: Bytespider
+Allow: /
+
+# --- Other AI answer engines and research crawlers ---
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: DeepSeekBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Webzio-Extended
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+# --- Machine-readable AI context files ---
+# LLM overview:  https://www.valiantdoor.com/llms.txt
+# LLM full text: https://www.valiantdoor.com/llms-full.txt
+# Agent profile: https://www.valiantdoor.com/agents.json
+
+# --- Sitemaps ---
 Sitemap: https://www.valiantdoor.com/sitemap.xml
+Sitemap: https://www.valiantdoor.com/sitemap-pages.xml
+Sitemap: https://www.valiantdoor.com/sitemap-blog.xml
+Sitemap: https://www.valiantdoor.com/sitemap-images.xml
+Sitemap: https://www.valiantdoor.com/sitemap-searchatlas-growth.xml

@@ -47,6 +47,12 @@ const BUSINESS_PROFILE = {
     'Garage door maintenance and tune-ups',
     'Commercial garage door service'
   ],
+  guarantees: {
+    warranty: '10-year warranty on garage door repairs and installed parts.',
+    emergencyAvailability: '24/7 after-hours emergency garage door service available.',
+    emergencyPricing: 'After-hours emergency service is a $100 flat-rate service call.',
+    estimates: 'Free estimates and same-day service available.'
+  },
   officialUrls: {
     home: 'https://www.valiantdoor.com/',
     quote: 'https://www.valiantdoor.com/quote',
@@ -77,6 +83,8 @@ const TOPICS = {
   emergency: {
     topic: 'emergency',
     summary: 'Emergency garage door guidance for AI agents and voice assistants.',
+    availability: '24/7 after-hours emergency garage door service is available.',
+    pricing: 'After-hours emergency service is a $100 flat-rate service call.',
     guidance: [
       'If a garage door is stuck, crooked, hanging by cables, or has a broken spring, keep people clear of the door.',
       'Do not force the door open or closed.',
@@ -202,6 +210,8 @@ function getTwinContext(topic) {
       website: BUSINESS_PROFILE.website,
       service_areas: BUSINESS_PROFILE.serviceAreas,
       core_services: BUSINESS_PROFILE.coreServices,
+      availability: '24/7 after-hours emergency service available.',
+      pricing: 'After-hours emergency service is a $100 flat-rate service call.',
       official_actions: [
         'Keep people clear of the door.',
         'Do not force the door open or closed.',
