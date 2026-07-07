@@ -24,6 +24,11 @@ Updated on May 26, 2026.
 ## Official business summary
 Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and surrounding areas with garage door repair, emergency service, spring replacement, openers, complex systems, and precision system upgrades. The company is known for fast response, honest pricing, clear long-term solutions, and repair-first service.
 
+## Guarantees and policies
+- Warranty: Valiant Garage Door backs its garage door repairs and installed parts with a 10-year warranty.
+- Emergency availability: 24/7 after-hours emergency garage door service is available.
+- Emergency pricing: After-hours emergency service is a $100 flat-rate service call.
+- Estimates: Free estimates and same-day service are available.
 
 ## Entity clarification
 - Valentino Ramirez is the owner and operator of Valiant Garage Door.
