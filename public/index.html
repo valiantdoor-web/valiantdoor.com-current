@@ -239,11 +239,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .founder-note p { color: var(--ink-dim); margin: 0 0 16px; }
   .founder-note .sig { font-family: "Great Vibes", cursive; font-size: 2rem; color: var(--gold-soft); }
 
+  /* ---------- Recent Work ---------- */
+  .work { background: var(--bg-2); }
+  .work-head { text-align: center; max-width: 720px; margin: 0 auto 30px; }
+  .work-kicker { font-size: .74rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-bright); }
+  .work-head h2 { font-size: 1.9rem; text-transform: uppercase; color: var(--gold-soft); margin: 10px 0; }
+  .work-head p { color: var(--ink-dim); font-size: .95rem; margin: 0; }
+  .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .work-item { margin: 0; border-radius: 14px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); }
+  .work-item img { width: 100%; height: 300px; object-fit: cover; }
+  .work-item figcaption { padding: 14px 16px; font-size: .82rem; color: var(--ink-dim); font-weight: 600; }
+  @media (max-width: 860px) { .work-grid { grid-template-columns: 1fr; } .work-item img { height: 260px; } }
+
   /* ---------- Reviews / CTA ---------- */
   .rev { background: var(--bg-2); }
   .rev-inner { display: grid; grid-template-columns: repeat(3, 1fr) 1.2fr; gap: 20px; align-items: stretch; }
   .rev-card { background: #fff; color: #16151a; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; }
   .rev-card .top { display: flex; align-items: center; gap: 12px; }
+  a.top { color: inherit; text-decoration: none; transition: opacity .15s ease; }
+  a.top:hover { opacity: .78; }
+  a.trust-item { text-decoration: none; color: inherit; transition: background .15s ease; }
+  a.trust-item:hover { background: rgba(255,255,255,.03); }
   .rev-card .top .ic { width: 40px; height: 40px; flex: none; display: grid; place-items: center; }
   .rev-card .top .ic svg { width: 36px; height: 36px; }
   .rev-card .top b { font-size: 1.5rem; font-weight: 800; }
@@ -316,9 +332,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- ANNOUNCEMENT -->
 <div class="announce">
-  <span>&#9733; 5.0 Rated on Google</span><span class="dot">&bull;</span>
+  <a href="https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">&#9733; 5.0 Rated on Google</a><span class="dot">&bull;</span>
   <span>70+ Reviews</span><span class="dot">&bull;</span>
-  <span>40+ Nextdoor Faves</span>
+  <a href="https://nextdoor.com/pages/valiant-garage-door-san-leandro-ca" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">40+ Nextdoor Faves</a>
 </div>
 
 <!-- HEADER -->
@@ -386,14 +402,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="trust">
   <div class="wrap">
     <div class="trust-inner">
-      <div class="trust-item">
+      <a class="trust-item" href="https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer" aria-label="Read Valiant Garage Door reviews on Google">
         <span class="ic"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12c0-.7-.1-1.4-.2-2H12v4h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4C20.8 18 22 15.3 22 12z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.4-2.6c-.9.6-2 1-3.2 1-2.5 0-4.6-1.7-5.3-3.9H3.2v2.6C4.9 19.9 8.2 22 12 22z"/><path fill="#FBBC05" d="M6.7 14.1c-.2-.6-.3-1.2-.3-2s.1-1.4.3-2V7.5H3.2C2.4 9 2 10.5 2 12s.4 3 1.2 4.5l3.5-2.4z"/><path fill="#EA4335" d="M12 6.4c1.4 0 2.7.5 3.7 1.4l2.7-2.7C16.9 3.5 14.7 2.6 12 2.6 8.2 2.6 4.9 4.7 3.2 7.9l3.5 2.6C7.4 8.1 9.5 6.4 12 6.4z"/></svg></span>
         <span class="tt"><b>5.0 <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></b><span class="lbl">70+ Google Reviews</span><small>100% Verified</small></span>
-      </div>
-      <div class="trust-item">
+      </a>
+      <a class="trust-item" href="https://nextdoor.com/pages/valiant-garage-door-san-leandro-ca" target="_blank" rel="noopener noreferrer" aria-label="See Valiant Garage Door on Nextdoor">
         <span class="ic"><svg viewBox="0 0 24 24" fill="#00b551"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg></span>
         <span class="tt"><b>40+</b><span class="lbl">Nextdoor Faves</span><small>Neighbors Recommend Us</small></span>
-      </div>
+      </a>
       <div class="trust-item">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="m14.7 6.3 3 3M3 21l3.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11z"/></svg></span>
         <span class="tt"><b>10,000+</b><span class="lbl">Doors Serviced</span><small>And Counting</small></span>
@@ -406,10 +422,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span>
         <span class="tt"><b>IDEA</b><span class="lbl">Certified Technician</span><small>Highest Industry Standard</small></span>
       </div>
-      <div class="trust-item">
+      <a class="trust-item" href="https://www.bbb.org/us/ca/pleasanton/profile/garage-door-repair/valiant-garage-door-1116-980936" target="_blank" rel="noopener noreferrer" aria-label="View Valiant Garage Door BBB profile">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2s5 2 5 8c0 3-2 5-2 7a3 3 0 0 1-6 0c0-2-2-4-2-7 0-6 5-8 5-8z"/></svg></span>
         <span class="tt"><b>A+ Rating</b><span class="lbl">BBB Accredited</span><small>Since Day One</small></span>
-      </div>
+      </a>
     </div>
   </div>
 </div>
@@ -517,23 +533,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
+<!-- RECENT WORK -->
+<section class="block work">
+  <div class="wrap">
+    <div class="work-head">
+      <span class="work-kicker">Recent Work</span>
+      <h2>Precision Garage Door Work in Pleasanton, CA</h2>
+      <p>A recent repair near the California Terrace neighborhood in Pleasanton &mdash; panel work and precision laser alignment, measured and finished right the first time.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="work-item">
+        <img src="/assets/lp/work-laser-level.jpg" alt="Valiant Garage Door technician using a Klein Tools green laser level to align a garage door panel in a Pleasanton garage" loading="lazy">
+        <figcaption>Laser-leveling a panel for a precise, square fit</figcaption>
+      </figure>
+      <figure class="work-item">
+        <img src="/assets/lp/work-panel-prep.jpg" alt="Valiant Garage Door technician prepping and cleaning a garage door panel during a repair near California Terrace in Pleasanton" loading="lazy">
+        <figcaption>Prepping the panel with detailed craftsmanship</figcaption>
+      </figure>
+      <figure class="work-item">
+        <img src="/assets/lp/work-panel-repair.jpg" alt="Valiant Garage Door technician clamping and repairing a garage door panel beside a freshly installed white sectional door in Pleasanton" loading="lazy">
+        <figcaption>Panel repair beside a freshly installed door</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- REVIEWS / CTA -->
 <section class="block rev">
   <div class="wrap rev-inner">
     <div class="rev-card">
-      <div class="top"><span class="ic"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12c0-.7-.1-1.4-.2-2H12v4h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4C20.8 18 22 15.3 22 12z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.4-2.6c-.9.6-2 1-3.2 1-2.5 0-4.6-1.7-5.3-3.9H3.2v2.6C4.9 19.9 8.2 22 12 22z"/><path fill="#FBBC05" d="M6.7 14.1c-.2-.6-.3-1.2-.3-2s.1-1.4.3-2V7.5H3.2C2.4 9 2 10.5 2 12s.4 3 1.2 4.5l3.5-2.4z"/><path fill="#EA4335" d="M12 6.4c1.4 0 2.7.5 3.7 1.4l2.7-2.7C16.9 3.5 14.7 2.6 12 2.6 8.2 2.6 4.9 4.7 3.2 7.9l3.5 2.6C7.4 8.1 9.5 6.4 12 6.4z"/></svg></span><div><b>5.0</b> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div class="lbl">70+ Google Reviews</div></div></div>
+      <a class="top" href="https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer" aria-label="Read Valiant Garage Door reviews on Google"><span class="ic"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12c0-.7-.1-1.4-.2-2H12v4h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4C20.8 18 22 15.3 22 12z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.4-2.6c-.9.6-2 1-3.2 1-2.5 0-4.6-1.7-5.3-3.9H3.2v2.6C4.9 19.9 8.2 22 12 22z"/><path fill="#FBBC05" d="M6.7 14.1c-.2-.6-.3-1.2-.3-2s.1-1.4.3-2V7.5H3.2C2.4 9 2 10.5 2 12s.4 3 1.2 4.5l3.5-2.4z"/><path fill="#EA4335" d="M12 6.4c1.4 0 2.7.5 3.7 1.4l2.7-2.7C16.9 3.5 14.7 2.6 12 2.6 8.2 2.6 4.9 4.7 3.2 7.9l3.5 2.6C7.4 8.1 9.5 6.4 12 6.4z"/></svg></span><div><b>5.0</b> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div class="lbl">70+ Google Reviews</div></div></a>
       <p class="q">&ldquo;Valentino is the best! Fast, honest, and does amazing work. Highly recommend!&rdquo; &ndash; Chris D.</p>
-      <a class="link" href="/reviews-and-proof">View All Reviews &rarr;</a>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer">View All Reviews &rarr;</a>
     </div>
     <div class="rev-card">
-      <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="#00b551"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg></span><div><b>40+</b><div class="lbl">Nextdoor Faves</div></div></div>
+      <a class="top" href="https://nextdoor.com/pages/valiant-garage-door-san-leandro-ca" target="_blank" rel="noopener noreferrer" aria-label="See Valiant Garage Door on Nextdoor"><span class="ic"><svg viewBox="0 0 24 24" fill="#00b551"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg></span><div><b>40+</b><div class="lbl">Nextdoor Faves</div></div></a>
       <p class="q">&ldquo;Our go-to garage door guy! Always reliable and fair.&rdquo; &ndash; Pleasanton Neighbor</p>
-      <a class="link" href="/reviews-and-proof">View All Faves &rarr;</a>
+      <a class="link" href="https://nextdoor.com/pages/valiant-garage-door-san-leandro-ca" target="_blank" rel="noopener noreferrer">View All Faves &rarr;</a>
     </div>
     <div class="rev-card">
-      <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0a4d8c" stroke-width="2"><path d="M12 2s5 2 5 8c0 3-2 5-2 7a3 3 0 0 1-6 0c0-2-2-4-2-7 0-6 5-8 5-8z"/></svg></span><div><b>A+</b> <span class="lbl">Rating</span><div class="lbl">BBB Accredited</div></div></div>
+      <a class="top" href="https://www.bbb.org/us/ca/pleasanton/profile/garage-door-repair/valiant-garage-door-1116-980936" target="_blank" rel="noopener noreferrer" aria-label="View Valiant Garage Door BBB profile"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0a4d8c" stroke-width="2"><path d="M12 2s5 2 5 8c0 3-2 5-2 7a3 3 0 0 1-6 0c0-2-2-4-2-7 0-6 5-8 5-8z"/></svg></span><div><b>A+</b> <span class="lbl">Rating</span><div class="lbl">BBB Accredited</div></div></a>
       <p class="q">&ldquo;Professional, trustworthy, and truly care about their customers.&rdquo;</p>
-      <a class="link" href="/reviews-and-proof">View BBB Profile &rarr;</a>
+      <a class="link" href="https://www.bbb.org/us/ca/pleasanton/profile/garage-door-repair/valiant-garage-door-1116-980936" target="_blank" rel="noopener noreferrer">View BBB Profile &rarr;</a>
     </div>
     <div class="rev-cta">
       <h3>Need Service Today?</h3>
