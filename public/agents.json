@@ -46,10 +46,11 @@
     "ai_plugin_manifest": "https://www.valiantdoor.com/.well-known/ai-plugin.json",
     "agent_api": "https://www.valiantdoor.com/api/valiant-agent",
     "searchatlas_api": "https://www.valiantdoor.com/api/searchatlas",
-    "searchatlas_growth_hub": "https://www.valiantdoor.com/search-atlas-growth"
+    "searchatlas_growth_hub": "https://www.valiantdoor.com/search-atlas-growth",
+    "agents_json": "https://www.valiantdoor.com/agents.json"
   },
   "amazon_alexa_app": {
-    "support_url": "https://www.valiantdoor.com/amazon-alexa",
+    "support_url": "https://www.valiantdoor.com/api/valiant-agent?topic=alexa",
     "endpoint": "https://www.valiantdoor.com/api/alexa-valiant",
     "invocation_name": "valiant garage door",
     "privacy_policy_url": "https://www.valiantdoor.com/privacy",
@@ -61,7 +62,8 @@
       "Does not process payments"
     ],
     "small_icon_url": "https://www.valiantdoor.com/assets/alexa/valiant-alexa-icon-108.png",
-    "large_icon_url": "https://www.valiantdoor.com/assets/alexa/valiant-alexa-icon-512.png"
+    "large_icon_url": "https://www.valiantdoor.com/assets/alexa/valiant-alexa-icon-512.png",
+    "support_note": "Public Alexa support facts are exposed through the read-only Valiant agent API plus privacy and terms pages."
   },
   "official_agent_topics": [
     "profile",
@@ -123,5 +125,11 @@
       "Does not invent rankings or scores that are not present in the Search Atlas data.",
       "Uses cached snapshot data when available."
     ]
+  },
+  "service_policy": {
+    "availability": "Open 24 hours a day, 7 days a week",
+    "parts_warranty": "10-year parts warranty on qualifying installed parts when documented on the estimate or invoice",
+    "after_hours_service_charge": "Flat $100 service charge for appointments at 7:00 PM or later before approved parts, repairs, conversions, or upgrades",
+    "crawler_access": "Public Valiant pages, public schema, llms.txt, llms-full.txt, geo.md, robots.txt, sitemap files, and public machine-readable endpoints are intended to be crawlable and indexable."
   }
 }
