@@ -171,11 +171,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ---------- Trust bar ---------- */
   .trust { background: var(--bg); padding: 0 0 clamp(30px,5vw,52px); }
-  .trust-inner { border: 1px solid rgba(255,255,255,.08); border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.2)); display: grid; grid-template-columns: repeat(6, 1fr); }
-  .trust-item { display: flex; align-items: center; gap: 12px; padding: 22px 20px; border-right: 1px solid rgba(255,255,255,.06); }
-  .trust-item:last-child { border-right: 0; }
-  .trust-item .ic { width: 34px; height: 34px; flex: none; display: grid; place-items: center; }
-  .trust-item .ic svg { width: 30px; height: 30px; }
+ .trust-inner { border: 1px solid rgba(255,255,255,.08); border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.2)); display: grid; grid-template-columns: repeat(7, 1fr); }
+ .trust-item { display: flex; align-items: center; gap: 12px; padding: 22px 16px; border-right: 1px solid rgba(255,255,255,.06); }
+ .trust-item:last-child { border-right: 0; }
+ .trust-item .ic { width: 34px; height: 34px; flex: none; display: grid; place-items: center; }
+ .trust-item .ic svg { width: 30px; height: 30px; }
+ .trust-item .ic img { width: 34px; height: 34px; object-fit: contain; border-radius: 50%; background: #fff; }
   .trust-item .tt { display: flex; flex-direction: column; line-height: 1.15; }
   .trust-item .tt b { font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 5px; }
   .trust-item .tt .lbl { font-size: .82rem; font-weight: 700; color: var(--ink); }
@@ -428,6 +429,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2s5 2 5 8c0 3-2 5-2 7a3 3 0 0 1-6 0c0-2-2-4-2-7 0-6 5-8 5-8z"/></svg></span>
         <span class="tt"><b>A+ Rating</b><span class="lbl">BBB Accredited</span><small>Since Day One</small></span>
       </a>
+      <div class="trust-item">
+        <span class="ic"><img src="/assets/lp/duns-badge.png" alt="Dun &amp; Bradstreet D-U-N-S Registered seal" width="34" height="34" loading="lazy"></span>
+        <span class="tt"><b>D-U-N-S</b><span class="lbl">Registered</span><small>Verified Business</small></span>
+      </div>
     </div>
   </div>
 </div>
@@ -491,6 +496,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a class="svc-card" href="/safety-sensors">
         <div class="svc-media"><img src="/assets/lp/service-sensor.jpg" alt="Garage door safety photo-eye sensor mounted on the track"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/></svg></span></div>
         <div class="svc-body"><h3>Sensor &amp; Safety</h3><p>Professional align sensors to keep your family safe.</p><span class="svc-more">Learn More &rarr;</span></div>
+      </a>
+      <a class="svc-card" href="/valiant-signature-opener-mount">
+        <div class="svc-media"><img src="/assets/lp/signature-mount.jpg" alt="Valiant Signature Opener Mount, a custom heavy-duty steel garage door opener bracket"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M7 7v13M17 7v13M4 20h16M9 11h6M9 15h6"/></svg></span></div>
+        <div class="svc-body"><h3>Signature Opener Mount</h3><p>Our custom-fabricated, heavy-duty opener bracket &mdash; free with every repair for a limited time.</p><span class="svc-more">Learn More &rarr;</span></div>
       </a>
     </div>
     <div class="services-cta"><a class="btn" href="/services">View All Services</a></div>
