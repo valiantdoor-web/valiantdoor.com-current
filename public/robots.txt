@@ -6,6 +6,22 @@
 User-agent: *
 Allow: /
 
+# --- Search engine crawlers ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
 # --- OpenAI ---
 User-agent: GPTBot
 Allow: /
@@ -18,9 +34,6 @@ Allow: /
 
 # --- Google (Gemini / AI training + AI Overviews) ---
 User-agent: Google-Extended
-Allow: /
-
-User-agent: GoogleOther
 Allow: /
 
 # --- Anthropic (Claude) ---
@@ -51,13 +64,6 @@ User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
-Allow: /
-
-# --- Microsoft / Bing (Copilot) ---
-User-agent: bingbot
-Allow: /
-
-User-agent: BingPreview
 Allow: /
 
 # --- Amazon (Alexa / Rufus) ---

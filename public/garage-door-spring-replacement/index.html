@@ -355,7 +355,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "reviewCount": "34",
         "bestRating": "5",
         "worstRating": "1"
-      }
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "openingHours": "Mo-Su 00:00-23:59",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Availability",
+          "value": "Open 24 hours a day, 7 days a week"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Parts warranty",
+          "value": "10-year parts warranty on qualifying installed parts"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "After-hours service charge",
+          "value": "Flat $100 service charge for appointments at 7:00 PM or later before approved parts, repairs, or upgrades"
+        }
+      ]
     },
     {
       "@type": "WebSite",
@@ -376,14 +408,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "isPartOf": {
         "@id": "https://www.valiantdoor.com/#website"
       },
-      "about": {
-        "@id": "https://www.valiantdoor.com/#business"
-      },
+      "about": [
+        {
+          "@id": "https://www.valiantdoor.com/#business"
+        },
+        {
+          "@type": "Thing",
+          "name": "Valiant Garage Door 24/7 warranty and after-hours policy",
+          "description": "Open 24 hours a day, 7 days a week; qualifying installed parts include a 10-year parts warranty; appointments at 7:00 PM or later have a flat $100 after-hours service charge."
+        }
+      ],
       "breadcrumb": {
         "@id": "https://www.valiantdoor.com/garage-door-spring-replacement#breadcrumb"
       },
-      "dateModified": "2026-05-06",
-      "primaryImageOfPage": "https://www.valiantdoor.com/assets/strategic-growth-review/valiant-duramaster-springs-technical-graphic.webp"
+      "dateModified": "2026-07-08",
+      "primaryImageOfPage": "https://www.valiantdoor.com/assets/strategic-growth-review/valiant-duramaster-springs-technical-graphic.webp",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "[aria-labelledby$=\"service-policies\"]"
+        ]
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -443,6 +489,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       ],
       "url": "https://www.valiantdoor.com/garage-door-spring-replacement",
+<<<<<<< HEAD
       "warranty": {
         "@type": "WarrantyPromise",
         "durationOfWarranty": {
@@ -452,6 +499,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         },
         "warrantyScope": "10-year warranty on garage door repairs and installed parts"
       }
+=======
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "24/7 broken spring repair and garage door spring replacement",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "USD",
+          "description": "Valiant Garage Door is available 24 hours a day, 7 days a week. Qualifying installed parts include a 10-year parts warranty."
+        },
+        {
+          "@type": "Offer",
+          "name": "After-hours service charge",
+          "priceCurrency": "USD",
+          "price": "100",
+          "description": "Flat $100 service charge for appointments at 7:00 PM or later, before approved parts, repairs, or upgrades."
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Availability",
+          "value": "Open 24 hours a day, 7 days a week"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Parts warranty",
+          "value": "10-year parts warranty on qualifying installed parts"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "After-hours service charge",
+          "value": "Flat $100 service charge for appointments at 7:00 PM or later before approved parts, repairs, or upgrades"
+        }
+      ]
+>>>>>>> 6ed0c813e073216bc94448ecd8f062e7c5b73c84
     },
     {
       "@type": "FAQPage",
@@ -568,15 +664,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
-       src="https://flask.nextdoor.com/pixel?pid=fe411d2f-ce90-47be-a0c0-061dcde0eeb1&ev=PAGE_VIEW&noscript=1"/>
+       src="https://flask.nextdoor.com/pixel?pid=fe411d2f-ce90-47be-a0c0-061dcde0eeb1&ev=PAGE_VIEW&noscript=1"/ alt="">
   </noscript>
 <!-- End Nextdoor Pixel Code -->
 
 <meta name="valiant:primary-keyword" content="broken spring repair and garage door spring replacement Pleasanton CA">
 <meta name="valiant:high-intent-focus" content="broken garage door spring repair near me; same-day garage door repair; high-intent garage door service; Valiant Garage Door project proof; East Bay garage door repair">
 <meta name="valiant:service-area-focus" content="Pleasanton">
+<<<<<<< HEAD
 <script type="application/ld+json" data-valiant-page-intent="">
 {
+=======
+<script type="application/ld+json" data-valiant-page-intent="">{
+>>>>>>> 6ed0c813e073216bc94448ecd8f062e7c5b73c84
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": "https://www.valiantdoor.com/garage-door-spring-replacement#valiant-page-intent",
@@ -594,6 +694,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {
       "@type": "Service",
       "name": "broken spring repair and garage door spring replacement",
+<<<<<<< HEAD
       "areaServed": "Pleasanton",
       "warranty": {
         "@type": "WarrantyPromise",
@@ -604,11 +705,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         },
         "warrantyScope": "10-year warranty on garage door repairs and installed parts"
       }
+=======
+      "areaServed": "Pleasanton"
+>>>>>>> 6ed0c813e073216bc94448ecd8f062e7c5b73c84
     },
     {
       "@type": "LocalBusiness",
       "name": "Valiant Garage Door",
       "telephone": "9254094974"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "@type": "Thing",
+      "name": "Valiant Garage Door 24/7 warranty and after-hours policy",
+      "description": "Open 24 hours a day, 7 days a week; qualifying installed parts include a 10-year parts warranty; appointments at 7:00 PM or later have a flat $100 after-hours service charge."
+>>>>>>> 6ed0c813e073216bc94448ecd8f062e7c5b73c84
     }
   ],
   "image": [
@@ -619,9 +731,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "https://www.valiantdoor.com/assets/icons/facebook.svg",
     "https://www.valiantdoor.com/assets/icons/instagram.svg"
   ],
+<<<<<<< HEAD
   "dateModified": "2026-06-28"
 }
 </script></head>
+=======
+  "dateModified": "2026-07-08",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "[aria-labelledby$=\"service-policies\"]"
+    ]
+  }
+}</script></head>
+>>>>>>> 6ed0c813e073216bc94448ecd8f062e7c5b73c84
   <body class="page-services page-geo has-sticky-call">
         <div class="home-sticky-call" role="region" aria-label="Emergency repair call button">
       <a class="home-sticky-call-button" href="tel:9254094974">Tap to Call for Emergency Repair.</a>
@@ -739,6 +863,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <article><strong>Same-Day</strong><span>Priority Response Across Core Service Areas</span></article>
 </section>
 
+<section class="geo-section" aria-labelledby="spring-service-policies">
+  <h2 id="spring-service-policies">Spring Repair Availability, Warranty &amp; After-Hours Policy</h2>
+  <div class="geo-card-grid">
+    <article class="geo-card"><h3>Open 24/7</h3><p>Valiant Garage Door is available 24 hours a day, 7 days a week for broken spring repair, emergency garage door repair, and unsafe stuck-door calls.</p></article>
+    <article class="geo-card"><h3>10-Year Parts Warranty</h3><p>Qualifying spring replacement parts are backed by a 10-year parts warranty, documented on the estimate or invoice for the completed spring repair.</p></article>
+    <article class="geo-card"><h3>After-Hours Service Charge</h3><p>Appointments at 7:00 PM or later have a flat $100 after-hours service charge before approved parts, repairs, conversions, or upgrades.</p></article>
+  </div>
+</section>
 
 <section class="geo-section spring-duramaster-section" aria-labelledby="endurance-max-springs">
   <h2 id="endurance-max-springs">Valiant DuraMaster Ultra High-Cycle Powder-Coated Torsion Springs</h2>
@@ -760,7 +892,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <h2 id="duramaster-spring-upgrade-visual">DuraMaster Powder-Coated Spring Options</h2>
   <p>This DuraMaster product sheet shows the powder-coated torsion spring finish options available for upgraded garage door spring replacement.</p>
   <figure class="geo-card spring-product-sheet-card">
-    <img src="/assets/duramaster-powder-coat-product-sheet.webp" alt="SSC DuraMaster powder-coated torsion spring product sheet showing blue, red, maroon, light pink, yellow, purple, pearl gold, gray, beige, and brown spring color options" width="400" height="300" loading="lazy" decoding="async">
+    <img src="/assets/duramaster-powder-coat-product-sheet.webp" alt="DuraMaster powder-coated torsion spring color options" width="400" height="300" loading="lazy" decoding="async">
     <figcaption class="spring-product-sheet-note">Powder-coated DuraMaster springs add a finished look, moisture resistance, and upgrade value for qualifying torsion spring replacements.</figcaption>
   </figure>
 </section>
@@ -865,13 +997,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="valiant-companycam-grid">
               <figure class="valiant-companycam-card">
               <a href="/assets/gallery-before-after/san-ramon-garage-door-spring-repair-before-after.jpg" aria-label="Open San Ramon garage door spring repair before and after">
-                <img src="/assets/gallery-before-after/san-ramon-garage-door-spring-repair-before-after.webp" alt="San Ramon garage door spring repair before and after by Valiant Garage Door for broken spring repair and garage door spring replacement Pleasanton CA" width="1800" height="1250" loading="lazy" decoding="async">
+                <img src="/assets/gallery-before-after/san-ramon-garage-door-spring-repair-before-after.webp" alt="San Ramon garage door spring repair before and after" width="1800" height="1250" loading="lazy" decoding="async">
               </a>
               <figcaption>Before and after view of a San Ramon garage door spring repair documented in CompanyCam. <a href="https://app.companycam.com/projects/104647302" target="_blank" rel="noopener noreferrer">CompanyCam project record</a></figcaption>
             </figure>
 <figure class="valiant-companycam-card">
               <a href="/assets/gallery-before-after/danville-garage-door-repair-spring-hardware-before-after.jpg" aria-label="Open Danville garage door repair before and after — spring and hardware repair">
-                <img src="/assets/gallery-before-after/danville-garage-door-repair-spring-hardware-before-after.webp" alt="Danville garage door repair before and after — spring and hardware repair by Valiant Garage Door for broken spring repair and garage door spring replacement Pleasanton CA" width="1800" height="1250" loading="lazy" decoding="async">
+                <img src="/assets/gallery-before-after/danville-garage-door-repair-spring-hardware-before-after.webp" alt="Danville garage door spring and hardware repair before and after" width="1800" height="1250" loading="lazy" decoding="async">
               </a>
               <figcaption>Before and after view of a Danville garage door spring and hardware repair from the CompanyCam project record. <a href="https://app.companycam.com/projects/104942719" target="_blank" rel="noopener noreferrer">CompanyCam project record</a></figcaption>
             </figure>

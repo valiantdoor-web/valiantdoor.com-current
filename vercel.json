@@ -207,6 +207,14 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/SERVICES/PLEASANTON-BROKEN-SPRING-REPAIR",
+      "destination": "/services/PLEASANTON-BROKEN-SPRING-REPAIR/index.html"
+    },
+    {
+      "source": "/SERVICES/PLEASANTON-BROKEN-SPRING-REPAIR/",
+      "destination": "/services/PLEASANTON-BROKEN-SPRING-REPAIR/index.html"
+    },
+    {
       "source": "/blog/how-to-tell-if-your-garage-door-needs-emergency-repair",
       "destination": "/blog/how-to-tell-if-your-garage-door-needs-emergency-repair/index.html"
     },
