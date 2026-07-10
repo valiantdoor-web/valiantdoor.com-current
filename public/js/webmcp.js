@@ -24,11 +24,11 @@
     name: "Valiant Garage Door",
     phone: "9254094974",
     phoneDisplay: "(925) 409-4974",
-    email: "vm@valiantdoor.com",
+    email: "vm@valiantdoor.io",
     address: "3588 Pimlico Dr, Pleasanton, CA 94588",
     bookingUrl:
       "https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true",
-    quoteUrl: "https://www.valiantdoor.com/quote",
+    quoteUrl: "https://www.valiantdoor.io/quote",
     emergency: "24/7 after-hours emergency service, flat-rate $100 service call.",
     warranty: "10-year warranty on garage door repairs and installed parts.",
     rating: "5.0 stars (34 reviews)",
