@@ -127,13 +127,13 @@ User-agent: PetalBot
 Allow: /
 
 # --- Machine-readable AI context files ---
-# LLM overview:  https://www.valiantdoor.io/llms.txt
-# LLM full text: https://www.valiantdoor.io/llms-full.txt
-# Agent profile: https://www.valiantdoor.io/agents.json
+# LLM overview:  https://www.valiantdoor.com/llms.txt
+# LLM full text: https://www.valiantdoor.com/llms-full.txt
+# Agent profile: https://www.valiantdoor.com/agents.json
 
 # --- Sitemaps ---
-Sitemap: https://www.valiantdoor.io/sitemap.xml
-Sitemap: https://www.valiantdoor.io/sitemap-pages.xml
-Sitemap: https://www.valiantdoor.io/sitemap-blog.xml
-Sitemap: https://www.valiantdoor.io/sitemap-images.xml
-Sitemap: https://www.valiantdoor.io/sitemap-searchatlas-growth.xml
+Sitemap: https://www.valiantdoor.com/sitemap.xml
+Sitemap: https://www.valiantdoor.com/sitemap-pages.xml
+Sitemap: https://www.valiantdoor.com/sitemap-blog.xml
+Sitemap: https://www.valiantdoor.com/sitemap-images.xml
+Sitemap: https://www.valiantdoor.com/sitemap-searchatlas-growth.xml

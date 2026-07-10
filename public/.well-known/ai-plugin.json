@@ -9,10 +9,10 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://www.valiantdoor.io/openapi.json",
+    "url": "https://www.valiantdoor.com/openapi.json",
     "is_user_authenticated": false
   },
-  "logo_url": "https://www.valiantdoor.io/assets/home-optimized/shield-192.webp",
-  "contact_email": "vm@valiantdoor.io",
-  "legal_info_url": "https://www.valiantdoor.io/terms"
+  "logo_url": "https://www.valiantdoor.com/assets/home-optimized/shield-192.webp",
+  "contact_email": "vm@valiantdoor.com",
+  "legal_info_url": "https://www.valiantdoor.com/terms"
 }
