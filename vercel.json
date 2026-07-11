@@ -173,6 +173,61 @@
   ],
   "redirects": [
     {
+      "source": "/garage-door-repair-near-fallon-road-dublin",
+      "destination": "/garage-door-repair-east-dublin",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/tracy-garage-door-project",
+      "destination": "/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/concord-garage-door-project",
+      "destination": "/garage-door-repair-concord",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/fremont-garage-door-project",
+      "destination": "/garage-door-repair-fremont",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/livermore-garage-door-project",
+      "destination": "/garage-door-repair-livermore",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/pleasanton-garage-door-project",
+      "destination": "/garage-door-repair-pleasanton",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/walnut-creek-garage-door-project",
+      "destination": "/garage-door-repair-walnut-creek",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/opener-replacements",
+      "destination": "/garage-door-openers",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/new-installations",
+      "destination": "/moenave-garage-doors",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/commercial-projects",
+      "destination": "/services/commercial",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/emergency-repairs",
+      "destination": "/emergency-garage-door-repair",
+      "permanent": true
+    },
+    {
       "source": "/services/garage-door-maintenance/",
       "destination": "/services/garage-door-maintenance",
       "permanent": true
