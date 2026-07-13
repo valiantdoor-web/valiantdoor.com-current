@@ -173,11 +173,6 @@
   ],
   "redirects": [
     {
-      "source": "/instant-estimate",
-      "destination": "https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true",
-      "permanent": true
-    },
-    {
       "source": "/garage-door-repair-near-fallon-road-dublin",
       "destination": "/garage-door-repair-east-dublin",
       "permanent": true
