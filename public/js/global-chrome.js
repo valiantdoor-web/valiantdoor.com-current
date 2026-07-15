@@ -6,6 +6,13 @@
   const BOOK_URL = "https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true";
   const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
 
+  document.querySelectorAll("section").forEach((section) => {
+    const heading = section.querySelector(":scope > h2");
+    if (heading && ["Search Atlas Intent Covered", "Search Atlas Visibility Gaps Used"].includes(heading.textContent.trim())) {
+      section.remove();
+    }
+  });
+
   const active = (href) => {
     if (href === "/") return currentPath === "/";
     return currentPath === href || currentPath.startsWith(`${href}/`);
