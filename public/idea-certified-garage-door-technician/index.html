@@ -168,9 +168,9 @@
   ]
 }</script>
 <style id="valiant-mobile-proof-fix">
-.idea-proof-logo-accent { float: right; width: min(138px, 28vw); height: auto; aspect-ratio: 936 / 830; object-fit: contain; margin: 0 0 12px 18px; opacity: .9; filter: drop-shadow(0 12px 24px rgba(0,0,0,.32)); border-radius: 999px; }
+.idea-proof-logo-accent { float: right; width: min(138px, 28vw); height: auto; aspect-ratio: 936 / 830; object-fit: contain; margin: 0 0 12px 18px; padding: 3px; opacity: .96; border: 2px solid #c7a34b; border-radius: 999px; filter: drop-shadow(0 0 8px rgba(199,163,75,.58)) drop-shadow(0 12px 24px rgba(0,0,0,.32)); }
 .idea-brand-proof-section { position: relative; text-align: left; }
-.idea-brand-proof-section .idea-proof-media { max-width: 720px; margin: 18px auto 0; grid-template-columns: 1fr; }
+.idea-brand-proof-section .idea-proof-media { width: 100%; max-width: none; margin: 18px 0 0; grid-template-columns: repeat(3,minmax(0,1fr)); align-items: stretch; }
 .idea-brand-proof-section .idea-proof-media img { width: 100%; max-width: 680px; height: auto; margin-inline: auto; border: 1px solid rgba(199,163,75,.28); border-radius: 22px; background: radial-gradient(circle at 50% 0%, rgba(199,163,75,.16), transparent 42%), #050507; box-shadow: 0 18px 42px rgba(0,0,0,.38); }
 .idea-credential-hero { position: relative; overflow: hidden; min-height: 620px; display: grid; align-content: end; isolation: isolate; background: #050507; }
 .idea-credential-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,5,7,.88) 0%, rgba(5,5,7,.58) 42%, rgba(5,5,7,.24) 100%); z-index: -1; }
@@ -198,7 +198,7 @@
 @media (max-width: 760px) {
   .idea-proof-logo-accent { float: none; display: block; width: 104px; height: auto; margin: 0 auto 14px; }
   .idea-brand-proof-section { text-align: center; padding: 22px 14px !important; }
-  .idea-brand-proof-section .idea-proof-media { margin-top: 16px; }
+  .idea-brand-proof-section .idea-proof-media { margin-top: 16px; grid-template-columns: 1fr; }
   .idea-brand-proof-section .idea-proof-media img { max-width: 100%; border-radius: 18px; }
   .idea-credential-hero { min-height: 650px; align-content: end; padding-top: 255px !important; }
   .idea-credential-hero::before { background: linear-gradient(180deg, rgba(5,5,7,.08) 0%, rgba(5,5,7,.24) 30%, rgba(5,5,7,.82) 58%, rgba(5,5,7,.98) 100%); }
