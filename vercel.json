@@ -173,6 +173,26 @@
   ],
   "redirects": [
     {
+      "source": "/about",
+      "destination": "/about-valentino-ramirez",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/repair-guides",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/same-day-garage-door-repair-pleasanton",
+      "destination": "/garage-door-repair-pleasanton",
+      "permanent": true
+    },
+    {
       "source": "/garage-door-repair-near-fallon-road-dublin",
       "destination": "/garage-door-repair-east-dublin",
       "permanent": true
