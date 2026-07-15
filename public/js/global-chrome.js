@@ -21,6 +21,33 @@
   const navLink = (href, label) =>
     `<a href="${href}"${active(href) ? ' aria-current="page"' : ""}>${label}</a>`;
 
+  const serviceLinks = [
+    ["/garage-door-repair", "Garage Door Repair"],
+    ["/garage-door-spring-replacement", "Spring Replacement"],
+    ["/garage-door-cable-repair", "Cable Repair"],
+    ["/garage-door-opener-repair", "Opener Repair"],
+    ["/garage-door-openers", "Opener Installation"],
+    ["/services/garage-door-maintenance", "Maintenance & Tune-Ups"],
+    ["/safety-sensors", "Safety Sensors"],
+    ["/services/commercial", "Commercial Service"],
+    ["/emergency-garage-door-repair", "Emergency Repair"],
+    ["/emergency-after-hours", "After-Hours Emergency"]
+  ];
+  const servicesActive = active("/services") || serviceLinks.some(([href]) => active(href));
+  const servicesMenu = `
+    <div class="global-nav-services${servicesActive ? " is-current" : ""}">
+      <button class="global-services-toggle" id="globalServicesToggle" type="button" aria-controls="globalServicesMenu" aria-expanded="false">
+        <span>Services</span>
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg>
+      </button>
+      <div class="global-services-menu" id="globalServicesMenu" aria-labelledby="globalServicesToggle">
+        <a class="global-services-all" href="/services"${currentPath === "/services" ? ' aria-current="page"' : ""}>View All Services <span aria-hidden="true">→</span></a>
+        <div class="global-services-grid">
+          ${serviceLinks.map(([href, label]) => navLink(href, label)).join("")}
+        </div>
+      </div>
+    </div>`;
+
   const brand = `
     <a class="global-brand" href="/" aria-label="Valiant Garage Door home">
       <img src="/assets/home-optimized/hero-door-shield-black-red-420.webp" alt="" width="48" height="48">
@@ -33,7 +60,7 @@
     <div class="global-wrap global-header-inner">
       ${brand}
       <nav class="global-main-nav" id="globalMainNav" aria-label="Primary navigation">
-        ${navLink("/services", "Services")}
+        ${servicesMenu}
         ${navLink("/service-areas", "Service Areas")}
         ${navLink("/repair-guides", "Repair Guides")}
         ${navLink("/community-garage-door-project", "Community Project")}
@@ -121,12 +148,44 @@
 
   const toggle = header.querySelector(".global-nav-toggle");
   const nav = header.querySelector(".global-main-nav");
+  const services = header.querySelector(".global-nav-services");
+  const servicesToggle = header.querySelector(".global-services-toggle");
+  const setServicesOpen = (open) => {
+    services.classList.toggle("is-open", open);
+    servicesToggle.setAttribute("aria-expanded", String(open));
+  };
   const setOpen = (open) => {
     nav.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+    if (!open) setServicesOpen(false);
   };
   toggle.addEventListener("click", () => setOpen(!nav.classList.contains("is-open")));
-  nav.addEventListener("click", (event) => { if (event.target.closest("a")) setOpen(false); });
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape") setOpen(false); });
+  servicesToggle.addEventListener("click", () => setServicesOpen(!services.classList.contains("is-open")));
+  services.addEventListener("mouseenter", () => {
+    if (window.matchMedia("(min-width: 761px) and (hover: hover)").matches) setServicesOpen(true);
+  });
+  services.addEventListener("mouseleave", () => {
+    if (window.matchMedia("(min-width: 761px) and (hover: hover)").matches && !services.contains(document.activeElement)) setServicesOpen(false);
+  });
+  services.addEventListener("focusout", (event) => {
+    if (!services.contains(event.relatedTarget)) setServicesOpen(false);
+  });
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      setServicesOpen(false);
+      setOpen(false);
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (!services.contains(event.target)) setServicesOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      const wasServicesOpen = services.classList.contains("is-open");
+      setServicesOpen(false);
+      setOpen(false);
+      if (wasServicesOpen) servicesToggle.focus();
+    }
+  });
 })();
