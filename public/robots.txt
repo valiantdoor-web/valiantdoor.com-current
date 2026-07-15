@@ -136,4 +136,3 @@ Sitemap: https://www.valiantdoor.com/sitemap.xml
 Sitemap: https://www.valiantdoor.com/sitemap-pages.xml
 Sitemap: https://www.valiantdoor.com/sitemap-blog.xml
 Sitemap: https://www.valiantdoor.com/sitemap-images.xml
-Sitemap: https://www.valiantdoor.com/sitemap-searchatlas-growth.xml

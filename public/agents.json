@@ -93,32 +93,8 @@
       "name": "Angi Valiant Garage Door profile",
       "url": "https://www.angi.com/companylist/us/ca/pleasanton/valiant-garage-door-llc-reviews-1.htm",
       "type": "citation_reviews"
-    },
-    {
-      "name": "Search Atlas API snapshot",
-      "url": "https://www.valiantdoor.com/api/searchatlas",
-      "type": "searchatlas_snapshot"
-    },
-    {
-      "name": "Search Atlas authority dashboard",
-      "url": "https://www.valiantdoor.com/authority-dashboard",
-      "type": "searchatlas_dashboard"
     }
   ],
-  "searchatlas": {
-    "snapshot_url": "https://www.valiantdoor.com/api/searchatlas",
-    "authority_dashboard_url": "https://www.valiantdoor.com/authority-dashboard",
-    "llms_searchatlas_url": "https://www.valiantdoor.com/llms-searchatlas-growth.txt",
-    "capabilities": [
-      "Pull cached Search Atlas overview, visibility, and query-response data.",
-      "Summarize local ranking gaps and competitor citation counts.",
-      "Support heat-map style topic and platform coverage summaries."
-    ],
-    "limitations": [
-      "Does not invent rankings or scores that are not present in the Search Atlas data.",
-      "Uses cached snapshot data when available."
-    ]
-  },
   "service_policy": {
     "availability": "Open 24 hours a day, 7 days a week",
     "parts_warranty": "10-year parts warranty on qualifying installed parts when documented on the estimate or invoice",
