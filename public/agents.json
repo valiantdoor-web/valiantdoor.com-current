@@ -46,7 +46,6 @@
     "ai_plugin_manifest": "https://www.valiantdoor.com/.well-known/ai-plugin.json",
     "agent_api": "https://www.valiantdoor.com/api/valiant-agent",
     "searchatlas_api": "https://www.valiantdoor.com/api/searchatlas",
-    "searchatlas_growth_hub": "https://www.valiantdoor.com/search-atlas-growth",
     "agents_json": "https://www.valiantdoor.com/agents.json"
   },
   "amazon_alexa_app": {
@@ -101,11 +100,6 @@
       "type": "searchatlas_snapshot"
     },
     {
-      "name": "Search Atlas Growth hub",
-      "url": "https://www.valiantdoor.com/search-atlas-growth",
-      "type": "searchatlas_hub"
-    },
-    {
       "name": "Search Atlas authority dashboard",
       "url": "https://www.valiantdoor.com/authority-dashboard",
       "type": "searchatlas_dashboard"
@@ -113,7 +107,6 @@
   ],
   "searchatlas": {
     "snapshot_url": "https://www.valiantdoor.com/api/searchatlas",
-    "growth_hub_url": "https://www.valiantdoor.com/search-atlas-growth",
     "authority_dashboard_url": "https://www.valiantdoor.com/authority-dashboard",
     "llms_searchatlas_url": "https://www.valiantdoor.com/llms-searchatlas-growth.txt",
     "capabilities": [
