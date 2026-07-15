@@ -9,6 +9,9 @@
   if (!forms.length) return;
 
   Array.prototype.forEach.call(forms, function (form) {
+    // The instant estimate form uploads photos and is handled by
+    // estimate-upload.js; skip it here to avoid a double submission.
+    if (form.hasAttribute('data-estimate-upload')) return;
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
