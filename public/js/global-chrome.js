@@ -38,7 +38,7 @@
         ${navLink("/repair-guides", "Repair Guides")}
         ${navLink("/community-garage-door-project", "Community Project")}
         ${navLink("/reviews-and-proof", "Reviews & Proof")}
-        ${navLink("/about", "About Us")}
+        ${navLink("/idea-certified-garage-door-technician", "About Us")}
         ${navLink("/business-card", "Contact Us")}
       </nav>
       <div class="global-header-actions">
