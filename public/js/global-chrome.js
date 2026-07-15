@@ -146,9 +146,19 @@
   if (existingFooter) existingFooter.replaceWith(footer);
   else document.body.append(footer);
 
-  document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
-    link.setAttribute("target", "_top");
-    link.setAttribute("rel", "nofollow");
+  document.addEventListener("click", (event) => {
+    const callLink = event.target.closest('a[href^="tel:"]');
+    if (!callLink) return;
+
+    const phoneUrl = callLink.getAttribute("href");
+    if (!phoneUrl) return;
+
+    event.preventDefault();
+    try {
+      window.top.location.href = phoneUrl;
+    } catch {
+      window.location.href = phoneUrl;
+    }
   });
 
   const toggle = header.querySelector(".global-nav-toggle");
