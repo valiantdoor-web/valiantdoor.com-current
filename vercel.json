@@ -173,6 +173,16 @@
   ],
   "redirects": [
     {
+      "source": "/same-day-garage-door-repair-pleasanton",
+      "destination": "/garage-door-repair",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/business-card",
+      "permanent": true
+    },
+    {
       "source": "/garage-door-repair-near-fallon-road-dublin",
       "destination": "/garage-door-repair-east-dublin",
       "permanent": true
