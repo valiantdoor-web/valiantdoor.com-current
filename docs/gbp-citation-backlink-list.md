@@ -34,6 +34,10 @@ Use the same NAP everywhere:
 - GBP product image URL: https://lh3.googleusercontent.com/glsgmb/AMnFcur8HEN_4VVG9vwFYphdh_CikUetQdRC5opC1Crjcl_2NvaT9AzxQdt3yj223g869wxaddAg2rS2xLhJLntxLEZrDg=w296-h200-p-k-no
 - Website destination: https://www.valiantdoor.com/blog/garage-door-roller-replacement
 
+- Product: Valiant Endurance Max – Torsion Springs
+- GBP product image URL: https://lh3.googleusercontent.com/glsgmb/AMnFcupqK2Xx2ATH9qGoUFxwNdA7erW2-fz9Y_0nPat8Mm_wAw3l1VrZs7D9WHLE8O3O_BkA6Kf5N7ZbbZw-uXLshNtx3Q=w296-h200-p-k-no
+- Website destination: https://www.valiantdoor.com/garage-door-spring-replacement
+
 ## Best supporting links to use when profiles allow a website or additional URL
 - Main website: https://www.valiantdoor.com/
 - Services: https://www.valiantdoor.com/services
