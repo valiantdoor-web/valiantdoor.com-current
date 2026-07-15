@@ -29,6 +29,11 @@ Use the same NAP everywhere:
 - Garage door repair / garage door supplier / garage door service
 - Service areas: Pleasanton, Dublin, Livermore, Fremont, San Ramon, Danville, Sunol
 
+## Google Business Profile product assets
+- Product: Valiant Stealth Kit
+- GBP product image URL: https://lh3.googleusercontent.com/glsgmb/AMnFcur8HEN_4VVG9vwFYphdh_CikUetQdRC5opC1Crjcl_2NvaT9AzxQdt3yj223g869wxaddAg2rS2xLhJLntxLEZrDg=w296-h200-p-k-no
+- Website destination: https://www.valiantdoor.com/blog/garage-door-roller-replacement
+
 ## Best supporting links to use when profiles allow a website or additional URL
 - Main website: https://www.valiantdoor.com/
 - Services: https://www.valiantdoor.com/services
