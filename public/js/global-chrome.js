@@ -72,7 +72,42 @@
     else document.body.prepend(header);
   }
 
+  const enduranceMaxRoutes = new Set([
+    "/broken-spring-repair-dublin-ca",
+    "/case-studies/broken-springs",
+    "/blog/broken-garage-door-spring-repair-pleasanton",
+    "/blog/broken-spring-repair-east-bay",
+    "/blog/garage-door-spring-replacement-cost",
+    "/blog/why-garage-door-springs-break"
+  ]);
+
+  const createEnduranceMaxCard = () => {
+    const informational = currentPath.startsWith("/blog/") || currentPath.startsWith("/case-studies/");
+    const section = document.createElement("section");
+    section.className = "endurance-max-section";
+    section.setAttribute("aria-labelledby", `endurance-max-${currentPath.replace(/[^a-z0-9]+/gi, "-")}`);
+    section.innerHTML = `
+      <h2 id="endurance-max-${currentPath.replace(/[^a-z0-9]+/gi, "-")}">A Premium Torsion Spring Option</h2>
+      <article class="endurance-max-card">
+        <div class="endurance-max-media"><img src="/assets/springs/valiant-endurance-max-torsion-spring.png" alt="Valiant Endurance Max branded torsion spring" width="604" height="610" loading="lazy" decoding="async"></div>
+        <div class="endurance-max-copy">
+          <p class="endurance-max-kicker">Valiant premium spring system</p>
+          <h3>Valiant Endurance Max – Torsion Springs</h3>
+          <p class="endurance-max-price">Starting at $149</p>
+          <p>A heavy-duty torsion spring option engineered from high-tensile steel for dependable torque, repeated operating cycles, reliable door balance, and strong resistance to wear.</p>
+          <ul class="endurance-max-features" aria-label="Endurance Max features"><li>High durability</li><li>Consistent torque</li><li>Wear resistant</li><li>Low maintenance</li></ul>
+          <p class="endurance-max-note">Final installed pricing depends on door weight, spring size, cycle rating, spring count, labor, conversions, and required safety corrections.</p>
+          <a class="endurance-max-cta" href="${informational ? "/garage-door-spring-replacement" : "/quote"}">${informational ? "Explore Spring Replacement" : "Request a Spring Estimate"}</a>
+        </div>
+      </article>`;
+    return section;
+  };
+
   const existingFooter = document.querySelector("footer.site-footer, footer.global-site-footer, body > footer");
+  if (enduranceMaxRoutes.has(currentPath) && !document.querySelector(".endurance-max-section")) {
+    const main = document.querySelector("main");
+    if (main) main.append(createEnduranceMaxCard());
+  }
   if (existingFooter) existingFooter.replaceWith(footer);
   else document.body.append(footer);
 
