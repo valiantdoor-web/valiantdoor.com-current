@@ -270,23 +270,24 @@
     }
   ],
   "trailingSlash": false,
+  "routes": [
+    {
+      "src": "^/(search-atlas-growth|authority-dashboard|llms-searchatlas-growth\\.txt)$",
+      "dest": "/api/valiant-agent?retiredResource=$1"
+    },
+    {
+      "src": "^/api/(searchatlas)$",
+      "dest": "/api/valiant-agent?retiredResource=$1-api"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
   "rewrites": [
-    {
-      "source": "/search-atlas-growth",
-      "destination": "/api/valiant-agent?retiredResource=search-atlas-growth"
-    },
-    {
-      "source": "/authority-dashboard",
-      "destination": "/api/valiant-agent?retiredResource=authority-dashboard"
-    },
-    {
-      "source": "/api/searchatlas",
-      "destination": "/api/valiant-agent?retiredResource=searchatlas-api"
-    },
-    {
-      "source": "/llms-searchatlas-growth.txt",
-      "destination": "/api/valiant-agent?retiredResource=llms-searchatlas-growth"
-    },
     {
       "source": "/SERVICES/PLEASANTON-BROKEN-SPRING-REPAIR",
       "destination": "/services/PLEASANTON-BROKEN-SPRING-REPAIR/index.html"
