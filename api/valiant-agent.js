@@ -460,7 +460,7 @@ async function runTwinCodex(req, res, body) {
 
 module.exports = async (req, res) => {
   const url = new URL(req.url || '/api/valiant-agent', 'https://www.valiantdoor.com');
-  const retiredResource = url.searchParams.get('retiredResource') || '';
+  const retiredResource = (url.searchParams.get('retiredResource') || '').replace(/\.txt$/, '');
 
   if (RETIRED_RESOURCES.has(retiredResource)) {
     sendGone(req, res, retiredResource);
