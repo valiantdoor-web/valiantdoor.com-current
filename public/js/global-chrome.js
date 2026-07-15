@@ -34,11 +34,12 @@
       ${brand}
       <nav class="global-main-nav" id="globalMainNav" aria-label="Primary navigation">
         ${navLink("/services", "Services")}
-        ${navLink("/repair-guides", "Repair Guides")}
-        ${navLink("/about", "About Us")}
-        ${navLink("/reviews-and-proof", "Reviews")}
         ${navLink("/service-areas", "Service Areas")}
-        ${navLink("/business-card", "Contact")}
+        ${navLink("/repair-guides", "Repair Guides")}
+        ${navLink("/community-garage-door-project", "Community Project")}
+        ${navLink("/reviews-and-proof", "Reviews & Proof")}
+        ${navLink("/about", "About Us")}
+        ${navLink("/business-card", "Contact Us")}
       </nav>
       <div class="global-header-actions">
         <a class="global-header-call js-tel" href="${PHONE_HREF}" aria-label="Call Valiant Garage Door at ${PHONE}"><span class="js-phone">${PHONE}</span></a>
