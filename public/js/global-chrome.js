@@ -146,6 +146,11 @@
   if (existingFooter) existingFooter.replaceWith(footer);
   else document.body.append(footer);
 
+  document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+    link.setAttribute("target", "_top");
+    link.setAttribute("rel", "nofollow");
+  });
+
   const toggle = header.querySelector(".global-nav-toggle");
   const nav = header.querySelector(".global-main-nav");
   const services = header.querySelector(".global-nav-services");
