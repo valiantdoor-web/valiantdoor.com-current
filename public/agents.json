@@ -45,7 +45,6 @@
     "openapi": "https://www.valiantdoor.com/openapi.json",
     "ai_plugin_manifest": "https://www.valiantdoor.com/.well-known/ai-plugin.json",
     "agent_api": "https://www.valiantdoor.com/api/valiant-agent",
-    "searchatlas_api": "https://www.valiantdoor.com/api/searchatlas",
     "agents_json": "https://www.valiantdoor.com/agents.json"
   },
   "amazon_alexa_app": {
@@ -69,8 +68,7 @@
     "emergency",
     "booking",
     "alexa",
-    "policies",
-    "searchatlas"
+    "policies"
   ],
   "policy_urls": {
     "privacy": "https://www.valiantdoor.com/privacy",

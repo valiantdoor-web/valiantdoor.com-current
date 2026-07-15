@@ -1,6 +1,13 @@
 const OpenAI = require('openai');
 const { requireListingsAdmin, readJsonBody } = require('../lib/listings/security');
 
+const RETIRED_RESOURCES = new Set([
+  'search-atlas-growth',
+  'authority-dashboard',
+  'searchatlas-api',
+  'llms-searchatlas-growth'
+]);
+
 const BUSINESS_PROFILE = {
   name: 'Valiant Garage Door',
   legalName: 'Valiant Garage Door LLC',
@@ -172,6 +179,32 @@ function sendJson(res, statusCode, payload) {
   res.setHeader('Cache-Control', 'public, max-age=300, must-revalidate');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.end(JSON.stringify(payload, null, 2));
+}
+
+function sendGone(req, res, resource) {
+  res.statusCode = 410;
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+  res.setHeader('Cache-Control', 'public, max-age=300, must-revalidate');
+
+  if (req.method === 'HEAD') {
+    res.end();
+    return;
+  }
+
+  res.end(
+    JSON.stringify(
+      {
+        ok: false,
+        status: 410,
+        error: 'Gone',
+        resource,
+        message: 'This resource has been intentionally retired.'
+      },
+      null,
+      2
+    )
+  );
 }
 
 function allowMethods(req, res, methods) {
@@ -426,6 +459,14 @@ async function runTwinCodex(req, res, body) {
 }
 
 module.exports = async (req, res) => {
+  const url = new URL(req.url || '/api/valiant-agent', 'https://www.valiantdoor.com');
+  const retiredResource = url.searchParams.get('retiredResource') || '';
+
+  if (RETIRED_RESOURCES.has(retiredResource)) {
+    sendGone(req, res, retiredResource);
+    return;
+  }
+
   if (!allowMethods(req, res, ['GET', 'POST'])) return;
 
   if (req.method === 'POST') {
@@ -441,7 +482,6 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const url = new URL(req.url || '/api/valiant-agent', 'https://www.valiantdoor.com');
   const topic = String(url.searchParams.get('topic') || 'profile').toLowerCase();
   const payload = TOPICS[topic] || TOPICS.profile;
 
