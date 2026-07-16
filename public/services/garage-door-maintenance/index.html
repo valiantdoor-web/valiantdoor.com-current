@@ -133,6 +133,245 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         text-transform: none;
         line-height: 1;
       }
+
+      .page-maintenance .maintenance-plans-grid,
+      .page-maintenance .maintenance-products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .page-maintenance .maintenance-plan-card,
+      .page-maintenance .maintenance-product-card {
+        display: flex;
+        min-width: 0;
+        overflow: hidden;
+        border: 1px solid rgba(199, 163, 75, 0.38);
+        border-radius: 16px;
+        background: #0d0e10;
+        color: #f5f2ec;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.24);
+      }
+
+      .page-maintenance .maintenance-plan-card {
+        flex-direction: column;
+      }
+
+      .page-maintenance .maintenance-plan-card--popular {
+        border-color: #c7a34b;
+        box-shadow: 0 18px 42px rgba(199, 163, 75, 0.16);
+      }
+
+      .page-maintenance .maintenance-card-media,
+      .page-maintenance .maintenance-product-media {
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+        background: #050607;
+      }
+
+      .page-maintenance .maintenance-card-media {
+        aspect-ratio: 16 / 9;
+      }
+
+      .page-maintenance .maintenance-card-media img,
+      .page-maintenance .maintenance-product-media img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .page-maintenance .maintenance-card-media::after,
+      .page-maintenance .maintenance-product-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-bottom: 1px solid rgba(199, 163, 75, 0.34);
+        pointer-events: none;
+      }
+
+      .page-maintenance .maintenance-plan-badge,
+      .page-maintenance .maintenance-product-kicker {
+        display: inline-flex;
+        align-items: center;
+        align-self: flex-start;
+        min-height: 28px;
+        padding: 5px 10px;
+        border: 1px solid rgba(199, 163, 75, 0.52);
+        border-radius: 999px;
+        color: #c7a34b;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .page-maintenance .maintenance-plan-badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        z-index: 1;
+        background: rgba(5, 6, 7, 0.9);
+      }
+
+      .page-maintenance .maintenance-plan-body,
+      .page-maintenance .maintenance-product-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: 24px;
+      }
+
+      .page-maintenance .maintenance-plan-body h3,
+      .page-maintenance .maintenance-product-body h3 {
+        margin: 12px 0 8px;
+        color: #f5f2ec;
+        line-height: 1.18;
+      }
+
+      .page-maintenance .maintenance-plan-type {
+        margin: 0;
+        color: #c7a34b;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .page-maintenance .maintenance-plan-price {
+        margin: 10px 0 12px;
+        color: #f5f2ec;
+        font-size: clamp(2rem, 5vw, 2.7rem);
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .page-maintenance .maintenance-plan-price span {
+        color: #a7a7a7;
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .page-maintenance .maintenance-plan-summary,
+      .page-maintenance .maintenance-product-body p {
+        color: #c9c7c2;
+      }
+
+      .page-maintenance .maintenance-plan-card h4 {
+        margin: 18px 0 8px;
+        color: #f5f2ec;
+        font-size: 0.84rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .page-maintenance .maintenance-plan-card ul,
+      .page-maintenance .maintenance-product-card ul {
+        margin: 0 0 22px;
+        padding-left: 20px;
+        color: #d7d5d0;
+      }
+
+      .page-maintenance .maintenance-plan-card li,
+      .page-maintenance .maintenance-product-card li {
+        margin-bottom: 8px;
+      }
+
+      .page-maintenance .maintenance-plan-use-case {
+        margin-top: 0;
+        padding: 12px 14px;
+        border-left: 2px solid #c7a34b;
+        background: #151619;
+        color: #d7d5d0;
+      }
+
+      .page-maintenance .maintenance-card-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        margin-top: auto;
+        padding: 12px 18px;
+        border: 1px solid #c7a34b;
+        border-radius: 10px;
+        background: #c7a34b;
+        color: #050607;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+      }
+
+      .page-maintenance .maintenance-card-cta:hover,
+      .page-maintenance .maintenance-card-cta:focus-visible {
+        background: #f5f2ec;
+        color: #050607;
+        transform: translateY(-2px);
+      }
+
+      .page-maintenance .maintenance-card-cta:focus-visible {
+        outline: 3px solid #f5f2ec;
+        outline-offset: 3px;
+      }
+
+      .page-maintenance .maintenance-products-intro {
+        max-width: 74ch;
+      }
+
+      .page-maintenance .maintenance-product-card {
+        flex-direction: row;
+      }
+
+      .page-maintenance .maintenance-product-media {
+        flex: 0 0 46%;
+        min-height: 360px;
+      }
+
+      .page-maintenance .maintenance-product-media--spring img {
+        object-fit: contain;
+        padding: 18px;
+      }
+
+      @media (max-width: 900px) {
+        .page-maintenance .maintenance-plans-grid,
+        .page-maintenance .maintenance-products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page-maintenance .maintenance-plans-grid,
+        .page-maintenance .maintenance-products-grid {
+          gap: 18px;
+          margin-top: 20px;
+        }
+
+        .page-maintenance .maintenance-plan-body,
+        .page-maintenance .maintenance-product-body {
+          padding: 20px;
+        }
+
+        .page-maintenance .maintenance-product-card {
+          flex-direction: column;
+        }
+
+        .page-maintenance .maintenance-product-media {
+          flex-basis: auto;
+          min-height: 0;
+          aspect-ratio: 16 / 10;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .page-maintenance .maintenance-card-cta {
+          transition: none;
+        }
+      }
     </style>
 
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YH9SQLKHQ2"></script>
@@ -669,7 +908,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "[aria-labelledby$=\"service-policies\"]"
     ]
   }
-}</script></head>
+}</script><link rel="stylesheet" href="/css/global-chrome.css">
+</head>
   <body class="page-services page-maintenance has-sticky-call">
         <div class="home-sticky-call" role="region" aria-label="Emergency repair call button">
       <a class="home-sticky-call-button" href="tel:9254094974">Tap to Call for Emergency Repair.</a>
@@ -728,9 +968,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="/services/garage-door-maintenance">Maintenance &amp; Tune-Ups</a>
               <a href="/emergency-garage-door-repair">Emergency Service</a>
               <a href="/services/commercial">Commercial Service</a>
-              <a href="/instant-estimate">Instant Estimate</a>
+              <a href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true">Instant Estimate</a>
               <a href="/quote">Request Appointment</a>
-              <a href="https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Free Estimate Instantly</a>
+              <a href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Free Estimate Instantly</a>
             </div>
           </details>
           <details class="nav-dropdown nav-dropdown-proof">
@@ -780,8 +1020,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <p>Garage door maintenance helps reduce noise, improve safety, protect opener performance, and catch worn parts before they turn into breakdowns. If a tune-up reveals spring fatigue, opener strain, or unsafe movement, we can also guide you into the right garage door spring repair or same-day repair service.</p>
         </div>
         <div class="mastertech-actions">
-          <a class="btn outline" href="https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Maintenance Instantly</a>
-          <a class="btn outline" href="https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Purchase Maintenance Package</a>
+          <a class="btn outline" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Maintenance Instantly</a>
+          <a class="btn outline" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Purchase Maintenance Package</a>
           <a class="btn outline" href="/quote">Request a Quote</a>
         </div>
         <figure class="maintenance-hero-art maintenance-hero-art--overview">
@@ -854,76 +1094,144 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h2>Maintenance Plan Options</h2>
         <p>We offer one-time tune-ups as well as three maintenance tiers for homeowners who want long-term reliability, priority care, and better protection from unexpected failures.</p>
         <p>These options work well for families who use the garage as a primary entry point, properties with multiple drivers, and doors that need regular attention to stay quiet, balanced, and dependable year-round.</p>
-        <div class="geo-card-grid">
-          <article class="geo-card">
-            <h3>One-Time Tune-Up</h3>
-            <p><strong>$89</strong></p>
-            <p>Routine inspection, lubrication, and adjustment service.</p>
-            <p><strong>Service Description:</strong></p>
-            <ul>
-              <li>Regular inspections for condition and performance</li>
-              <li>Preventive maintenance, cleaning, adjustments, and tune-ups</li>
-              <li>Priority service for repairs and maintenance requests</li>
-            </ul>
+        <div class="maintenance-plans-grid">
+          <article class="maintenance-plan-card">
+            <figure class="maintenance-card-media">
+              <span class="maintenance-plan-badge">One-time service</span>
+              <img src="/assets/maintenance/plans/one-time-tune-up.png" alt="Technician inspecting the track and hardware during a garage door tune-up" width="1024" height="1024" loading="lazy" decoding="async">
+            </figure>
+            <div class="maintenance-plan-body">
+              <p class="maintenance-plan-type">Essential safety tune-up</p>
+              <h3>One-Time Tune-Up</h3>
+              <p class="maintenance-plan-price">$89 <span>one visit</span></p>
+              <p class="maintenance-plan-summary">Routine inspection, lubrication, and adjustment service.</p>
+              <h4>Service Description</h4>
+              <ul>
+                <li>Regular inspections for condition and performance</li>
+                <li>Preventive maintenance, cleaning, adjustments, and tune-ups</li>
+                <li>Priority service for repairs and maintenance requests</li>
+              </ul>
+              <a class="maintenance-card-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Maintenance</a>
+            </div>
           </article>
-          <article class="geo-card">
-            <h3>Tier 1 – The Valiant Essentials</h3>
-            <p><strong>Basic / Preventative</strong></p>
-            <p><strong>$189</strong></p>
-            <p>Yearly maintenance visit built to catch wear early and keep the system running smoothly.</p>
-            <p><strong>Service Description:</strong></p>
-            <ul>
-              <li>Regular inspections</li>
-              <li>Preventive maintenance</li>
-              <li>Priority service</li>
-              <li>10% discounts on parts, labor, and emergency services</li>
-              <li>Peace of mind with fewer unexpected repair issues</li>
-            </ul>
-            <p><strong>Why Choose Valiant Maintenance</strong></p>
-            <ul>
-              <li>Precision workmanship — not rushed, done right</li>
-              <li>Extended system life — helps prevent major failures</li>
-              <li>Safety-first approach — reduces liability and risk</li>
-            </ul>
+          <article class="maintenance-plan-card">
+            <figure class="maintenance-card-media">
+              <span class="maintenance-plan-badge">Annual care</span>
+              <img src="/assets/maintenance/plans/valiant-essentials.png" alt="Technician lubricating garage door hinges during annual preventive maintenance" width="1024" height="1024" loading="lazy" decoding="async">
+            </figure>
+            <div class="maintenance-plan-body">
+              <p class="maintenance-plan-type">Basic / Preventative</p>
+              <h3>Tier 1 – The Valiant Essentials</h3>
+              <p class="maintenance-plan-price">$189 <span>annual visit</span></p>
+              <p class="maintenance-plan-summary">Yearly maintenance visit built to catch wear early and keep the system running smoothly.</p>
+              <h4>Service Description</h4>
+              <ul>
+                <li>Regular inspections</li>
+                <li>Preventive maintenance</li>
+                <li>Priority service</li>
+                <li>10% discounts on parts, labor, and emergency services</li>
+                <li>Peace of mind with fewer unexpected repair issues</li>
+              </ul>
+              <h4>Why Choose Valiant Maintenance</h4>
+              <ul>
+                <li>Precision workmanship — not rushed, done right</li>
+                <li>Extended system life — helps prevent major failures</li>
+                <li>Safety-first approach — reduces liability and risk</li>
+              </ul>
+              <a class="maintenance-card-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Schedule Maintenance</a>
+            </div>
           </article>
-          <article class="geo-card">
-            <h3>Tier 2 – Performance Plus</h3>
-            <p><strong>Most Popular / Performance Optimization</strong></p>
-            <p><strong>$249</strong></p>
-            <p>Includes everything in Tier 1 plus extra tuning for doors showing wear, noise, or performance issues.</p>
-            <p><strong>Includes Everything In Tier 1 PLUS:</strong></p>
-            <ul>
-              <li>Door balance and force adjustment</li>
-              <li>Sensor alignment and opener calibration</li>
-              <li>Minor system tuning for smoother operation</li>
-              <li>Broken hinge replacement — limit 2</li>
-            </ul>
-            <p><strong>Use Case:</strong> If your door is showing wear, noise, or suffering from performance issues</p>
-            <p><strong>Why Choose Valiant Maintenance</strong></p>
-            <ul>
-              <li>Precision workmanship — not rushed, done right</li>
-              <li>Extended system life — helps prevent major failures</li>
-              <li>Safety-first approach — reduces liability and risk</li>
-            </ul>
+          <article class="maintenance-plan-card maintenance-plan-card--popular">
+            <figure class="maintenance-card-media">
+              <span class="maintenance-plan-badge">Most popular</span>
+              <img src="/assets/maintenance/plans/performance-plus.png" alt="Technician calibrating a garage door opener for smoother performance" width="1024" height="1024" loading="lazy" decoding="async">
+            </figure>
+            <div class="maintenance-plan-body">
+              <p class="maintenance-plan-type">Performance optimization</p>
+              <h3>Tier 2 – Performance Plus</h3>
+              <p class="maintenance-plan-price">$249 <span>annual visit</span></p>
+              <p class="maintenance-plan-summary">Includes everything in Tier 1 plus extra tuning for doors showing wear, noise, or performance issues.</p>
+              <h4>Includes Everything In Tier 1 Plus</h4>
+              <ul>
+                <li>Door balance and force adjustment</li>
+                <li>Sensor alignment and opener calibration</li>
+                <li>Minor system tuning for smoother operation</li>
+                <li>Broken hinge replacement — limit 2</li>
+              </ul>
+              <p class="maintenance-plan-use-case"><strong>Use Case:</strong> Doors showing wear, noise, or performance issues.</p>
+              <h4>Why Choose Valiant Maintenance</h4>
+              <ul>
+                <li>Precision workmanship — not rushed, done right</li>
+                <li>Extended system life — helps prevent major failures</li>
+                <li>Safety-first approach — reduces liability and risk</li>
+              </ul>
+              <a class="maintenance-card-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Schedule Maintenance</a>
+            </div>
           </article>
-          <article class="geo-card">
-            <h3>Tier 3 – Valiant Signature Shield</h3>
-            <p><strong>Premium / Longevity + Priority Service</strong></p>
-            <p><strong>$299</strong></p>
-            <p>Includes everything in Tier 2 plus the highest-priority care for high-cycle doors and homeowners who want zero headaches.</p>
-            <p><strong>Includes Everything In Tier 2 PLUS:</strong></p>
-            <ul>
-              <li>Roller upgrade or replacement for key wear components</li>
-              <li>Priority scheduling with front-of-line service</li>
-              <li>Extended lifespan focus to reduce future failures</li>
-            </ul>
-            <p><strong>Use Case:</strong> High-cycle doors and homeowners who want zero headaches</p>
-            <p><strong>Why Choose Valiant Maintenance</strong></p>
-            <ul>
-              <li>Precision workmanship — not rushed, done right</li>
-              <li>Extended system life — helps prevent major failures</li>
-              <li>Safety-first approach — reduces liability and risk</li>
-            </ul>
+          <article class="maintenance-plan-card">
+            <figure class="maintenance-card-media">
+              <span class="maintenance-plan-badge">Priority care</span>
+              <img src="/assets/maintenance/plans/signature-shield.png" alt="Technician completing a comprehensive whole-door preventive inspection" width="1024" height="1024" loading="lazy" decoding="async">
+            </figure>
+            <div class="maintenance-plan-body">
+              <p class="maintenance-plan-type">Premium / Longevity + Priority Service</p>
+              <h3>Tier 3 – Valiant Signature Shield</h3>
+              <p class="maintenance-plan-price">$299 <span>annual visit</span></p>
+              <p class="maintenance-plan-summary">Includes everything in Tier 2 plus the highest-priority care for high-cycle doors and homeowners who want zero headaches.</p>
+              <h4>Includes Everything In Tier 2 Plus</h4>
+              <ul>
+                <li>Roller upgrade or replacement for key wear components</li>
+                <li>Priority scheduling with front-of-line service</li>
+                <li>Extended lifespan focus to reduce future failures</li>
+              </ul>
+              <p class="maintenance-plan-use-case"><strong>Use Case:</strong> High-cycle doors and homeowners who want zero headaches.</p>
+              <h4>Why Choose Valiant Maintenance</h4>
+              <ul>
+                <li>Precision workmanship — not rushed, done right</li>
+                <li>Extended system life — helps prevent major failures</li>
+                <li>Safety-first approach — reduces liability and risk</li>
+              </ul>
+              <a class="maintenance-card-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Schedule Maintenance</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="geo-section" aria-labelledby="maintenance-upgrades-title">
+        <h2 id="maintenance-upgrades-title">Torsion Springs &amp; Stealth Kits</h2>
+        <p class="maintenance-products-intro">When maintenance reveals worn balance components or noisy travel hardware, we can outline the right upgrade for your specific door. These systems are selected and installed to match the door rather than treated as one-size-fits-all parts.</p>
+        <div class="maintenance-products-grid">
+          <article class="maintenance-product-card">
+            <figure class="maintenance-product-media maintenance-product-media--spring">
+              <img src="/assets/springs/valiant-endurance-max-torsion-spring.png" alt="Valiant Endurance Max garage door torsion spring" width="604" height="610" loading="lazy" decoding="async">
+            </figure>
+            <div class="maintenance-product-body">
+              <span class="maintenance-product-kicker">Balanced lift system</span>
+              <h3>Valiant Torsion Springs</h3>
+              <p>Correctly sized torsion springs counterbalance the door so it lifts smoothly and the opener does not carry the full door weight.</p>
+              <ul>
+                <li>Matched to the door's weight and configuration</li>
+                <li>Balanced for smoother, more controlled travel</li>
+                <li>Available in high-cycle options for frequent use</li>
+              </ul>
+              <a class="maintenance-card-cta" href="/garage-door-spring-replacement">Request Appointment</a>
+            </div>
+          </article>
+          <article class="maintenance-product-card">
+            <figure class="maintenance-product-media">
+              <img src="/assets/maintenance/plans/stealth-kit.png" alt="Quiet garage door rollers, hinges, and upgraded hardware arranged as a Stealth Kit" width="1024" height="1024" loading="lazy" decoding="async">
+            </figure>
+            <div class="maintenance-product-body">
+              <span class="maintenance-product-kicker">Quiet operation upgrade</span>
+              <h3>Valiant Stealth Kit</h3>
+              <p>A coordinated roller and hardware upgrade for doors that shake, rattle, squeak, or send too much vibration through the garage.</p>
+              <ul>
+                <li>Quiet rollers help reduce travel noise</li>
+                <li>Fresh wear hardware supports smoother movement</li>
+                <li>Installed and adjusted as part of the full door system</li>
+              </ul>
+              <a class="maintenance-card-cta" href="/quote">Request Appointment</a>
+            </div>
           </article>
         </div>
       </section>
@@ -974,7 +1282,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<section class="geo-section" aria-labelledby="search-atlas-maintenance-gap-answers"><h2 id="search-atlas-maintenance-gap-answers">Search Atlas Maintenance Gap Answers</h2><div class="geo-faq-list"><details class="geo-faq-item"><summary>How do I maintain my garage door tracks to prevent sticking?</summary><p>Keep tracks clear of grit and debris, do not pack the track with grease, and schedule service if the door rubs, binds, scrapes, or stalls. Valiant checks track alignment, roller condition, hinge movement, spring balance, and opener force so a sticking door is corrected at the cause.</p></details><details class="geo-faq-item"><summary>What are the signs that my garage door rollers need to be replaced?</summary><p>Grinding, squeaking, wobbling, flat-spotted rollers, shaking sections, rough travel, or a door that drags in the track can point to worn rollers. Replacing worn rollers can reduce opener strain and prevent a small maintenance issue from becoming an emergency repair.</p></details><details class="geo-faq-item"><summary>Who offers the most thorough garage door safety inspections in Dublin, CA?</summary><p>Valiant Garage Door serves Dublin with safety inspections that check springs, cables, rollers, hinges, tracks, opener limits, force settings, photo eyes, reverse function, balance, and loose hardware. The goal is to identify safety issues before the door traps a vehicle or fails suddenly.</p></details><details class="geo-faq-item"><summary>How often should I have my garage door serviced in Pleasanton?</summary><p>Most Pleasanton residential garage doors should be serviced once per year. High-use doors, noisy doors, rental properties, older springs, heavy wood doors, and doors with opener strain should be inspected sooner.</p></details></div></section>
+<section class="geo-section" aria-labelledby="search-atlas-maintenance-gap-answers"><h2 id="search-atlas-maintenance-gap-answers">Maintenance Maintenance Gap Answers</h2><div class="geo-faq-list"><details class="geo-faq-item"><summary>How do I maintain my garage door tracks to prevent sticking?</summary><p>Keep tracks clear of grit and debris, do not pack the track with grease, and schedule service if the door rubs, binds, scrapes, or stalls. Valiant checks track alignment, roller condition, hinge movement, spring balance, and opener force so a sticking door is corrected at the cause.</p></details><details class="geo-faq-item"><summary>What are the signs that my garage door rollers need to be replaced?</summary><p>Grinding, squeaking, wobbling, flat-spotted rollers, shaking sections, rough travel, or a door that drags in the track can point to worn rollers. Replacing worn rollers can reduce opener strain and prevent a small maintenance issue from becoming an emergency repair.</p></details><details class="geo-faq-item"><summary>Who offers the most thorough garage door safety inspections in Dublin, CA?</summary><p>Valiant Garage Door serves Dublin with safety inspections that check springs, cables, rollers, hinges, tracks, opener limits, force settings, photo eyes, reverse function, balance, and loose hardware. The goal is to identify safety issues before the door traps a vehicle or fails suddenly.</p></details><details class="geo-faq-item"><summary>How often should I have my garage door serviced in Pleasanton?</summary><p>Most Pleasanton residential garage doors should be serviced once per year. High-use doors, noisy doors, rental properties, older springs, heavy wood doors, and doors with opener strain should be inspected sooner.</p></details></div></section>
 
 <section class="geo-section service-cross-links" aria-labelledby="service-cross-links-title">
   <h2 id="service-cross-links-title">Garage Door Service Links</h2>
@@ -995,7 +1303,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="mastertech-actions">
           <a class="btn outline" href="/quote">Free Estimate Options</a>
           <a class="btn outline" href="tel:9254094974">9254094974</a>
-          <a class="btn" href="https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Free Estimate Instantly</a>
+          <a class="btn" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Free Estimate Instantly</a>
         </div>
       </section>
     </main>
@@ -1015,7 +1323,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <a href="/mission">Mission</a>
           <a href="/service-areas">Service Areas</a>
           <a href="/quote">Request Appointment</a>
-          <a href="https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Free Estimate Instantly</a>
+          <a href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Free Estimate Instantly</a>
           <a href="/business-card">Business Card</a><a href="/site-map">Site Map</a>
         </nav>
         <div class="footer-legal">
@@ -1028,4 +1336,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+<script src="/js/global-chrome.js" defer></script>
 </body></html>
