@@ -37,6 +37,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       /* Reserve space only for the fixed emergency call strip at paint time.
          The global header is position:sticky so it does not consume flow space —
          including its height in padding-top created a blank gap below the header. */
+      /* Let the hero image show through the content boxes on the quote page. */
+      body.page-quote .form-card {
+        background: rgba(15, 16, 18, 0.55);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        border-color: rgba(199, 163, 75, 0.28);
+      }
       body.page-quote {
         padding-top: 64px !important;
         background-color: #08090d;
