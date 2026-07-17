@@ -6,6 +6,90 @@
   const BOOK_URL = "https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true";
   const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
 
+  const initializeSiteBot = (() => {
+    const INJECT_URL = "https://cdn.botpress.cloud/webchat/v3.6/inject.js";
+    const CONFIG_URL = "https://files.bpcontent.cloud/2026/05/01/11/20260501112742-4945ZV3N.js";
+    const MAX_ATTEMPTS = 3;
+    const LOAD_TIMEOUT = 12000;
+    let started = false;
+
+    const findScript = (url) =>
+      Array.from(document.scripts).find((script) => script.src && script.src.split("?")[0] === url);
+
+    const loadScript = (url, id, attempt) =>
+      new Promise((resolve, reject) => {
+        const existing = findScript(url);
+        if (existing?.dataset.valiantLoaded === "true") {
+          resolve(existing);
+          return;
+        }
+
+        const script = existing || document.createElement("script");
+        const timer = window.setTimeout(() => reject(new Error(`${id} timed out`)), LOAD_TIMEOUT);
+        const finish = () => {
+          window.clearTimeout(timer);
+          script.dataset.valiantLoaded = "true";
+          resolve(script);
+        };
+        const fail = () => {
+          window.clearTimeout(timer);
+          script.remove();
+          reject(new Error(`${id} failed to load`));
+        };
+
+        script.addEventListener("load", finish, { once: true });
+        script.addEventListener("error", fail, { once: true });
+        if (!existing) {
+          script.id = id;
+          script.src = `${url}${attempt > 1 ? `?retry=${attempt}` : ""}`;
+          script.async = false;
+          script.crossOrigin = "anonymous";
+          document.body.append(script);
+        } else if (url === INJECT_URL && window.botpress) {
+          finish();
+        }
+      });
+
+    const botIsMounted = () =>
+      Boolean(
+        document.querySelector('iframe[src*="botpress"], #bp-web-widget-container, [data-botpress-webchat]')
+      );
+
+    const start = async () => {
+      if (started || botIsMounted()) return;
+      started = true;
+
+      for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
+        try {
+          if (!window.botpress) {
+            const staleRuntime = findScript(INJECT_URL);
+            if (staleRuntime && document.readyState === "complete") staleRuntime.remove();
+            await loadScript(INJECT_URL, "valiant-botpress-runtime", attempt);
+          }
+          if (!window.botpress) throw new Error("Botpress runtime unavailable");
+
+          if (!botIsMounted()) {
+            const staleConfig = findScript(CONFIG_URL);
+            if (staleConfig && staleConfig.dataset.valiantLoaded !== "true") staleConfig.remove();
+            await loadScript(CONFIG_URL, "valiant-botpress-config", attempt);
+          }
+          return;
+        } catch (error) {
+          if (attempt === MAX_ATTEMPTS) return;
+          await new Promise((resolve) => window.setTimeout(resolve, attempt * 1000));
+        }
+      }
+    };
+
+    return start;
+  })();
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeSiteBot, { once: true });
+  } else {
+    initializeSiteBot();
+  }
+
   document.querySelectorAll("section").forEach((section) => {
     const heading = section.querySelector(":scope > h2");
     if (heading && ["Search Atlas Intent Covered", "Search Atlas Visibility Gaps Used"].includes(heading.textContent.trim())) {
