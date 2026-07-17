@@ -159,6 +159,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           grid-template-columns: 1fr;
         }
       }
+      /* Documented commercial repair report */
+      .commercial-report {
+        border: 1px solid rgba(199, 163, 75, 0.28);
+        border-radius: 16px;
+        background: rgba(14, 14, 16, 0.85);
+        padding: clamp(20px, 3vw, 36px);
+        margin-top: 1.5rem;
+      }
+      .commercial-report-meta {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(199, 163, 75, 0.9);
+        margin-bottom: 0.75rem;
+      }
+      .commercial-report-scope {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin: 1.5rem 0;
+      }
+      .commercial-report-scope div {
+        border: 1px solid rgba(199, 163, 75, 0.18);
+        border-radius: 12px;
+        padding: 18px 16px;
+        background: rgba(20, 18, 10, 0.55);
+      }
+      .commercial-report-scope h3 {
+        font-size: 1rem;
+        margin: 0 0 0.6rem;
+        color: rgba(224, 199, 131, 0.95);
+      }
+      .commercial-report-scope ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+      .commercial-report-scope li {
+        margin-bottom: 0.35rem;
+      }
+      .commercial-report-score {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(199, 163, 75, 0.2);
+      }
+      .commercial-report-score div {
+        text-align: center;
+      }
+      .commercial-report-score .score-value {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--global-gold, #c7a34b);
+        line-height: 1.1;
+      }
+      .commercial-report-score .score-label {
+        display: block;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--global-muted, #b7b1a6);
+        margin-top: 0.4rem;
+      }
+      .commercial-report-standard {
+        margin-top: 1.5rem;
+        font-style: italic;
+        color: rgba(224, 199, 131, 0.9);
+      }
+      @media (max-width: 760px) {
+        .commercial-report-scope,
+        .commercial-report-score {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
       <!-- Google tag (gtag.js) -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YH9SQLKHQ2"></script>
@@ -650,6 +728,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <figcaption>Commercial overhead door service in progress with technician access and chain-drive adjustment.</figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="service-detail" aria-labelledby="commercial-repair-report">
+        <h2 id="commercial-repair-report">Documented Commercial Repair: Crashed Door Recovery</h2>
+        <p>A recent commercial call shows how Valiant documents and executes a full crashed-door recovery — torsion reset, track reset, and alignment — under the Valiant Standard of Excellence.</p>
+        <div class="commercial-report">
+          <span class="commercial-report-meta">Commercial Maintenance &amp; Repair Visit #1 &middot; July 11, 2026</span>
+          <p>Crashed door re-balance, track reset and alignment, and a complete tune-up with safety inspection — with the dead-shaft retainer (RDRG) reset and chain drive re-routed to restore reliable operation.</p>
+          <div class="commercial-report-scope">
+            <div>
+              <h3>Crashed Door &amp; Torsion Reset</h3>
+              <ul>
+                <li>Crashed door re-balance</li>
+                <li>Track re-set &amp; alignment</li>
+                <li>Complete tune-up &amp; safety inspection</li>
+              </ul>
+            </div>
+            <div>
+              <h3>RDRG — Dead Shaft Retainer</h3>
+              <ul>
+                <li>Dead shaft retainer reset</li>
+                <li>Commercial door balance</li>
+                <li>Chain re-routed &amp; chain guide mended</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Track Reset &amp; Alignment</h3>
+              <ul>
+                <li>Mended vertical tracks</li>
+                <li>Replaced splice plates</li>
+                <li>Re-attached reverse angle &amp; reinforced vertical track support</li>
+              </ul>
+            </div>
+          </div>
+          <div class="commercial-report-score">
+            <div>
+              <span class="score-value">7/10</span>
+              <span class="score-label">Master Tech Door Health Rating</span>
+            </div>
+            <div>
+              <span class="score-value">1</span>
+              <span class="score-label">Repair Visit Exhausted</span>
+            </div>
+            <div>
+              <span class="score-value">2</span>
+              <span class="score-label">Suggested Upgrades</span>
+            </div>
+          </div>
+          <p style="margin-top:1.25rem;"><strong>Suggested upgrades:</strong> 1.6200ZZ 100k-cycle rollers and 14-gauge graduated hinges to extend service life on a high-cycle commercial door.</p>
+          <p class="commercial-report-standard">Every repair is backed by The Valiant Standard of Excellence.</p>
         </div>
       </section>
 
