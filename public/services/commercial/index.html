@@ -110,6 +110,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           background: #0a0a0b;
         }
       }
+      .commercial-cred-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 1.5rem;
+      }
+      .commercial-cred-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 16px;
+        border: 1px solid rgba(199, 163, 75, 0.28);
+        border-radius: 14px;
+        background: rgba(14, 14, 16, 0.85);
+        text-decoration: none;
+        transition: border-color 0.2s, background 0.2s;
+      }
+      .commercial-cred-card:hover,
+      .commercial-cred-card:focus-visible {
+        border-color: rgba(199, 163, 75, 0.65);
+        background: rgba(20, 18, 10, 0.95);
+      }
+      .commercial-cred-card img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+      .commercial-cred-card--badge img {
+        max-width: 140px;
+      }
+      .commercial-cred-label {
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: rgba(199, 163, 75, 0.9);
+        text-align: center;
+      }
+      @media (max-width: 640px) {
+        .commercial-cred-strip {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
       <!-- Google tag (gtag.js) -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YH9SQLKHQ2"></script>
@@ -621,6 +667,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p>Typical commercial calls include operator troubleshooting, safety device testing, weather seal replacement, bottom bar damage, spring fatigue, chain hoist issues, and repeated door balance problems that put extra strain on the opener. We can also help you prioritize what needs same-Day repair versus what can be scheduled into a preventive maintenance plan.</p>
         <p>We also coordinate commercial garage door repair in Pleasanton, CA for facilities that rely on sectional doors, rolling steel doors, loading-Dock operators, and other door openers. When a business needs broader garage door services, our team can connect commercial work with the main <a href="/services">Service Overview</a> And <a href="/services/garage-door-maintenance">Scheduled Maintenance</a>.</p>
         <p>If your facility depends on loading access, secure overnight closure, or uninterrupted tenant operations, Valiant documents the problem clearly and explains the recommended repair path so decision-Makers can move quickly. For urgent secure-Close situations, use the <a href="/emergency-garage-door-repair">Emergency garage door repair page</a> Or <a href="/quote">Request commercial service online</a>.</p>
+      </section>
+
+      <section class="service-detail" aria-labelledby="commercial-credentials-strip">
+        <h2 id="commercial-credentials-strip">IDEA Certifications &amp; Master Technician Badge</h2>
+        <p>Valiant Garage Door is backed by formal IDEA industry training. Valentino Ramirez holds active certifications for Commercial Sectional Door Installation, Commercial Sectional Systems, Commercial Rolling Door Systems, and Residential Door Systems — all verifiable through the IDEA Certified Technician Directory.</p>
+        <div class="commercial-cred-strip">
+          <a class="commercial-cred-card" href="/idea-certified-garage-door-technician" aria-label="View IDEA certification proof">
+            <img src="/assets/credentials/idea-logo-education-accreditation-cropped.webp" alt="IDEA International Door Education Association certification logo" width="480" height="240" loading="lazy" decoding="async">
+            <span class="commercial-cred-label">IDEA Certified</span>
+          </a>
+          <a class="commercial-cred-card commercial-cred-card--badge" href="/mastertech" aria-label="Meet the master technician">
+            <img src="/assets/credentials/idea-master-technician-badge.png" alt="IDEA Master Technician badge — Valentino Ramirez, Valiant Garage Door" width="320" height="320" loading="lazy" decoding="async">
+            <span class="commercial-cred-label">Master Technician</span>
+          </a>
+          <a class="commercial-cred-card" href="/idea-certified-garage-door-technician" aria-label="View IDEA commercial credential proof">
+            <img src="/assets/credentials/idea-certification-patches-collage-cropped.png" alt="IDEA certification patches collage including commercial sectional and rolling door credentials" width="480" height="320" loading="lazy" decoding="async">
+            <span class="commercial-cred-label">Commercial Credentials</span>
+          </a>
+        </div>
+        <p style="margin-top:1.25rem;"><a href="/idea-certified-garage-door-technician">View full IDEA credential proof</a> &nbsp;&middot;&nbsp; <a href="/mastertech">Meet the master technician</a></p>
+      </section>
+
+      <section class="service-detail" aria-labelledby="commercial-maintenance-plans">
+        <h2 id="commercial-maintenance-plans">Commercial Maintenance &amp; Repair Fixed Plans</h2>
+        <p>Unplanned downtime is expensive. Valiant offers structured commercial maintenance plans that keep sectional doors, rolling steel doors, and overhead operators running at full performance — before a broken spring or failed operator forces an emergency call.</p>
+        <ul>
+          <li><strong>Fixed-Rate Repair Visits</strong> — Flat-rate pricing for common commercial repairs: spring replacement, cable repair, roller replacement, bottom bar damage, and operator troubleshooting. No surprise labor markups.</li>
+          <li><strong>Scheduled Maintenance Contracts</strong> — Periodic inspections, lubrication, balance checks, safety device testing, and wear-part documentation. Available quarterly or semi-annually.</li>
+          <li><strong>Priority Response</strong> — Maintenance contract customers receive priority scheduling over standard calls, minimizing disruption to loading operations and tenant access.</li>
+          <li><strong>Documented Service Records</strong> — Every visit is documented with findings, parts used, and recommended next steps — useful for property management, insurance, and facilities planning.</li>
+        </ul>
+        <p>Ask about commercial plan pricing when you <a href="/quote">request commercial service</a> or <a href="tel:+19254094974">call (925) 409-4974</a> directly.</p>
       </section>
 
       <section class="services-cta">

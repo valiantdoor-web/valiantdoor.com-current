@@ -13,6 +13,17 @@
 }
 @media (max-width: 1080px) { :root { --header-h: 77px; } }
 @media (max-width: 760px)  { :root { --header-h: 73px; } }
+/* Hide the old site-header immediately so it never paints at its full
+   height before global-chrome.js swaps it for the new compact header.
+   Using opacity+pointer-events (not display:none) keeps layout stable
+   and prevents CLS while the deferred script is still loading. */
+header.site-header {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  max-height: var(--header-h) !important;
+  overflow: hidden !important;
+  transition: none !important;
+}
 .global-site-header,
 .global-site-footer {
   color: var(--global-ivory);

@@ -34,8 +34,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.min.css?v=20260703-header-buttons">
     <style>
+      /* Reserve space for sticky emergency strip (64px) + global header at paint time
+         so the deferred chrome injection causes zero layout shift (CLS = 0). */
       body.page-quote {
-        padding-top: var(--header-h, 85px);
+        padding-top: calc(64px + var(--header-h, 85px)) !important;
+      }
+      @media (max-width: 640px) {
+        body.page-quote {
+          padding-top: calc(74px + var(--header-h, 73px)) !important;
+        }
       }
 
       .quote-sticky-call {
@@ -74,10 +81,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       @media (max-width: 640px) {
-        body.page-quote {
-          padding-top: var(--header-h, 73px);
-        }
-
         .quote-sticky-call-button {
           width: 100%;
           text-align: center;
