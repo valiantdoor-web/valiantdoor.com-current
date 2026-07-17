@@ -6,7 +6,18 @@
   --global-gold-soft: #e0c783;
   --global-ivory: #f5f2ec;
   --global-muted: #b7b1a6;
+  /* Header height reservation — prevents layout shift when the JS-injected
+     sticky header pops in. Keep in sync with .global-header-inner min-height. */
+  --header-h: 85px;
+  scroll-padding-top: var(--header-h);
 }
+/* Reserve the exact space the sticky header will occupy so content never
+   jumps when global-chrome.js injects the header element. */
+body:not(.no-chrome) {
+  padding-top: var(--header-h);
+}
+@media (max-width: 1080px) { :root { --header-h: 77px; } }
+@media (max-width: 760px)  { :root { --header-h: 73px; } }
 .global-site-header,
 .global-site-footer {
   color: var(--global-ivory);
