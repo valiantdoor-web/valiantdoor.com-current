@@ -11,11 +11,6 @@
   --header-h: 85px;
   scroll-padding-top: var(--header-h);
 }
-/* Reserve the exact space the sticky header will occupy so content never
-   jumps when global-chrome.js injects the header element. */
-body:not(.no-chrome) {
-  padding-top: var(--header-h);
-}
 @media (max-width: 1080px) { :root { --header-h: 77px; } }
 @media (max-width: 760px)  { :root { --header-h: 73px; } }
 .global-site-header,

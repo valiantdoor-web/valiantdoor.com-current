@@ -73,6 +73,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         object-position: center;
         display: block;
       }
+      .commercial-photo-card-rotate-wrap {
+        width: 100%;
+        height: clamp(240px, 32vw, 420px);
+        overflow: hidden;
+        position: relative;
+      }
+      .commercial-photo-card-rotate-wrap img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: calc(100% * 1.333);
+        max-width: none;
+        transform: translate(-50%, -50%) rotate(90deg);
+        transform-origin: center center;
+        object-fit: cover;
+      }
+      .commercial-photo-card--rotated > img {
+        display: none;
+      }
       .commercial-photo-card figcaption {
         padding: 12px 14px 14px;
         color: rgba(245, 242, 236, 0.84);
@@ -573,8 +593,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="/assets/commercial/commercial-hoist-1.webp" alt="Commercial rolling steel door drum and chain hoist assembly during service" width="1800" height="1350" loading="eager" decoding="async">
             <figcaption>Commercial chain hoist and rolling steel door hardware during on-site service.</figcaption>
           </figure>
-          <figure class="commercial-photo-card">
-            <img src="/assets/commercial/commercial-hoist-2.webp" alt="Valiant technician on a ladder servicing a commercial overhead door chain system" width="1800" height="1350" loading="lazy" decoding="async" style="transform:rotate(90deg);transform-origin:center center;">
+          <figure class="commercial-photo-card commercial-photo-card--rotated">
+            <div class="commercial-photo-card-rotate-wrap">
+              <img src="/assets/commercial/commercial-hoist-2.webp" alt="Valiant technician on a ladder servicing a commercial overhead door chain system" width="1800" height="1350" loading="lazy" decoding="async">
+            </div>
             <figcaption>Commercial overhead door service in progress with technician access and chain-drive adjustment.</figcaption>
           </figure>
         </div>

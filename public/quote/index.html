@@ -35,7 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="/css/styles.min.css?v=20260703-header-buttons">
     <style>
       body.page-quote {
-        padding-top: 64px;
+        padding-top: var(--header-h, 85px);
       }
 
       .quote-sticky-call {
@@ -75,7 +75,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       @media (max-width: 640px) {
         body.page-quote {
-          padding-top: 74px;
+          padding-top: var(--header-h, 73px);
         }
 
         .quote-sticky-call-button {
