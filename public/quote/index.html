@@ -34,23 +34,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.min.css?v=20260703-header-buttons">
     <style>
-      /* Reserve space for sticky emergency strip (64px) + global header at paint time
-         so the deferred chrome injection causes zero layout shift (CLS = 0). */
+      /* Reserve space only for the fixed emergency call strip at paint time.
+         The global header is position:sticky so it does not consume flow space —
+         including its height in padding-top created a blank gap below the header. */
       body.page-quote {
-        padding-top: calc(64px + var(--header-h, 85px)) !important;
+        padding-top: 64px !important;
         background-color: #08090d;
         background-image:
-          linear-gradient(180deg, rgba(8, 9, 13, 0.72) 0%, rgba(8, 9, 13, 0.82) 55%, rgba(8, 9, 13, 0.95) 100%),
+          linear-gradient(180deg, rgba(8, 9, 13, 0.78) 0%, rgba(8, 9, 13, 0.88) 60%, rgba(8, 9, 13, 0.97) 100%),
           url("/assets/quote/quote-hero-service-repair.webp");
-        background-repeat: no-repeat, no-repeat;
-        background-position: center top, center top;
-        background-size: cover, cover;
-        background-attachment: fixed, fixed;
+        background-repeat: no-repeat;
+        background-position: center 64px, center 64px;
+        background-size: cover;
+        background-attachment: fixed;
       }
       @media (max-width: 640px) {
         body.page-quote {
-          padding-top: calc(74px + var(--header-h, 73px)) !important;
-          background-attachment: scroll, scroll;
+          padding-top: 74px !important;
+          background-position: center 74px, center 74px;
+          background-attachment: scroll;
         }
       }
 
@@ -198,7 +200,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "url": "https://www.valiantdoor.com/",
       "telephone": "9254094974",
       "email": "vm@valiantdoor.com",
-      "description": "Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement,Openers,Complex Systems, And Precision System Upgrades. We’re Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service.",
+      "description": "Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement,Openers,Complex Systems, And Precision System Upgrades. We��re Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service.",
       "priceRange": "$$",
       "logo": "https://www.valiantdoor.com/assets/logo/valiant-logo-gold.png",
       "image": "https://www.valiantdoor.com/assets/home-optimized/shield-192.webp",

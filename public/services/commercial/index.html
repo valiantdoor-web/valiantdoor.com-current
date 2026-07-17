@@ -83,8 +83,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         position: absolute;
         top: 50%;
         left: 50%;
-        width: auto;
-        height: calc(100% * 1.333);
+        /* Images are landscape (1800×1350). After rotating 90° the natural
+           width becomes the height axis. Using width = containerHeight × (W/H)
+           fills the container without black bars. */
+        width: calc(100% * 1.333);
+        height: auto;
         max-width: none;
         transform: translate(-50%, -50%) rotate(90deg);
         transform-origin: center center;
