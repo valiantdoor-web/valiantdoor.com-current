@@ -183,12 +183,16 @@
       <div class="global-footer-bottom"><span>&copy; 2026 Valiant Garage Door LLC. All Rights Reserved.</span><span><a href="/privacy">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="/terms">Terms of Service</a></span></div>
     </div>`;
 
-  const existingHeader = document.querySelector("header.site-header, header.global-site-header");
-  if (existingHeader) existingHeader.replaceWith(header);
-  else {
-    const announcement = document.querySelector(".announce, .top-strip, .home-sticky-call");
-    if (announcement) announcement.insertAdjacentElement("afterend", header);
-    else document.body.prepend(header);
+  const noChrome = currentPath === "/business-card";
+
+  if (!noChrome) {
+    const existingHeader = document.querySelector("header.site-header, header.global-site-header");
+    if (existingHeader) existingHeader.replaceWith(header);
+    else {
+      const announcement = document.querySelector(".announce, .top-strip, .home-sticky-call");
+      if (announcement) announcement.insertAdjacentElement("afterend", header);
+      else document.body.prepend(header);
+    }
   }
 
   const enduranceMaxRoutes = new Set([
@@ -227,8 +231,10 @@
     const main = document.querySelector("main");
     if (main) main.append(createEnduranceMaxCard());
   }
-  if (existingFooter) existingFooter.replaceWith(footer);
-  else document.body.append(footer);
+  if (!noChrome) {
+    if (existingFooter) existingFooter.replaceWith(footer);
+    else document.body.append(footer);
+  }
 
   document.addEventListener("click", (event) => {
     const callLink = event.target.closest('a[href^="tel:"]');
