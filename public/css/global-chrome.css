@@ -9,7 +9,9 @@
   /* Header height reservation — prevents layout shift when the JS-injected
      sticky header pops in. Keep in sync with .global-header-inner min-height. */
   --header-h: 85px;
-  scroll-padding-top: var(--header-h);
+  /* Total offset = sticky call bar + global header. Pages without the call
+     bar have --valiant-sticky-call-offset defaulting to 0 via the fallback. */
+  scroll-padding-top: calc(var(--valiant-sticky-call-offset, 0px) + var(--header-h));
 }
 @media (max-width: 1080px) { :root { --header-h: 77px; } }
 @media (max-width: 760px)  { :root { --header-h: 73px; } }
@@ -36,8 +38,12 @@ header.site-header {
 .global-wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 .global-site-header {
   position: sticky;
-  top: 0;
-  z-index: 1000;
+  /* Sit directly below the fixed emergency call bar on pages that have it.
+     Falls back to 0 on pages without --valiant-sticky-call-offset. */
+  top: var(--valiant-sticky-call-offset, 0px);
+  /* Must exceed the old site-header z-index (9990) so the new header
+     always renders on top and intercepts scroll correctly. */
+  z-index: 9995;
   background: rgba(9, 9, 10, .97);
   border-bottom: 1px solid rgba(199, 163, 75, .24);
   box-shadow: 0 10px 28px rgba(0, 0, 0, .26);
