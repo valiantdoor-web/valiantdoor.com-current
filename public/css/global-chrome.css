@@ -51,7 +51,7 @@ header.site-header {
 }
 .global-header-inner { min-height: 84px; display: flex; align-items: center; gap: 24px; }
 .global-brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 10px; }
-.global-brand img { width: 48px; height: 48px; object-fit: contain; }
+.global-brand img { width: 62px; height: 62px; object-fit: contain; }
 .global-brand-text { display: flex; flex-direction: column; line-height: 1; }
 .global-brand-text b { font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; letter-spacing: .14em; }
 .global-brand-text small { margin-top: 7px; color: var(--global-gold); font-size: .62rem; letter-spacing: .34em; }
@@ -111,7 +111,7 @@ header.site-header {
 @media (max-width: 760px) {
   .global-wrap { width: min(100% - 28px, 1180px); }
   .global-header-inner { min-height: 72px; justify-content: space-between; }
-  .global-brand img { width: 45px; height: 45px; }
+  .global-brand img { width: 54px; height: 54px; }
   .global-brand-text { display: flex; }
   .global-brand-text b { font-size: 1rem; }
   .global-brand-text small { font-size: .5rem; }
