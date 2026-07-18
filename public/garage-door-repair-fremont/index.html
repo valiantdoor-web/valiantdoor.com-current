@@ -119,12 +119,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "price": "100",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "availableAtOrFrom": { "@type": "Place", "name": "Pleasanton, CA and the East Bay" }
+          "availableAtOrFrom": {
+            "@type": "Place",
+            "name": "Pleasanton, CA and the East Bay"
+          }
         }
       ],
       "warranty": {
         "@type": "WarrantyPromise",
-        "durationOfWarranty": { "@type": "QuantitativeValue", "value": 10, "unitCode": "ANN" },
+        "durationOfWarranty": {
+          "@type": "QuantitativeValue",
+          "value": 10,
+          "unitCode": "ANN"
+        },
         "warrantyScope": "10-year warranty on garage door repairs and installed parts"
       },
       "name": "Valiant Garage Door",
@@ -259,36 +266,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "provider": {
         "@id": "https://www.valiantdoor.com/#business"
       },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Pleasanton, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Dublin, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Livermore, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Fremont, CA"
-        },
-        {
-          "@type": "City",
-          "name": "San Ramon, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Danville, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Sunol, CA"
+      "areaServed": {
+        "@type": "City",
+        "name": "Fremont, CA",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.5485,
+          "longitude": -121.9886
         }
-      ],
+      },
       "url": "https://www.valiantdoor.com/garage-door-repair-fremont",
       "warranty": {
         "@type": "WarrantyPromise",

@@ -33,12 +33,19 @@
           "price": "100",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "availableAtOrFrom": { "@type": "Place", "name": "Pleasanton, CA and the East Bay" }
+          "availableAtOrFrom": {
+            "@type": "Place",
+            "name": "Pleasanton, CA and the East Bay"
+          }
         }
       ],
       "warranty": {
         "@type": "WarrantyPromise",
-        "durationOfWarranty": { "@type": "QuantitativeValue", "value": 10, "unitCode": "ANN" },
+        "durationOfWarranty": {
+          "@type": "QuantitativeValue",
+          "value": 10,
+          "unitCode": "ANN"
+        },
         "warrantyScope": "10-year warranty on garage door repairs and installed parts"
       },
       "name": "Valiant Garage Door",
@@ -158,8 +165,13 @@
         "@id": "https://www.valiantdoor.com/#business"
       },
       "areaServed": {
-        "@type": "Place",
-        "name": "East Dublin, Dublin, CA"
+        "@type": "City",
+        "name": "Dublin, CA",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.705,
+          "longitude": -121.868
+        }
       },
       "warranty": {
         "@type": "WarrantyPromise",
