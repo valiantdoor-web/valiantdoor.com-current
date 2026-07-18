@@ -13,7 +13,7 @@ const GOOGLE_PLACE_ID = 'ChIJreu0MBcWcgMRQnyWHvhS94w'
 // Edit these if the live source is ever unavailable / not yet wired.
 const STATIC_FALLBACK = {
   googleRating: 5.0,
-  googleReviewCount: 70,
+  googleReviewCount: 59,
   nextdoorFaves: 40,
 }
 
