@@ -272,7 +272,7 @@
   "trailingSlash": false,
   "routes": [
     {
-      "src": "^/(search-atlas-growth|authority-dashboard|llms-searchatlas-growth\\.txt)$",
+      "src": "^/(search-atlas-growth|authority-dashboard|amazon-alexa|llms-searchatlas-growth\\.txt)$",
       "dest": "/api/valiant-agent?retiredResource=$1"
     },
     {
