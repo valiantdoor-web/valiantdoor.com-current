@@ -160,6 +160,27 @@
     initializeSiteBot();
   }
 
+  // Add accessible names to the Botpress chat widget images (injected at runtime).
+  // Fixes Lighthouse "image without [alt]" and "ARIA role should be appropriate"
+  // (a role="button" element needs an accessible name).
+  (function patchBotpressA11y() {
+    const label = (img, text) => {
+      if (!img || img.dataset.valiantA11y === "true") return;
+      img.setAttribute("alt", text);
+      img.setAttribute("aria-label", text);
+      img.dataset.valiantA11y = "true";
+    };
+    const patch = () => {
+      document.querySelectorAll("img.bpFabImage").forEach((el) => label(el, "Open chat with Valiant Garage Door"));
+      document.querySelectorAll("img.bpMessagePreviewAvatarImage").forEach((el) => label(el, "Valiant Garage Door chat assistant"));
+    };
+    patch();
+    const observer = new MutationObserver(patch);
+    observer.observe(document.body, { childList: true, subtree: true });
+    // Stop observing after 60s; the widget mounts well within this window.
+    window.setTimeout(() => observer.disconnect(), 60000);
+  })();
+
   document.querySelectorAll("section").forEach((section) => {
     const heading = section.querySelector(":scope > h2");
     if (heading && ["Search Atlas Intent Covered", "Search Atlas Visibility Gaps Used"].includes(heading.textContent.trim())) {

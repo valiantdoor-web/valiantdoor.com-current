@@ -95,9 +95,36 @@
     return tryOnce();
   }
 
+  // Add accessible names to the Botpress chat widget images (injected at runtime).
+  // Fixes Lighthouse "image without [alt]" and "ARIA role should be appropriate".
+  function patchBotpressA11y() {
+    var label = function (img, text) {
+      if (!img || img.dataset.valiantA11y === "true") return;
+      img.setAttribute("alt", text);
+      img.setAttribute("aria-label", text);
+      img.dataset.valiantA11y = "true";
+    };
+    var patch = function () {
+      var fab = document.querySelectorAll("img.bpFabImage");
+      for (var i = 0; i < fab.length; i += 1) label(fab[i], "Open chat with Valiant Garage Door");
+      var av = document.querySelectorAll("img.bpMessagePreviewAvatarImage");
+      for (var j = 0; j < av.length; j += 1) label(av[j], "Valiant Garage Door chat assistant");
+    };
+    patch();
+    var observer = new MutationObserver(patch);
+    observer.observe(document.body, { childList: true, subtree: true });
+    window.setTimeout(function () {
+      observer.disconnect();
+    }, 60000);
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", start, { once: true });
+    document.addEventListener("DOMContentLoaded", function () {
+      start();
+      patchBotpressA11y();
+    }, { once: true });
   } else {
     start();
+    patchBotpressA11y();
   }
 })();
