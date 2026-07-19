@@ -243,6 +243,11 @@
       "permanent": true
     },
     {
+      "source": "/garage-door-repair-pleasanton/",
+      "destination": "/garage-door-repair-pleasanton",
+      "permanent": true
+    },
+    {
       "source": "/agents.json",
       "destination": "/api/agents",
       "permanent": false
