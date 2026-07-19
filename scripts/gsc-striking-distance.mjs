@@ -24,6 +24,8 @@
  */
 
 import crypto from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const TOKEN_URL = 'https://oauth2.googleapis.com/token';
 const SCOPE = 'https://www.googleapis.com/auth/webmasters.readonly';
@@ -34,8 +36,14 @@ function fail(msg) {
 }
 
 function loadServiceAccount() {
-  const raw = process.env.GSC_SERVICE_ACCOUNT_JSON;
-  if (!raw) fail('GSC_SERVICE_ACCOUNT_JSON is not set.');
+  // Prefer a local gitignored key file if present (avoids env-panel truncation
+  // of the ~2.3KB service-account key); fall back to the env var.
+  const keyFile = path.resolve(process.cwd(), '.gsc-key.json');
+  let raw = process.env.GSC_SERVICE_ACCOUNT_JSON;
+  if (fs.existsSync(keyFile)) {
+    raw = fs.readFileSync(keyFile, 'utf8');
+  }
+  if (!raw) fail('No credentials found: add .gsc-key.json or set GSC_SERVICE_ACCOUNT_JSON.');
   let text = raw.trim();
   // Support base64-encoded JSON (avoids newline/quoting issues in env panels).
   if (!text.startsWith('{')) {
