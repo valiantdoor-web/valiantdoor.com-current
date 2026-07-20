@@ -28,13 +28,42 @@ const { google } = require("googleapis")
 const SCOPES = ["https://www.googleapis.com/auth/indexing"]
 const ENDPOINT_TYPE = "URL_UPDATED" // use "URL_DELETED" to notify of removals
 
-// Key URLs to notify Google about. Add/remove as needed.
-const URLS = [
+// Sitemaps that list the canonical, indexable pages. Read at runtime so the
+// submission always covers every live page without hand-maintaining a list.
+const SITEMAP_FILES = ["public/sitemap-pages.xml", "public/sitemap-blog.xml"]
+
+// Fallback if no sitemaps are found (keeps the script usable in isolation).
+const FALLBACK_URLS = [
   "https://www.valiantdoor.com/",
   "https://www.valiantdoor.com/mastertech",
   "https://www.valiantdoor.com/garage-door-repair",
   "https://www.valiantdoor.com/short-repair-videos",
 ]
+
+// Retired resources (return 410). Never submit these to Google, even if a
+// stray sitemap entry references them.
+const RETIRED = ["/amazon-alexa", "/authority-dashboard", "/search-atlas-growth"]
+
+/** Collect indexable URLs from the local sitemap files. */
+function collectUrls() {
+  const urls = new Set()
+  for (const rel of SITEMAP_FILES) {
+    const file = path.resolve(process.cwd(), rel)
+    if (!fs.existsSync(file)) continue
+    const xml = fs.readFileSync(file, "utf8")
+    for (const m of xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)) {
+      urls.add(m[1].trim())
+    }
+  }
+  const all = urls.size > 0 ? [...urls] : FALLBACK_URLS
+  // Defensively drop any retired paths.
+  return all.filter((u) => {
+    const p = u.replace(/^https?:\/\/[^/]+/, "").replace(/\/$/, "")
+    return !RETIRED.includes(p)
+  })
+}
+
+const URLS = collectUrls()
 
 /** Load service-account credentials from file or env var. */
 function loadCredentials() {
