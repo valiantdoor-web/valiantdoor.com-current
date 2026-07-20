@@ -1,10 +1,11 @@
 name: Index Site
 
-# Notify Google (Indexing API) to re-crawl key URLs on every push to main.
+# Notify Google (Indexing API) to re-crawl pages.
+# - push to main: submit ONLY the pages that changed in that push.
+# - manual run:   submit ALL canonical pages (full re-index).
 on:
   push:
     branches: [main]
-  # Allow manual runs from the Actions tab.
   workflow_dispatch:
 
 # Avoid overlapping submissions if pushes land close together.
@@ -17,12 +18,56 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Need history so we can diff the pushed commits and find changed pages.
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: 24
 
       - run: npm ci
+
+      # On push: map the changed public/*.html files to canonical URLs.
+      # (The script re-validates these against the sitemaps before submitting.)
+      - name: Determine changed page URLs
+        if: github.event_name == 'push'
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          BASE="$BEFORE"
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "${BASE}^{commit}" 2>/dev/null; then
+            if git rev-parse HEAD~1 >/dev/null 2>&1; then BASE="HEAD~1"; else BASE=""; fi
+          fi
+          if [ -z "$BASE" ]; then
+            echo "No base commit to diff; submitting nothing (use a manual run for a full re-index)."
+            FILES=""
+          else
+            echo "Diffing $BASE..$AFTER"
+            FILES=$(git diff --name-only "$BASE" "$AFTER" -- public | grep '\.html$' || true)
+          fi
+          echo "Changed HTML files:"; echo "$FILES"
+          URLS=$(printf '%s\n' "$FILES" | node -e '
+            const base="https://www.valiantdoor.com";
+            const rl=require("readline").createInterface({input:process.stdin});
+            const out=new Set();
+            rl.on("line",(f)=>{
+              f=f.trim();
+              if(!f.startsWith("public/")||!f.endsWith(".html")) return;
+              let p=f.slice("public".length).replace(/index\.html$/,"").replace(/\.html$/,"");
+              if(p!=="/"&&p.endsWith("/")) p=p.slice(0,-1);
+              out.add(base+(p===""?"/":p));
+            });
+            rl.on("close",()=>process.stdout.write([...out].join("\n")));
+          ')
+          echo "Mapped URLs:"; echo "$URLS"
+          echo "INDEX_MODE=changed" >> "$GITHUB_ENV"
+          {
+            echo "INDEX_URLS<<INDEX_EOF"
+            echo "$URLS"
+            echo "INDEX_EOF"
+          } >> "$GITHUB_ENV"
 
       # Materialize the service-account key from the repo secret, run, then remove it.
       - name: Submit URLs to Google Indexing API
