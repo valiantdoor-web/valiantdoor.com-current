@@ -160,3 +160,20 @@ header.site-header {
   .endurance-max-media { flex-basis: auto; min-height: 0; aspect-ratio: 1 / 1; }
   .endurance-max-copy { padding: 24px 20px 26px; }
 }
+
+/* Lazy chat launcher: static shield placeholder shown before Botpress loads */
+#valiant-chat-fab { position: fixed; right: 20px; bottom: 20px; z-index: 9990; width: 60px; height: 60px; display: inline-flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; background: var(--global-coal); border: 1px solid rgba(199, 163, 75, .5); border-radius: 50%; box-shadow: 0 10px 26px rgba(0, 0, 0, .4); transition: transform .18s ease, box-shadow .18s ease; }
+#valiant-chat-fab:hover, #valiant-chat-fab:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0, 0, 0, .5); outline: none; }
+#valiant-chat-fab:focus-visible { border-color: var(--global-gold-soft); }
+#valiant-chat-fab img { width: 34px; height: 34px; display: block; object-fit: contain; }
+#valiant-chat-fab .valiant-chat-fab-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid rgba(224, 199, 131, .55); animation: valiant-chat-pulse 2.6s ease-out infinite; pointer-events: none; }
+#valiant-chat-fab.is-loading { cursor: progress; }
+#valiant-chat-fab.is-loading img { opacity: .35; }
+#valiant-chat-fab.is-loading .valiant-chat-fab-pulse { border-color: rgba(224, 199, 131, .25); border-top-color: var(--global-gold-soft); animation: valiant-chat-spin .8s linear infinite; }
+@keyframes valiant-chat-pulse { 0% { transform: scale(1); opacity: .7; } 70% { transform: scale(1.35); opacity: 0; } 100% { opacity: 0; } }
+@keyframes valiant-chat-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  #valiant-chat-fab .valiant-chat-fab-pulse { animation: none; }
+  #valiant-chat-fab.is-loading .valiant-chat-fab-pulse { animation: valiant-chat-spin 1s linear infinite; }
+}
+@media (max-width: 480px) { #valiant-chat-fab { right: 14px; bottom: 14px; width: 54px; height: 54px; } }

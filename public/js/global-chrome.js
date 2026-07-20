@@ -154,22 +154,54 @@
     return start;
   })();
 
-  // Defer the chat widget (≈5.5MB) off the critical path: load it on the first
-  // user interaction, or after an idle fallback delay. This keeps LCP fast on
-  // slow connections while still loading the widget for anyone who engages.
-  (function deferSiteBot() {
-    let started = false;
-    const events = ["pointerdown", "mousemove", "touchstart", "keydown", "scroll"];
-    const startOnce = () => {
-      if (started) return;
-      started = true;
-      events.forEach((e) => window.removeEventListener(e, startOnce, { passive: true }));
+  // Lazy chat: render a lightweight static shield button immediately, and only
+  // download the Botpress widget (~5.5MB) when the visitor actually opens chat.
+  // This keeps all of that weight off the initial load / LCP path entirely.
+  (function mountChatLauncher() {
+    if (currentPath === "/business-card") return; // digital card has no site chrome
+
+    const botIsMounted = () =>
+      Boolean(document.querySelector('iframe[src*="botpress"], #bp-web-widget-container, [data-botpress-webchat]'));
+
+    const fab = document.createElement("button");
+    fab.type = "button";
+    fab.id = "valiant-chat-fab";
+    fab.setAttribute("aria-label", "Open chat with Valiant Garage Door");
+    fab.innerHTML =
+      '<img src="/assets/valiant-chat-fab-shield.webp" width="34" height="34" alt="" decoding="async">' +
+      '<span class="valiant-chat-fab-pulse" aria-hidden="true"></span>';
+
+    let launching = false;
+    const launch = () => {
+      if (launching) return;
+      launching = true;
+      fab.classList.add("is-loading");
+      fab.setAttribute("aria-busy", "true");
       initializeSiteBot();
+
+      // Once the real widget mounts, open it and retire the placeholder.
+      let waited = 0;
+      const poll = window.setInterval(() => {
+        waited += 250;
+        if (window.botpress && typeof window.botpress.open === "function") {
+          try { window.botpress.open(); } catch { /* ignore */ }
+        }
+        if (botIsMounted()) {
+          window.clearInterval(poll);
+          fab.remove();
+        } else if (waited >= 20000) {
+          window.clearInterval(poll); // give up gracefully; call/book CTAs remain
+          fab.classList.remove("is-loading");
+          fab.removeAttribute("aria-busy");
+          launching = false;
+        }
+      }, 250);
     };
-    events.forEach((e) => window.addEventListener(e, startOnce, { passive: true, once: false }));
-    // Fallback: load during idle time, or after 6s, even without interaction.
-    const idle = window.requestIdleCallback || function (cb) { return window.setTimeout(cb, 6000); };
-    idle(() => window.setTimeout(startOnce, 4000));
+
+    fab.addEventListener("click", launch);
+    const add = () => document.body.appendChild(fab);
+    if (document.body) add();
+    else document.addEventListener("DOMContentLoaded", add, { once: true });
   })();
 
   // Add accessible names to the Botpress chat widget images (injected at runtime).
