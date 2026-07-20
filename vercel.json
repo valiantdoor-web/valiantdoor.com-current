@@ -264,6 +264,28 @@
       "permanent": true
     },
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.valiantdoor.io"
+        }
+      ],
+      "destination": "https://www.valiantdoor.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "valiantdoor.io"
+        }
+      ],
+      "destination": "https://www.valiantdoor.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/services/garage-door-maintenence",
       "destination": "/services/garage-door-maintenance",
       "permanent": true
