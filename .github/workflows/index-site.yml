@@ -1,0 +1,43 @@
+name: Index Site
+
+# Notify Google (Indexing API) to re-crawl key URLs on every push to main.
+on:
+  push:
+    branches: [main]
+    # Only run when content or the indexing script actually changes.
+    paths:
+      - "public/**"
+      - "index-site.js"
+      - ".github/workflows/index-site.yml"
+  # Allow manual runs from the Actions tab.
+  workflow_dispatch:
+
+# Avoid overlapping submissions if pushes land close together.
+concurrency:
+  group: index-site
+  cancel-in-progress: false
+
+jobs:
+  index-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - run: npm ci
+
+      # Materialize the service-account key from the repo secret, run, then remove it.
+      - name: Submit URLs to Google Indexing API
+        env:
+          INDEXING_KEY: ${{ secrets.INDEXING_KEY }}
+        run: |
+          if [ -z "$INDEXING_KEY" ]; then
+            echo "::error::INDEXING_KEY secret is not set. Add it in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          printf '%s' "$INDEXING_KEY" > service-account.json
+          trap 'rm -f service-account.json' EXIT
+          node index-site.js
