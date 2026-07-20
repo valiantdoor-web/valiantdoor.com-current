@@ -6,3 +6,5 @@ node_modules/
 test-results/
 .gsc-key.json
 .gsc-*.json
+service-account.json
+*.service-account.json
