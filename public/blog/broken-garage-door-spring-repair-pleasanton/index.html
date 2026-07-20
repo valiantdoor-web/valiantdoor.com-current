@@ -105,7 +105,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
+      "@type": [
+        "HomeAndConstructionBusiness",
+        "LocalBusiness"
+      ],
       "@id": "https://www.valiantdoor.com/#business",
       "makesOffer": [
         {
@@ -116,12 +119,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "price": "100",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "availableAtOrFrom": { "@type": "Place", "name": "Pleasanton, CA and the East Bay" }
+          "availableAtOrFrom": {
+            "@type": "Place",
+            "name": "Pleasanton, CA and the East Bay"
+          }
         }
       ],
       "warranty": {
         "@type": "WarrantyPromise",
-        "durationOfWarranty": { "@type": "QuantitativeValue", "value": 10, "unitCode": "ANN" },
+        "durationOfWarranty": {
+          "@type": "QuantitativeValue",
+          "value": 10,
+          "unitCode": "ANN"
+        },
         "warrantyScope": "10-year warranty on garage door repairs and installed parts"
       },
       "name": "Valiant Garage Door",
@@ -142,19 +152,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "addressCountry": "US"
       },
       "areaServed": [
-        {"@type": "City", "name": "Pleasanton, CA"},
-        {"@type": "City", "name": "Dublin, CA"},
-        {"@type": "City", "name": "Livermore, CA"},
-        {"@type": "City", "name": "Fremont, CA"},
-        {"@type": "City", "name": "San Ramon, CA"}
-      ]
+        {
+          "@type": "City",
+          "name": "Pleasanton, CA"
+        },
+        {
+          "@type": "City",
+          "name": "Dublin, CA"
+        },
+        {
+          "@type": "City",
+          "name": "Livermore, CA"
+        },
+        {
+          "@type": "City",
+          "name": "Fremont, CA"
+        },
+        {
+          "@type": "City",
+          "name": "San Ramon, CA"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.676357,
+        "longitude": -121.894745
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://www.valiantdoor.com/#website",
       "url": "https://www.valiantdoor.com/",
       "name": "Valiant Garage Door",
-      "publisher": {"@id": "https://www.valiantdoor.com/#business"}
+      "publisher": {
+        "@id": "https://www.valiantdoor.com/#business"
+      }
     },
     {
       "@type": "WebPage",
@@ -163,9 +195,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Broken Garage Door Spring Repair | Pleasanton",
       "description": "Learn the warning signs of a broken garage door spring in Pleasanton, what to do first, and when same-day spring replacement is the safest option.",
       "inLanguage": "en-US",
-      "isPartOf": {"@id": "https://www.valiantdoor.com/#website"},
-      "about": {"@id": "https://www.valiantdoor.com/#business"},
-      "breadcrumb": {"@id": "https://www.valiantdoor.com/blog/broken-garage-door-spring-repair-pleasanton#breadcrumb"},
+      "isPartOf": {
+        "@id": "https://www.valiantdoor.com/#website"
+      },
+      "about": {
+        "@id": "https://www.valiantdoor.com/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://www.valiantdoor.com/blog/broken-garage-door-spring-repair-pleasanton#breadcrumb"
+      },
       "datePublished": "2026-06-12",
       "dateModified": "2026-06-12",
       "primaryImageOfPage": "https://www.valiantdoor.com/assets/Valiant%20Services%20%20Hero%20Final%20.png"
@@ -174,9 +212,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@type": "BreadcrumbList",
       "@id": "https://www.valiantdoor.com/blog/broken-garage-door-spring-repair-pleasanton#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.valiantdoor.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.valiantdoor.com/blog"},
-        {"@type": "ListItem", "position": 3, "name": "Broken Garage Door Spring Repair In Pleasanton", "item": "https://www.valiantdoor.com/blog/broken-garage-door-spring-repair-pleasanton"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.valiantdoor.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.valiantdoor.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Broken Garage Door Spring Repair In Pleasanton",
+          "item": "https://www.valiantdoor.com/blog/broken-garage-door-spring-repair-pleasanton"
+        }
       ]
     },
     {
@@ -184,9 +237,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@id": "https://www.valiantdoor.com/blog/broken-garage-door-spring-repair-pleasanton#article",
       "headline": "Broken Garage Door Spring Repair In Pleasanton: What To Do First",
       "description": "Learn the warning signs of a broken garage door spring in Pleasanton, what to do first, and when same-day spring replacement is the safest option.",
-      "author": {"@type": "Person", "name": "Valentino Ramirez"},
-      "publisher": {"@id": "https://www.valiantdoor.com/#business"},
-      "mainEntityOfPage": {"@id": "https://www.valiantdoor.com/blog/broken-garage-door-spring-repair-pleasanton#webpage"},
+      "author": {
+        "@type": "Person",
+        "name": "Valentino Ramirez"
+      },
+      "publisher": {
+        "@id": "https://www.valiantdoor.com/#business"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://www.valiantdoor.com/blog/broken-garage-door-spring-repair-pleasanton#webpage"
+      },
       "datePublished": "2026-06-12",
       "dateModified": "2026-06-12"
     },
@@ -194,15 +254,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@type": "FAQPage",
       "@id": "https://www.valiantdoor.com/blog/broken-garage-door-spring-repair-pleasanton#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "What are the first signs of a broken garage door spring?", "acceptedAnswer": {"@type": "Answer", "text": "Common signs include a loud bang from the garage, a door that suddenly feels heavy, a visible gap in the torsion spring, or an opener that strains without lifting the door."}},
-        {"@type": "Question", "name": "Should I keep using the opener if the spring broke?", "acceptedAnswer": {"@type": "Answer", "text": "No. If a spring is broken, stop using the opener because the door may be unbalanced and can damage the opener or become unsafe to move."}},
-        {"@type": "Question", "name": "Can broken spring repair usually happen the same day in Pleasanton?", "acceptedAnswer": {"@type": "Answer", "text": "In many cases yes, provided the schedule and the correct spring size are available. After replacement, the door should be rebalanced and safety tested before normal use."}},
-        {"@type": "Question", "name": "Do both springs need to be replaced together?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes, especially on a two-spring system where both springs have similar age and cycle wear. Replacing both at the same time can help restore balanced performance."}}
+        {
+          "@type": "Question",
+          "name": "What are the first signs of a broken garage door spring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common signs include a loud bang from the garage, a door that suddenly feels heavy, a visible gap in the torsion spring, or an opener that strains without lifting the door."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I keep using the opener if the spring broke?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. If a spring is broken, stop using the opener because the door may be unbalanced and can damage the opener or become unsafe to move."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can broken spring repair usually happen the same day in Pleasanton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In many cases yes, provided the schedule and the correct spring size are available. After replacement, the door should be rebalanced and safety tested before normal use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do both springs need to be replaced together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often yes, especially on a two-spring system where both springs have similar age and cycle wear. Replacing both at the same time can help restore balanced performance."
+          }
+        }
       ]
     }
   ]
 }
-    </script>
+</script>
 <!-- Microsoft Ads UET tracking tag -->
 <script>(function(w, d, t, u, o) {w[u] = w[u] || [], o.ts = (new Date).getTime();var n = d.createElement(t);n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : ""),n.async = 1, n.onload = n.onreadystatechange = function() {var s = this.readyState;s && "loaded" !== s && "complete" !== s ||(o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),n.onload = n.onreadystatechange = null)};var i = d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n, i);})(window, document, "script", "uetq", {ti: "187250229",enableAutoSpaTracking: true});</script><!-- You can set default Consent Mode right after the UET tag --><script>window.uetq = window.uetq || [];window.uetq.push('consent', 'default', {'ad_storage': 'denied'});</script><!-- Implement a cookie banner or another method to collect user consent. When a user grants consent (e.g., selects 'Accept' on your banner), update the consent settings using the command below. --><script>window.uetq = window.uetq || [];window.uetq.push('consent', 'update', {'ad_storage': 'granted'});</script>
 <!-- End Microsoft Ads UET tracking tag -->

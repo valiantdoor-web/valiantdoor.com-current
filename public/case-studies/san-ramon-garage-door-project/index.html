@@ -19,7 +19,8 @@
 <meta name="twitter:image" content="https://www.valiantdoor.com/assets/home-optimized/shield-192.webp">
 <link rel="stylesheet" href="/css/styles.min.css?v=20260703-header-buttons">
 <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"JBzHfzVvqm4VbGoHRAJtoP",debug:true});</script>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -37,12 +38,19 @@
           "price": "100",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "availableAtOrFrom": { "@type": "Place", "name": "Pleasanton, CA and the East Bay" }
+          "availableAtOrFrom": {
+            "@type": "Place",
+            "name": "Pleasanton, CA and the East Bay"
+          }
         }
       ],
       "warranty": {
         "@type": "WarrantyPromise",
-        "durationOfWarranty": { "@type": "QuantitativeValue", "value": 10, "unitCode": "ANN" },
+        "durationOfWarranty": {
+          "@type": "QuantitativeValue",
+          "value": 10,
+          "unitCode": "ANN"
+        },
         "warrantyScope": "10-year warranty on garage door repairs and installed parts"
       },
       "name": "Valiant Garage Door",
@@ -115,6 +123,11 @@
         "reviewCount": "60",
         "bestRating": "5",
         "worstRating": "1"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.676357,
+        "longitude": -121.894745
       }
     },
     {
@@ -235,7 +248,8 @@
       ]
     }
   ]
-}</script>
+}
+</script>
 <!-- Nextdoor Pixel Code -->
   <script type="text/javascript">
     !function(e,n){var t,p;e.ndp||((t=e.ndp=function(){
