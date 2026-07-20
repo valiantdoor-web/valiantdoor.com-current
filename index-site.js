@@ -99,6 +99,11 @@ async function main() {
 
   const indexing = google.indexing({ version: "v3", auth })
 
+  console.log("[index] Submitting %d URL(s) as %s ...", URLS.length, ENDPOINT_TYPE)
+  console.log(
+    "[index] Note: the Indexing API default quota is 200 publish requests/day.",
+  )
+
   let ok = 0
   let failed = 0
 
@@ -116,6 +121,8 @@ async function main() {
       console.error("[index] FAILED  %s  ->  [%s] %s", url, status, reason)
       failed++
     }
+    // Gentle throttle to stay well under the per-minute rate limit.
+    await new Promise((r) => setTimeout(r, 100))
   }
 
   console.log("\n[index] Done. %d succeeded, %d failed, %d total.", ok, failed, URLS.length)

@@ -293,10 +293,6 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
     <lastmod>${TODAY}</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://www.valiantdoor.com/sitemap-searchatlas-growth.xml</loc>
-    <lastmod>${TODAY}</lastmod>
-  </sitemap>
-  <sitemap>
     <loc>https://www.valiantdoor.com/sitemap-images.xml</loc>
     <lastmod>${TODAY}</lastmod>
   </sitemap>
