@@ -4,3 +4,7 @@
 node_modules/
 .DS_Store
 test-results/
+.gsc-key.json
+.gsc-*.json
+service-account.json
+*.service-account.json

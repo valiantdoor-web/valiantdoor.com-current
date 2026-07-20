@@ -119,12 +119,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "price": "100",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "availableAtOrFrom": { "@type": "Place", "name": "Pleasanton, CA and the East Bay" }
+          "availableAtOrFrom": {
+            "@type": "Place",
+            "name": "Pleasanton, CA and the East Bay"
+          }
         }
       ],
       "warranty": {
         "@type": "WarrantyPromise",
-        "durationOfWarranty": { "@type": "QuantitativeValue", "value": 10, "unitCode": "ANN" },
+        "durationOfWarranty": {
+          "@type": "QuantitativeValue",
+          "value": 10,
+          "unitCode": "ANN"
+        },
         "warrantyScope": "10-year warranty on garage door repairs and installed parts"
       },
       "name": "Valiant Garage Door",
@@ -199,7 +206,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "34",
+        "reviewCount": "60",
         "bestRating": "5",
         "worstRating": "1"
       }
@@ -259,36 +266,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "provider": {
         "@id": "https://www.valiantdoor.com/#business"
       },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Pleasanton, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Dublin, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Livermore, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Fremont, CA"
-        },
-        {
-          "@type": "City",
-          "name": "San Ramon, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Danville, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Sunol, CA"
+      "areaServed": {
+        "@type": "City",
+        "name": "Fremont, CA",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.5485,
+          "longitude": -121.9886
         }
-      ],
+      },
       "url": "https://www.valiantdoor.com/garage-door-repair-fremont",
       "warranty": {
         "@type": "WarrantyPromise",
@@ -341,7 +327,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "name": "Do you provide emergency service?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Call 9254094974 for urgent service requests including stuck-open or stuck-closed doors."
+            "text": "Yes. Call (925) 409-4974 for urgent service requests including stuck-open or stuck-closed doors."
           }
         }
       ]
@@ -423,7 +409,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
   <body class="page-services page-geo has-sticky-call">
         <div class="home-sticky-call" role="region" aria-label="Emergency repair call button">
-      <a class="home-sticky-call-button" href="tel:9254094974">Tap to Call for Emergency Repair.</a>
+      <a class="home-sticky-call-button" href="tel:+19254094974">Tap to Call for Emergency Repair.</a>
     </div>
 <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T74PV8L5"
@@ -476,7 +462,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <summary>Services</summary>
             <div class="nav-dropdown-menu">
               <a href="/services">Services Overview</a>
-              <a href="/same-day-garage-door-repair-pleasanton">Garage Door Repair</a>
+              <a href="/garage-door-repair">Garage Door Repair</a>
               <a href="/garage-door-spring-replacement">Spring Replacement</a>
               <a href="/garage-door-opener-repair">Opener Repair</a>
               <a href="/garage-door-openers">Openers &amp; Pricing</a>
@@ -508,7 +494,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="/partners">Partners</a>
               <a href="/business-card">Business Card</a>
               <a href="/Garage-Door-Service-Excellence">Valiant Service Excellence Protocol</a>
-              <a href="/amazon-alexa">Amazon &amp; Alexa App</a>
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>
               <a href="/site-map">Site Map</a>
@@ -552,7 +537,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <article class="geo-card">
       <h3>How Fast Can It Be Fixed?</h3>
       <p>Most standard repairs are completed in one visit. Urgent secure-Close issues are prioritized for fastest response.</p>
-      <p>Call <a href="tel:9254094974">9254094974</a> for immediate dispatch options.</p>
+      <p>Call <a href="tel:+19254094974">(925) 409-4974</a> for immediate dispatch options.</p>
     </article>
     <article class="geo-card">
       <h3>Average Cost Range</h3>
@@ -560,6 +545,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </article>
   </div>
 </section>
+<section class="geo-section"><h2>How Fremont Homes Affect Garage Door Repairs</h2><p>Fremont is really five historic districts stitched together, and the garage door repair usually tracks the district. The older homes in Niles and Centerville often still run original torsion springs and dated openers, so worn springs, frayed cables, and failing logic boards are common. Up in the Mission San Jose hills, larger custom and double-wide insulated doors are the norm, where correct spring sizing and a properly set opener force matter for safe, quiet operation on a heavier door. Newer tract and transit-village homes around Warm Springs, the Tesla plant, and Ardenwood cycle their doors hard every day, which wears rollers, hinges, and opener gears faster than a typical single-family garage.</p><p>Fremont's western flats in Ardenwood and Warm Springs sit close to the bay near the Dumbarton Bridge approach, so marine moisture and fog speed up rust on cables, springs, and steel hardware, especially on doors that face the prevailing wind. When we diagnose a Fremont door, we look for corrosion and cycle fatigue, confirm the door is balanced before blaming the opener, and verify the safety sensors and auto-reverse work correctly so the door closes securely.</p></section>
+<section class="geo-section"><h2>Neighborhood And Road References</h2><div class="geo-card-grid"><article class="geo-card"><h3>Mission Boulevard</h3><p>Garage door repair near Mission Boulevard in Fremont for broken springs, opener problems, cable issues, off-track doors, and noisy operation.</p></article><article class="geo-card"><h3>Fremont Boulevard</h3><p>Garage door repair near Fremont Boulevard for broken springs, opener problems, cable issues, off-track doors, and noisy operation.</p></article><article class="geo-card"><h3>Warm Springs Boulevard</h3><p>Garage door repair near Warm Springs Boulevard in Fremont for broken springs, opener problems, cable issues, off-track doors, and noisy operation.</p></article><article class="geo-card"><h3>Mowry Avenue</h3><p>Garage door repair near Mowry Avenue in Fremont for broken springs, opener problems, cable issues, off-track doors, and noisy operation.</p></article><article class="geo-card"><h3>Mission San Jose</h3><p>Garage door repair in the Mission San Jose district of Fremont for broken springs, opener problems, cable issues, off-track doors, and noisy operation.</p></article><article class="geo-card"><h3>Niles District</h3><p>Garage door repair in the historic Niles district of Fremont for broken springs, opener problems, cable issues, off-track doors, and noisy operation.</p></article></div></section>
 <section class="geo-section">
   <h2>Expert Answer</h2>
   <blockquote class="geo-expert">"Garage Door Springs Usually Fail From Metal Fatigue And Cycle Load. Preventive Balance Checks Can Catch High-Risk Wear Before Total Failure."</blockquote>
@@ -583,7 +570,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </section>
       <section class="geo-section"><h2>Related Resources</h2><div class="geo-link-grid">
-<a class="geo-link-card" href="/same-day-garage-door-repair-pleasanton"><h3>Garage Door Repair Service Overview</h3><p>See repair process, pricing expectations, and service FAQs.</p></a>
+<a class="geo-link-card" href="/garage-door-repair"><h3>Garage Door Repair Service Overview</h3><p>See repair process, pricing expectations, and service FAQs.</p></a>
 <a class="geo-link-card" href="/garage-door-spring-replacement"><h3>Garage Door Spring Replacement</h3><p>High-Cycle spring options and balancing details.</p></a>
 <a class="geo-link-card" href="/garage-door-opener-repair"><h3>Garage Door Opener Repair</h3><p>Sensor, motor, travel-Limit, and connectivity fixes.</p></a>
 <a class="geo-link-card" href="/emergency-garage-door-repair"><h3>Emergency Garage Door Repair</h3><p>24/7 urgent service for stuck or unsafe doors.</p></a>
@@ -606,7 +593,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 <section class="geo-section geo-cta-strip">
         <h2>Need Help Right Now?</h2>
-        <p>Call <a href="tel:9254094974">9254094974</a> Or <a href="/quote">Request garage door service online</a>, Or <a href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book free estimate instantly</a>.</p>
+        <p>Call <a href="tel:+19254094974">(925) 409-4974</a> Or <a href="/quote">Request garage door service online</a>, Or <a href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book free estimate instantly</a>.</p>
       </section>
     </main>
 

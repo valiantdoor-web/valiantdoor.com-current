@@ -5,7 +5,8 @@ const RETIRED_RESOURCES = new Set([
   'search-atlas-growth',
   'authority-dashboard',
   'searchatlas-api',
-  'llms-searchatlas-growth'
+  'llms-searchatlas-growth',
+  'amazon-alexa'
 ]);
 
 const BUSINESS_PROFILE = {

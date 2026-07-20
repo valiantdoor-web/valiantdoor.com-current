@@ -11,7 +11,9 @@
     "dev": "node server.js",
     "start": "node server.js",
     "test": "node -e \"require('./api/authority-dashboard.js'); console.log('authority dashboard api ok')\" && npm run validate:indexing",
-    "validate:indexing": "python3 scripts/validate_indexing_contract.py"
+    "validate:indexing": "python3 scripts/validate_indexing_contract.py",
+    "sync:reviews": "node --env-file-if-exists=/vercel/share/.env.project scripts/sync-review-schema.mjs",
+    "index:site": "node index-site.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
   "dependencies": {
     "@vercel/blob": "^2.6.1",
     "cheerio": "^1.2.0",
+    "googleapis": "^173.0.0",
     "openai": "^6.44.0",
     "sharp": "^0.35.3"
   },

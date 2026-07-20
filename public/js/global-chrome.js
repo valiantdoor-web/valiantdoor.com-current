@@ -6,6 +6,76 @@
   const BOOK_URL = "https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true";
   const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
 
+  // ---- Live review stats: keep visible counters AND JSON-LD in sync sitewide ----
+  // Numbers come from /api/reviews, which auto-updates from the Google Places API
+  // (6h server cache) and falls back to safe static values if the API is down.
+  const syncReviewStats = (() => {
+    let done = false;
+
+    const setVisible = (name, value) => {
+      document.querySelectorAll('[data-review="' + name + '"]').forEach((el) => {
+        el.textContent = value;
+      });
+    };
+
+    // Walk any object/array and refresh every schema.org aggregateRating we find.
+    const patchAggregateRating = (node, rating, count) => {
+      if (!node || typeof node !== "object") return;
+      if (Array.isArray(node)) {
+        node.forEach((item) => patchAggregateRating(item, rating, count));
+        return;
+      }
+      const agg = node.aggregateRating;
+      if (agg && typeof agg === "object" && !Array.isArray(agg)) {
+        if (typeof rating === "number") agg.ratingValue = rating.toFixed(1);
+        if (typeof count === "number") agg.reviewCount = String(count);
+      }
+      Object.keys(node).forEach((key) => patchAggregateRating(node[key], rating, count));
+    };
+
+    const updateJsonLd = (rating, count) => {
+      document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+        let data;
+        try {
+          data = JSON.parse(script.textContent);
+        } catch {
+          return; // leave malformed/unrelated blocks untouched
+        }
+        patchAggregateRating(data, rating, count);
+        try {
+          script.textContent = JSON.stringify(data);
+        } catch {
+          /* ignore serialization issues */
+        }
+      });
+    };
+
+    return () => {
+      if (done) return;
+      done = true;
+      fetch("/api/reviews", { headers: { Accept: "application/json" } })
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => {
+          if (!d) return;
+          const rating = typeof d.googleRating === "number" ? d.googleRating : null;
+          const count = typeof d.googleReviewCount === "number" ? d.googleReviewCount : null;
+          if (rating !== null) setVisible("google-rating", rating.toFixed(1));
+          if (count !== null) setVisible("google-count", String(count));
+          if (typeof d.nextdoorFaves === "number") setVisible("nextdoor-faves", String(d.nextdoorFaves));
+          if (rating !== null || count !== null) updateJsonLd(rating, count);
+        })
+        .catch(() => {
+          /* keep the accurate static fallback already baked into the HTML */
+        });
+    };
+  })();
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", syncReviewStats, { once: true });
+  } else {
+    syncReviewStats();
+  }
+
   const initializeSiteBot = (() => {
     const INJECT_URL = "https://cdn.botpress.cloud/webchat/v3.6/inject.js";
     const CONFIG_URL = "https://files.bpcontent.cloud/2026/05/01/11/20260501112742-4945ZV3N.js";
@@ -84,11 +154,76 @@
     return start;
   })();
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initializeSiteBot, { once: true });
-  } else {
-    initializeSiteBot();
-  }
+  // Lazy chat: render a lightweight static shield button immediately, and only
+  // download the Botpress widget (~5.5MB) when the visitor actually opens chat.
+  // This keeps all of that weight off the initial load / LCP path entirely.
+  (function mountChatLauncher() {
+    if (currentPath === "/business-card") return; // digital card has no site chrome
+
+    const botIsMounted = () =>
+      Boolean(document.querySelector('iframe[src*="botpress"], #bp-web-widget-container, [data-botpress-webchat]'));
+
+    const fab = document.createElement("button");
+    fab.type = "button";
+    fab.id = "valiant-chat-fab";
+    fab.setAttribute("aria-label", "Open chat with Valiant Garage Door");
+    fab.innerHTML =
+      '<img src="/assets/valiant-chat-fab-shield.webp" width="34" height="34" alt="" decoding="async">' +
+      '<span class="valiant-chat-fab-pulse" aria-hidden="true"></span>';
+
+    let launching = false;
+    const launch = () => {
+      if (launching) return;
+      launching = true;
+      fab.classList.add("is-loading");
+      fab.setAttribute("aria-busy", "true");
+      initializeSiteBot();
+
+      // Once the real widget mounts, open it and retire the placeholder.
+      let waited = 0;
+      const poll = window.setInterval(() => {
+        waited += 250;
+        if (window.botpress && typeof window.botpress.open === "function") {
+          try { window.botpress.open(); } catch { /* ignore */ }
+        }
+        if (botIsMounted()) {
+          window.clearInterval(poll);
+          fab.remove();
+        } else if (waited >= 20000) {
+          window.clearInterval(poll); // give up gracefully; call/book CTAs remain
+          fab.classList.remove("is-loading");
+          fab.removeAttribute("aria-busy");
+          launching = false;
+        }
+      }, 250);
+    };
+
+    fab.addEventListener("click", launch);
+    const add = () => document.body.appendChild(fab);
+    if (document.body) add();
+    else document.addEventListener("DOMContentLoaded", add, { once: true });
+  })();
+
+  // Add accessible names to the Botpress chat widget images (injected at runtime).
+  // Fixes Lighthouse "image without [alt]" and "ARIA role should be appropriate"
+  // (a role="button" element needs an accessible name).
+  (function patchBotpressA11y() {
+    const label = (img, text) => {
+      if (!img || img.dataset.valiantA11y === "true") return;
+      img.setAttribute("alt", text);
+      img.setAttribute("aria-label", text);
+      img.dataset.valiantA11y = "true";
+    };
+    const patch = () => {
+      document.querySelectorAll("img.bpFabImage").forEach((el) => label(el, "Open chat with Valiant Garage Door"));
+      document.querySelectorAll("img.bpMessagePreviewAvatarImage").forEach((el) => label(el, "Valiant Garage Door chat assistant"));
+    };
+    patch();
+    const observer = new MutationObserver(patch);
+    observer.observe(document.body, { childList: true, subtree: true });
+    // Stop observing after 60s; the widget mounts well within this window.
+    window.setTimeout(() => observer.disconnect(), 60000);
+  })();
 
   document.querySelectorAll("section").forEach((section) => {
     const heading = section.querySelector(":scope > h2");
@@ -183,12 +318,16 @@
       <div class="global-footer-bottom"><span>&copy; 2026 Valiant Garage Door LLC. All Rights Reserved.</span><span><a href="/privacy">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="/terms">Terms of Service</a></span></div>
     </div>`;
 
-  const existingHeader = document.querySelector("header.site-header, header.global-site-header");
-  if (existingHeader) existingHeader.replaceWith(header);
-  else {
-    const announcement = document.querySelector(".announce, .top-strip, .home-sticky-call");
-    if (announcement) announcement.insertAdjacentElement("afterend", header);
-    else document.body.prepend(header);
+  const noChrome = currentPath === "/business-card";
+
+  if (!noChrome) {
+    const existingHeader = document.querySelector("header.site-header, header.global-site-header");
+    if (existingHeader) existingHeader.replaceWith(header);
+    else {
+      const announcement = document.querySelector(".announce, .top-strip, .home-sticky-call");
+      if (announcement) announcement.insertAdjacentElement("afterend", header);
+      else document.body.prepend(header);
+    }
   }
 
   const enduranceMaxRoutes = new Set([
@@ -227,8 +366,10 @@
     const main = document.querySelector("main");
     if (main) main.append(createEnduranceMaxCard());
   }
-  if (existingFooter) existingFooter.replaceWith(footer);
-  else document.body.append(footer);
+  if (!noChrome) {
+    if (existingFooter) existingFooter.replaceWith(footer);
+    else document.body.append(footer);
+  }
 
   document.addEventListener("click", (event) => {
     const callLink = event.target.closest('a[href^="tel:"]');

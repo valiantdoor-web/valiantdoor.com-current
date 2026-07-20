@@ -119,12 +119,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "price": "100",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "availableAtOrFrom": { "@type": "Place", "name": "Pleasanton, CA and the East Bay" }
+          "availableAtOrFrom": {
+            "@type": "Place",
+            "name": "Pleasanton, CA and the East Bay"
+          }
         }
       ],
       "warranty": {
         "@type": "WarrantyPromise",
-        "durationOfWarranty": { "@type": "QuantitativeValue", "value": 10, "unitCode": "ANN" },
+        "durationOfWarranty": {
+          "@type": "QuantitativeValue",
+          "value": 10,
+          "unitCode": "ANN"
+        },
         "warrantyScope": "10-year warranty on garage door repairs and installed parts"
       },
       "name": "Valiant Garage Door",
@@ -199,7 +206,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "34",
+        "reviewCount": "60",
         "bestRating": "5",
         "worstRating": "1"
       }
@@ -259,36 +266,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "provider": {
         "@id": "https://www.valiantdoor.com/#business"
       },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Pleasanton, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Dublin, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Livermore, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Fremont, CA"
-        },
-        {
-          "@type": "City",
-          "name": "San Ramon, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Danville, CA"
-        },
-        {
-          "@type": "City",
-          "name": "Sunol, CA"
+      "areaServed": {
+        "@type": "City",
+        "name": "Livermore, CA",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.6819,
+          "longitude": -121.768
         }
-      ],
+      },
       "url": "https://www.valiantdoor.com/garage-door-repair-livermore",
       "warranty": {
         "@type": "WarrantyPromise",
@@ -341,7 +327,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "name": "Do you provide emergency service?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Call 9254094974 for urgent service requests including stuck-open or stuck-closed doors."
+            "text": "Yes. Call (925) 409-4974 for urgent service requests including stuck-open or stuck-closed doors."
           }
         }
       ]
@@ -423,7 +409,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
   <body class="page-services page-geo has-sticky-call">
         <div class="home-sticky-call" role="region" aria-label="Emergency repair call button">
-      <a class="home-sticky-call-button" href="tel:9254094974">Tap to Call for Emergency Repair.</a>
+      <a class="home-sticky-call-button" href="tel:+19254094974">Tap to Call for Emergency Repair.</a>
     </div>
 <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T74PV8L5"
@@ -476,7 +462,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <summary>Services</summary>
             <div class="nav-dropdown-menu">
               <a href="/services">Services Overview</a>
-              <a href="/same-day-garage-door-repair-pleasanton">Garage Door Repair</a>
+              <a href="/garage-door-repair">Garage Door Repair</a>
               <a href="/garage-door-spring-replacement">Spring Replacement</a>
               <a href="/garage-door-opener-repair">Opener Repair</a>
               <a href="/garage-door-openers">Openers &amp; Pricing</a>
@@ -508,7 +494,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="/partners">Partners</a>
               <a href="/business-card">Business Card</a>
               <a href="/Garage-Door-Service-Excellence">Valiant Service Excellence Protocol</a>
-              <a href="/amazon-alexa">Amazon &amp; Alexa App</a>
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>
               <a href="/site-map">Site Map</a>
@@ -552,7 +537,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <article class="geo-card">
       <h3>How Fast Can It Be Fixed?</h3>
       <p>Most standard repairs are completed in one visit. Urgent secure-Close issues are prioritized for fastest response.</p>
-      <p>Call <a href="tel:9254094974">9254094974</a> for immediate dispatch options.</p>
+      <p>Call <a href="tel:+19254094974">(925) 409-4974</a> for immediate dispatch options.</p>
     </article>
     <article class="geo-card">
       <h3>Average Cost Range</h3>
@@ -583,7 +568,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </section>
       <section class="geo-section"><h2>Related Resources</h2><div class="geo-link-grid">
-<a class="geo-link-card" href="/same-day-garage-door-repair-pleasanton"><h3>Garage Door Repair Service Overview</h3><p>See repair process, pricing expectations, and service FAQs.</p></a>
+<a class="geo-link-card" href="/garage-door-repair"><h3>Garage Door Repair Service Overview</h3><p>See repair process, pricing expectations, and service FAQs.</p></a>
 <a class="geo-link-card" href="/garage-door-spring-replacement"><h3>Garage Door Spring Replacement</h3><p>High-Cycle spring options and balancing details.</p></a>
 <a class="geo-link-card" href="/garage-door-opener-repair"><h3>Garage Door Opener Repair</h3><p>Sensor, motor, travel-Limit, and connectivity fixes.</p></a>
 <a class="geo-link-card" href="/emergency-garage-door-repair"><h3>Emergency Garage Door Repair</h3><p>24/7 urgent service for stuck or unsafe doors.</p></a>
@@ -606,9 +591,129 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 <section class="geo-section geo-cta-strip">
         <h2>Need Help Right Now?</h2>
-        <p>Call <a href="tel:9254094974">9254094974</a> Or <a href="/quote">Request garage door service online</a>, Or <a href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book free estimate instantly</a>.</p>
+        <p>Call <a href="tel:+19254094974">(925) 409-4974</a> Or <a href="/quote">Request garage door service online</a>, Or <a href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book free estimate instantly</a>.</p>
       </section>
-    </main>
+    
+<section class="valiant-companycam-native-proof valiant-companycam-native-proof--compact" aria-labelledby="native-companycam-proof-heading">
+            <div class="valiant-companycam-native-proof__intro">
+              <p class="geo-eyebrow">Native crawlable CompanyCam proof</p>
+              <h2 id="native-companycam-proof-heading">Real Livermore garage door repair job photos</h2>
+              <p>These are real Valiant Garage Door field photos from Livermore, CA jobs, saved as crawlable images with descriptive filenames, alt text, captions, and GPS location data embedded for local and AI search.</p>
+            </div>
+            <div class="valiant-companycam-grid">
+              <figure class="valiant-companycam-card">
+                <a href="/assets/gallery-before-after/livermore-garage-door-repair-craftsman-door.jpg" aria-label="Open Livermore garage door repair — craftsman-style wood door serviced">
+                  <img src="/assets/gallery-before-after/livermore-garage-door-repair-craftsman-door.webp" alt="Livermore garage door repair — craftsman-style wood door serviced" width="1600" height="1200" loading="lazy" decoding="async">
+                </a>
+                <figcaption>A craftsman-style wood garage door in Livermore, CA after a Valiant service call. <a href="/gallery">See more Valiant project photos</a></figcaption>
+              </figure>
+              <figure class="valiant-companycam-card">
+                <a href="/assets/gallery-before-after/livermore-garage-door-safety-sensor-repair-before-after.jpg" aria-label="Open Livermore garage door safety sensor repair before and after">
+                  <img src="/assets/gallery-before-after/livermore-garage-door-safety-sensor-repair-before-after.webp" alt="Livermore garage door safety sensor repair before and after" width="1440" height="1440" loading="lazy" decoding="async">
+                </a>
+                <figcaption>Before and after of a garage door safety sensor and bottom-bracket repair on a Livermore, CA job. <a href="/gallery">See more Valiant project photos</a></figcaption>
+              </figure>
+            </div>
+          </section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.valiantdoor.com/garage-door-repair-livermore/#image-1",
+      "contentUrl": "https://www.valiantdoor.com/assets/gallery-before-after/livermore-garage-door-repair-craftsman-door.jpg",
+      "url": "https://www.valiantdoor.com/assets/gallery-before-after/livermore-garage-door-repair-craftsman-door.jpg",
+      "thumbnailUrl": "https://www.valiantdoor.com/assets/gallery-before-after/livermore-garage-door-repair-craftsman-door-thumb.jpg",
+      "width": 1600,
+      "height": 1200,
+      "name": "Livermore garage door repair — craftsman-style wood door serviced",
+      "caption": "A craftsman-style wood garage door in Livermore, CA after a Valiant service call.",
+      "description": "A craftsman-style wood garage door in Livermore, CA after a Valiant service call.",
+      "representativeOfPage": true,
+      "contentLocation": {
+        "@type": "Place",
+        "name": "Livermore, CA",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Livermore",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.6819,
+          "longitude": -121.768
+        }
+      },
+      "locationCreated": {
+        "@type": "Place",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.6819,
+          "longitude": -121.768
+        }
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Valiant Garage Door",
+        "@id": "https://www.valiantdoor.com/#business"
+      },
+      "copyrightHolder": {
+        "@type": "Organization",
+        "name": "Valiant Garage Door"
+      },
+      "creditText": "Valiant Garage Door LLC"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.valiantdoor.com/garage-door-repair-livermore/#image-2",
+      "contentUrl": "https://www.valiantdoor.com/assets/gallery-before-after/livermore-garage-door-safety-sensor-repair-before-after.jpg",
+      "url": "https://www.valiantdoor.com/assets/gallery-before-after/livermore-garage-door-safety-sensor-repair-before-after.jpg",
+      "thumbnailUrl": "https://www.valiantdoor.com/assets/gallery-before-after/livermore-garage-door-safety-sensor-repair-before-after-thumb.jpg",
+      "width": 1440,
+      "height": 1440,
+      "name": "Livermore garage door safety sensor repair before and after",
+      "caption": "Before and after of a garage door safety sensor and bottom-bracket repair on a Livermore, CA job.",
+      "description": "Before and after of a garage door safety sensor and bottom-bracket repair on a Livermore, CA job.",
+      "contentLocation": {
+        "@type": "Place",
+        "name": "Livermore, CA",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Livermore",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.6819,
+          "longitude": -121.768
+        }
+      },
+      "locationCreated": {
+        "@type": "Place",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.6819,
+          "longitude": -121.768
+        }
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Valiant Garage Door",
+        "@id": "https://www.valiantdoor.com/#business"
+      },
+      "copyrightHolder": {
+        "@type": "Organization",
+        "name": "Valiant Garage Door"
+      },
+      "creditText": "Valiant Garage Door LLC"
+    }
+  ]
+}
+</script>
+</main>
 
     <footer class="site-footer">
       <div class="container footer-content">

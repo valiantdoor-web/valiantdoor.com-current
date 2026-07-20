@@ -13,9 +13,11 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="/assets/home-optimized/hero-bg-1536.webp">
 <link rel="icon" href="/assets/home-optimized/hero-door-shield-black-red-192.webp" type="image/webp">
+<link rel="preload" as="image" href="/assets/home-optimized/hero-bg-1536.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet"></noscript>
 <style>
   /* ============================================================
      EDIT THIS ONE BLOCK PER DOMAIN
@@ -141,6 +143,8 @@
   .serving-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
   .serving-card li { display: flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 600; }
   .serving-card li svg { width: 18px; height: 18px; color: var(--gold); flex: none; }
+  .serving-card li a { color: inherit; text-decoration: none; transition: color .15s ease; }
+  .serving-card li a:hover, .serving-card li a:focus-visible { color: var(--gold); text-decoration: underline; }
   .serving-card .foot { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.08); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dimmer); }
 
   /* ---------- Trust bar ---------- */
@@ -176,7 +180,7 @@
   .prove .btn-outline { margin-top: 32px; border: 1px solid var(--gold); color: var(--ink); padding: 14px 26px; text-transform: uppercase; font-size: .78rem; background: transparent; }
   .prove .btn-outline:hover { background: rgba(199,163,75,.1); }
   .prove-visual { position: relative; }
-  .prove-visual img.phone { width: min(320px, 80%); margin: 0 auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,.6)); }
+  .prove-visual img.phone { width: min(320px, 80%); height: auto; margin: 0 auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,.6)); }
   .transparency { margin-top: 24px; border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: flex; gap: 16px; align-items: center; background: rgba(8,8,10,.6); }
   .transparency .shield { width: 48px; height: 48px; flex: none; color: var(--gold); }
   .transparency b { color: var(--gold-soft); text-transform: uppercase; letter-spacing: .06em; font-size: .9rem; }
@@ -307,7 +311,7 @@
     </nav>
     <div class="header-cta">
       <a class="btn btn-phone js-tel" href="#">
-        <b class="js-phone">(925) 526-5972</b><span>Call Now &mdash; We Answer</span>
+        <b class="js-phone">(925) 409-4974</b><span>Call Now &mdash; We Answer</span>
       </a>
       <a class="btn btn-book" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
@@ -320,6 +324,7 @@
   </div>
 </header>
 
+<main id="main">
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-inner">
@@ -329,7 +334,7 @@
       <p class="hero-sub">Same-Day Service <span class="sep">&bull;</span> Honest Recommendations <span class="sep">&bull;</span> Proven Results</p>
       <p class="hero-desc">IDEA Certified technician with 12+ years of experience. We diagnose first, educate always, and fix it right the first time.</p>
       <div class="hero-actions">
-        <a class="btn cta-call js-tel" href="#"><b>Call <span class="js-phone">(925) 526-5972</span></b><span>We Answer</span></a>
+        <a class="btn cta-call js-tel" href="#"><b>Call <span class="js-phone">(925) 409-4974</span></b><span>We Answer</span></a>
         <a class="btn cta-book" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer"><b>Book Free Estimate</b><span>Fast &amp; Easy</span></a>
       </div>
       <p class="hero-same-day">
@@ -340,12 +345,12 @@
     <aside class="serving-card">
       <h2>Proudly Serving</h2>
       <ul>
-        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Pleasanton</li>
-        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Dublin</li>
-        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Livermore</li>
-        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>San Ramon</li>
-        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Danville</li>
-        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Fremont</li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><a href="/garage-door-repair-pleasanton">Garage Door Repair Pleasanton</a></li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><a href="/garage-door-repair-dublin-ca">Garage Door Repair Dublin</a></li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><a href="/garage-door-repair-livermore">Garage Door Repair Livermore</a></li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><a href="/garage-door-repair-san-ramon">Garage Door Repair San Ramon</a></li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><a href="/garage-door-repair-danville">Garage Door Repair Danville</a></li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><a href="/garage-door-repair-fremont">Garage Door Repair Fremont</a></li>
       </ul>
       <p class="foot">And Surrounding Areas</p>
     </aside>
@@ -358,7 +363,7 @@
     <div class="trust-inner">
       <div class="trust-item">
         <span class="ic"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12c0-.7-.1-1.4-.2-2H12v4h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4C20.8 18 22 15.3 22 12z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.4-2.6c-.9.6-2 1-3.2 1-2.5 0-4.6-1.7-5.3-3.9H3.2v2.6C4.9 19.9 8.2 22 12 22z"/><path fill="#FBBC05" d="M6.7 14.1c-.2-.6-.3-1.2-.3-2s.1-1.4.3-2V7.5H3.2C2.4 9 2 10.5 2 12s.4 3 1.2 4.5l3.5-2.4z"/><path fill="#EA4335" d="M12 6.4c1.4 0 2.7.5 3.7 1.4l2.7-2.7C16.9 3.5 14.7 2.6 12 2.6 8.2 2.6 4.9 4.7 3.2 7.9l3.5 2.6C7.4 8.1 9.5 6.4 12 6.4z"/></svg></span>
-        <span class="tt"><b>5.0 <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></b><span class="lbl">70+ Google Reviews</span><small>100% Verified</small></span>
+        <span class="tt"><b>5.0 <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></b><span class="lbl"><span data-review="google-count">60</span> Google Reviews</span><small>100% Verified</small></span>
       </div>
       <div class="trust-item">
         <span class="ic"><svg viewBox="0 0 24 24" fill="#00b551"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg></span>
@@ -401,7 +406,7 @@
       <a class="btn btn-outline" href="/services">Learn More About Our Process</a>
     </div>
     <div class="prove-visual">
-      <img class="phone" src="/assets/lp/inspection-phone.png" alt="Smartphone showing a Valiant digital inspection report with photos and checkmarks">
+      <img loading="lazy" decoding="async" width="1024" height="1024" class="phone" src="/assets/lp/inspection-phone.webp" alt="Smartphone showing a Valiant digital inspection report with photos and checkmarks">
       <div class="transparency">
         <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
         <div><b>100% Transparency</b><p>No pressure. No surprises. Just the truth and the best solution for your home.</p></div>
@@ -417,27 +422,27 @@
     <h2 class="section-title">Complete Garage Door Solutions</h2>
     <div class="services-grid">
       <a class="svc-card" href="/services">
-        <div class="svc-media"><img src="/assets/lp/service-spring.png" alt="Garage door torsion spring"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16M4 8h16M4 12h16M4 16h16M4 20h16"/></svg></span></div>
+        <div class="svc-media"><img loading="lazy" decoding="async" width="1024" height="1024" src="/assets/lp/service-spring.webp" alt="Garage door torsion spring"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16M4 8h16M4 12h16M4 16h16M4 20h16"/></svg></span></div>
         <div class="svc-body"><h3>Spring Repair</h3><p>Broken spring? We replace all types of springs safely and correctly.</p><span class="svc-more">Learn More &rarr;</span></div>
       </a>
       <a class="svc-card" href="/services">
-        <div class="svc-media"><img src="/assets/lp/service-opener.png" alt="Garage door opener motor"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 8V6a5 5 0 0 1 10 0v2"/></svg></span></div>
+        <div class="svc-media"><img loading="lazy" decoding="async" width="1024" height="1024" src="/assets/lp/service-opener.webp" alt="Garage door opener motor"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 8V6a5 5 0 0 1 10 0v2"/></svg></span></div>
         <div class="svc-body"><h3>Garage Door Openers</h3><p>Installation, repair &amp; smart opener upgrades for all brands.</p><span class="svc-more">Learn More &rarr;</span></div>
       </a>
       <a class="svc-card" href="/services">
-        <div class="svc-media"><img src="/assets/lp/service-cable.png" alt="Garage door lift cable and drum"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v6a6 6 0 0 0 12 0V3M6 21v-6a6 6 0 0 1 12 0v6"/></svg></span></div>
+        <div class="svc-media"><img loading="lazy" decoding="async" width="1024" height="1024" src="/assets/lp/service-cable.webp" alt="Garage door lift cable and drum"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v6a6 6 0 0 0 12 0V3M6 21v-6a6 6 0 0 1 12 0v6"/></svg></span></div>
         <div class="svc-body"><h3>Cable Repair</h3><p>Frayed or snapped cables replaced with precision and care.</p><span class="svc-more">Learn More &rarr;</span></div>
       </a>
       <a class="svc-card" href="/services">
-        <div class="svc-media"><img src="/assets/lp/service-track.png" alt="Garage door roller in track"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M4 6v12M20 6v12"/></svg></span></div>
+        <div class="svc-media"><img loading="lazy" decoding="async" width="1024" height="1024" src="/assets/lp/service-track.webp" alt="Garage door roller in track"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M4 6v12M20 6v12"/></svg></span></div>
         <div class="svc-body"><h3>Door Off Track</h3><p>Realigns your door and restores safe, smooth operation.</p><span class="svc-more">Learn More &rarr;</span></div>
       </a>
       <a class="svc-card" href="/services">
-        <div class="svc-media"><img src="/assets/lp/service-install.png" alt="New garage doors on a modern home"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 4l9 7M5 10v10h14V10"/></svg></span></div>
+        <div class="svc-media"><img loading="lazy" decoding="async" width="1024" height="1024" src="/assets/lp/service-install.webp" alt="New garage doors on a modern home"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 4l9 7M5 10v10h14V10"/></svg></span></div>
         <div class="svc-body"><h3>New Door Installation</h3><p>High-quality doors installed by experts. Built to last.</p><span class="svc-more">Learn More &rarr;</span></div>
       </a>
       <a class="svc-card" href="/services">
-        <div class="svc-media"><img src="/assets/lp/service-sensor.png" alt="Garage door safety sensor"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/></svg></span></div>
+        <div class="svc-media"><img loading="lazy" decoding="async" width="1024" height="1024" src="/assets/lp/service-sensor.webp" alt="Garage door safety sensor"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/></svg></span></div>
         <div class="svc-body"><h3>Sensor &amp; Safety</h3><p>Professional align sensors to keep your family safe.</p><span class="svc-more">Learn More &rarr;</span></div>
       </a>
     </div>
@@ -459,7 +464,7 @@
       </ul>
     </div>
     <div class="why-photo">
-      <img src="/assets/lp/founder-valentino.png" alt="Valentino, founder and lead technician of Valiant Garage Door">
+      <img loading="lazy" decoding="async" width="1024" height="1024" src="/assets/lp/founder-valentino.webp" alt="Valentino, founder and lead technician of Valiant Garage Door">
     </div>
     <div class="founder-note">
       <h2>Founder. Technician. Your Neighbor.</h2>
@@ -474,7 +479,7 @@
 <section class="block rev">
   <div class="wrap rev-inner">
     <div class="rev-card">
-      <div class="top"><span class="ic"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12c0-.7-.1-1.4-.2-2H12v4h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4C20.8 18 22 15.3 22 12z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.4-2.6c-.9.6-2 1-3.2 1-2.5 0-4.6-1.7-5.3-3.9H3.2v2.6C4.9 19.9 8.2 22 12 22z"/><path fill="#FBBC05" d="M6.7 14.1c-.2-.6-.3-1.2-.3-2s.1-1.4.3-2V7.5H3.2C2.4 9 2 10.5 2 12s.4 3 1.2 4.5l3.5-2.4z"/><path fill="#EA4335" d="M12 6.4c1.4 0 2.7.5 3.7 1.4l2.7-2.7C16.9 3.5 14.7 2.6 12 2.6 8.2 2.6 4.9 4.7 3.2 7.9l3.5 2.6C7.4 8.1 9.5 6.4 12 6.4z"/></svg></span><div><b>5.0</b> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div class="lbl">70+ Google Reviews</div></div></div>
+      <div class="top"><span class="ic"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12c0-.7-.1-1.4-.2-2H12v4h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4C20.8 18 22 15.3 22 12z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.4-2.6c-.9.6-2 1-3.2 1-2.5 0-4.6-1.7-5.3-3.9H3.2v2.6C4.9 19.9 8.2 22 12 22z"/><path fill="#FBBC05" d="M6.7 14.1c-.2-.6-.3-1.2-.3-2s.1-1.4.3-2V7.5H3.2C2.4 9 2 10.5 2 12s.4 3 1.2 4.5l3.5-2.4z"/><path fill="#EA4335" d="M12 6.4c1.4 0 2.7.5 3.7 1.4l2.7-2.7C16.9 3.5 14.7 2.6 12 2.6 8.2 2.6 4.9 4.7 3.2 7.9l3.5 2.6C7.4 8.1 9.5 6.4 12 6.4z"/></svg></span><div><b>5.0</b> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div class="lbl"><span data-review="google-count">60</span> Google Reviews</div></div></div>
       <p class="q">&ldquo;Valentino is the best! Fast, honest, and does amazing work. Highly recommend!&rdquo; &ndash; Chris D.</p>
       <a class="link" href="/reviews-and-proof">View All Reviews &rarr;</a>
     </div>
@@ -491,11 +496,12 @@
     <div class="rev-cta">
       <h3>Need Service Today?</h3>
       <p>We&rsquo;re ready to help. Call now or book online.</p>
-      <a class="btn call js-tel" href="#"><span class="js-phone">(925) 526-5972</span></a>
+      <a class="btn call js-tel" href="#"><span class="js-phone">(925) 409-4974</span></a>
       <a class="btn appt" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Appointment</a>
     </div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -533,7 +539,7 @@
       <div class="fcol">
         <h4>Contact</h4>
         <ul>
-          <li><a class="js-tel" href="#"><span class="js-phone">(925) 526-5972</span></a></li>
+          <li><a class="js-tel" href="#"><span class="js-phone">(925) 409-4974</span></a></li>
           <li><a href="mailto:vm@valiantdoor.com">vm@valiantdoor.com</a></li>
           <li>Pleasanton, CA</li>
           <li>Licensed &amp; Insured</li>
@@ -560,7 +566,7 @@
 
 <script>
   // ---- Phone number: change PHONE once to update every CTA on the page ----
-  var PHONE = "(925) 526-5972";
+  var PHONE = "(925) 409-4974";
   (function () {
     var digits = PHONE.replace(/[^0-9]/g, "");
     document.querySelectorAll(".js-phone").forEach(function (el) { el.textContent = PHONE; });

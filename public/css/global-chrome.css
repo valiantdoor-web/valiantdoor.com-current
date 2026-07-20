@@ -6,6 +6,25 @@
   --global-gold-soft: #e0c783;
   --global-ivory: #f5f2ec;
   --global-muted: #b7b1a6;
+  /* Header height reservation — prevents layout shift when the JS-injected
+     sticky header pops in. Keep in sync with .global-header-inner min-height. */
+  --header-h: 85px;
+  /* Total offset = sticky call bar + global header. Pages without the call
+     bar have --valiant-sticky-call-offset defaulting to 0 via the fallback. */
+  scroll-padding-top: calc(var(--valiant-sticky-call-offset, 0px) + var(--header-h));
+}
+@media (max-width: 1080px) { :root { --header-h: 77px; } }
+@media (max-width: 760px)  { :root { --header-h: 73px; } }
+/* Hide the old site-header immediately so it never paints at its full
+   height before global-chrome.js swaps it for the new compact header.
+   Using opacity+pointer-events (not display:none) keeps layout stable
+   and prevents CLS while the deferred script is still loading. */
+header.site-header {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  max-height: var(--header-h) !important;
+  overflow: hidden !important;
+  transition: none !important;
 }
 .global-site-header,
 .global-site-footer {
@@ -19,8 +38,12 @@
 .global-wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 .global-site-header {
   position: sticky;
-  top: 0;
-  z-index: 1000;
+  /* Sit directly below the fixed emergency call bar on pages that have it.
+     Falls back to 0 on pages without --valiant-sticky-call-offset. */
+  top: var(--valiant-sticky-call-offset, 0px);
+  /* Must exceed the old site-header z-index (9990) so the new header
+     always renders on top and intercepts scroll correctly. */
+  z-index: 9995;
   background: rgba(9, 9, 10, .97);
   border-bottom: 1px solid rgba(199, 163, 75, .24);
   box-shadow: 0 10px 28px rgba(0, 0, 0, .26);
@@ -28,7 +51,7 @@
 }
 .global-header-inner { min-height: 84px; display: flex; align-items: center; gap: 24px; }
 .global-brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 10px; }
-.global-brand img { width: 48px; height: 48px; object-fit: contain; }
+.global-brand img { width: 62px; height: 62px; object-fit: contain; }
 .global-brand-text { display: flex; flex-direction: column; line-height: 1; }
 .global-brand-text b { font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; letter-spacing: .14em; }
 .global-brand-text small { margin-top: 7px; color: var(--global-gold); font-size: .62rem; letter-spacing: .34em; }
@@ -88,7 +111,7 @@
 @media (max-width: 760px) {
   .global-wrap { width: min(100% - 28px, 1180px); }
   .global-header-inner { min-height: 72px; justify-content: space-between; }
-  .global-brand img { width: 45px; height: 45px; }
+  .global-brand img { width: 54px; height: 54px; }
   .global-brand-text { display: flex; }
   .global-brand-text b { font-size: 1rem; }
   .global-brand-text small { font-size: .5rem; }
@@ -137,3 +160,20 @@
   .endurance-max-media { flex-basis: auto; min-height: 0; aspect-ratio: 1 / 1; }
   .endurance-max-copy { padding: 24px 20px 26px; }
 }
+
+/* Lazy chat launcher: static shield placeholder shown before Botpress loads */
+#valiant-chat-fab { position: fixed; right: 20px; bottom: 20px; z-index: 9990; width: 60px; height: 60px; display: inline-flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; background: var(--global-coal); border: 1px solid rgba(199, 163, 75, .5); border-radius: 50%; box-shadow: 0 10px 26px rgba(0, 0, 0, .4); transition: transform .18s ease, box-shadow .18s ease; }
+#valiant-chat-fab:hover, #valiant-chat-fab:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0, 0, 0, .5); outline: none; }
+#valiant-chat-fab:focus-visible { border-color: var(--global-gold-soft); }
+#valiant-chat-fab img { width: 34px; height: 34px; display: block; object-fit: contain; }
+#valiant-chat-fab .valiant-chat-fab-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid rgba(224, 199, 131, .55); animation: valiant-chat-pulse 2.6s ease-out infinite; pointer-events: none; }
+#valiant-chat-fab.is-loading { cursor: progress; }
+#valiant-chat-fab.is-loading img { opacity: .35; }
+#valiant-chat-fab.is-loading .valiant-chat-fab-pulse { border-color: rgba(224, 199, 131, .25); border-top-color: var(--global-gold-soft); animation: valiant-chat-spin .8s linear infinite; }
+@keyframes valiant-chat-pulse { 0% { transform: scale(1); opacity: .7; } 70% { transform: scale(1.35); opacity: 0; } 100% { opacity: 0; } }
+@keyframes valiant-chat-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  #valiant-chat-fab .valiant-chat-fab-pulse { animation: none; }
+  #valiant-chat-fab.is-loading .valiant-chat-fab-pulse { animation: valiant-chat-spin 1s linear infinite; }
+}
+@media (max-width: 480px) { #valiant-chat-fab { right: 14px; bottom: 14px; width: 54px; height: 54px; } }

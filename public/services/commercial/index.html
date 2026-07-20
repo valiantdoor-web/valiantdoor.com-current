@@ -73,6 +73,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         object-position: center;
         display: block;
       }
+      .commercial-photo-card-rotate-wrap {
+        width: 100%;
+        height: clamp(240px, 32vw, 420px);
+        overflow: hidden;
+        position: relative;
+      }
+      .commercial-photo-card-rotate-wrap img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* Images are landscape (1800×1350). After rotating 90° the natural
+           width becomes the height axis. Using width = containerHeight × (W/H)
+           fills the container without black bars. */
+        width: calc(100% * 1.333);
+        height: auto;
+        max-width: none;
+        transform: translate(-50%, -50%) rotate(90deg);
+        transform-origin: center center;
+        object-fit: cover;
+      }
+      .commercial-photo-card--rotated > img {
+        display: none;
+      }
       .commercial-photo-card figcaption {
         padding: 12px 14px 14px;
         color: rgba(245, 242, 236, 0.84);
@@ -88,6 +111,130 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           max-height: none;
           object-fit: contain;
           background: #0a0a0b;
+        }
+      }
+      .commercial-cred-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 1.5rem;
+      }
+      .commercial-cred-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 16px;
+        border: 1px solid rgba(199, 163, 75, 0.28);
+        border-radius: 14px;
+        background: rgba(14, 14, 16, 0.85);
+        text-decoration: none;
+        transition: border-color 0.2s, background 0.2s;
+      }
+      .commercial-cred-card:hover,
+      .commercial-cred-card:focus-visible {
+        border-color: rgba(199, 163, 75, 0.65);
+        background: rgba(20, 18, 10, 0.95);
+      }
+      .commercial-cred-card img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+      .commercial-cred-card--badge img {
+        max-width: 200px;
+      }
+      .commercial-cred-label {
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: rgba(199, 163, 75, 0.9);
+        text-align: center;
+      }
+      @media (max-width: 640px) {
+        .commercial-cred-strip {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* Documented commercial repair report */
+      .commercial-report {
+        border: 1px solid rgba(199, 163, 75, 0.28);
+        border-radius: 16px;
+        background: rgba(14, 14, 16, 0.85);
+        padding: clamp(20px, 3vw, 36px);
+        margin-top: 1.5rem;
+      }
+      .commercial-report-meta {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(199, 163, 75, 0.9);
+        margin-bottom: 0.75rem;
+      }
+      .commercial-report-scope {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin: 1.5rem 0;
+      }
+      .commercial-report-scope div {
+        border: 1px solid rgba(199, 163, 75, 0.18);
+        border-radius: 12px;
+        padding: 18px 16px;
+        background: rgba(20, 18, 10, 0.55);
+      }
+      .commercial-report-scope h3 {
+        font-size: 1rem;
+        margin: 0 0 0.6rem;
+        color: rgba(224, 199, 131, 0.95);
+      }
+      .commercial-report-scope ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+      .commercial-report-scope li {
+        margin-bottom: 0.35rem;
+      }
+      .commercial-report-score {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(199, 163, 75, 0.2);
+      }
+      .commercial-report-score div {
+        text-align: center;
+      }
+      .commercial-report-score .score-value {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--global-gold, #c7a34b);
+        line-height: 1.1;
+      }
+      .commercial-report-score .score-label {
+        display: block;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--global-muted, #b7b1a6);
+        margin-top: 0.4rem;
+      }
+      .commercial-report-standard {
+        margin-top: 1.5rem;
+        font-style: italic;
+        color: rgba(224, 199, 131, 0.9);
+      }
+      @media (max-width: 760px) {
+        .commercial-report-scope,
+        .commercial-report-score {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -259,7 +406,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "34",
+        "reviewCount": "60",
         "bestRating": "5",
         "worstRating": "1"
       },
@@ -455,7 +602,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
   <body class="page-services has-sticky-call">
         <div class="home-sticky-call" role="region" aria-label="Emergency repair call button">
-      <a class="home-sticky-call-button" href="tel:9254094974">Tap to Call for Emergency Repair.</a>
+      <a class="home-sticky-call-button" href="tel:+19254094974">Tap to Call for Emergency Repair.</a>
     </div>
 <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T74PV8L5"
@@ -507,7 +654,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <summary>Services</summary>
             <div class="nav-dropdown-menu">
               <a href="/services">Services Overview</a>
-              <a href="/same-day-garage-door-repair-pleasanton">Garage Door Repair</a>
+              <a href="/garage-door-repair">Garage Door Repair</a>
               <a href="/garage-door-spring-replacement">Spring Replacement</a>
               <a href="/garage-door-opener-repair">Opener Repair</a>
               <a href="/garage-door-openers">Openers &amp; Pricing</a>
@@ -539,7 +686,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="/partners">Partners</a>
               <a href="/business-card">Business Card</a>
               <a href="/Garage-Door-Service-Excellence">Valiant Service Excellence Protocol</a>
-              <a href="/amazon-alexa">Amazon &amp; Alexa App</a>
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>
               <a href="/site-map">Site Map</a>
@@ -569,14 +715,82 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <section class="service-detail" aria-labelledby="commercial-service-photos">
         <h2 id="commercial-service-photos">Commercial Service In The Field</h2>
         <div class="commercial-photo-grid">
-          <figure class="commercial-photo-card">
-            <img src="/assets/commercial/commercial-hoist-1.webp" alt="Commercial rolling steel door drum and chain hoist assembly during service" width="1800" height="1350" loading="eager" decoding="async">
+          <figure class="commercial-photo-card commercial-photo-card--rotated">
+            <div class="commercial-photo-card-rotate-wrap">
+              <img src="/assets/commercial/commercial-hoist-1.webp" alt="Commercial rolling steel door drum and chain hoist assembly during service" width="1800" height="1350" loading="eager" decoding="async">
+            </div>
             <figcaption>Commercial chain hoist and rolling steel door hardware during on-site service.</figcaption>
           </figure>
-          <figure class="commercial-photo-card">
-            <img src="/assets/commercial/commercial-hoist-2.webp" alt="Valiant technician on a ladder servicing a commercial overhead door chain system" width="1800" height="1350" loading="lazy" decoding="async">
+          <figure class="commercial-photo-card commercial-photo-card--rotated">
+            <div class="commercial-photo-card-rotate-wrap">
+              <img src="/assets/commercial/commercial-hoist-2.webp" alt="Valiant technician on a ladder servicing a commercial overhead door chain system" width="1800" height="1350" loading="lazy" decoding="async">
+            </div>
             <figcaption>Commercial overhead door service in progress with technician access and chain-drive adjustment.</figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="service-detail" aria-labelledby="commercial-chain-hoist-video">
+        <h2 id="commercial-chain-hoist-video">How To Use A Chain Hoist</h2>
+        <section class="custom-video-section custom-video-section--gallery" aria-label="Chain hoist video">
+          <div class="custom-video-wrap">
+            <p class="services-page-intro">How to operate a commercial Garage Door chain hoist</p>
+            <video class="custom-video-player custom-video-player--portrait" controls="" playsinline="" preload="none" poster="/assets/gallery/chain-hoist-instruction-poster.webp" width="480" height="854">
+              <source src="/assets/gallery/chain-hoist-instruction-mobile.mp4" type="video/mp4">
+              Your Browser Does Not Support The Video Tag.
+            </video>
+          </div>
+        </section>
+      </section>
+
+      <section class="service-detail" aria-labelledby="commercial-repair-report">
+        <h2 id="commercial-repair-report">Documented Commercial Repair: Crashed Door Recovery</h2>
+        <p>A recent commercial call shows how Valiant documents and executes a full crashed-door recovery — torsion reset, track reset, and alignment — under the Valiant Standard of Excellence.</p>
+        <div class="commercial-report">
+          <span class="commercial-report-meta">Commercial Maintenance &amp; Repair Visit #1 &middot; July 11, 2026</span>
+          <p>Crashed door re-balance, track reset and alignment, and a complete tune-up with safety inspection — with the dead-shaft retainer (RDRG) reset and chain drive re-routed to restore reliable operation.</p>
+          <div class="commercial-report-scope">
+            <div>
+              <h3>Crashed Door &amp; Torsion Reset</h3>
+              <ul>
+                <li>Crashed door re-balance</li>
+                <li>Track re-set &amp; alignment</li>
+                <li>Complete tune-up &amp; safety inspection</li>
+              </ul>
+            </div>
+            <div>
+              <h3>RDRG — Dead Shaft Retainer</h3>
+              <ul>
+                <li>Dead shaft retainer reset</li>
+                <li>Commercial door balance</li>
+                <li>Chain re-routed &amp; chain guide mended</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Track Reset &amp; Alignment</h3>
+              <ul>
+                <li>Mended vertical tracks</li>
+                <li>Replaced splice plates</li>
+                <li>Re-attached reverse angle &amp; reinforced vertical track support</li>
+              </ul>
+            </div>
+          </div>
+          <div class="commercial-report-score">
+            <div>
+              <span class="score-value">7/10</span>
+              <span class="score-label">Master Tech Door Health Rating</span>
+            </div>
+            <div>
+              <span class="score-value">1</span>
+              <span class="score-label">Repair Visit Exhausted</span>
+            </div>
+            <div>
+              <span class="score-value">2</span>
+              <span class="score-label">Suggested Upgrades</span>
+            </div>
+          </div>
+          <p style="margin-top:1.25rem;"><strong>Suggested upgrades:</strong> 1.6200ZZ 100k-cycle rollers and 14-gauge graduated hinges to extend service life on a high-cycle commercial door.</p>
+          <p class="commercial-report-standard">Every repair is backed by The Valiant Standard of Excellence.</p>
         </div>
       </section>
 
@@ -597,6 +811,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p>Typical commercial calls include operator troubleshooting, safety device testing, weather seal replacement, bottom bar damage, spring fatigue, chain hoist issues, and repeated door balance problems that put extra strain on the opener. We can also help you prioritize what needs same-Day repair versus what can be scheduled into a preventive maintenance plan.</p>
         <p>We also coordinate commercial garage door repair in Pleasanton, CA for facilities that rely on sectional doors, rolling steel doors, loading-Dock operators, and other door openers. When a business needs broader garage door services, our team can connect commercial work with the main <a href="/services">Service Overview</a> And <a href="/services/garage-door-maintenance">Scheduled Maintenance</a>.</p>
         <p>If your facility depends on loading access, secure overnight closure, or uninterrupted tenant operations, Valiant documents the problem clearly and explains the recommended repair path so decision-Makers can move quickly. For urgent secure-Close situations, use the <a href="/emergency-garage-door-repair">Emergency garage door repair page</a> Or <a href="/quote">Request commercial service online</a>.</p>
+      </section>
+
+      <section class="service-detail" aria-labelledby="commercial-credentials-strip">
+        <h2 id="commercial-credentials-strip">IDEA Certifications &amp; Master Technician Badge</h2>
+        <p>Valiant Garage Door is backed by formal IDEA industry training. Valentino Ramirez holds active certifications for Commercial Sectional Door Installation, Commercial Sectional Systems, Commercial Rolling Door Systems, and Residential Door Systems — all verifiable through the IDEA Certified Technician Directory.</p>
+        <div class="commercial-cred-strip">
+          <a class="commercial-cred-card" href="/idea-certified-garage-door-technician" aria-label="View IDEA certification proof">
+            <img src="/assets/credentials/idea-logo-education-accreditation-cropped.webp" alt="IDEA International Door Education Association certification logo" width="480" height="240" loading="lazy" decoding="async">
+            <span class="commercial-cred-label">IDEA Certified</span>
+          </a>
+          <a class="commercial-cred-card commercial-cred-card--badge" href="/mastertech" aria-label="Meet the master technician">
+            <img src="/assets/credentials/idea-master-technician-badge.png" alt="IDEA Master Technician badge — Valentino Ramirez, Valiant Garage Door" width="320" height="320" loading="lazy" decoding="async">
+            <span class="commercial-cred-label">Master Technician</span>
+          </a>
+          <a class="commercial-cred-card" href="/idea-certified-garage-door-technician" aria-label="View IDEA residential technician credential proof">
+            <img src="/assets/credentials/idea-residential-door-systems-technician-valentino-2028.png" alt="IDEA Residential Door Systems Technician — Valentino Ramirez, certified through 2028" width="320" height="480" loading="lazy" decoding="async">
+            <span class="commercial-cred-label">Residential Technician</span>
+          </a>
+        </div>
+        <p style="margin-top:1.25rem;"><a href="/idea-certified-garage-door-technician">View full IDEA credential proof</a> &nbsp;&middot;&nbsp; <a href="/mastertech">Meet the master technician</a></p>
+      </section>
+
+      <section class="service-detail" aria-labelledby="commercial-maintenance-plans">
+        <h2 id="commercial-maintenance-plans">Commercial Maintenance &amp; Repair Fixed Plans</h2>
+        <p>Unplanned downtime is expensive. Valiant offers structured commercial maintenance plans that keep sectional doors, rolling steel doors, and overhead operators running at full performance — before a broken spring or failed operator forces an emergency call.</p>
+        <ul>
+          <li><strong>Fixed-Rate Repair Visits</strong> — Flat-rate pricing for common commercial repairs: spring replacement, cable repair, roller replacement, bottom bar damage, and operator troubleshooting. No surprise labor markups.</li>
+          <li><strong>Scheduled Maintenance Contracts</strong> — Periodic inspections, lubrication, balance checks, safety device testing, and wear-part documentation. Available quarterly or semi-annually.</li>
+          <li><strong>Priority Response</strong> — Maintenance contract customers receive priority scheduling over standard calls, minimizing disruption to loading operations and tenant access.</li>
+          <li><strong>Documented Service Records</strong> — Every visit is documented with findings, parts used, and recommended next steps — useful for property management, insurance, and facilities planning.</li>
+        </ul>
+        <p>Ask about commercial plan pricing when you <a href="/quote">request commercial service</a> or <a href="tel:+19254094974">call (925) 409-4974</a> directly.</p>
       </section>
 
       <section class="services-cta">

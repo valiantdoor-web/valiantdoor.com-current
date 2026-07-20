@@ -34,8 +34,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.min.css?v=20260703-header-buttons">
     <style>
+      /* Reserve space only for the fixed emergency call strip at paint time.
+         The global header is position:sticky so it does not consume flow space —
+         including its height in padding-top created a blank gap below the header. */
+      /* Let the hero image show through the content boxes on the quote page. */
+      body.page-quote .form-card {
+        background: rgba(15, 16, 18, 0.55);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        border-color: rgba(199, 163, 75, 0.28);
+      }
       body.page-quote {
-        padding-top: 64px;
+        padding-top: 64px !important;
+        background-color: #08090d;
+        background-image:
+          linear-gradient(180deg, rgba(8, 9, 13, 0.78) 0%, rgba(8, 9, 13, 0.88) 60%, rgba(8, 9, 13, 0.97) 100%),
+          url("/assets/quote/quote-hero-service-repair.webp");
+        background-repeat: no-repeat;
+        background-position: center 64px, center 64px;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      @media (max-width: 640px) {
+        body.page-quote {
+          padding-top: 74px !important;
+          background-position: center 74px, center 74px;
+          background-attachment: scroll;
+        }
       }
 
       .quote-sticky-call {
@@ -74,10 +99,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       @media (max-width: 640px) {
-        body.page-quote {
-          padding-top: 74px;
-        }
-
         .quote-sticky-call-button {
           width: 100%;
           text-align: center;
@@ -186,7 +207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "url": "https://www.valiantdoor.com/",
       "telephone": "9254094974",
       "email": "vm@valiantdoor.com",
-      "description": "Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement,Openers,Complex Systems, And Precision System Upgrades. We’re Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service.",
+      "description": "Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement,Openers,Complex Systems, And Precision System Upgrades. We��re Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service.",
       "priceRange": "$$",
       "logo": "https://www.valiantdoor.com/assets/logo/valiant-logo-gold.png",
       "image": "https://www.valiantdoor.com/assets/home-optimized/shield-192.webp",
@@ -253,7 +274,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "34",
+        "reviewCount": "60",
         "bestRating": "5",
         "worstRating": "1"
       }
@@ -345,9 +366,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T74PV8L5"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="quote-sticky-call" role="region" aria-label="Emergency repair call button">
-      <a class="quote-sticky-call-button" href="tel:+19254094974">Tap to Call for Emergency Repair.</a>
-    </div>
     <header class="site-header site-header-dark">
       <div class="container nav">
         <a class="logo" href="/" aria-label="Valiant Garage Door home">
@@ -394,7 +412,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <summary>Services</summary>
             <div class="nav-dropdown-menu">
               <a href="/services">Services Overview</a>
-              <a href="/same-day-garage-door-repair-pleasanton">Garage Door Repair</a>
+              <a href="/garage-door-repair">Garage Door Repair</a>
               <a href="/garage-door-spring-replacement">Spring Replacement</a>
               <a href="/garage-door-opener-repair">Opener Repair</a>
               <a href="/garage-door-openers">Openers &amp; Pricing</a>
@@ -426,7 +444,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="/partners">Partners</a>
               <a href="/business-card">Business Card</a>
               <a href="/Garage-Door-Service-Excellence">Valiant Service Excellence Protocol</a>
-              <a href="/amazon-alexa">Amazon &amp; Alexa App</a>
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>
               <a href="/site-map">Site Map</a>
@@ -441,8 +458,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <main class="services-shell">
       <section id="quote" class="form-section" aria-labelledby="quote-title">
         <div class="form-card">
-          <h1 id="quote-title" class="quote-title">Free Estimate Instant Booking</h1>
-          <p>Book a free estimate instantly for <a href="/same-day-garage-door-repair-pleasanton">Garage Door Repair</a>, <a href="/garage-door-spring-replacement">Spring Replacement</a>, <a href="/garage-door-opener-repair">Opener Service</a>, <a href="/services/garage-door-maintenance">Maintenance</a>, Or <a href="/emergency-garage-door-repair">Same-Day Emergency Help</a>.</p>
+          <h1 id="quote-title" class="quote-title">Free Estimate &amp; Instant Booking</h1>
+          <p>Book a free estimate instantly for <a href="/garage-door-repair">Garage Door Repair</a>, <a href="/garage-door-spring-replacement">Spring Replacement</a>, <a href="/garage-door-opener-repair">Opener Service</a>, <a href="/services/garage-door-maintenance">Maintenance</a>, Or <a href="/emergency-garage-door-repair">Same-Day Emergency Help</a>.</p>
           <div id="book-online" class="hcp-inline-booking" aria-label="Free estimate instant booking">
             <p class="hcp-inline-booking-label">Free estimate instant booking</p>
             <div class="form-actions">
