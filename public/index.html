@@ -171,11 +171,12 @@
   ]
 }
 </script>
-<link rel="preload" as="image" href="/assets/home-optimized/hero-bg-1536.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/home-optimized/hero-bg-960.webp" media="(max-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/home-optimized/hero-bg-1536.webp" media="(min-width: 769px)" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&family=Open+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&family=Open+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet"></noscript>
 <style>
   /* ============================================================
      EDIT THIS ONE BLOCK PER DOMAIN
@@ -274,6 +275,9 @@
     background: url('/assets/home-optimized/hero-bg-1536.webp') center right / cover no-repeat;
     z-index: 0;
   }
+  @media (max-width: 768px) {
+    .hero::before { background-image: url('/assets/home-optimized/hero-bg-960.webp'); }
+  }
   .hero::after {
     content: ""; position: absolute; inset: 0; z-index: 1;
     background: linear-gradient(90deg, rgba(8,8,10,.62) 0%, rgba(8,8,10,.34) 42%, rgba(8,8,10,0) 72%, rgba(8,8,10,.08) 100%);
@@ -316,7 +320,7 @@
   .trust-item .ic.ic-bbb { width: 34px; height: 34px; border-radius: 50%; background: #fff; display: grid; place-items: center; overflow: hidden; }
   .trust-item .ic.ic-bbb img.bbb-logo { width: auto; height: 30px; border-radius: 2px; background: transparent; object-fit: contain; }
   .rev-card .top .ic img.bbb-logo { width: auto; height: 36px; border-radius: 3px; background: #fff; object-fit: contain; }
-.svc-desc-modern { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; font-style: italic; }
+  .svc-desc-modern { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; font-style: italic; }
   .trust-item .tt { display: flex; flex-direction: column; line-height: 1.15; }
   .trust-item .tt b { font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 5px; }
   .trust-item .tt .lbl { font-size: .82rem; font-weight: 700; color: var(--ink); }
