@@ -14,7 +14,6 @@ const SITEMAPS = ["sitemap-pages.xml", "sitemap-images.xml", "sitemap-blog.xml"]
 
 // Canonical paths (no domain) of noindex pages that must not appear in sitemaps.
 const REMOVE = new Set([
-  "/business-card",
   "/thank-you",
   "/address-selection-hidden",
 ]);
