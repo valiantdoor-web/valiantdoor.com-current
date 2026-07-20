@@ -154,11 +154,23 @@
     return start;
   })();
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initializeSiteBot, { once: true });
-  } else {
-    initializeSiteBot();
-  }
+  // Defer the chat widget (≈5.5MB) off the critical path: load it on the first
+  // user interaction, or after an idle fallback delay. This keeps LCP fast on
+  // slow connections while still loading the widget for anyone who engages.
+  (function deferSiteBot() {
+    let started = false;
+    const events = ["pointerdown", "mousemove", "touchstart", "keydown", "scroll"];
+    const startOnce = () => {
+      if (started) return;
+      started = true;
+      events.forEach((e) => window.removeEventListener(e, startOnce, { passive: true }));
+      initializeSiteBot();
+    };
+    events.forEach((e) => window.addEventListener(e, startOnce, { passive: true, once: false }));
+    // Fallback: load during idle time, or after 6s, even without interaction.
+    const idle = window.requestIdleCallback || function (cb) { return window.setTimeout(cb, 6000); };
+    idle(() => window.setTimeout(startOnce, 4000));
+  })();
 
   // Add accessible names to the Botpress chat widget images (injected at runtime).
   // Fixes Lighthouse "image without [alt]" and "ARIA role should be appropriate"
