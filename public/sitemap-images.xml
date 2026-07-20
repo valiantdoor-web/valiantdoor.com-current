@@ -103,13 +103,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.valiantdoor.com/address-selection-hidden</loc>
-    <image:image>
-      <image:loc>https://fonts.gstatic.com/s/i/googlematerialicons/location_pin/v5/24px.svg</image:loc>
-      <image:title>Map location pin</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.valiantdoor.com/blog/bent-garage-door-track-repair</loc>
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp</image:loc>
@@ -1902,13 +1895,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.valiantdoor.com/business-card</loc>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp</image:loc>
-      <image:title>Valiant Garage Door shield logo</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.valiantdoor.com/case-studies/broken-springs</loc>
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/home-optimized/shield-192.webp</image:loc>
@@ -3581,50 +3567,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.valiantdoor.com/how-to-emergency-repair/</loc>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/home-optimized/shield-192.webp</image:loc>
-      <image:title>Valiant shield</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/home-optimized/wordmark-320.webp</image:loc>
-      <image:title>Valiant Garage Door</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/google.svg</image:loc>
-      <image:title>Google Business Profile</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/yelp.svg</image:loc>
-      <image:title>Yelp Reviews</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/facebook.svg</image:loc>
-      <image:title>Valiant Garage Door on Facebook</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/instagram.svg</image:loc>
-      <image:title>Valiant Garage Door on Instagram</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/youtube.svg</image:loc>
-      <image:title>Valiant Garage Door on YouTube</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/tiktok.svg</image:loc>
-      <image:title>Valiant Garage Door on TikTok</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/nextdoor.svg</image:loc>
-      <image:title>Valiant Garage Door on Nextdoor</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/thumbtack.svg</image:loc>
-      <image:title>Valiant Garage Door on Thumbtack</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.valiantdoor.com/how-to-emergency-repair.html</loc>
+    <loc>https://www.valiantdoor.com/how-to-emergency-repair</loc>
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/home-optimized/shield-192.webp</image:loc>
       <image:title>Valiant shield</image:title>
@@ -3805,13 +3748,6 @@
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/blog/smart-garage-door-opener-installation-san-leandro-ca.webp</image:loc>
       <image:title>Text-Based Garage Door Estimate</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.valiantdoor.com/listings-admin</loc>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/listings-app/valiant-listings-icon-192.webp</image:loc>
-      <image:title>Valiant Listings app icon</image:title>
     </image:image>
   </url>
   <url>
@@ -4995,53 +4931,6 @@
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/icons/thumbtack.svg</image:loc>
       <image:title>Valiant Garage Door on Thumbtack</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.valiantdoor.com/thank-you</loc>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp</image:loc>
-      <image:title>Valiant shield</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/logo/valiant-logo-gold.webp</image:loc>
-      <image:title>Valiant Garage Door</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/google.svg</image:loc>
-      <image:title>Google Business Profile</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/yelp.svg</image:loc>
-      <image:title>Yelp Reviews</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/facebook.svg</image:loc>
-      <image:title>Valiant Garage Door on Facebook</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/instagram.svg</image:loc>
-      <image:title>Valiant Garage Door on Instagram</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/youtube.svg</image:loc>
-      <image:title>Valiant Garage Door on YouTube</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/tiktok.svg</image:loc>
-      <image:title>Valiant Garage Door on TikTok</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/nextdoor.svg</image:loc>
-      <image:title>Valiant Garage Door on Nextdoor</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/thumbtack.svg</image:loc>
-      <image:title>Valiant Garage Door on Thumbtack</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/logo/valiant-v-polished.webp</image:loc>
-      <image:title>Valiant V</image:title>
     </image:image>
   </url>
   <url>

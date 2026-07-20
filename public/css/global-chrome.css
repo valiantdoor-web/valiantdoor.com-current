@@ -177,3 +177,7 @@ header.site-header {
   #valiant-chat-fab.is-loading .valiant-chat-fab-pulse { animation: valiant-chat-spin 1s linear infinite; }
 }
 @media (max-width: 480px) { #valiant-chat-fab { right: 14px; bottom: 14px; width: 54px; height: 54px; } }
+
+/* Hide the Botpress native FAB; use only the custom Valiant shield button. */
+.bpFabClickableArea, .bpFabContainer, [data-bp-fab], .bpWidget { display: none !important; }
+iframe[src*="botpress"] { pointer-events: none; }

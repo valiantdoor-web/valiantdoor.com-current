@@ -54,30 +54,59 @@ This is the step everyone forgets — without it, every request returns
 
 ```bash
 npm install googleapis      # already added to package.json
-node index-site.js          # or: npm run index:site
+
+node index-site.js          # FULL run: submit every canonical page
+node index-site.js --dry-run  # preview which URLs would be submitted (no API calls)
 ```
 
-### Expected output
+The URL list is **not** hardcoded — the script reads every canonical URL from
+`public/sitemap-pages.xml` and `public/sitemap-blog.xml` at runtime (currently
+~101 URLs), so new pages are picked up automatically and retired 410 paths are
+filtered out.
+
+### Two modes
+
+| Mode | How it runs | What it submits |
+| --- | --- | --- |
+| **Full** | `node index-site.js` (no env), or a **manual** workflow run | All canonical pages from the sitemaps |
+| **Changed** | Set `INDEX_MODE=changed` + `INDEX_URLS` (newline/space/comma separated) | Only those URLs, after validating each against the sitemaps |
+
+```bash
+# Example: submit only two pages
+INDEX_MODE=changed \
+INDEX_URLS=$'https://www.valiantdoor.com/quote\nhttps://www.valiantdoor.com/faq' \
+node index-site.js
+```
+
+### Expected output (full run)
 
 ```
 [index] Authenticating as valiant-site-indexer@valiant-door-indexing.iam.gserviceaccount.com
-[index] OK      https://www.valiantdoor.com/  (URL_UPDATED @ 2026-07-19T...Z)
-[index] OK      https://www.valiantdoor.com/mastertech  (URL_UPDATED @ ...)
+[index] Submitting 101 URL(s) as URL_UPDATED (full mode) ...
+[index] OK      https://www.valiantdoor.com/  (URL_UPDATED @ 2026-07-20T...Z)
 [index] OK      https://www.valiantdoor.com/garage-door-repair  (URL_UPDATED @ ...)
-[index] OK      https://www.valiantdoor.com/short-repair-videos  (URL_UPDATED @ ...)
-
-[index] Done. 4 succeeded, 0 failed, 4 total.
+...
+[index] Done. 101 succeeded, 0 failed, 101 total.
 ```
 
-## 5. Editing the URL list
+## 5. Automation (GitHub Actions)
 
-Open `index-site.js` and edit the `URLS` array. Use `URL_UPDATED` for
-new/changed pages; switch `ENDPOINT_TYPE` to `URL_DELETED` only to notify
-Google of removed pages.
+`.github/workflows/index-site.yml` runs automatically:
+
+- **On every push to `main`:** it diffs the pushed commits, maps the changed
+  `public/**/*.html` files to canonical URLs, and submits **only those pages**
+  (`changed` mode). A push that touches no HTML pages submits nothing.
+- **Manual run** (Actions tab → *Index Site* → *Run workflow*): a **full**
+  re-index of every canonical page.
+
+The workflow writes `service-account.json` from the `INDEXING_KEY` repo secret
+at runtime and deletes it afterward. To change which pages are eligible, edit
+the sitemaps — no code change needed. Use `URL_UPDATED` for new/changed pages;
+switch `ENDPOINT_TYPE` to `URL_DELETED` only to notify Google of removed pages.
 
 > **Do NOT add retired pages** (e.g. `/amazon-alexa`, `/authority-dashboard`,
-> `/search-atlas-growth`) — they return 410 by design and must never be
-> submitted for indexing.
+> `/search-atlas-growth`) — they return 410 by design, are excluded from the
+> sitemaps, and are filtered out by the script even if passed explicitly.
 
 ## Quotas & troubleshooting
 
