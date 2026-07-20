@@ -8,3 +8,6 @@ test-results/
 .gsc-*.json
 service-account.json
 *.service-account.json
+
+# browser-test screenshots
+fab-*.png
