@@ -6,8 +6,37 @@ Every agent must read this file before pushing or deploying anything related to 
 - Live domain: https://www.valiantdoor.com/
 - Website repository: https://github.com/valiantdoor-web/valiantdoor.com-current.git
 - Local website repo: /Users/vm/Code/valiantdoor-live-edit-deploy
-- Vercel project: 2026-01-26-website
+- Vercel project name: valiantdoor-com-current
+- Vercel project ID: prj_JvCujZmnI32dWtCr210nKF2pPj1f
+- Vercel team: valiant-garage-door (team_O6ZRh3X80wVbdhhQp2hpYNGD)
 - Vercel output directory: public
+- Production branch: main
+
+## Deployment pipeline (CRITICAL — read before deploying)
+Root cause of the long-standing "my changes never go live" problem (fixed 2026-07-20):
+- The repo `valiantdoor-web/valiantdoor.com-current` (repoId 1296543400) is a FORK of the
+  parent `Valiant-Production-Co/valiantdoor.com-current` (repoId 1162332791).
+- All work (v0 commits, PRs, merges to `main`) happens on the FORK.
+- The Vercel project's Git integration was mistakenly linked to the PARENT repo, so pushes
+  and merges to the fork's `main` never triggered a production deploy. The live site stayed
+  frozen on an old build while `main` moved ahead. Merging a PR looked "done" but nothing
+  reached www.valiantdoor.com.
+
+The fix (permanent):
+- Re-linked the Vercel project's Git integration to the FORK `valiantdoor-web/valiantdoor.com-current`
+  (repoId 1296543400), production branch `main`, createDeployments enabled.
+- From now on, a push/merge to `main` on the fork auto-deploys to production.
+
+How to deploy going forward:
+1. Merge the change into `main` on `valiantdoor-web/valiantdoor.com-current` (the fork).
+2. Vercel auto-builds and aliases www.valiantdoor.com. No manual step needed.
+3. Verify live within ~2 min (curl the page; check a marker you changed).
+4. If auto-deploy ever stops again, first confirm the Vercel project is still linked to the
+   FORK repoId 1296543400 (not the parent 1162332791) via the Vercel API/dashboard.
+
+Known sandbox quirk: the v0 sandbox's local git mirror of `origin/main` can go stale (shows an
+older commit than GitHub). Treat the GitHub API (`gh api repos/.../commits/main`) as authoritative;
+when in doubt, deploy from a fresh clone of the fork's `main`.
 
 ## Separate projects that must not be mixed with the main website
 - Service app: valiant-service-app.vercel.app
