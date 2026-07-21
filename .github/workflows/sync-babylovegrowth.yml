@@ -1,0 +1,52 @@
+name: Sync BabyLoveGrowth Articles
+
+# Pull published articles from the BabyLoveGrowth API and regenerate the
+# static repair-guides pages + sitemap entries. Commits any changes back to
+# main, which triggers a Vercel deploy and the Index Site workflow.
+#
+# The API key lives ONLY in the BABYLOVEGROWTH_API_KEY repo secret and is
+# passed to the sync script at runtime. It is never written to a committed file.
+on:
+  schedule:
+    # Daily at 13:00 UTC (~6am PT). Adjust as desired.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: sync-babylovegrowth
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Sync articles from BabyLoveGrowth
+        env:
+          BABYLOVEGROWTH_API_KEY: ${{ secrets.BABYLOVEGROWTH_API_KEY }}
+        run: |
+          if [ -z "$BABYLOVEGROWTH_API_KEY" ]; then
+            echo "::error::BABYLOVEGROWTH_API_KEY secret is not set. Add it in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          node scripts/sync-babylovegrowth.mjs
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- public; then
+            echo "No article changes to publish."
+            exit 0
+          fi
+          git add public/repair-guides public/sitemap-blog.xml
+          git commit -m "chore(repair-guides): auto-sync BabyLoveGrowth articles [skip ci]"
+          git push origin HEAD:main
