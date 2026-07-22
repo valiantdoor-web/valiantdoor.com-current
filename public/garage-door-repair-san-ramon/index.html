@@ -430,6 +430,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: rgba(175, 127, 32, 0.88);
     font-size: 16px;
   }
+  
+  /* Remove image scaling constraint on first button */
+  button:nth-of-type(1) > img {
+    object-fit: none;
+  }
 </style>
 </head>
   <body class="page-services page-geo has-sticky-call">
