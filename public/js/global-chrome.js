@@ -242,7 +242,7 @@
 
   const serviceLinks = [
     ["/garage-door-repair", "Garage Door Repair"],
-    ["/garage-door-spring-replacement", "Spring Replacement"],
+    ["/garage-door-spring-replacement", "Broken Spring Repair"],
     ["/garage-door-cable-repair", "Cable Repair"],
     ["/garage-door-opener-repair", "Opener Repair"],
     ["/garage-door-openers", "Opener Installation"],
