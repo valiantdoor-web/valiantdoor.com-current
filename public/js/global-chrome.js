@@ -243,14 +243,14 @@
   const serviceLinks = [
     ["/garage-door-repair", "Garage Door Repair"],
     ["/garage-door-spring-replacement", "Broken Spring Repair"],
+    ["/garage-door-openers", "Opener Installation"],
     ["/garage-door-cable-repair", "Cable Repair"],
     ["/garage-door-opener-repair", "Opener Repair"],
-    ["/garage-door-openers", "Opener Installation"],
     ["/services/garage-door-maintenance", "Maintenance & Tune-Ups"],
     ["/safety-sensors", "Safety Sensors"],
+    ["/emergency-after-hours", "After-Hours Emergency"],
     ["/services/commercial", "Commercial Service"],
-    ["/emergency-garage-door-repair", "Emergency Repair"],
-    ["/emergency-after-hours", "After-Hours Emergency"]
+    ["/emergency-garage-door-repair", "Emergency Repair"]
   ];
   const servicesActive = active("/services") || serviceLinks.some(([href]) => active(href));
   const servicesMenu = `
