@@ -407,10 +407,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script><link rel="stylesheet" href="/css/global-chrome.css">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;500;600;700&display=swap');
-  
-  /* Page-scoped: render the San Ramon hero H1 and the project H1 in the same Great Vibes cursive as the section headings, without changing their colors. */
-  body.page-geo .geo-hero h1,
+  /* CompanyCam proof heading in the same Great Vibes cursive as the section headings. */
   body.page-geo #native-companycam-proof-heading {
     font-family: "Great Vibes", "Brush Script MT", "Snell Roundhand", "Segoe Script", cursive !important;
     font-weight: 400 !important;
@@ -418,22 +415,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-transform: none !important;
     letter-spacing: .025em !important;
     line-height: 1.05 !important;
-  }
-  
-  /* San Ramon geo-hero styling */
-  body.page-geo .geo-hero {
-    border-width: 4px !important;
-  }
-  
-  body.page-geo .geo-hero > p:nth-of-type(1) {
-    font-family: "Oswald", sans-serif;
-    color: rgba(175, 127, 32, 0.88);
-    font-size: 16px;
-  }
-  
-  /* Remove image scaling constraint on first button */
-  button:nth-of-type(1) > img {
-    object-fit: none;
   }
 </style>
 </head>
@@ -537,7 +518,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <main class="services-shell geo-shell">
       <nav class="geo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/service-areas" style="font-family: inherit;">Service Areas</a><span>›</span><a href="/garage-door-repair-san-ramon">San Ramon</a></nav>
-      <section class="geo-hero" style="background-image: linear-gradient(90deg, rgba(15,13,10,0.94) 0%, rgba(15,13,10,0.72) 45%, rgba(15,13,10,0.35) 100%), url('/assets/gallery-before-after/san-ramon-garage-door-opener-support-bracket.webp'); background-size: auto, contain; background-position: center, right center; background-repeat: no-repeat, no-repeat; background-color: #0f0d0a; padding-bottom: 285px; margin-bottom: 25px;">
+      <section class="geo-hero">
+        <img class="geo-hero__bg" src="/assets/gallery-before-after/san-ramon-garage-door-opener-support-bracket.webp" alt="" aria-hidden="true" decoding="async">
         <h1>Garage Door Repair In San Ramon </h1>
         <p>Same-Day Garage Door Repair in San Ramon Honest Clear Pricing Before Work Begins.</p>
       </section>
