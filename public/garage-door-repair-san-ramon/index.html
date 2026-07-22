@@ -407,7 +407,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script><link rel="stylesheet" href="/css/global-chrome.css">
 <style>
-  /* CompanyCam proof heading in the same Great Vibes cursive as the section headings. */
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+  /* Hero H1 + CompanyCam proof heading in the same Great Vibes cursive as the section headings. */
+  body.page-geo .geo-hero h1,
   body.page-geo #native-companycam-proof-heading {
     font-family: "Great Vibes", "Brush Script MT", "Snell Roundhand", "Segoe Script", cursive !important;
     font-weight: 400 !important;
@@ -415,6 +418,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-transform: none !important;
     letter-spacing: .025em !important;
     line-height: 1.05 !important;
+  }
+
+  /* San Ramon hero box + text styling (unchanged) */
+  body.page-geo .geo-hero {
+    border-width: 4px !important;
+  }
+
+  body.page-geo .geo-hero > p:nth-of-type(1) {
+    font-family: "Oswald", sans-serif;
+    color: rgba(175, 127, 32, 0.88);
+    font-size: 16px;
   }
 </style>
 </head>
@@ -518,8 +532,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <main class="services-shell geo-shell">
       <nav class="geo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/service-areas" style="font-family: inherit;">Service Areas</a><span>›</span><a href="/garage-door-repair-san-ramon">San Ramon</a></nav>
-      <section class="geo-hero">
-        <img class="geo-hero__bg" src="/assets/gallery-before-after/san-ramon-garage-door-opener-support-bracket.webp" alt="" aria-hidden="true" decoding="async">
+      <section class="geo-hero" style="background-image: linear-gradient(rgba(11,11,12,0.60), rgba(11,11,12,0.60)), url('/assets/gallery-before-after/san-ramon-garage-door-opener-support-bracket.webp'); background-size: cover, cover; background-position: center, center; background-repeat: no-repeat, no-repeat; background-color: #0f0d0a; padding-bottom: 285px; margin-bottom: 25px;">
         <h1>Garage Door Repair In San Ramon </h1>
         <p>Same-Day Garage Door Repair in San Ramon Honest Clear Pricing Before Work Begins.</p>
       </section>
