@@ -168,8 +168,8 @@
     fab.id = "valiant-chat-fab";
     fab.setAttribute("aria-label", "Open chat with Valiant Garage Door");
     fab.innerHTML =
+      '<img src="/assets/valiant-chat-fab-shield.webp" width="34" height="34" alt="" decoding="async">' +
       '<span class="valiant-chat-fab-pulse" aria-hidden="true"></span>';
-      // Shield icon removed — Botpress widget provides its own shield, preventing duplicates
 
     let launching = false;
     const launch = () => {
