@@ -29,6 +29,7 @@
   "homepage": "https://github.com/valiantdoor-web/valiantdoor.com-current#readme",
   "dependencies": {
     "@vercel/blob": "^2.6.1",
+    "@vercel/speed-insights": "^2.0.0",
     "cheerio": "^1.2.0",
     "googleapis": "^173.0.0",
     "openai": "^6.44.0",
