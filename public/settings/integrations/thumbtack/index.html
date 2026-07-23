@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="tt-html">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Thumbtack Integration &middot; Valiant Garage Door</title>
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --panel: #141416;
+      --panel-2: #1b1b1e;
+      --border: rgba(199, 163, 75, 0.28);
+      --gold: #ecd79f;
+      --gold-strong: #c7a34b;
+      --text: #f5f2ec;
+      --muted: rgba(245, 242, 236, 0.7);
+      --ok: #6fcf97;
+      --bad: #e88b8b;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html.tt-html { background: var(--bg); }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-strong);
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 8px;
+      color: var(--text);
+      text-wrap: balance;
+    }
+    .lede { color: var(--muted); margin: 0 0 28px; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .brandmark {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 20px;
+      flex: 0 0 auto;
+    }
+    .title-block { flex: 1 1 auto; min-width: 180px; }
+    .title-block h2 { margin: 0; font-size: 18px; }
+    .title-block p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+    }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
+    .status-pill.is-connected .dot { background: var(--ok); }
+    .status-pill.is-disconnected .dot { background: var(--bad); }
+    .divider { height: 1px; background: var(--border); margin: 22px 0; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      appearance: none;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      min-height: 44px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.15s ease;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn-primary { background: var(--gold); color: #1a1400; }
+    .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+    .btn[disabled] { opacity: 0.5; cursor: not-allowed; }
+    .banner {
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      display: none;
+    }
+    .banner.show { display: block; }
+    .banner.ok { border-color: rgba(111, 207, 151, 0.4); background: rgba(111, 207, 151, 0.08); color: var(--ok); }
+    .banner.bad { border-color: rgba(232, 139, 139, 0.4); background: rgba(232, 139, 139, 0.08); color: var(--bad); }
+    .meta { color: var(--muted); font-size: 13px; margin-top: 14px; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    footer.note { color: var(--muted); font-size: 12px; margin-top: 26px; }
+    footer.note a { color: var(--gold); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">Settings &middot; Integrations</p>
+    <h1>Thumbtack</h1>
+    <p class="lede">Connect your Thumbtack account so Valiant can sync leads securely. Your credentials are stored encrypted on the server and never shown in the browser.</p>
+
+    <div id="banner" class="banner" role="status" aria-live="polite"></div>
+
+    <section class="card" aria-labelledby="tt-heading">
+      <div class="row">
+        <div class="brandmark" aria-hidden="true">Tt</div>
+        <div class="title-block">
+          <h2 id="tt-heading">Thumbtack integration</h2>
+          <p id="tt-subtitle">Checking connection&hellip;</p>
+        </div>
+        <span id="statusPill" class="status-pill" aria-live="polite">
+          <span class="dot"></span>
+          <span id="statusText">Checking&hellip;</span>
+        </span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="actions">
+        <!-- Connect: hands off to the server-side start endpoint that sets the
+             CSRF state cookie and redirects to Thumbtack. -->
+        <a id="connectBtn" class="btn btn-primary" href="/api/auth/thumbtack/start">Connect Thumbtack</a>
+        <!-- Disconnect: POSTs to the server to delete stored tokens. -->
+        <button id="disconnectBtn" class="btn btn-ghost" type="button" hidden>Disconnect integration</button>
+      </div>
+
+      <p id="connectedMeta" class="meta" hidden></p>
+    </section>
+
+    <footer class="note">
+      Callback endpoint:
+      <a href="/api/auth/thumbtack/callback">/api/auth/thumbtack/callback</a>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var banner = document.getElementById('banner');
+      var pill = document.getElementById('statusPill');
+      var statusText = document.getElementById('statusText');
+      var subtitle = document.getElementById('tt-subtitle');
+      var connectBtn = document.getElementById('connectBtn');
+      var disconnectBtn = document.getElementById('disconnectBtn');
+      var connectedMeta = document.getElementById('connectedMeta');
+
+      function showBanner(kind, message) {
+        banner.textContent = message;
+        banner.className = 'banner show ' + kind;
+      }
+
+      // Reflect the redirect result from the OAuth callback.
+      var connected = params.get('connected');
+      var reason = params.get('reason');
+      if (connected === 'true') {
+        showBanner('ok', 'Thumbtack connected successfully.');
+      } else if (connected === 'false') {
+        var msg = 'Thumbtack authorization failed. Please try connecting again.';
+        if (reason === 'not_configured') {
+          msg = 'Thumbtack is not fully configured yet. Add the required environment variables in Vercel, then try again.';
+        } else if (reason === 'state_mismatch') {
+          msg = 'Security check failed (state mismatch). Please start the connection again.';
+        } else if (reason === 'provider_error') {
+          msg = 'Thumbtack declined the authorization request.';
+        }
+        showBanner('bad', msg);
+      }
+
+      function render(state) {
+        var isConnected = !!state.connected;
+        pill.classList.toggle('is-connected', isConnected);
+        pill.classList.toggle('is-disconnected', !isConnected);
+        statusText.textContent = isConnected ? 'Connected' : 'Not connected';
+        subtitle.textContent = isConnected
+          ? 'Your Thumbtack account is linked.'
+          : 'No Thumbtack account is linked yet.';
+        connectBtn.textContent = isConnected ? 'Reconnect Thumbtack' : 'Connect Thumbtack';
+        disconnectBtn.hidden = !isConnected;
+        if (isConnected && state.connectedAt) {
+          var when = new Date(state.connectedAt);
+          connectedMeta.hidden = false;
+          connectedMeta.textContent = 'Connected on ' + (isNaN(when) ? state.connectedAt : when.toLocaleString()) + '.';
+        } else {
+          connectedMeta.hidden = true;
+        }
+      }
+
+      function loadStatus() {
+        fetch('/api/auth/thumbtack/status', { headers: { Accept: 'application/json' } })
+          .then(function (r) { return r.json(); })
+          .then(function (data) { render(data || { connected: false }); })
+          .catch(function () {
+            statusText.textContent = 'Unknown';
+            subtitle.textContent = 'Could not check connection status.';
+          });
+      }
+
+      disconnectBtn.addEventListener('click', function () {
+        if (!window.confirm('Disconnect the Thumbtack integration? Stored credentials will be deleted.')) return;
+        disconnectBtn.disabled = true;
+        fetch('/api/auth/thumbtack/disconnect', { method: 'POST', headers: { Accept: 'application/json' } })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            disconnectBtn.disabled = false;
+            if (data && data.ok) {
+              showBanner('ok', 'Thumbtack integration disconnected.');
+              render({ connected: false });
+            } else {
+              showBanner('bad', 'Could not disconnect. Please try again.');
+            }
+          })
+          .catch(function () {
+            disconnectBtn.disabled = false;
+            showBanner('bad', 'Could not disconnect. Please try again.');
+          });
+      });
+
+      loadStatus();
+    })();
+  </script>
+</body>
+</html>
