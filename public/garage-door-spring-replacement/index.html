@@ -62,7 +62,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         position: relative;
         z-index: 1;
         display: block;
-        width: 100%;
+        /* Capped so the full banner - including its bullet/logo bar - and the
+           headline stay visible on load instead of running past the fold. */
+        width: min(100%, 790px);
+        margin-inline: auto;
         height: auto;
         aspect-ratio: 1659 / 948;
         object-fit: contain;
@@ -818,7 +821,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <main class="services-shell geo-shell">
       <nav class="geo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/garage-door-spring-replacement">Garage Door Spring Replacement</a></nav>
       <section class="geo-hero spring-duramaster-hero">
-        <img class="spring-hero-bg" src="/assets/spring-service-repair-hero.webp" srcset="/assets/spring-service-repair-hero-mobile.webp 960w, /assets/spring-service-repair-hero.webp 1600w" sizes="(max-width: 760px) 100vw, min(1600px, 100vw)" alt="Valiant Garage Door service and repair: a Valiant technician outside a stone home with arched wood carriage garage doors, alongside broken spring repair, LiftMaster opener repair and replacement, and hardware upgrades, with a Valiant CO-129-40.75 torsion spring" width="1659" height="948" loading="eager" fetchpriority="high" decoding="async">
+        <img class="spring-hero-bg" src="/assets/spring-service-repair-hero.webp" srcset="/assets/spring-service-repair-hero-mobile.webp 960w, /assets/spring-service-repair-hero.webp 1600w" sizes="(max-width: 760px) 100vw, 790px" alt="Valiant Garage Door service and repair: a Valiant technician outside a stone home with arched wood carriage garage doors, alongside broken spring repair, LiftMaster opener repair and replacement, and hardware upgrades, with a Valiant CO-129-40.75 torsion spring" width="1659" height="948" loading="eager" fetchpriority="high" decoding="async">
         <div class="spring-hero-copy">
           <p class="geo-eyebrow">DuraMaster spring upgrade · Pleasanton and nearby East Bay communities</p>
           <h1>DuraMaster Garage Door Spring Replacement In Pleasanton</h1>
