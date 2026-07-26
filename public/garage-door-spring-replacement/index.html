@@ -23,7 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:description" content="Broken spring repair in Pleasanton with clear starting prices, 30-60 minute install timing, safe balancing, and DuraMaster spring warranty options from Valiant Garage Door.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.valiantdoor.com/garage-door-spring-replacement">
-    <meta property="og:image" content="https://www.valiantdoor.com/assets/strategic-growth-review/valiant-duramaster-springs-technical-graphic.webp">
+    <meta property="og:image" content="https://www.valiantdoor.com/assets/spring-service-repair-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Broken Spring Repair Pleasanton | Valiant Garage Door">
     <meta name="twitter:description" content="Broken spring repair in Pleasanton with clear starting prices, 30-60 minute install timing, safe balancing, and DuraMaster spring warranty options from Valiant Garage Door.">
@@ -33,9 +33,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .spring-duramaster-hero {
         position: relative;
         overflow: hidden;
-        min-height: 540px;
-        display: grid;
-        align-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(16px, 2.6vw, 26px);
         isolation: isolate;
         background:
           radial-gradient(circle at 78% 31%, rgba(236, 183, 82, .34), transparent 28%),
@@ -54,36 +54,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         opacity: .78;
         z-index: 0;
       }
-      .spring-duramaster-hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          linear-gradient(90deg, rgba(3,5,8,.97) 0%, rgba(4,8,12,.88) 43%, rgba(4,8,12,.58) 66%, rgba(4,8,12,.78) 100%),
-          linear-gradient(180deg, rgba(4,4,5,.18), rgba(4,4,5,.72));
-        z-index: 2;
-      }
+      /* Banner artwork carries its own lettering and logo, so it is shown
+         uncropped with no darkening scrim over the top of it. */
       .spring-hero-bg {
-        position: absolute;
-        top: 50%;
-        right: clamp(18px, 4vw, 76px);
-        left: auto;
-        width: min(54vw, 650px);
-        height: min(58%, 380px);
-        transform: translateY(-50%) rotate(-2deg);
-        object-fit: contain;
-        object-position: center;
-        opacity: 1;
+        position: relative;
         z-index: 1;
-        filter:
-          drop-shadow(0 0 18px rgba(236,183,82,.32))
-          drop-shadow(0 26px 44px rgba(0,0,0,.58));
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1659 / 948;
+        object-fit: contain;
+        border-radius: 16px;
+        border: 1px solid rgba(236,215,159,.30);
+        box-shadow: 0 20px 46px rgba(0,0,0,.55);
       }
       .spring-hero-copy {
         position: relative;
         z-index: 3;
-        max-width: min(650px, 56%);
-        padding: clamp(20px, 4vw, 34px);
+        max-width: 100%;
+        padding: clamp(18px, 3vw, 30px);
         border: 1px solid rgba(236,215,159,.38);
         border-radius: 24px;
         background: linear-gradient(135deg, rgba(2,7,12,.95), rgba(8,8,10,.84));
@@ -156,14 +145,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         text-align: center;
       }
       @media (max-width: 760px) {
-        .spring-duramaster-hero { min-height: 620px; align-content: end; padding-top: 238px !important; }
+        .spring-duramaster-hero { gap: 14px; }
         .spring-duramaster-hero::before {
           background:
             radial-gradient(ellipse at 50% 20%, rgba(236,183,82,.24), transparent 43%),
             linear-gradient(115deg, rgba(236,215,159,.13) 0 1px, transparent 1px 22px);
         }
-        .spring-duramaster-hero::after { background: linear-gradient(180deg, rgba(3,5,8,.18) 0%, rgba(3,5,8,.30) 30%, rgba(3,5,8,.86) 56%, rgba(3,5,8,.98) 100%); }
-        .spring-hero-bg { top: 28px; right: 10px; left: 10px; width: calc(100% - 20px); height: 190px; transform: rotate(-1deg); object-fit: contain; object-position: center; opacity: 1; }
+        .spring-hero-bg { border-radius: 12px; }
         .spring-hero-copy { max-width: 100%; padding: 14px 13px; border-radius: 20px; background-color: rgba(1,6,11,.93); background-image: linear-gradient(180deg, rgba(1,6,11,.97), rgba(2,7,12,.89)); }
         .spring-hero-copy h1 { font-size: clamp(1.55rem, 7vw, 2.1rem) !important; line-height: 1.04; }
         .spring-hero-copy p { font-size: .92rem; line-height: 1.36; }
@@ -828,7 +816,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <main class="services-shell geo-shell">
       <nav class="geo-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/garage-door-spring-replacement">Garage Door Spring Replacement</a></nav>
       <section class="geo-hero spring-duramaster-hero">
-        <img class="spring-hero-bg" src="/assets/duramaster-spring-cutout.webp" alt="Valiant DuraMaster gold torsion spring hero image" width="534" height="360" loading="eager" fetchpriority="high" decoding="async">
+        <img class="spring-hero-bg" src="/assets/spring-service-repair-hero.webp" srcset="/assets/spring-service-repair-hero-mobile.webp 960w, /assets/spring-service-repair-hero.webp 1600w" sizes="(max-width: 760px) 100vw, min(1600px, 100vw)" alt="Valiant Garage Door service and repair: a Valiant technician outside a stone home with arched wood carriage garage doors, alongside broken spring repair, LiftMaster opener repair and replacement, and hardware upgrades, with a Valiant CO-129-40.75 torsion spring" width="1659" height="948" loading="eager" fetchpriority="high" decoding="async">
         <div class="spring-hero-copy">
           <p class="geo-eyebrow">DuraMaster spring upgrade · Pleasanton and nearby East Bay communities</p>
           <h1>DuraMaster Garage Door Spring Replacement In Pleasanton</h1>

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.valiantdoor.com/valiant-carriage-door-restorations</loc>
+    <image:image>
+      <image:loc>https://www.valiantdoor.com/assets/projects/pleasanton-carriage-door-restoration-poster.jpg</image:loc>
+      <image:title>Carriage door restoration in progress on a Pleasanton home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.valiantdoor.com/assets/projects/pleasanton-carriage-door-restoration-card.jpg</image:loc>
+      <image:title>Valiant carriage door restoration project in Pleasanton, CA</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.valiantdoor.com/Garage-Door-Service-Excellence</loc>
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp</image:loc>
