@@ -95,7 +95,8 @@
   ],
   "service_policy": {
     "availability": "Open 24 hours a day, 7 days a week",
-    "parts_warranty": "10-year parts warranty on qualifying installed parts when documented on the estimate or invoice",
+    "parts_warranty": "Lifetime parts warranty on qualifying installed parts when documented on the estimate or invoice, backed by the Valiant Standard of Excellence",
+    "spring_warranty": "10-year warranty on qualifying spring replacement work, backed by the Valiant Standard of Excellence",
     "after_hours_service_charge": "Flat $100 service charge for appointments at 7:00 PM or later before approved parts, repairs, conversions, or upgrades",
     "crawler_access": "Public Valiant pages, public schema, llms.txt, llms-full.txt, geo.md, robots.txt, sitemap files, and public machine-readable endpoints are intended to be crawlable and indexable."
   }
