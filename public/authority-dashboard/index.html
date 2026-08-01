@@ -49,6 +49,10 @@
     .bad { color:var(--danger); border-color:rgba(255,118,118,.45); }
     .table-wrap { overflow:auto; max-width:100%; }
     table { width:100%; border-collapse: collapse; min-width: 720px; }
+    /* Four-column tables inside half-width cards must not inherit the 720px floor,
+       otherwise their trailing columns get clipped behind a horizontal scroll. */
+    .table-wrap.compact table { min-width: 0; }
+    .table-wrap.compact th, .table-wrap.compact td { padding:10px 8px; font-size:.92rem; }
     th, td { padding:12px 10px; border-bottom:1px solid rgba(230,200,121,.14); text-align:left; vertical-align:top; color:var(--muted); }
     th { color:var(--gold); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
     td strong { color:#fff; }
@@ -148,6 +152,40 @@
         <article class="card half"><h2>PR / backlink campaigns</h2><div class="list" id="campaigns"></div></article>
         <article class="card half"><h2>Priority link targets</h2><div class="list" id="link-targets"></div></article>
 
+        <article class="card kpi"><h3>Local Falcon SoLV</h3><div class="metric" id="lf-solv">—</div><div class="bar"><span id="lf-solv-bar"></span></div><p>Average share of local voice across every tracked geo-grid scan.</p></article>
+        <article class="card kpi"><h3>Avg. Rank (ARP)</h3><div class="metric" id="lf-arp">—</div><p id="lf-arp-note" class="muted">Average map-pack rank across scanned grid points. Lower is better.</p></article>
+        <article class="card kpi"><h3>Invisible Combos</h3><div class="metric" id="lf-invisible">—</div><p><span id="lf-gap-total">—</span> total weak keyword + platform pairs to attack.</p></article>
+        <article class="card kpi"><h3>Geo-Grid Scans</h3><div class="metric" id="lf-scans">—</div><p id="lf-scan-meta" class="muted">—</p></article>
+
+        <article class="card wide">
+          <h2>Local Falcon AI platform visibility</h2>
+          <p>Share of local voice per AI and map platform. Cold platforms are the biggest untapped visibility gaps.</p>
+          <div class="list" id="lf-platforms"></div>
+        </article>
+        <article class="card side">
+          <h2>Tracked locations</h2>
+          <div class="list" id="lf-locations"></div>
+          <h2 style="margin-top:16px;">Campaigns</h2>
+          <div class="list" id="lf-campaigns"></div>
+        </article>
+
+        <article class="card">
+          <h2>Local Falcon keyword grid performance</h2>
+          <p>Latest scan per keyword with share of local voice, average rank, and grid coverage.</p>
+          <div class="table-wrap"><table id="lf-keywords-table"><thead><tr><th>Keyword</th><th>SoLV</th><th>ARP</th><th>Found In</th><th>Grid</th><th>Heat</th><th>Report</th></tr></thead><tbody></tbody></table></div>
+        </article>
+
+        <article class="card half">
+          <h2>Local Falcon visibility gaps</h2>
+          <p>Keyword and platform pairs where Valiant is invisible or barely present.</p>
+          <div class="table-wrap compact"><table id="lf-gaps-table"><thead><tr><th>Keyword</th><th>Platform</th><th>SoLV</th><th>Severity</th></tr></thead><tbody></tbody></table></div>
+        </article>
+        <article class="card half">
+          <h2>Local Falcon movement</h2>
+          <p>Change between the first and latest scan for each keyword and platform pair.</p>
+          <div class="table-wrap compact"><table id="lf-trends-table"><thead><tr><th>Keyword</th><th>Platform</th><th>SoLV</th><th>Move</th></tr></thead><tbody></tbody></table></div>
+        </article>
+
         <article class="card"><h2>Cheerio site crawl: pages with the most issues</h2><div class="table-wrap"><table id="issues-table"><thead><tr><th>Page</th><th>Issues</th><th>Title</th><th>H1</th><th>Broken links</th><th>Image issues</th></tr></thead><tbody></tbody></table></div></article>
 
         <article class="card"><h2>Immediate execution rules</h2><div class="list" id="guardrails"></div><div class="actions"><a class="button" href="/listings-admin">Listings Center</a><a class="button" href="/llms.txt">llms.txt</a><a class="button" href="/agents.json">agents.json</a></div></article>
@@ -198,6 +236,7 @@
         els.dash.classList.remove('hide');
         els.state.textContent = 'Live';
         els.msg.textContent = 'Dashboard loaded. Data source: ' + data.searchAtlas.source + '.';
+        loadLocalFalcon(token);
       } catch (err) {
         els.state.textContent = 'Error';
         els.msg.innerHTML = '<span class="error">' + esc(err.message) + '</span>';
@@ -225,6 +264,84 @@
       document.getElementById('link-targets').innerHTML = (data.backlinkPlan.linkTargets || []).map(t => `<div class="item"><strong><a href="${esc(t.url)}">${esc(t.url.replace('https://www.valiantdoor.com',''))}</a></strong><p>${esc(t.reason)}</p><p class="muted">Anchor guidance: ${esc(t.anchorGuidance)}</p></div>`).join('');
       document.getElementById('guardrails').innerHTML = (data.backlinkPlan.guardrails || []).map(g => `<div class="item"><strong>Guardrail</strong><span class="muted">${esc(g)}</span></div>`).join('');
       document.querySelector('#issues-table tbody').innerHTML = (data.siteAudit.topIssuePages || []).slice(0, 30).map(p => `<tr><td><a href="${esc(p.path)}">${esc(p.path)}</a></td><td><span class="status ${p.issueCount > 10 ? 'bad' : 'warn'}">${esc(p.issueCount)}</span></td><td>${esc(p.titleLength)} chars</td><td>${esc(p.h1Count)} · ${esc(p.h1).slice(0,80)}</td><td>${esc((p.brokenInternalLinks || []).length)}</td><td>alt ${esc(p.missingAlt)} / size ${esc(p.missingSize)}</td></tr>`).join('');
+    }
+
+    // Local Falcon loads separately from the Search Atlas payload so a Falcon outage or
+    // plan restriction never blocks the rest of the command center.
+    async function loadLocalFalcon(token) {
+      const setEmpty = (message) => {
+        const platforms = document.getElementById('lf-platforms');
+        if (platforms) platforms.innerHTML = '<div class="item"><strong>Local Falcon unavailable</strong><span class="muted">' + esc(message) + '</span></div>';
+      };
+      try {
+        const res = await fetch(API_BASE + '/api/local-falcon', { headers: { Authorization: 'Bearer ' + token } });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'Local Falcon failed to load.');
+        renderLocalFalcon(data);
+      } catch (err) {
+        setEmpty(err.message);
+      }
+    }
+
+    function heatClass(heat) { return heat === 'hot' ? 'good' : heat === 'warm' ? 'warn' : 'bad'; }
+
+    function renderLocalFalcon(data) {
+      const s = data.summary || {};
+      const setText = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+
+      setText('lf-solv', s.avgSolv + '%');
+      const solvBar = document.getElementById('lf-solv-bar');
+      if (solvBar) solvBar.style.width = pct(s.avgSolv) + '%';
+      setText('lf-arp', s.avgArp);
+      setText('lf-invisible', s.invisibleCount);
+      setText('lf-gap-total', s.gapCount);
+      setText('lf-scans', s.reportCount);
+      setText('lf-scan-meta', (s.keywordCount || 0) + ' keywords · ' + (s.platformCount || 0) + ' platforms · last ' + (s.lastScanned || 'n/a'));
+
+      const arpNote = document.getElementById('lf-arp-note');
+      if (arpNote && s.businessName) {
+        arpNote.textContent = 'Average map-pack rank (lower is better) for ' + s.businessName + ' · ' + (s.rating || '—') + '★ from ' + (s.reviews || 0) + ' reviews.';
+      }
+
+      document.getElementById('lf-platforms').innerHTML = (data.byPlatform || []).map(p =>
+        '<div class="item"><strong>' + esc(p.platform) + ' <span class="status ' + heatClass(p.heat) + '">' + esc(p.heat) + '</span></strong>' +
+        '<span class="muted">SoLV ' + esc(p.avgSolv) + '% · ARP ' + esc(p.avgArp) + ' · ' + esc(p.keywordCount) + ' keywords · ' + esc(p.reportCount) + ' scans</span>' +
+        '<div class="bar"><span style="width:' + pct(p.avgSolv) + '%"></span></div></div>'
+      ).join('') || '<div class="item">No Local Falcon platform data.</div>';
+
+      document.getElementById('lf-locations').innerHTML = (data.locations || []).map(l =>
+        '<div class="item"><strong>' + esc(l.name) + '</strong><span class="muted">' + esc(l.address) + '</span>' +
+        '<p class="muted">' + esc(l.rating == null ? '—' : l.rating) + '★ · ' + esc(l.reviews || 0) + ' reviews</p></div>'
+      ).join('') || '<div class="item">No tracked locations.</div>';
+
+      document.getElementById('lf-campaigns').innerHTML = (data.campaigns || []).map(c =>
+        '<div class="item"><strong>' + esc(c.name) + ' <span class="status ' + (c.status === 'running' ? 'good' : 'warn') + '">' + esc(c.status || 'unknown') + '</span></strong>' +
+        '<span class="muted">' + esc(c.keywordCount) + ' keywords · ' + esc(c.locationCount) + ' locations · ' + esc(c.scanCount) + ' scans · ' + esc(c.gridSize || '') + '</span>' +
+        '<p class="muted">' + esc(c.frequency || '') + ' · next ' + esc(c.nextRun || 'n/a') + '</p></div>'
+      ).join('') || '<div class="item">No campaigns configured.</div>';
+
+      document.querySelector('#lf-keywords-table tbody').innerHTML = (data.byKeyword || []).map(k =>
+        '<tr><td><strong>' + esc(k.keyword) + '</strong><br><span class="muted">' + esc(k.latestPlatform) + ' · ' + esc(k.latestDate) + '</span></td>' +
+        '<td>' + esc(k.solv) + '%<br><span class="muted">avg ' + esc(k.avgSolv) + '%</span></td>' +
+        '<td>' + esc(k.arp) + '</td>' +
+        '<td>' + esc(k.foundIn) + '/' + esc(k.dataPoints) + '</td>' +
+        '<td>' + esc(k.gridSize || '—') + '<br><span class="muted">' + esc(k.radius || '') + '</span></td>' +
+        '<td><span class="status ' + heatClass(k.heat) + '">' + esc(k.heat) + '</span></td>' +
+        '<td>' + (k.publicUrl ? '<a href="' + esc(k.publicUrl) + '" target="_blank" rel="noopener">Heatmap</a>' : '—') + '</td></tr>'
+      ).join('') || '<tr><td colspan="7">No Local Falcon scans found.</td></tr>';
+
+      document.querySelector('#lf-gaps-table tbody').innerHTML = (data.gaps || []).map(g =>
+        '<tr><td><strong>' + esc(g.keyword) + '</strong></td><td>' + esc(g.platform) + '</td>' +
+        '<td>' + esc(g.solv) + '%</td>' +
+        '<td><span class="status ' + (g.severity === 'invisible' ? 'bad' : 'warn') + '">' + esc(g.severity) + '</span></td></tr>'
+      ).join('') || '<tr><td colspan="4">No visibility gaps. Every tracked pair is above 15% SoLV.</td></tr>';
+
+      document.querySelector('#lf-trends-table tbody').innerHTML = (data.trends || []).map(t =>
+        '<tr><td><strong>' + esc(t.keyword) + '</strong></td><td>' + esc(t.platform) + '</td>' +
+        '<td>' + esc(t.solvFrom) + '% → ' + esc(t.solvTo) + '%</td>' +
+        '<td><span class="status ' + (t.direction === 'up' ? 'good' : t.direction === 'down' ? 'bad' : '') + '">' +
+        (t.solvDelta > 0 ? '+' : '') + esc(t.solvDelta) + '%</span></td></tr>'
+      ).join('') || '<tr><td colspan="4">Not enough repeat scans to show movement yet.</td></tr>';
     }
 
     (function setupTwinCodex() {
