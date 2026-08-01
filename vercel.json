@@ -173,6 +173,21 @@
   ],
   "redirects": [
     {
+      "source": "/how-to-emergency-repair.html",
+      "destination": "/how-to-emergency-repair",
+      "permanent": true
+    },
+    {
+      "source": "/contact-referral",
+      "destination": "/business-card",
+      "permanent": true
+    },
+    {
+      "source": "/garage-door-installation",
+      "destination": "/moenave-garage-doors",
+      "permanent": true
+    },
+    {
       "source": "/contact",
       "destination": "/business-card",
       "permanent": true
