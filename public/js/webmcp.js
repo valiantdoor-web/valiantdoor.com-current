@@ -30,7 +30,7 @@
       "https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true",
     quoteUrl: "https://www.valiantdoor.com/quote",
     emergency: "24/7 after-hours emergency service, flat-rate $100 service call.",
-    warranty: "10-year warranty on garage door repairs and installed parts.",
+    warranty: "Lifetime warranty on installed parts and 10-year warranty on spring replacement, backed by the Valiant Standard of Excellence.",
     rating: "5.0 stars (34 reviews)",
     serviceAreas: [
       "Pleasanton",

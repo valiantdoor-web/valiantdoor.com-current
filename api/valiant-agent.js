@@ -56,7 +56,7 @@ const BUSINESS_PROFILE = {
     'Commercial garage door service'
   ],
   guarantees: {
-    warranty: '10-year warranty on garage door repairs and installed parts.',
+    warranty: 'Lifetime warranty on installed parts and 10-year warranty on spring replacement, backed by the Valiant Standard of Excellence.',
     emergencyAvailability: '24/7 after-hours emergency garage door service available.',
     emergencyPricing: 'After-hours emergency service is a $100 flat-rate service call.',
     estimates: 'Free estimates and same-day service available.'
