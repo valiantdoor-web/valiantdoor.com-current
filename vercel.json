@@ -173,11 +173,6 @@
   ],
   "redirects": [
     {
-      "source": "/same-day-garage-door-repair-pleasanton",
-      "destination": "/garage-door-repair",
-      "permanent": true
-    },
-    {
       "source": "/contact",
       "destination": "/business-card",
       "permanent": true
