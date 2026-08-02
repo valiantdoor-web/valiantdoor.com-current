@@ -166,6 +166,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .spring-premium-card img { width: 100%; max-width: 100%; }
         .spring-premium-card { grid-template-columns: 1fr; text-align: center; }
       }
+      /* --- Recent Pleasanton spring repair case study --- */
+      .spring-casestudy-intro { max-width: 70ch; color: rgba(245,242,236,.9); }
+      .spring-casestudy-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+        gap: clamp(18px, 3vw, 34px);
+        align-items: start;
+        margin-top: clamp(16px, 2.4vw, 24px);
+      }
+      .spring-casestudy-gallery { display: grid; gap: 16px; min-width: 0; }
+      .spring-ba-figure { margin: 0; min-width: 0; }
+      .spring-ba-trigger {
+        position: relative; display: block; width: 100%; padding: 0;
+        background: #050507; border-radius: 16px; overflow: hidden; cursor: zoom-in;
+        border: 1px solid rgba(236,215,159,.28);
+        box-shadow: 0 16px 34px rgba(0,0,0,.4);
+      }
+      .spring-ba-trigger img { display: block; width: 100%; height: auto; object-fit: contain; }
+      .spring-ba-label {
+        position: absolute; top: 12px; left: 12px;
+        font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700;
+        padding: 6px 12px; border-radius: 999px;
+        background: rgba(3,7,12,.82); color: #f6f0dc; border: 1px solid rgba(236,215,159,.4);
+      }
+      .spring-ba-figcaption { margin: 6px 2px 0; font-size: .82rem; color: rgba(245,242,236,.6); }
+      .spring-casestudy-testimonial {
+        padding: clamp(18px, 2.6vw, 26px);
+        border-radius: 20px;
+        border: 1px solid rgba(236,215,159,.34);
+        background: linear-gradient(150deg, rgba(8,12,18,.94), rgba(4,6,10,.9));
+        box-shadow: 0 20px 46px rgba(0,0,0,.42);
+        display: flex; flex-direction: column; gap: 14px;
+      }
+      .spring-stars { display: inline-flex; gap: 3px; color: #f5b942; }
+      .spring-stars svg { width: 20px; height: 20px; }
+      .spring-stars + .spring-stars-label { font-size: .78rem; color: rgba(245,242,236,.6); }
+      .spring-testimonial-quote {
+        margin: 0; font-size: clamp(1.02rem, 1.6vw, 1.18rem); line-height: 1.5;
+        color: #f6f0dc; font-style: normal;
+      }
+      .spring-testimonial-attr { margin: 0; font-style: normal; line-height: 1.45; }
+      .spring-testimonial-attr .name { display: block; font-weight: 700; color: #f6f0dc; }
+      .spring-testimonial-attr .meta { display: block; font-size: .86rem; color: rgba(245,242,236,.66); }
+      .spring-review-link { align-self: flex-start; font-weight: 600; color: #f5b942; }
+      .spring-proofline {
+        margin: 4px 0 0; padding-top: 12px; border-top: 1px solid rgba(236,215,159,.18);
+        font-size: .86rem; color: rgba(245,242,236,.8); line-height: 1.5;
+      }
+      .spring-review-screenshot { margin-top: clamp(16px, 2.4vw, 22px); }
+      .spring-review-screenshot > summary { cursor: pointer; font-weight: 600; color: #f5b942; padding: 6px 0; }
+      .spring-review-screenshot img { display: block; width: 100%; max-width: 520px; height: auto; margin-top: 12px; border-radius: 12px; border: 1px solid rgba(236,215,159,.28); }
+      .spring-review-screenshot .spring-screenshot-note { margin: 10px 0 0; font-size: .86rem; color: rgba(245,242,236,.6); }
+      .spring-casestudy-cta {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px;
+        margin-top: clamp(18px, 2.6vw, 26px);
+      }
+      .spring-casestudy-cta .btn { margin: 0; }
+      .spring-call-link { font-weight: 600; color: #f5b942; }
+      .spring-lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 96vh; }
+      .spring-lightbox::backdrop { background: rgba(2,4,8,.86); }
+      .spring-lightbox img { display: block; max-width: 96vw; max-height: 88vh; width: auto; height: auto; border-radius: 12px; }
+      .spring-lightbox-close {
+        position: fixed; top: 18px; right: 18px; width: 44px; height: 44px; border-radius: 999px;
+        border: 1px solid rgba(236,215,159,.5); background: rgba(3,7,12,.85); color: #f6f0dc;
+        font-size: 1.4rem; line-height: 1; cursor: pointer;
+      }
+      @media (max-width: 760px) {
+        .spring-casestudy-grid { grid-template-columns: 1fr; }
+        .spring-casestudy-cta .btn { width: 100%; }
+      }
       .page-geo #fab-root > img[role="button"] {
         width: auto !important;
         height: 186px !important;
@@ -917,6 +987,87 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li>Pleasanton, CA</li><li>Dublin, CA</li><li>Livermore, CA</li><li>Fremont, CA</li><li>San Ramon, CA</li>
   </ul>
 </section>
+
+<section class="geo-section spring-casestudy" aria-labelledby="pleasanton-spring-casestudy">
+  <h2 id="pleasanton-spring-casestudy">Recent Garage Door Spring Repair in Pleasanton</h2>
+  <p class="spring-casestudy-intro">A Pleasanton homeowner contacted Valiant Garage Door after the garage door spring failed after approximately five years. During our inspection, we discovered additional problems left from the original installation. We provided several clear repair options, replaced the failed spring system, corrected the installation issues, balanced the garage door, and verified safe operation before completing the job.</p>
+  <p class="spring-casestudy-intro">This same-day garage door service in Pleasanton included careful garage door balancing and garage door safety testing after we corrected the original garage door installation issues.</p>
+  <div class="spring-casestudy-grid">
+    <div class="spring-casestudy-gallery">
+      <figure class="spring-ba-figure">
+        <button type="button" class="spring-ba-trigger" data-full="/assets/case-studies/pleasanton-garage-door-spring-repair-before.webp" data-caption="Damaged garage door spring system before repair in Pleasanton, California" aria-label="Enlarge the before photo of the damaged garage door spring system">
+          <img src="/assets/case-studies/pleasanton-garage-door-spring-repair-before.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Damaged garage door spring system before repair in Pleasanton, California">
+          <span class="spring-ba-label">Before</span>
+        </button>
+        <figcaption class="spring-ba-figcaption">Before: damaged spring system that needed garage door spring repair in Pleasanton.</figcaption>
+      </figure>
+      <figure class="spring-ba-figure">
+        <button type="button" class="spring-ba-trigger" data-full="/assets/case-studies/pleasanton-garage-door-spring-repair-after.webp" data-caption="Completed garage door spring replacement after correcting installation issues in Pleasanton, California" aria-label="Enlarge the after photo of the completed garage door spring replacement">
+          <img src="/assets/case-studies/pleasanton-garage-door-spring-repair-after.webp" width="900" height="1600" loading="lazy" decoding="async" alt="Completed garage door spring replacement after correcting installation issues in Pleasanton, California">
+          <span class="spring-ba-label">After</span>
+        </button>
+        <figcaption class="spring-ba-figcaption">After: completed garage door spring replacement with the door re-balanced and safety tested.</figcaption>
+      </figure>
+    </div>
+    <aside class="spring-casestudy-testimonial">
+      <div>
+        <span class="spring-stars" role="img" aria-label="Rated 5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+        </span>
+      </div>
+      <blockquote class="spring-testimonial-quote">&ldquo;He was quick to respond, showed up same-day within the promised window, and gave a fair quote with several options to fix it right. He also caught and corrected the earlier installation issues.&rdquo;</blockquote>
+      <figcaption class="spring-testimonial-attr">
+        <span class="name">Vikram G.</span>
+        <span class="meta">Verified Google customer</span>
+        <span class="meta">Pleasanton garage door spring repair</span>
+      </figcaption>
+      <!-- TODO: replace the href below with the direct Google review permalink -->
+      <a class="spring-review-link" href="https://search.google.com/local/reviews?placeid=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer">View the complete review on Google</a>
+      <p class="spring-proofline">Same-day response &bull; Multiple repair options &bull; Installation issues corrected &bull; Door balanced and safety tested</p>
+    </aside>
+  </div>
+
+  <details class="spring-review-screenshot">
+    <summary>View original customer review</summary>
+    <!-- Optional supporting proof only. When a review screenshot is provided, drop it at
+         /assets/case-studies/pleasanton-spring-repair-google-review.webp and uncomment the img below.
+    <img src="/assets/case-studies/pleasanton-spring-repair-google-review.webp" width="520" height="520" loading="lazy" decoding="async" alt="Screenshot of Vikram G.'s Google review for Valiant Garage Door garage door spring repair in Pleasanton">
+    -->
+    <p class="spring-screenshot-note">The full review text is shown above. A screenshot of the original Google review can be added here as supporting proof.</p>
+  </details>
+
+  <div class="spring-casestudy-cta">
+    <a class="btn btn-primary" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Schedule Garage Door Spring Service</a>
+    <a class="spring-call-link js-tel" href="tel:+19254094974">Call Valiant Garage Door</a>
+  </div>
+</section>
+
+<dialog class="spring-lightbox" id="springLightbox" aria-label="Enlarged job photo">
+  <button type="button" class="spring-lightbox-close" data-close aria-label="Close enlarged photo">&times;</button>
+  <img id="springLightboxImg" src="" alt="">
+</dialog>
+<script>
+  (function () {
+    var dlg = document.getElementById('springLightbox');
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    var img = document.getElementById('springLightboxImg');
+    document.querySelectorAll('.spring-ba-trigger').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        img.src = btn.getAttribute('data-full');
+        img.alt = btn.getAttribute('data-caption') || '';
+        dlg.showModal();
+      });
+    });
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.hasAttribute('data-close')) dlg.close();
+    });
+    dlg.addEventListener('close', function () { img.src = ''; });
+  })();
+</script>
 
       <section class="geo-section">
 <h2>Frequently Asked Questions</h2>
