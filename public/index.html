@@ -400,10 +400,32 @@
   .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
   @media (min-width: 720px) { .work-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (min-width: 1024px) { .work-grid { grid-template-columns: repeat(5, 1fr); } }
+  .work-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 720px) { .work-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1024px) { .work-grid-3 { grid-template-columns: repeat(3, 1fr); max-width: 780px; margin: 0 auto; } }
   .work-item { margin: 0; border-radius: 14px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); }
   .work-item img { width: 100%; height: 260px; object-fit: cover; }
   .work-item figcaption { padding: 14px 16px; font-size: .82rem; color: var(--ink-dim); font-weight: 600; }
-  @media (max-width: 560px) { .work-grid { grid-template-columns: 1fr; } .work-item img { height: 260px; } }
+  @media (max-width: 560px) { .work-grid, .work-grid-3 { grid-template-columns: 1fr; } .work-item img { height: 260px; } }
+
+  /* ---------- Recent Work feed / carousel ---------- */
+  .work-feed { position: relative; }
+  .work-feed-viewport { overflow: hidden; }
+  .work-feed-track { display: flex; transition: transform .5s cubic-bezier(.4,0,.2,1); }
+  .work-slide { flex: 0 0 100%; min-width: 100%; }
+  .work-slide-head { text-align: center; max-width: 680px; margin: 0 auto 22px; }
+  .work-slide-loc { display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .work-slide-head h3 { font-size: 1.25rem; color: var(--ink); margin: 0 0 10px; }
+  .work-slide-head p { color: var(--ink-dim); font-size: .92rem; margin: 0; }
+  .work-slide-link { display: block; text-align: center; margin-top: 18px; color: var(--gold-soft); font-weight: 700; font-size: .85rem; }
+  .work-slide-link:hover { color: var(--gold-bright); }
+  .work-feed-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 28px; }
+  .work-feed-arrow { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); color: var(--gold-soft); cursor: pointer; display: grid; place-items: center; font-size: 1.05rem; transition: background .15s ease, color .15s ease; }
+  .work-feed-arrow:hover { background: rgba(199,163,75,.14); color: var(--gold-bright); }
+  .work-feed-dots { display: flex; align-items: center; gap: 9px; }
+  .work-feed-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 0; background: var(--line); cursor: pointer; transition: background .15s ease, transform .15s ease; }
+  .work-feed-dots button.is-active { background: var(--gold-bright); transform: scale(1.3); }
+  @media (max-width: 560px) { .work-feed-controls { gap: 14px; } .work-feed-arrow { width: 36px; height: 36px; } }
 
   /* ---------- Reviews / CTA ---------- */
   .rev { background: var(--bg-2); }
@@ -728,30 +750,70 @@
   <div class="wrap">
     <div class="work-head">
       <span class="work-kicker">Recent Work</span>
-      <h2>Precision Garage Door Work in Pleasanton, CA</h2>
-      <p>A recent repair near the California Terrace neighborhood in Pleasanton &mdash; panel work and precision laser alignment, measured and finished right the first time.</p>
+      <h2>Real Jobs, Real Results Across the Bay Area</h2>
+      <p>A rotating look at recent Valiant Garage Door jobs &mdash; real photos, straight from the field.</p>
     </div>
-    <div class="work-grid">
-      <figure class="work-item">
-        <img width="1400" height="1050" src="/assets/lp/work-laser-level.webp" alt="Valiant Garage Door technician using a Klein Tools green laser level to align a garage door panel in a Pleasanton garage" loading="lazy">
-        <figcaption>Laser-leveling a panel for a precise, square fit</figcaption>
-      </figure>
-      <figure class="work-item">
-        <img width="1200" height="1600" src="/assets/lp/work-panel-prep.webp" alt="Valiant Garage Door technician prepping and cleaning a garage door panel during a repair near California Terrace in Pleasanton" loading="lazy">
-        <figcaption>Prepping the panel with detailed craftsmanship</figcaption>
-      </figure>
-      <figure class="work-item">
-        <img width="1400" height="1050" src="/assets/lp/work-panel-repair.webp" alt="Valiant Garage Door technician clamping and repairing a garage door panel beside a freshly installed white sectional door in Pleasanton" loading="lazy">
-        <figcaption>Panel repair beside a freshly installed door</figcaption>
-      </figure>
-      <figure class="work-item">
-        <img width="1400" height="1050" src="/assets/lp/work-grinding.webp" alt="Valiant Garage Door technician using an angle grinder on a steel bar at his work truck at night, throwing sparks during custom metal fabrication" loading="lazy">
-        <figcaption>Custom metal fabrication and on-site welding</figcaption>
-      </figure>
-      <figure class="work-item">
-        <img width="1400" height="1246" src="/assets/lp/work-opener-install.webp" alt="Valiant Garage Door technician in a branded work shirt installing a new Chamberlain belt-drive garage door opener on a Pleasanton garage floor" loading="lazy">
-        <figcaption>Installing a new Chamberlain belt-drive opener</figcaption>
-      </figure>
+    <div class="work-feed" data-work-feed>
+      <div class="work-feed-viewport">
+        <div class="work-feed-track" data-work-feed-track>
+          <article class="work-slide" data-work-slide>
+            <div class="work-slide-head">
+              <span class="work-slide-loc">California Terrace, Pleasanton, CA</span>
+              <h3>Panel Repair &amp; Precision Laser Alignment</h3>
+              <p>Panel work and precision laser alignment, measured and finished right the first time.</p>
+            </div>
+            <div class="work-grid">
+              <figure class="work-item">
+                <img width="1400" height="1050" src="/assets/lp/work-laser-level.webp" alt="Valiant Garage Door technician using a Klein Tools green laser level to align a garage door panel in a Pleasanton garage" loading="lazy">
+                <figcaption>Laser-leveling a panel for a precise, square fit</figcaption>
+              </figure>
+              <figure class="work-item">
+                <img width="1200" height="1600" src="/assets/lp/work-panel-prep.webp" alt="Valiant Garage Door technician prepping and cleaning a garage door panel during a repair near California Terrace in Pleasanton" loading="lazy">
+                <figcaption>Prepping the panel with detailed craftsmanship</figcaption>
+              </figure>
+              <figure class="work-item">
+                <img width="1400" height="1050" src="/assets/lp/work-panel-repair.webp" alt="Valiant Garage Door technician clamping and repairing a garage door panel beside a freshly installed white sectional door in Pleasanton" loading="lazy">
+                <figcaption>Panel repair beside a freshly installed door</figcaption>
+              </figure>
+              <figure class="work-item">
+                <img width="1400" height="1050" src="/assets/lp/work-grinding.webp" alt="Valiant Garage Door technician using an angle grinder on a steel bar at his work truck at night, throwing sparks during custom metal fabrication" loading="lazy">
+                <figcaption>Custom metal fabrication and on-site welding</figcaption>
+              </figure>
+              <figure class="work-item">
+                <img width="1400" height="1246" src="/assets/lp/work-opener-install.webp" alt="Valiant Garage Door technician in a branded work shirt installing a new Chamberlain belt-drive garage door opener on a Pleasanton garage floor" loading="lazy">
+                <figcaption>Installing a new Chamberlain belt-drive opener</figcaption>
+              </figure>
+            </div>
+          </article>
+          <article class="work-slide" data-work-slide>
+            <div class="work-slide-head">
+              <span class="work-slide-loc">Pleasanton, CA</span>
+              <h3>Spring Failure From a Previous Installer&rsquo;s Mistake</h3>
+              <p>A garage door spring failed after only 5 years because the original installer left the end plate and spring plate badly out of level.</p>
+            </div>
+            <div class="work-grid work-grid-3">
+              <figure class="work-item">
+                <img width="810" height="1440" src="/assets/gallery-before-after/pleasanton-garage-door-end-plate-repair-before-after.webp" alt="Pleasanton garage door end plate before and after, showing the severely crooked end plate corrected to level" loading="lazy">
+                <figcaption>Correcting a severely crooked end plate</figcaption>
+              </figure>
+              <figure class="work-item">
+                <img width="1440" height="1440" src="/assets/gallery-before-after/pleasanton-garage-door-spring-plate-repair-before-after.webp" alt="Pleasanton garage door spring plate before and after, showing the incredibly crooked spring plate corrected to level" loading="lazy">
+                <figcaption>Leveling a dangerously crooked spring plate</figcaption>
+              </figure>
+              <figure class="work-item">
+                <img width="1440" height="1440" src="/assets/gallery-before-after/pleasanton-garage-door-spring-replacement-before-after.webp" alt="Pleasanton garage door torsion spring before and after replacement with a new Valiant spring" loading="lazy">
+                <figcaption>Installing a correctly sized replacement spring</figcaption>
+              </figure>
+            </div>
+            <a class="work-slide-link" href="/case-studies/pleasanton-garage-door-spring-repair">Read the full case study &rarr;</a>
+          </article>
+        </div>
+      </div>
+      <div class="work-feed-controls">
+        <button type="button" class="work-feed-arrow" data-work-feed-prev aria-label="Previous job">&#8592;</button>
+        <div class="work-feed-dots" data-work-feed-dots role="tablist" aria-label="Recent jobs"></div>
+        <button type="button" class="work-feed-arrow" data-work-feed-next aria-label="Next job">&#8594;</button>
+      </div>
     </div>
   </div>
 </section>
@@ -852,6 +914,67 @@
     var digits = PHONE.replace(/[^0-9]/g, "");
     document.querySelectorAll(".js-phone").forEach(function (el) { el.textContent = PHONE; });
     document.querySelectorAll(".js-tel").forEach(function (el) { el.setAttribute("href", "tel:+1" + digits); });
+  })();
+
+  // ---- Recent Work rotating feed ----
+  (function () {
+    var root = document.querySelector("[data-work-feed]");
+    if (!root) return;
+    var track = root.querySelector("[data-work-feed-track]");
+    var slides = Array.prototype.slice.call(root.querySelectorAll("[data-work-slide]"));
+    var dotsWrap = root.querySelector("[data-work-feed-dots]");
+    var prevBtn = root.querySelector("[data-work-feed-prev]");
+    var nextBtn = root.querySelector("[data-work-feed-next]");
+    if (!track || slides.length < 2) return;
+
+    var index = 0;
+    var timer = null;
+    var AUTO_MS = 7000;
+
+    slides.forEach(function (_, i) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("role", "tab");
+      dot.setAttribute("aria-label", "Go to job " + (i + 1));
+      dot.addEventListener("click", function () { goTo(i, true); });
+      dotsWrap.appendChild(dot);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+
+    function render() {
+      track.style.transform = "translateX(-" + (index * 100) + "%)";
+      dots.forEach(function (d, i) {
+        d.classList.toggle("is-active", i === index);
+        d.setAttribute("aria-selected", i === index ? "true" : "false");
+      });
+    }
+
+    function goTo(i, userInitiated) {
+      index = (i + slides.length) % slides.length;
+      render();
+      if (userInitiated) restartAuto();
+    }
+
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+
+    if (nextBtn) nextBtn.addEventListener("click", function () { next(); restartAuto(); });
+    if (prevBtn) prevBtn.addEventListener("click", function () { prev(); restartAuto(); });
+
+    function startAuto() {
+      if (slides.length < 2) return;
+      timer = setInterval(next, AUTO_MS);
+    }
+    function restartAuto() {
+      if (timer) clearInterval(timer);
+      startAuto();
+    }
+
+    root.addEventListener("mouseenter", function () { if (timer) clearInterval(timer); });
+    root.addEventListener("mouseleave", startAuto);
+
+    render();
+    startAuto();
   })();
 
   // ---- Mobile nav toggle ----
