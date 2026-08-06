@@ -88,9 +88,12 @@
     {
       "@type": [
         "HomeAndConstructionBusiness",
-        "LocalBusiness"
+        "LocalBusiness",
+        "Organization"
       ],
       "@id": "https://www.valiantdoor.com/#business",
+      "legalName": "Valiant Garage Door LLC",
+      "founder": { "@id": "https://www.valiantdoor.com/#founder" },
       "makesOffer": [
         {
           "@type": "Offer",
@@ -170,6 +173,15 @@
       }
     },
     {
+      "@type": "Person",
+      "@id": "https://www.valiantdoor.com/#founder",
+      "name": "Valentino Ramirez",
+      "alternateName": "Valentino",
+      "jobTitle": "Founder & Master Technician",
+      "worksFor": { "@id": "https://www.valiantdoor.com/#business" },
+      "knowsAbout": ["Garage Door Repair", "Garage Door Spring Replacement", "Garage Door Opener Installation"]
+    },
+    {
       "@type": "WebSite",
       "@id": "https://www.valiantdoor.com/#website",
       "url": "https://www.valiantdoor.com/",
@@ -185,6 +197,42 @@
       "inLanguage": "en-US",
       "isPartOf": { "@id": "https://www.valiantdoor.com/#website" },
       "about": { "@id": "https://www.valiantdoor.com/#business" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.valiantdoor.com/#homepage-faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does garage door repair usually cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most standard garage door repair pricing depends on labor time and replacement parts. We provide clear, itemized pricing before any repair work begins, so there are never surprise fees." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer emergency garage door service?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Emergency scheduling is available for urgent issues such as a stuck-open, stuck-closed, or unsafe door, with after-hours dispatch starting at a flat $100 service call plus parts and labor." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do garage door springs last?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Typical spring life is 7 to 10 years or around 10,000 cycles, depending on usage and maintenance. Every spring replacement we install is backed by a 10-year warranty." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair garage door openers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We diagnose and repair motor issues, sensors, remotes, keypad sync, travel limits, and safety reverse settings on all major opener brands, including LiftMaster." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide estimates before work starts?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every job starts with a full digital inspection with photos and video so you can see exactly what needs attention and approve pricing before we touch your door." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve cities outside Pleasanton?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We serve Pleasanton, Dublin, Livermore, San Ramon, Danville, Fremont, Sunol, and nearby East Bay communities with route-based scheduling for fast response times." }
+        }
+      ]
     }
   ]
 }
@@ -437,6 +485,18 @@
   .work-feed-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 0; background: var(--line); cursor: pointer; transition: background .15s ease, transform .15s ease; }
   .work-feed-dots button.is-active { background: var(--gold-bright); transform: scale(1.3); }
   @media (max-width: 560px) { .work-feed-controls { gap: 14px; } .work-feed-arrow { width: 36px; height: 36px; } }
+
+  /* ---------- FAQ ---------- */
+  .faq-intro { max-width: 62ch; color: var(--ink-dim); margin: 0 0 30px; }
+  .faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .faq-item { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 4px 22px; }
+  .faq-item summary { cursor: pointer; list-style: none; font-weight: 700; padding: 18px 28px 18px 0; position: relative; color: var(--ink); }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: "+"; position: absolute; right: 0; top: 16px; font-size: 1.4rem; color: var(--gold); transition: transform .15s ease; }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p { color: var(--ink-dim); margin: 0 0 18px; max-width: 68ch; }
+  .faq-cta { text-align: center; margin-top: 30px; }
+  .faq-cta a { color: var(--gold-soft); font-weight: 700; }
 
   /* ---------- Reviews / CTA ---------- */
   .rev { background: var(--bg-2); }
@@ -829,6 +889,24 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="block faq" id="faq">
+  <div class="wrap" style="text-align:center;">
+    <p class="eyebrow">Common Questions</p>
+    <h2 class="section-title">Garage Door Repair Questions, Answered</h2>
+    <p class="faq-intro" style="margin-inline:auto;">Straight answers to the questions Pleasanton and East Bay homeowners ask most before booking repair, spring, or opener service. Have a different question? Call <span class="js-phone">(925) 409-4974</span> and we'll walk you through it.</p>
+    <div class="faq-list">
+      <details class="faq-item"><summary>How much does garage door repair usually cost?</summary><p>Most standard garage door repair pricing depends on labor time and replacement parts. We provide clear, itemized pricing before any repair work begins, so there are never surprise fees.</p></details>
+      <details class="faq-item"><summary>Do you offer emergency garage door service?</summary><p>Yes. Emergency scheduling is available for urgent issues such as a stuck-open, stuck-closed, or unsafe door, with after-hours dispatch starting at a flat $100 service call plus parts and labor.</p></details>
+      <details class="faq-item"><summary>How long do garage door springs last?</summary><p>Typical spring life is 7 to 10 years or around 10,000 cycles, depending on usage and maintenance. Every spring replacement we install is backed by a 10-year warranty.</p></details>
+      <details class="faq-item"><summary>Do you repair garage door openers?</summary><p>Yes. We diagnose and repair motor issues, sensors, remotes, keypad sync, travel limits, and safety reverse settings on all major opener brands, including LiftMaster.</p></details>
+      <details class="faq-item"><summary>Do you provide estimates before work starts?</summary><p>Yes. Every job starts with a full digital inspection with photos and video so you can see exactly what needs attention and approve pricing before we touch your door.</p></details>
+      <details class="faq-item"><summary>Do you serve cities outside Pleasanton?</summary><p>Yes. We serve Pleasanton, Dublin, Livermore, San Ramon, Danville, Fremont, Sunol, and nearby East Bay communities with route-based scheduling for fast response times.</p></details>
+    </div>
+    <p class="faq-cta"><a href="/faq">See more garage door FAQs &rarr;</a></p>
+  </div>
+</section>
+
 <!-- REVIEWS / CTA -->
 <section class="block rev">
   <div class="wrap rev-inner">
@@ -895,7 +973,7 @@
         <ul>
           <li><a class="js-tel" href="#"><span class="js-phone">(925) 409-4974</span></a></li>
           <li><a href="mailto:vm@valiantdoor.com">vm@valiantdoor.com</a></li>
-          <li>Pleasanton, CA</li>
+          <li><address style="font-style:normal;display:inline;">3588 Pimlico Dr, Pleasanton, CA 94588</address></li>
         <li>Insured</li>
         </ul>
       </div>
