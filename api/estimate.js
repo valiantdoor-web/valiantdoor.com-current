@@ -203,6 +203,7 @@ module.exports = async (req, res) => {
     city: body.city,
     notes: body.notes,
     source: body.source || req.headers.referer || 'valiantdoor.com/instant-estimate',
+    ndclid: body.ndclid,
   };
 
   if (!fields.phone && !fields.email) {

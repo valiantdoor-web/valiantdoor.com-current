@@ -6,6 +6,26 @@
   const BOOK_URL = "https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true";
   const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
 
+  // ---- Nextdoor ad click ID (ndclid) capture ----
+  // Nextdoor appends ?ndclid=... to our URL when someone clicks a Nextdoor ad.
+  // We store it in a long-lived cookie so it survives across pages/sessions
+  // until the visitor submits a lead form (see lead-capture.js /
+  // estimate-upload.js), which reads this cookie and forwards the value to
+  // Housecall Pro. That's what lets the Nextdoor Conversions API relay
+  // attribute the eventual lead back to the specific ad that drove it.
+  (function captureNdclid() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var ndclid = params.get("ndclid");
+      if (!ndclid) return;
+      var maxAge = 60 * 60 * 24 * 90; // 90 days
+      document.cookie =
+        "vg_ndclid=" + encodeURIComponent(ndclid) + "; max-age=" + maxAge + "; path=/; SameSite=Lax";
+    } catch (_err) {
+      // Cookies unavailable (privacy mode, etc.) -- fail silently, never block the page.
+    }
+  })();
+
   // ---- Live review stats: keep visible counters AND JSON-LD in sync sitewide ----
   // Numbers come from /api/reviews, which auto-updates from the Google Places API
   // (6h server cache) and falls back to safe static values if the API is down.

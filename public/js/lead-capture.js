@@ -8,6 +8,13 @@
   var forms = document.querySelectorAll('form[action="/thank-you"]');
   if (!forms.length) return;
 
+  // Read the Nextdoor ad click ID captured by global-chrome.js (if any), so
+  // it can ride along with this lead into Housecall Pro for CAPI attribution.
+  function readCookie(name) {
+    var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : '';
+  }
+
   Array.prototype.forEach.call(forms, function (form) {
     // The instant estimate form uploads photos and is handled by
     // estimate-upload.js; skip it here to avoid a double submission.
@@ -25,6 +32,8 @@
       // Collect text fields; skip file inputs (photos can't be forwarded to
       // the lead API), but record whether any were selected.
       var data = { source: window.location.href };
+      var ndclid = readCookie('vg_ndclid');
+      if (ndclid) data.ndclid = ndclid;
       var hasPhotos = false;
       Array.prototype.forEach.call(form.elements, function (el) {
         if (!el.name || el.disabled) return;

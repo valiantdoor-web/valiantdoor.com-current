@@ -76,6 +76,7 @@
       city: fields.city,
       notes: fields.notes,
       source: window.location.href,
+      ndclid: readCookie('vg_ndclid') || undefined,
       photoPathnames: pathnames
     };
 
@@ -116,6 +117,13 @@
       data[el.name] = el.value;
     });
     return data;
+  }
+
+  // Read the Nextdoor ad click ID captured by global-chrome.js (if any), so
+  // it can ride along with this lead into Housecall Pro for CAPI attribution.
+  function readCookie(name) {
+    var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : '';
   }
 
   // Downscale a photo to a JPEG and return { filename, contentType, dataBase64 }.
