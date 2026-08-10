@@ -993,34 +993,90 @@ const watchBotpressFabSize = () => {
 };
 
 
+const HCP_BOOK_URL = "https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true";
+const VALIANT_PHONE = "(925) 409-4974";
+const VALIANT_BOOK_CTA = " Book Free Estimate Instantly: " + HCP_BOOK_URL + " or call " + VALIANT_PHONE + ".";
+
 const createValiantBotFallbackReply = (messageText) => {
-  const normalized = String(messageText || "").toLowerCase();
+  const t = String(messageText || "").toLowerCase();
 
-  if (/\b(areas?|serve|service areas?|city|cities|where)\b/.test(normalized)) {
-    return "Valiant Garage Door serves Pleasanton, Dublin, Livermore, Fremont, San Ramon, Danville, Sunol, and nearby East Bay communities. Tell us your city and what is wrong with the door, or use Book Free Estimate Instantly to request service.";
+  // Service areas
+  if (/\b(areas?|serve|service areas?|city|cities|where|location|cover)\b/.test(t)) {
+    return "Valiant Garage Door serves Pleasanton, Dublin, Livermore, Fremont, San Ramon, Danville, Sunol, Pleasant Hill, Alamo, Blackhawk, Castro Valley, Hayward, Newark, and nearby East Bay communities." + VALIANT_BOOK_CTA;
   }
 
-  if (/\b(emergency|stuck|trapped|off.?track|won'?t close|won'?t open|broken cable|unsafe)\b/.test(normalized)) {
-    return "If the door is stuck, off track, unsafe, or will not open or close, stop using it and request emergency garage door service. Use Book Free Estimate Instantly or call Valiant Garage Door so a technician can review the route and availability.";
+  // Emergency / urgent
+  if (/\b(emergency|stuck|trapped|off.?track|won'?t close|won'?t open|broken cable|unsafe|urgent|now|asap|help)\b/.test(t)) {
+    return "If your garage door is stuck, off track, unsafe, or will not open or close, stop using it immediately. Do not force the door or opener. Valiant Garage Door offers same-day emergency repair across the East Bay. Call " + VALIANT_PHONE + " right now or book emergency service instantly: " + HCP_BOOK_URL;
   }
 
-  if (/\b(spring|springs|torsion|extension|snapped|heavy)\b/.test(normalized)) {
-    return "For a broken or heavy garage door spring, do not force the door or opener. Valiant Garage Door handles spring replacement with balance and safety testing. Share your city and door size, or use Book Free Estimate Instantly to request service.";
+  // Springs
+  if (/\b(spring|springs|torsion|extension|snapped|heavy|broke.*spring)\b/.test(t)) {
+    return "Broken garage door spring? Do not force the door. Valiant Garage Door handles torsion and extension spring replacement with balance and safety testing. Spring repair typically runs $159 to $249 depending on type and size. Most repairs take 30 to 60 minutes." + VALIANT_BOOK_CTA;
   }
 
-  if (/\b(opener|remote|keypad|sensor|motor|liftmaster|genie|chamberlain)\b/.test(normalized)) {
-    return "Valiant Garage Door can help with opener diagnostics, remotes, keypads, safety sensors, travel limits, and motor issues. Tell us the opener brand and what it is doing, or use Book Free Estimate Instantly to request an appointment.";
+  // Cables
+  if (/\b(cable|cables|snapped cable|frayed)\b/.test(t)) {
+    return "A snapped or frayed garage door cable is a safety hazard. Stop using the door and keep it closed. Valiant Garage Door replaces cables same-day across the East Bay." + VALIANT_BOOK_CTA;
   }
 
-  if (/\b(price|cost|quote|estimate|how much)\b/.test(normalized)) {
-    return "Pricing depends on the door, parts, access, and diagnosis. Use the online request form or Book Free Estimate Instantly and include photos if you can, so Valiant Garage Door can review the issue and next steps.";
+  // Openers
+  if (/\b(opener|remote|keypad|sensor|motor|liftmaster|genie|chamberlain|chain|belt|drive)\b/.test(t)) {
+    return "Valiant Garage Door repairs and installs LiftMaster, Chamberlain, and Genie openers. Services include diagnostics, remotes, keypads, safety sensors, travel limits, force settings, and motor replacement. New opener installation starts at $229 for standard overhead and $249 for wall-mount." + VALIANT_BOOK_CTA;
   }
 
-  if (/\b(install|installation|new door|replace door|door replacement)\b/.test(normalized)) {
-    return "Valiant Garage Door can help review repair, opener, maintenance, and emergency service options. Share your city and what is happening with the door, or use Book Free Estimate Instantly to start the request.";
+  // Pricing
+  if (/\b(price|cost|quote|estimate|how much|rate|fee|charge|pricing)\b/.test(t)) {
+    return "Here are typical starting prices:\n• Spring replacement: $159 to $249\n• Opener installation: $229 to $249 (starting labor)\n• Off-track repair: varies by damage\n• Cable repair: varies by door type\nFinal pricing depends on parts, door size, and labor. Get an itemized estimate with photos: " + HCP_BOOK_URL + " or call " + VALIANT_PHONE;
   }
 
-  return "Yes — Valiant Garage Door can help with garage door repair, spring replacement, opener repair, maintenance, commercial service, and emergency service. Tell us your city and what is wrong, or use Book Free Estimate Instantly to request service.";
+  // Maintenance
+  if (/\b(maintenance|tune.?up|inspect|lubricat|balance|tune|service|check.?up|prevent)\b/.test(t)) {
+    return "Regular maintenance extends door life and prevents emergencies. Valiant Garage Door offers tune-ups including roller inspection, track alignment, lubrication, balance testing, and safety sensor checks." + VALIANT_BOOK_CTA;
+  }
+
+  // Commercial
+  if (/\b(commercial|business|warehouse|industrial|storefront|loading dock|roll.?up|sectional)\b/.test(t)) {
+    return "Yes, Valiant Garage Door handles commercial and light-commercial garage doors including sectional doors, rolling steel, and loading dock doors across the East Bay." + VALIANT_BOOK_CTA;
+  }
+
+  // New doors / installation
+  if (/\b(install|installation|new door|replace.*door|door replacement|custom|carriage|design)\b/.test(t)) {
+    return "Valiant Garage Door installs custom and new garage doors including carriage house and modern designs. We help you choose the right door for your home, handle removal of the old door, and complete installation with balance and safety testing." + VALIANT_BOOK_CTA;
+  }
+
+  // Noise
+  if (/\b(noise|noisy|loud|squeak|grind|bang|rattle|sound)\b/.test(t)) {
+    return "A noisy garage door usually means worn rollers, loose hardware, or lack of lubrication. Valiant Garage Door can diagnose and fix the source of the noise with a tune-up." + VALIANT_BOOK_CTA;
+  }
+
+  // Booking / appointment
+  if (/\b(book|appointment|schedule|availability|today|same.?day|when|how soon|time)\b/.test(t)) {
+    return "You can book instantly: " + HCP_BOOK_URL + "\nOr call " + VALIANT_PHONE + " for same-day scheduling. Most repairs are completed the same day across Pleasanton, Dublin, Livermore, Fremont, San Ramon, and nearby East Bay cities.";
+  }
+
+  // Hours
+  if (/\b(hours?|open|closed|when.*available|today)\b/.test(t)) {
+    return "Valiant Garage Door offers same-day and emergency repair service. Call " + VALIANT_PHONE + " for current availability or book instantly: " + HCP_BOOK_URL;
+  }
+
+  // Reviews / reputation
+  if (/\b(review|reviews|rating|google|trust|reputation|experience|years)\b/.test(t)) {
+    return "Valiant Garage Door has 12+ years of hands-on experience, over 10,000 garage doors serviced, and a strong Google Business Profile rating. We are licensed, insured, and trusted across the East Bay." + VALIANT_BOOK_CTA;
+  }
+
+  // Warranty
+  if (/\b(warranty|guarantee|guaranteed)\b/.test(t)) {
+    return "Valiant Garage Door stands behind our work. Parts and labor warranties vary by service. Ask your technician for specific warranty details on your repair." + VALIANT_BOOK_CTA;
+  }
+
+  // Contact
+  if (/\b(contact|phone|call|number|email|reach|address)\b/.test(t)) {
+    return "Call Valiant Garage Door at " + VALIANT_PHONE + "\nEmail: vm@valiantdoor.com\nAddress: 3588 Pimlico Dr, Pleasanton, CA 94588\nBook online: " + HCP_BOOK_URL;
+  }
+
+  // Default / general
+  return "Valiant Garage Door can help with garage door repair, spring replacement, opener repair and installation, cable repair, off-track repair, maintenance and tune-ups, commercial service, custom doors, and 24/7 emergency repair across Pleasanton, Dublin, Livermore, Fremont, San Ramon, and nearby East Bay cities. Tell us your city and what is wrong with the door, or book instantly: " + HCP_BOOK_URL + " or call " + VALIANT_PHONE + ".";
 };
 
 const setupBotpressFallbackAssistant = () => {
