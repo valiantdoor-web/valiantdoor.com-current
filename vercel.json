@@ -188,6 +188,11 @@
       "permanent": true
     },
     {
+      "source": "/services/installations",
+      "destination": "/moenave-garage-doors",
+      "permanent": true
+    },
+    {
       "source": "/contact",
       "destination": "/business-card",
       "permanent": true
