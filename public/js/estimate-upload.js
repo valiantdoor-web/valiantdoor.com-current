@@ -232,6 +232,9 @@
         event_callback: finish,
         event_timeout: 1500
       });
+      window.gtag('event', 'lead_form_success', {
+        form_source: window.location.pathname
+      });
       window.setTimeout(finish, 1500);
     } else {
       finish();

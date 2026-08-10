@@ -15,6 +15,36 @@
     return match ? decodeURIComponent(match[1]) : '';
   }
 
+  // Fires the same Google Ads lead conversion event that estimate-upload.js
+  // fires on a real successful photo-estimate submission. Previously this
+  // file redirected to /thank-you on success WITHOUT firing any conversion
+  // event at all, so real, successful lead submissions through this form
+  // (homepage lead form, Nominate A Family, Partner Intake) were invisible
+  // to GA4/Google Ads. The only conversion firing anywhere on the site was
+  // a mere CLICK on a Book Free Estimate link (see setupGoogleAdsQuoteConversion
+  // in main.min.js), which fires even if the visitor never actually books.
+  function fireConversionThen(done) {
+    var finished = false;
+    var finish = function () {
+      if (finished) return;
+      finished = true;
+      done();
+    };
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'ads_conversion_Submit_lead_form_1', {
+        event_callback: finish,
+        event_timeout: 1500,
+      });
+      window.gtag('event', 'lead_form_success', {
+        event_callback: function () {},
+        form_source: window.location.pathname,
+      });
+      window.setTimeout(finish, 1500);
+    } else {
+      finish();
+    }
+  }
+
   Array.prototype.forEach.call(forms, function (form) {
     // The instant estimate form uploads photos and is handled by
     // estimate-upload.js; skip it here to avoid a double submission.
@@ -58,7 +88,9 @@
         })
         .then(function (result) {
           if (result && result.ok) {
-            window.location.href = '/thank-you';
+            fireConversionThen(function () {
+              window.location.href = '/thank-you';
+            });
           } else {
             showError(form, button, originalLabel, result && result.error);
           }
