@@ -110,7 +110,7 @@
 
   const initializeSiteBot = (() => {
     const INJECT_URL = "https://cdn.botpress.cloud/webchat/v3.6/inject.js";
-    const CONFIG_URL = "https://files.bpcontent.cloud/2026/05/01/11/20260501112742-4945ZV3N.js";
+    const CONFIG_URL = "/js/botpress-config.js";
     const MAX_ATTEMPTS = 3;
     const LOAD_TIMEOUT = 12000;
     let started = false;
@@ -170,28 +170,6 @@
           }
           if (!window.botpress) throw new Error("Botpress runtime unavailable");
 
-          // Override webchat configuration with current company info
-          if (typeof window.botpress.init === "function" && !window.botpress._valiantOverride) {
-            const originalInit = window.botpress.init;
-            window.botpress.init = function (config) {
-              if (config && config.configuration) {
-                config.configuration.botName = "Valiant Garage Door";
-                config.configuration.botDescription = "Valiant Garage Door Online Receptionist";
-                config.configuration.composerPlaceholder = "How can we help with your garage door?";
-                config.configuration.proactiveBubbleMessage = "How can Valiant shield your door today?";
-                if (config.configuration.phone) {
-                  config.configuration.phone.title = "(925) 409-4974";
-                }
-                if (config.configuration.website) {
-                  config.configuration.website.title = "https://www.valiantdoor.com";
-                  config.configuration.website.link = "https://www.valiantdoor.com";
-                }
-              }
-              return originalInit.call(this, config);
-            };
-            window.botpress._valiantOverride = true;
-          }
-
           if (!botIsMounted()) {
             const staleConfig = findScript(CONFIG_URL);
             if (staleConfig && staleConfig.dataset.valiantLoaded !== "true") staleConfig.remove();
@@ -248,6 +226,8 @@
         if (botIsMounted()) {
           window.clearInterval(poll);
           fab.remove();
+          // Inject close button fix CSS into Botpress shadow DOM
+          injectCloseButtonFix();
         } else if (waited >= 20000) {
           window.clearInterval(poll); // give up gracefully; call/book CTAs remain
           fab.classList.remove("is-loading");
@@ -261,6 +241,34 @@
     const add = () => document.body.appendChild(fab);
     if (document.body) add();
     else document.addEventListener("DOMContentLoaded", add, { once: true });
+
+    // Inject CSS into Botpress shadow DOM to fix close button overlap with sticky call banner
+    function injectCloseButtonFix() {
+      const fabRoot = document.getElementById("fab-root");
+      if (!fabRoot?.shadowRoot) return;
+      const sr = fabRoot.shadowRoot;
+      if (sr.querySelector("#valiant-close-fix")) return;
+      const style = document.createElement("style");
+      style.id = "valiant-close-fix";
+      style.textContent = `
+        @media (max-width: 760px) {
+          .bpWebchat.bpOpen,
+          .bpWebchat.bpOpen.bpFABWebchat {
+            top: 60px !important;
+            bottom: 8px !important;
+            height: calc(100dvh - 68px) !important;
+            max-height: calc(100dvh - 68px) !important;
+          }
+          .bpWebchat.bpOpen .bpHeaderContentActionsIcons,
+          .bpWebchat.bpOpen svg[aria-label="Close Chatbot Button"] {
+            flex-shrink: 0 !important;
+            min-width: 34px !important;
+            min-height: 34px !important;
+          }
+        }
+      `;
+      sr.appendChild(style);
+    }
   })();
 
   // Add accessible names to the Botpress chat widget images (injected at runtime).
