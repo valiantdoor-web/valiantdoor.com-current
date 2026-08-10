@@ -248,6 +248,21 @@
       "permanent": true
     },
     {
+      "source": "/emergency-after-hours",
+      "destination": "/emergency-garage-door-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/emergency",
+      "destination": "/emergency-garage-door-repair",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-emergency-repair",
+      "destination": "/emergency-garage-door-repair",
+      "permanent": true
+    },
+    {
       "source": "/services/garage-door-maintenance/",
       "destination": "/services/garage-door-maintenance",
       "permanent": true

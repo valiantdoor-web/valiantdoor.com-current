@@ -6,6 +6,18 @@
   const BOOK_URL = "https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true";
   const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
 
+  // ---- Microsoft Clarity: load on ALL pages, not just homepage ----
+  // Previously this was trapped inside setupDeferredHomepageTracking() which
+  // only ran on page-home, leaving 100+ pages with zero session recording.
+  (function loadClarity() {
+    if (document.querySelector('script[data-valiant-clarity]')) return;
+    const s = document.createElement('script');
+    s.src = 'https://www.clarity.ms/tag/xbiv7tx2p3';
+    s.async = true;
+    s.dataset.valiantClarity = 'true';
+    (document.head || document.documentElement).appendChild(s);
+  })();
+
   // ---- Nextdoor ad click ID (ndclid) capture ----
   // Nextdoor appends ?ndclid=... to our URL when someone clicks a Nextdoor ad.
   // We store it in a long-lived cookie so it survives across pages/sessions
@@ -268,7 +280,7 @@
     ["/garage-door-opener-repair", "Opener Repair"],
     ["/services/garage-door-maintenance", "Maintenance & Tune-Ups"],
     ["/safety-sensors", "Safety Sensors"],
-    ["/emergency-after-hours", "After-Hours Emergency"],
+    ["/emergency-garage-door-repair", "After-Hours Emergency"],
     ["/services/commercial", "Commercial Service"],
     ["/emergency-garage-door-repair", "Emergency Repair"]
   ];
