@@ -210,6 +210,11 @@
       fab.classList.add("is-loading");
       fab.setAttribute("aria-busy", "true");
       initializeSiteBot();
+      // Applies FAB sizing/branding CSS and the fallback assistant once the
+      // Botpress runtime is loading (defined in main.js).
+      if (typeof window.__valiantInitBotpressEnhancements === "function") {
+        window.__valiantInitBotpressEnhancements();
+      }
 
       // Once the real widget mounts, open it and retire the placeholder.
       let waited = 0;

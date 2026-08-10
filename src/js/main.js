@@ -3,8 +3,6 @@ const siteNav = document.querySelector(".site-nav");
 const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJreu0MBcWcgMRQnyWHvhS94w";
 const FONT_STYLESHEET_HREF = "https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap";
 const HOUSECALL_PRO_BOOK_URL = "https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true";
-const BOTPRESS_INJECT_SCRIPT_SRC = "https://cdn.botpress.cloud/webchat/v3.6/inject.js";
-const BOTPRESS_CONFIG_SCRIPT_SRC = "https://files.bpcontent.cloud/2026/05/01/11/20260501112742-4945ZV3N.js";
 const CALLTRACKING_SCRIPT_SRC = "https://app.800.com/calltracking/index.js?token=OFdsQlpNcWtkdi9PUy93a3hHeUkwdz09&backend=https://api.800.com/";
 const HOUSECALL_PRO_EXECUTE_CODE_CARD = {
   blocks: [
@@ -251,7 +249,6 @@ const loadExternalScript = (url, { defer = false, async = true } = {}) =>
   });
 
 let hasInitializedBotpressEnhancements = false;
-let botpressLoadPromise = null;
 
 const initializeBotpressEnhancements = () => {
   if (hasInitializedBotpressEnhancements) return;
@@ -261,98 +258,16 @@ const initializeBotpressEnhancements = () => {
   setupBotpressFallbackAssistant();
 };
 
-const loadBotpressOnDemand = () => {
-  if (botpressLoadPromise) return botpressLoadPromise;
-  botpressLoadPromise = Promise.allSettled([
-    loadExternalScript(BOTPRESS_INJECT_SCRIPT_SRC),
-    loadExternalScript(BOTPRESS_CONFIG_SCRIPT_SRC, { defer: true }),
-  ]).finally(() => {
-    initializeBotpressEnhancements();
-  });
-  return botpressLoadPromise;
-};
-
-const openBotpressWhenReady = (attempt = 0) => {
-  if (typeof window.botpress?.open === "function") {
-    try {
-      window.botpress.open();
-      return;
-    } catch (error) {}
-  }
-
-  const trigger = document.querySelector('.bpFab, .bpFabWrapper, #fab-root button, img[role="button"]');
-  if (trigger instanceof HTMLElement) {
-    trigger.click();
-    return;
-  }
-
-  if (attempt >= 40) return;
-  window.setTimeout(() => openBotpressWhenReady(attempt + 1), 250);
-};
-
-const setupBotpressShell = () => {
-  if (document.querySelector('[data-valiant-bot-shell]')) return;
-
-  const shell = document.createElement('button');
-  shell.type = 'button';
-  shell.setAttribute('data-valiant-bot-shell', 'true');
-  shell.setAttribute('aria-label', 'Open Valiant chat assistant');
-  shell.style.position = 'fixed';
-  shell.style.right = '10px';
-  shell.style.bottom = document.body?.classList.contains('page-gallery') ? '180px' : '44px';
-  shell.style.zIndex = '40';
-  shell.style.display = 'grid';
-  shell.style.placeItems = 'center';
-  shell.style.gap = '4px';
-  shell.style.width = '88px';
-  shell.style.padding = '6px 4px 2px';
-  shell.style.border = '0';
-  shell.style.borderRadius = '24px';
-  shell.style.background = 'transparent';
-  shell.style.cursor = 'pointer';
-
-  const image = document.createElement('img');
-  image.src = '/assets/valiant-bot-widget-static-shield-20260629.png';
-  image.alt = '';
-  image.width = 72;
-  image.height = 72;
-  image.loading = 'eager';
-  image.decoding = 'async';
-  image.style.width = '72px';
-  image.style.height = '72px';
-  image.style.objectFit = 'contain';
-  image.style.filter = 'drop-shadow(0 10px 22px rgba(0, 0, 0, 0.36))';
-
-  const label = document.createElement('span');
-  label.textContent = 'Valiant AI Assistant';
-  label.style.color = '#ffcc66';
-  label.style.fontSize = '0.68rem';
-  label.style.fontWeight = '700';
-  label.style.letterSpacing = '0.14em';
-  label.style.textTransform = 'uppercase';
-  label.style.textShadow = '0 2px 8px rgba(0, 0, 0, 0.55)';
-
-  shell.append(image, label);
-
-  shell.addEventListener('click', () => {
-    label.textContent = 'Loading';
-    shell.disabled = true;
-    loadBotpressOnDemand().finally(() => {
-      shell.style.display = 'none';
-      openBotpressWhenReady();
-    });
-  });
-
-  const hideShellIfBotExists = () => {
-    if (document.querySelector('.bpFab, .bpFabWrapper, #fab-root')) {
-      shell.style.display = 'none';
-    }
-  };
-
-  document.body.appendChild(shell);
-  hideShellIfBotExists();
-  window.setInterval(hideShellIfBotExists, 1000);
-};
+// The floating chat launcher itself now lives entirely in global-chrome.js
+// (#valiant-chat-fab), which is loaded on every page. This used to also have
+// a separate, older shield+label launcher (setupBotpressShell) defined here,
+// but both launchers rendered simultaneously (stacked, overlapping icons with
+// clipped text in the bottom-right corner) since neither knew about the
+// other. The duplicate legacy launcher has been removed; global-chrome.js's
+// launcher calls window.__valiantInitBotpressEnhancements() (exposed below)
+// once it starts loading Botpress, so FAB sizing and the fallback assistant
+// still activate regardless of which code path triggers the load.
+window.__valiantInitBotpressEnhancements = initializeBotpressEnhancements;
 
 const setupDeferredThirdPartyScripts = () => {
   if (!document.body?.classList.contains("page-home")) return;
@@ -522,7 +437,6 @@ const setupProjectMapShells = () => {
 setupProjectMapShells();
 
 setupDeferredHomeHousecallEmbeds();
-setupBotpressShell();
 setupDeferredThirdPartyScripts();
 
 const setupPhotoAlbum = () => {
