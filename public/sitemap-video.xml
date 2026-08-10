@@ -128,4 +128,15 @@
       <video:upload_date>2026-06-15</video:upload_date>
     </video:video>
   </url>
+  <url>
+    <loc>https://www.valiantdoor.com/valiant-carriage-door-restorations</loc>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/projects/pleasanton-carriage-door-restoration-poster.jpg</video:thumbnail_loc>
+      <video:title>Carriage Door Restoration In Pleasanton, CA</video:title>
+      <video:description>Valiant Garage Door refinishing a carriage house garage door panel during a restoration in Pleasanton, California.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/projects/pleasanton-carriage-door-restoration.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:upload_date>2026-07-31</video:upload_date>
+    </video:video>
+  </url>
 </urlset>
