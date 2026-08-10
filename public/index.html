@@ -568,6 +568,19 @@
     .steps { gap: 10px; }
     .step { flex-basis: 40%; }
   }
+
+
+.svc-card-link{display:flex;flex-direction:column;flex:1;color:inherit;text-decoration:none}
+.svc-card-ctas{display:flex;gap:6px;padding:0 18px 18px}
+.svc-cta{flex:1;text-align:center;padding:8px 6px;border-radius:8px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:opacity .15s}
+.svc-cta:first-child{background:#f5b942;color:#111}
+.svc-cta:first-child:hover{background:#ffd267}
+.svc-cta:nth-child(2){border:1px solid #b08a2e;color:#7a5e18;background:rgba(176,138,46,.06)}
+.svc-cta:nth-child(2):hover{background:rgba(176,138,46,.12)}
+.svc-cta:nth-child(3){border:1px solid rgba(0,0,0,.15);color:#555;background:rgba(0,0,0,.02)}
+.svc-cta:nth-child(3):hover{background:rgba(0,0,0,.05)}
+@media(max-width:760px){.svc-card-ctas{gap:4px;padding:0 14px 14px}.svc-cta{font-size:.62rem;padding:7px 4px}}
+
 </style>
 <link rel="stylesheet" href="/css/global-chrome.css">
 </head>
@@ -729,54 +742,54 @@
     <p class="eyebrow">Our Services</p>
     <h2 class="section-title">Pleasanton Based Garage Door Service</h2>
     <div class="services-grid">
-<a class="svc-card" href="/garage-door-openers">
+<div class="svc-card"><a href="/garage-door-openers" class="svc-card-link">
         <div class="svc-media"><img loading="lazy" decoding="async" width="1206" height="1383" src="/assets/lp/liftmaster-opener-myq-800.webp" srcset="/assets/lp/liftmaster-opener-myq-800.webp 800w, /assets/lp/liftmaster-opener-myq.webp 1206w" sizes="(max-width: 760px) 90vw, 380px" alt="LiftMaster garage door opener powered by myQ"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg></span></div>
         <div class="svc-body"><h3>Garage Door Openers</h3><p class="svc-desc-modern">Installation, repair &amp; smart opener upgrades for all brands.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/garage-door-opener-repair">
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/garage-door-opener-repair" class="svc-card-link">
         <div class="svc-media"><picture><source type="image/webp" srcset="/assets/projects/walnut-creek-opener-repair-card.webp"><img loading="lazy" decoding="async" width="900" height="600" src="/assets/projects/walnut-creek-opener-repair-card.jpg" sizes="(max-width: 760px) 90vw, 380px" alt="A LiftMaster myQ garage door opener securely remounted on galvanized steel angle-iron bracing under garage ceiling joists"></picture><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0 5 5l-9.6 9.6a2.1 2.1 0 0 1-3-3z"/><path d="m17.5 3.5 3 3-2 2-3-3z"/></svg></span></div>
         <div class="svc-body"><h3>Garage Door Opener Repair</h3><p class="svc-desc-modern">Grinding gears, dead motors &amp; failed logic boards diagnosed and repaired.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/valiant-signature-opener-mount">
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/valiant-signature-opener-mount" class="svc-card-link">
         <div class="svc-media"><img loading="lazy" decoding="async" width="3024" height="4032" src="/assets/lp/signature-mount.webp" alt="Valiant Signature Opener Mount, a custom heavy-duty steel garage door opener bracket"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M7 7v13M17 7v13M4 20h16M9 11h6M9 15h6"/></svg></span></div>
         <div class="svc-body"><h3>Signature Opener Mount</h3><p>Our custom-fabricated, heavy-duty opener bracket &mdash; free with every repair for a limited time.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/safety-sensors">
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/safety-sensors" class="svc-card-link">
         <div class="svc-media"><img loading="lazy" decoding="async" width="1810" height="2413" src="/assets/lp/service-sensor.webp" alt="Garage door safety photo-eye sensor mounted on the track"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/></svg></span></div>
         <div class="svc-body"><h3>Sensor &amp; Safety</h3><p>Professional align sensors to keep your family safe.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/garage-door-spring-replacement">
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/garage-door-spring-replacement" class="svc-card-link">
         <div class="svc-media"><picture><source type="image/webp" srcset="/assets/projects/dublin-broken-spring-repair.webp"><img loading="lazy" decoding="async" width="900" height="600" src="/assets/projects/dublin-broken-spring-repair.jpg" sizes="(max-width: 760px) 90vw, 380px" alt="A snapped black garage door torsion spring beside new Valiant Door high-cycle replacement springs on a garage floor"></picture><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16M4 8h16M4 12h16M4 16h16M4 20h16"/></svg></span></div>
         <div class="svc-body"><h3>Broken Spring Replacement</h3><p>Broken spring? We replace all types of springs safely and correctly.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/garage-door-cable-repair">
-        <div class="svc-media"><img loading="lazy" decoding="async" width="1024" height="1024" src="/assets/lp/service-cable.webp" alt="Garage door lift cable and drum"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v6a6 6 0 0 0 12 0V3M6 21v-6a6 6 0 0 1 12 0v6"/></svg></span></div>
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/garage-door-cable-repair" class="svc-card-link">
+        <div class="svc-media"><img loading="lazy" decoding="async" width="800" height="500" src="/assets/projects/cable-repair-card.webp" alt="Garage door cable and bottom bracket with roller hardware during replacement"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v6a6 6 0 0 0 12 0V3M6 21v-6a6 6 0 0 1 12 0v6"/></svg></span></div>
         <div class="svc-body"><h3>Cable Repair</h3><p>Frayed or snapped cables replaced with precision and care.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/Garage-Door-Service-Excellence">
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/Garage-Door-Service-Excellence" class="svc-card-link">
         <div class="svc-media"><img loading="lazy" decoding="async" width="1758" height="978" src="/assets/service-excellence/service-excellence-hero.webp" alt="The Valiant Standard of Excellence - our service protocol"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span></div>
         <div class="svc-body"><h3>The Valiant Standard of Excellence</h3><p>Our proven service protocol &mdash; upfront pricing, expert diagnosis, and workmanship backed by warranty.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/emergency-garage-door-repair">
-        <div class="svc-media"><img loading="lazy" decoding="async" width="1125" height="2436" src="/assets/lp/service-emergency.webp" alt="24/7 same-day emergency garage door service, available anytime"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span></div>
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/emergency-garage-door-repair" class="svc-card-link">
+        <div class="svc-media"><img loading="lazy" decoding="async" width="800" height="500" src="/assets/projects/emergency-repair-card.webp" alt="Garage door end plate repair showing before and after alignment with a level"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span></div>
         <div class="svc-body"><h3>24/7 Emergency Garage Door Service</h3><p>Immediate help for doors that are stuck, unsafe, off-track, or preventing access. After-hours emergency dispatch begins at $100, plus parts and labor.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/garage-door-off-track-repair">
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/garage-door-off-track-repair" class="svc-card-link">
         <div class="svc-media"><img loading="lazy" decoding="async" width="940" height="600" src="/assets/lp/service-offtrack.webp" alt="Door off track service - we get it back on track"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M4 6v12M20 6v12"/></svg></span></div>
         <div class="svc-body"><h3>Door Off Track</h3><p>Realigns your door and restores safe, smooth operation.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/valiant-carriage-door-restorations">
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/valiant-carriage-door-restorations" class="svc-card-link">
         <div class="svc-media"><picture><source type="image/webp" srcset="/assets/projects/carriage-door-restoration-card.webp"><img loading="lazy" decoding="async" width="720" height="480" src="/assets/projects/carriage-door-restoration-card.jpg" sizes="(max-width: 760px) 90vw, 380px" alt="Carriage-style wood garage doors with stone and brick archway on a Pleasanton home"></picture><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13"/><path d="M12 3v18M3 12h18"/></svg></span></div>
         <div class="svc-body"><h3>Carriage Door Restorations</h3><p>Restores original wood carriage doors instead of replacing them.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/services/commercial">
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/services/commercial" class="svc-card-link">
         <div class="svc-media"><picture><source type="image/webp" srcset="/assets/Valiant%20Door%20Commercial%20Solutions%20Service%20Card%20Final%20.webp"><img loading="lazy" decoding="async" width="450" height="552" src="/assets/Valiant%20Door%20Commercial%20Solutions%20Service%20Card%20Final%20.png" sizes="(max-width: 760px) 90vw, 380px" alt="Commercial garage door service and rolling steel door repair"></picture><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span></div>
         <div class="svc-body"><h3>Commercial Garage Door Service</h3><p>Rolling steel doors, operators, and preventive maintenance for businesses.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
-      <a class="svc-card" href="/same-day-garage-door-repair-pleasanton">
-        <div class="svc-media"><img loading="lazy" decoding="async" width="1024" height="1024" src="/assets/valiant-24-7-same-day-emergency-service-card.webp" alt="Same-day garage door repair technician arriving at a Pleasanton home"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13z"/></svg></span></div>
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
+      <div class="svc-card"><a href="/same-day-garage-door-repair-pleasanton" class="svc-card-link">
+        <div class="svc-media"><img loading="lazy" decoding="async" width="800" height="500" src="/assets/projects/same-day-repair-card.webp" alt="Garage door section hardware repair completed in Dublin with new struts and hinges"><span class="svc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13z"/></svg></span></div>
         <div class="svc-body"><h3>Same-Day Service In Pleasanton</h3><p>Fast, same-day appointments for Pleasanton homeowners who need it fixed today.</p><span class="svc-more">Learn More &rarr;</span></div>
-      </a>
+      </a><div class="svc-card-ctas"><a class="svc-cta" href="tel:+19254094974">Call</a><a class="svc-cta" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book</a><a class="svc-cta" href="sms:+19254094974">Text</a></div></div>
     </div>
     <div class="services-cta"><a class="btn" href="/services">View All Services</a></div>
   </div>
