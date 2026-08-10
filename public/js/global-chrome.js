@@ -154,7 +154,7 @@
 
     const botIsMounted = () =>
       Boolean(
-        document.querySelector('iframe[src*="botpress"], #bp-web-widget-container, [data-botpress-webchat]')
+        document.querySelector('iframe[src*="botpress"], #bp-web-widget-container, [data-botpress-webchat], .bpChatContainer, #fab-root')
       );
 
     const start = async () => {
@@ -193,7 +193,7 @@
     if (currentPath === "/business-card") return; // digital card has no site chrome
 
     const botIsMounted = () =>
-      Boolean(document.querySelector('iframe[src*="botpress"], #bp-web-widget-container, [data-botpress-webchat]'));
+      Boolean(document.querySelector('iframe[src*="botpress"], #bp-web-widget-container, [data-botpress-webchat], .bpChatContainer, #fab-root'));
 
     const fab = document.createElement("button");
     fab.type = "button";
