@@ -210,6 +210,11 @@
       fab.classList.add("is-loading");
       fab.setAttribute("aria-busy", "true");
       initializeSiteBot();
+      // Applies FAB sizing/branding CSS and the fallback assistant once the
+      // Botpress runtime is loading (defined in main.js).
+      if (typeof window.__valiantInitBotpressEnhancements === "function") {
+        window.__valiantInitBotpressEnhancements();
+      }
 
       // Once the real widget mounts, open it and retire the placeholder.
       let waited = 0;
@@ -274,7 +279,7 @@
 
   const serviceLinks = [
     ["/garage-door-repair", "Garage Door Repair"],
-    ["/garage-door-spring-replacement", "Broken Spring Repair"],
+    ["/garage-door-spring-replacement", "Broken Spring Replacement"],
     ["/garage-door-openers", "Opener Installation"],
     ["/garage-door-cable-repair", "Cable Repair"],
     ["/garage-door-opener-repair", "Opener Repair"],

@@ -73,6 +73,7 @@
       phone: fields.phone,
       email: fields.email,
       problem_type: fields.problem_type,
+      address: fields.address,
       city: fields.city,
       notes: fields.notes,
       source: window.location.href,
