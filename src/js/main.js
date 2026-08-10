@@ -887,12 +887,12 @@ const BOTPRESS_FAB_SIZE_STYLE = `
       .bpWebchat.bpOpen.bpFABWebchat {
         left: 8px !important;
         right: 8px !important;
-        top: 8px !important;
+        top: 60px !important;
         bottom: 8px !important;
         width: calc(100vw - 16px) !important;
         max-width: calc(100vw - 16px) !important;
-        height: calc(100dvh - 16px) !important;
-        max-height: calc(100dvh - 16px) !important;
+        height: calc(100dvh - 68px) !important;
+        max-height: calc(100dvh - 68px) !important;
       }
 
       .bpWebchat.bpOpen .bpContainer,

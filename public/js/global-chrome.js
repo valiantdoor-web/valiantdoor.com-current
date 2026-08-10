@@ -170,6 +170,28 @@
           }
           if (!window.botpress) throw new Error("Botpress runtime unavailable");
 
+          // Override webchat configuration with current company info
+          if (typeof window.botpress.init === "function" && !window.botpress._valiantOverride) {
+            const originalInit = window.botpress.init;
+            window.botpress.init = function (config) {
+              if (config && config.configuration) {
+                config.configuration.botName = "Valiant Garage Door";
+                config.configuration.botDescription = "Valiant Garage Door Online Receptionist";
+                config.configuration.composerPlaceholder = "How can we help with your garage door?";
+                config.configuration.proactiveBubbleMessage = "How can Valiant shield your door today?";
+                if (config.configuration.phone) {
+                  config.configuration.phone.title = "(925) 409-4974";
+                }
+                if (config.configuration.website) {
+                  config.configuration.website.title = "https://www.valiantdoor.com";
+                  config.configuration.website.link = "https://www.valiantdoor.com";
+                }
+              }
+              return originalInit.call(this, config);
+            };
+            window.botpress._valiantOverride = true;
+          }
+
           if (!botIsMounted()) {
             const staleConfig = findScript(CONFIG_URL);
             if (staleConfig && staleConfig.dataset.valiantLoaded !== "true") staleConfig.remove();
