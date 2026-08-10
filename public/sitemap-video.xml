@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://www.valiantdoor.com/services/commercial</loc>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/gallery/chain-hoist-instruction-poster.webp</video:thumbnail_loc>
+      <video:title>Chain Hoist Instruction For Commercial Garage Doors</video:title>
+      <video:description>Demonstration of chain hoist operation for commercial garage door service and repair.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/gallery/chain-hoist-instruction-mobile.mp4</video:content_loc>
+      <video:duration>110</video:duration>
+      <video:upload_date>2026-06-15</video:upload_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.valiantdoor.com/blog/essential-garage-door-maintenance-tips-pleasanton-homes</loc>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/maintenance/The_Valiant_PreventiveOverview.jpg</video:thumbnail_loc>
+      <video:title>Valiant Preventive Maintenance Overview</video:title>
+      <video:description>A comprehensive walkthrough of Valiant Garage Door's preventive maintenance service for Pleasanton homeowners.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/maintenance/The_Valiant_PreventiveOverview.mp4</video:content_loc>
+      <video:duration>334</video:duration>
+      <video:upload_date>2026-06-15</video:upload_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.valiantdoor.com/blog/garage-door-safety-sensor-how-to-fix-it</loc>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-alignment-guide.webp</video:thumbnail_loc>
+      <video:title>Garage Door Safety Sensor Alignment Guide</video:title>
+      <video:description>A homeowner-friendly walkthrough showing the most common safety sensor warning signs and how to inspect alignment before calling for service.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-alignment-guide.mp4</video:content_loc>
+      <video:duration>272</video:duration>
+      <video:upload_date>2026-06-23</video:upload_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-fix-explainer.webp</video:thumbnail_loc>
+      <video:title>Garage Door Safety Sensor Fix Explainer</video:title>
+      <video:description>A second informational video for homeowners who want to understand what to check if the door still will not close safely after a basic sensor inspection.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-fix-explainer.mp4</video:content_loc>
+      <video:duration>122</video:duration>
+      <video:upload_date>2026-06-23</video:upload_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-wire-splice-correctly.webp</video:thumbnail_loc>
+      <video:title>How To Splice Garage Door Safety Sensor Wires Correctly</video:title>
+      <video:description>Valiant Garage Door shows how a safety sensor wire splice should be handled correctly and when the repair should be completed by a technician.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-wire-splice-correctly.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+      <video:upload_date>2026-06-23</video:upload_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.valiantdoor.com/mastertech</loc>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-bg-1536.webp</video:thumbnail_loc>
+      <video:title>Valiant Master Tech Hero Video</video:title>
+      <video:description>Showcase video highlighting Valiant Garage Door's master technician expertise and service quality.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-widescreen-optimized.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:upload_date>2026-06-12</video:upload_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.valiantdoor.com/short-repair-videos</loc>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/gallery/chain-hoist-instruction-poster.webp</video:thumbnail_loc>
+      <video:title>Chain Hoist Instruction Mobile</video:title>
+      <video:description>Existing Valiant repair or product video asset for short-form repair education.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/gallery/chain-hoist-instruction-mobile.mp4</video:content_loc>
+      <video:duration>110</video:duration>
+      <video:upload_date>2026-06-15</video:upload_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/maintenance/The_Valiant_PreventiveOverview.jpg</video:thumbnail_loc>
+      <video:title>The Valiant Preventive Overview</video:title>
+      <video:description>Existing Valiant repair or product video asset for short-form repair education.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/maintenance/The_Valiant_PreventiveOverview.mp4</video:content_loc>
+      <video:duration>334</video:duration>
+      <video:upload_date>2026-06-15</video:upload_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-bg-1536.webp</video:thumbnail_loc>
+      <video:title>Mastertech Hero Portrait</video:title>
+      <video:description>Existing Valiant repair or product video asset for short-form repair education.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-portrait-optimized.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:upload_date>2026-06-12</video:upload_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-bg-1536.webp</video:thumbnail_loc>
+      <video:title>Mastertech Hero Widescreen Optimized</video:title>
+      <video:description>Existing Valiant repair or product video asset for short-form repair education.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-widescreen-optimized.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:upload_date>2026-06-12</video:upload_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-bg-1536.webp</video:thumbnail_loc>
+      <video:title>Mastertech Hero Widescreen</video:title>
+      <video:description>Existing Valiant repair or product video asset for short-form repair education.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-widescreen.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:upload_date>2026-06-12</video:upload_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-bg-1536.webp</video:thumbnail_loc>
+      <video:title>Mastertech Hero</video:title>
+      <video:description>Existing Valiant repair or product video asset for short-form repair education.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:upload_date>2026-06-12</video:upload_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/valiant-business-card.webp</video:thumbnail_loc>
+      <video:title>Valiant Hardware Parts And Accessories Card</video:title>
+      <video:description>Existing Valiant repair or product video asset for short-form repair education.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/valiant-hardware-parts-accessories-card-exact.mp4</video:content_loc>
+      <video:duration>11</video:duration>
+      <video:upload_date>2026-06-15</video:upload_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.valiantdoor.com/assets/valiant-business-card.webp</video:thumbnail_loc>
+      <video:title>Valiant Repair Video Clip</video:title>
+      <video:description>Existing Valiant repair or product video asset for short-form repair education.</video:description>
+      <video:content_loc>https://www.valiantdoor.com/assets/videos/0E99B72D-7F7A-44C7-AEA5-94B93B84A510.MP4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:upload_date>2026-06-15</video:upload_date>
+    </video:video>
+  </url>
+</urlset>
