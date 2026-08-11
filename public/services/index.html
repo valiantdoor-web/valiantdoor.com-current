@@ -495,6 +495,123 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "dateModified": "2026-06-28"
 }
 </script><link rel="stylesheet" href="/css/global-chrome.css">
+    <style id="services-conversion-refresh">
+      .page-services .services-page-heading {
+        margin: 0 0 clamp(24px, 4vw, 44px);
+        color: var(--gold);
+        font-family: "Brush Script MT", "Snell Roundhand", cursive;
+        font-size: clamp(2.35rem, 6vw, 4.65rem);
+        font-weight: 400;
+        letter-spacing: .015em;
+        line-height: 1.04;
+        text-transform: none;
+      }
+
+      .page-services .services-grid {
+        gap: clamp(16px, 2vw, 26px);
+      }
+
+      .page-services .service-card {
+        overflow: hidden;
+        border: 1px solid rgba(199, 163, 75, .28);
+        border-radius: 14px;
+        background: #0d0e10;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, .34);
+      }
+
+      .page-services .service-media {
+        aspect-ratio: 16 / 10;
+        background: #050607;
+      }
+
+      .page-services .service-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .page-services .service-card--exact-install .service-media img {
+        object-position: center 42%;
+      }
+
+      .page-services .service-content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: stretch;
+        padding: clamp(18px, 2.2vw, 26px);
+        text-align: left;
+      }
+
+      .page-services .service-content h3 {
+        margin-bottom: 10px;
+        font-size: clamp(1.08rem, 1.7vw, 1.3rem);
+        letter-spacing: .035em;
+        line-height: 1.25;
+      }
+
+      .page-services .service-content > p:not(.service-offer) {
+        margin-bottom: 14px;
+        color: rgba(245, 242, 236, .84);
+        font-size: .96rem;
+        line-height: 1.55;
+      }
+
+      .page-services .service-offer {
+        margin: auto 0 16px;
+        color: #ecd79f;
+        font-size: .84rem;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .page-services .service-content .btn {
+        width: 100%;
+        min-height: 44px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-services .service-cross-links .geo-link-card {
+        display: flex;
+        min-height: 190px;
+        flex-direction: column;
+        border-color: rgba(199, 163, 75, .34);
+        background: #0d0e10;
+      }
+
+      .page-services .service-cross-links .geo-link-card::after {
+        content: "View service details \2192";
+        margin-top: auto;
+        padding-top: 16px;
+        color: #ecd79f;
+        font-size: .78rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+      }
+
+      .page-services .service-cross-links .geo-link-card:hover,
+      .page-services .service-cross-links .geo-link-card:focus-visible {
+        border-color: #c7a34b;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .32);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 760px) {
+        .page-services .services-page-heading {
+          font-size: clamp(2.15rem, 11vw, 3.35rem);
+        }
+
+        .page-services .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .page-services .service-cross-links .geo-link-card {
+          min-height: 0;
+        }
+      }
+    </style>
 </head>
   <body class="page-services has-sticky-call">
         <div class="home-sticky-call" role="region" aria-label="Emergency repair call button">
@@ -644,41 +761,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <section class="services-section">
         <div class="container">
-          <h1 class="services-page-heading">Garage Door Services In Pleasanton: Repair, Springs &amp; Openers</h1>
-          <p class="section-subtitle">Need emergency garage door repair fast? Find the right service for broken springs, opener issues, loud or off-Track doors, commercial doors, and 24/7 emergencies.</p>
-          <p class="section-subtitle">Use this page when you need urgent answers about doors and Garage Door problems, from noisy rollers and broken springs to <a href="/garage-door-cable-repair">Garage Door cable repair</a>, <a href="/services/garage-door-maintenance">Maintenance</a>, and same-Day dispatch. Valiant garage door repair experts also handle custom Garage Door solutions, precision system upgrades, and fast emergency calls across Pleasanton and nearby East Bay cities.</p>
+          <h1 class="services-page-heading">Garage Door Repair In Pleasanton &mdash; Tri-Valley &amp; Bay Area</h1>
 
           <div class="services-grid">
             <article class="service-card service-new service-card--exact-install">
               <div class="service-media">
-                <img src="/assets/valiant-opener-service-card.webp" alt="Garage door opener repair and replacement service" loading="lazy" width="1360" height="1024">
+                <img src="/assets/lp/liftmaster-opener-myq-800.webp" alt="LiftMaster garage door opener powered by myQ" loading="lazy" decoding="async" width="800" height="917">
               </div>
               <div class="service-content">
-                <h3>Opener Repair &amp; Replacement</h3>
-                <p>Fixes for openers that stop responding, reverse unexpectedly, make unusual noise, or need a quieter replacement with smart access.</p>
-                <a class="btn outline small" href="/quote">REQUEST OPENER SERVICE</a>
+                <h3>Opener Installation &amp; Repair</h3>
+                <p>Repair a failed opener or compare quieter LiftMaster replacements with smart myQ access.</p>
+                <p class="service-offer">Installation labor from $229</p>
+                <a class="btn outline small" href="/garage-door-openers">COMPARE OPENER OPTIONS</a>
               </div>
             </article>
 
             <article class="service-card service-new service-card--maintenance-plan">
               <div class="service-media">
-                <img src="/assets/valiant-maintenance-tune-ups-card.webp" alt="Valiant maintenance and tune-ups service plan" loading="lazy" width="1536" height="1024">
+                <img src="/assets/maintenance-plans-hero.webp" alt="Valiant Shield garage door maintenance plans" loading="lazy" decoding="async" width="1402" height="1122">
               </div>
               <div class="service-content">
                 <h3>Maintenance &amp; Tune-Ups</h3>
-                <p>Scheduled tune-Ups, lubrication, safety checks, and annual maintenance plans that help prevent breakdowns and extend system life.</p>
-                <a class="btn outline small" href="/services/garage-door-maintenance">BOOK MAINTENANCE</a>
+                <p>Lubrication, balance testing, safety inspection, and hardware tightening to quiet the door and prevent breakdowns.</p>
+                <p class="service-offer">From $89 one-time &bull; annual plans from $189</p>
+                <a class="btn outline small" href="/services/garage-door-maintenance">VIEW MAINTENANCE PLANS</a>
               </div>
             </article>
 
             <article class="service-card service-emergency service-card--exact-emergency-promo">
               <div class="service-media">
-                <img src="/assets/valiant-24-7-same-day-emergency-service-card.webp" alt="24/7 emergency garage door repair" loading="lazy" width="1024" height="1024">
+                <img src="/assets/projects/emergency-repair-card.webp" alt="Garage door emergency repair completed with precise alignment" loading="lazy" decoding="async" width="800" height="500">
               </div>
               <div class="service-content">
-                <h3>24/7 Emergency Service</h3>
-                <p>Call for a Garage Door stuck open, stuck closed, off track, or unsafe after a broken spring, cable, or opener failure.</p>
-                <a class="btn outline small" href="/emergency-garage-door-repair">EMERGENCY SERVICE</a>
+                <h3>24/7 Emergency Repair</h3>
+                <p>Immediate help for a door that is stuck, off track, unsafe, or blocking access after a spring, cable, or opener failure.</p>
+                <p class="service-offer">After-hours dispatch from $100 + repair</p>
+                <a class="btn outline small" href="/emergency-garage-door-repair">GET EMERGENCY HELP</a>
               </div>
             </article>
           </div>
