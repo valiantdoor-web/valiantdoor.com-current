@@ -111,7 +111,7 @@ function buildSchema(a, url) {
           'https://www.x.com/valiantgd',
           'https://www.tiktok.com/@valiantdoor',
           'https://www.youtube.com/@Valiantdoor',
-          'https://nextdoor.com/pages/valiant-garage-door-san-leandro-ca',
+          'https://nextdoor.com/page/valiant-garage-door-pleasanton/',
         ],
       },
       { '@type': 'WebSite', '@id': `${SITE}/#website`, url: `${SITE}/`, name: 'Valiant Garage Door', publisher: { '@id': `${SITE}/#business` } },

@@ -317,7 +317,7 @@
     ["/safety-sensors", "Safety Sensors"],
     ["/emergency-garage-door-repair", "After-Hours Emergency"],
     ["/services/commercial", "Commercial Service"],
-    ["/emergency-garage-door-repair", "Emergency Repair"]
+    ["/same-day-garage-door-repair-pleasanton", "Same-Day Service"]
   ];
   const servicesActive = active("/services") || serviceLinks.some(([href]) => active(href));
   const servicesMenu = `
@@ -327,7 +327,10 @@
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg>
       </button>
       <div class="global-services-menu" id="globalServicesMenu" aria-labelledby="globalServicesToggle">
-        <a class="global-services-all" href="/services"${currentPath === "/services" ? ' aria-current="page"' : ""}>View All Services <span aria-hidden="true">→</span></a>
+        <a class="global-services-all" href="/services"${currentPath === "/services" ? ' aria-current="page"' : ""}>
+          <span><strong>Services Overview</strong><small>Compare repair, opener, maintenance &amp; emergency options</small></span>
+          <span aria-hidden="true">→</span>
+        </a>
         <div class="global-services-grid">
           ${serviceLinks.map(([href, label]) => navLink(href, label)).join("")}
         </div>
@@ -468,7 +471,11 @@
     if (!open) setServicesOpen(false);
   };
   toggle.addEventListener("click", () => setOpen(!nav.classList.contains("is-open")));
-  servicesToggle.addEventListener("click", () => setServicesOpen(!services.classList.contains("is-open")));
+  servicesToggle.addEventListener("click", () => {
+    const desktopHover = window.matchMedia("(min-width: 761px) and (hover: hover)").matches;
+    if (desktopHover && services.classList.contains("is-open")) return;
+    setServicesOpen(!services.classList.contains("is-open"));
+  });
   services.addEventListener("mouseenter", () => {
     if (window.matchMedia("(min-width: 761px) and (hover: hover)").matches) setServicesOpen(true);
   });

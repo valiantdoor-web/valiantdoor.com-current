@@ -18,7 +18,7 @@
 - TikTok profile: `https://www.tiktok.com/@valiantdoor`
   - public title observed headlessly: **Valiant Garage Door LLC (@valiantdoor) | TikTok**
   - target display name: **Valiant Garage Door**
-- Nextdoor page: `https://nextdoor.com/pages/valiant-garage-door-san-leandro-ca`
+- Nextdoor page: `https://nextdoor.com/page/valiant-garage-door-pleasanton/`
   - public title observed headlessly: **Valiant Garage Door LLC - Nextdoor**
   - page slug also uses **san-leandro-ca**, which does not match the primary Pleasanton/Tri-Valley positioning
   - target display name: **Valiant Garage Door**
