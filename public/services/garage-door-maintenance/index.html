@@ -91,7 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       .page-maintenance .maintenance-video-link::after {
-        content: "Watch maintenance overview";
+        content: "▶  Watch the Valiant Maintenance Experience";
         position: absolute;
         left: 50%;
         bottom: clamp(14px, 4vw, 24px);
@@ -99,18 +99,97 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 42px;
-        padding: 0 18px;
-        border: 1px solid rgba(245, 242, 236, 0.72);
-        border-radius: 999px;
-        background: rgba(8, 9, 13, 0.82);
-        color: #f5f2ec;
-        font-size: 0.78rem;
-        font-weight: 800;
-        letter-spacing: 0.08em;
+        min-height: 64px;
+        padding: 0 clamp(22px, 4vw, 38px);
+        border: 1px solid rgba(255, 225, 145, 0.9);
+        border-radius: 12px;
+        background: #c7a34b;
+        color: #08090b;
+        font-size: clamp(0.98rem, 2vw, 1.22rem);
+        font-weight: 900;
+        letter-spacing: 0.045em;
         text-transform: uppercase;
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+        box-shadow:
+          0 14px 32px rgba(0, 0, 0, 0.48),
+          0 0 0 6px rgba(199, 163, 75, 0.12);
         white-space: nowrap;
+        transition:
+          background-color 180ms ease,
+          box-shadow 180ms ease,
+          transform 180ms ease;
+      }
+
+      .page-maintenance .maintenance-video-link:hover::after,
+      .page-maintenance .maintenance-video-link:focus-visible::after {
+        background: #f5d987;
+        box-shadow:
+          0 18px 40px rgba(0, 0, 0, 0.54),
+          0 0 0 8px rgba(199, 163, 75, 0.18);
+        transform: translateX(-50%) translateY(-3px);
+      }
+
+      .page-maintenance .maintenance-video-link:focus-visible {
+        outline: 3px solid #f5d987;
+        outline-offset: 4px;
+      }
+
+      .page-maintenance .maintenance-info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin: 24px 0 44px;
+      }
+
+      .page-maintenance .maintenance-info-panel {
+        position: relative;
+        overflow: hidden;
+        margin: 24px 0;
+        padding: clamp(24px, 4vw, 38px);
+        border: 1px solid rgba(199, 163, 75, 0.4);
+        border-radius: 16px;
+        background:
+          linear-gradient(145deg, rgba(24, 25, 28, 0.98), rgba(10, 11, 13, 0.98));
+        box-shadow:
+          0 18px 42px rgba(0, 0, 0, 0.28),
+          inset 0 1px 0 rgba(255, 255, 255, 0.035);
+      }
+
+      .page-maintenance .maintenance-info-grid .maintenance-info-panel {
+        height: 100%;
+        margin: 0;
+      }
+
+      .page-maintenance .maintenance-info-panel::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(245, 217, 135, 0.78), transparent);
+        pointer-events: none;
+      }
+
+      .page-maintenance .geo-section > h2,
+      .page-maintenance .maintenance-info-panel > h2 {
+        margin-top: 0;
+        color: #e0c783;
+        font-family: "Great Vibes", "Brush Script MT", "Snell Roundhand", "Segoe Script", cursive;
+        font-size: clamp(2.35rem, 5.8vw, 4rem);
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        line-height: 1.08;
+        text-transform: none;
+        text-shadow: 0 0 18px rgba(199, 163, 75, 0.2);
+      }
+
+      .page-maintenance .maintenance-info-panel > p,
+      .page-maintenance .maintenance-info-panel > ul {
+        color: #d7d5d0;
+      }
+
+      .page-maintenance .maintenance-info-panel > p:last-child,
+      .page-maintenance .maintenance-info-panel > ul:last-child {
+        margin-bottom: 0;
       }
 
       @media (max-width: 760px) {
@@ -124,10 +203,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         .page-maintenance .maintenance-video-link::after {
-          min-height: 38px;
-          padding: 0 14px;
-          font-size: 0.66rem;
-          letter-spacing: 0.06em;
+          width: calc(100% - 28px);
+          min-height: 56px;
+          padding: 10px 16px;
+          font-size: 0.88rem;
+          letter-spacing: 0.035em;
+          line-height: 1.2;
+          text-align: center;
+          white-space: normal;
+        }
+
+        .page-maintenance .maintenance-info-grid {
+          grid-template-columns: 1fr;
+          gap: 18px;
+          margin: 18px 0 34px;
+        }
+
+        .page-maintenance .maintenance-info-panel {
+          margin: 18px 0;
+          padding: 22px 20px;
+          border-radius: 14px;
+        }
+
+        .page-maintenance .geo-section > h2,
+        .page-maintenance .maintenance-info-panel > h2 {
+          font-size: clamp(2.15rem, 12vw, 3.25rem);
         }
       }
 
@@ -1138,7 +1238,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </figure>
       </section>
 
-      <section class="geo-section" aria-labelledby="maintenance-service-policies">
+      <section class="geo-section maintenance-info-panel" aria-labelledby="maintenance-service-policies">
         <h2 id="maintenance-service-policies">Maintenance Scheduling, Warranty &amp; After-Hours Policy</h2>
         <div class="geo-card-grid">
           <article class="geo-card"><h3>Open 24/7</h3><p>Valiant Garage Door is available 24 hours a day, 7 days a week for urgent garage door maintenance, safety checks, and emergency repair requests.</p></article>
@@ -1147,52 +1247,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </section>
 
-      <section class="geo-section">
-        <h2>What's Included In Our Maintenance Service</h2>
-        <p>Our maintenance plans are designed to catch wear early, improve performance, and help you avoid expensive repairs. A typical garage door tune-up may include:</p>
-        <ul>
-          <li>Full inspection of springs, cables, rollers, hinges, and tracks</li>
-          <li>Professional lubrication of moving parts</li>
-          <li>Door balance and overall system check</li>
-          <li>Opener force and limit adjustment</li>
-          <li>Safety sensor testing</li>
-          <li>Tightening of hardware and minor performance adjustments</li>
-          <li>Noise reduction recommendations where applicable</li>
-        </ul>
-      </section>
+      <div class="maintenance-info-grid">
+        <section class="geo-section maintenance-info-panel">
+          <h2>What's Included In Our Maintenance Service</h2>
+          <p>Our maintenance plans are designed to catch wear early, improve performance, and help you avoid expensive repairs. A typical garage door tune-up may include:</p>
+          <ul>
+            <li>Full inspection of springs, cables, rollers, hinges, and tracks</li>
+            <li>Professional lubrication of moving parts</li>
+            <li>Door balance and overall system check</li>
+            <li>Opener force and limit adjustment</li>
+            <li>Safety sensor testing</li>
+            <li>Tightening of hardware and minor performance adjustments</li>
+            <li>Noise reduction recommendations where applicable</li>
+          </ul>
+        </section>
 
-      <section class="geo-section">
-        <h2>Why Regular Maintenance Matters</h2>
-        <p>Garage doors are heavy, high-cycle systems with springs, rollers, hinges, tracks, bearings, cables, and opener components that all wear over time. Regular garage door maintenance helps extend the life of the door and opener, improves safety, and reduces the chance of sudden breakdowns.</p>
-        <p>For homeowners scheduling garage door maintenance in Pleasanton, CA, an annual tune-up is one of the simplest ways to protect the full system. Preventive service gives us time to inspect the door, test the safety sensors, evaluate opener performance, and look for early signs of wear before they become larger repairs.</p>
-        <p>That includes common warning signs tied to garage door spring repair, opener force issues, loose hardware, noisy rollers, uneven travel, and unsafe reversing behavior. The goal is not just to lubricate the door, but to make sure the whole system is structurally sound, easier to use, and less likely to fail at the wrong time.</p>
-      </section>
+        <section class="geo-section maintenance-info-panel">
+          <h2>Why Regular Maintenance Matters</h2>
+          <p>Garage doors are heavy, high-cycle systems with springs, rollers, hinges, tracks, bearings, cables, and opener components that all wear over time. Regular garage door maintenance helps extend the life of the door and opener, improves safety, and reduces the chance of sudden breakdowns.</p>
+          <p>For homeowners scheduling garage door maintenance in Pleasanton, CA, an annual tune-up is one of the simplest ways to protect the full system. Preventive service gives us time to inspect the door, test the safety sensors, evaluate opener performance, and look for early signs of wear before they become larger repairs.</p>
+          <p>That includes common warning signs tied to garage door spring repair, opener force issues, loose hardware, noisy rollers, uneven travel, and unsafe reversing behavior. The goal is not just to lubricate the door, but to make sure the whole system is structurally sound, easier to use, and less likely to fail at the wrong time.</p>
+        </section>
 
-      <section class="geo-section">
-        <h2>Who Should Schedule Maintenance</h2>
-        <p>This service is a smart fit for homeowners who want a cleaner, quieter, safer, and more reliable garage door system.</p>
-        <ul>
-          <li>Garage doors that have not been serviced in the last 12 months</li>
-          <li>Noisy, slow, heavy, or uneven doors</li>
-          <li>Homes with older openers, worn rollers, or stressed hinges</li>
-          <li>Rental properties and multi-vehicle households with daily door use</li>
-          <li>Doors showing early signs that may turn into garage door spring repair or opener repair</li>
-          <li>Homeowners who want to prevent emergency repairs before a door gets stuck open or closed</li>
-        </ul>
-      </section>
+        <section class="geo-section maintenance-info-panel">
+          <h2>Who Should Schedule Maintenance</h2>
+          <p>This service is a smart fit for homeowners who want a cleaner, quieter, safer, and more reliable garage door system.</p>
+          <ul>
+            <li>Garage doors that have not been serviced in the last 12 months</li>
+            <li>Noisy, slow, heavy, or uneven doors</li>
+            <li>Homes with older openers, worn rollers, or stressed hinges</li>
+            <li>Rental properties and multi-vehicle households with daily door use</li>
+            <li>Doors showing early signs that may turn into garage door spring repair or opener repair</li>
+            <li>Homeowners who want to prevent emergency repairs before a door gets stuck open or closed</li>
+          </ul>
+        </section>
 
-      <section class="geo-section">
-        <h2>What Maintenance Can Catch Early</h2>
-        <p>One reason long-term maintenance matters is that many serious failures start as small performance changes. During a tune-up, we look for early issues that can affect safety, door balance, and day-to-day operation.</p>
-        <ul>
-          <li>Spring wear, imbalance, and early signs that can lead to garage door spring repair</li>
-          <li>Loose hinges, brackets, and track hardware</li>
-          <li>Roller wear, vibration, and noisy travel</li>
-          <li>Sensor alignment problems and unsafe reversal behavior</li>
-          <li>Opener strain, travel limit issues, and inconsistent closing force</li>
-          <li>Cable fray, door binding, and uneven panel movement</li>
-        </ul>
-      </section>
+        <section class="geo-section maintenance-info-panel">
+          <h2>What Maintenance Can Catch Early</h2>
+          <p>One reason long-term maintenance matters is that many serious failures start as small performance changes. During a tune-up, we look for early issues that can affect safety, door balance, and day-to-day operation.</p>
+          <ul>
+            <li>Spring wear, imbalance, and early signs that can lead to garage door spring repair</li>
+            <li>Loose hinges, brackets, and track hardware</li>
+            <li>Roller wear, vibration, and noisy travel</li>
+            <li>Sensor alignment problems and unsafe reversal behavior</li>
+            <li>Opener strain, travel limit issues, and inconsistent closing force</li>
+            <li>Cable fray, door binding, and uneven panel movement</li>
+          </ul>
+        </section>
+      </div>
 
       <section class="geo-section">
         <h2>Maintenance Plan Options</h2>
