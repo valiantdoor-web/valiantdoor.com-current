@@ -315,10 +315,6 @@
       "destination": "/api/valiant-agent?retiredResource=authority-dashboard"
     },
     {
-      "source": "/amazon-alexa",
-      "destination": "/api/valiant-agent?retiredResource=amazon-alexa"
-    },
-    {
       "source": "/llms-searchatlas-growth.txt",
       "destination": "/api/valiant-agent?retiredResource=llms-searchatlas-growth.txt"
     },

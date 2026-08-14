@@ -4,7 +4,6 @@ const BUSINESS = {
   phoneDisplay: '925-409-4974',
   website: 'https://www.valiantdoor.com',
   quoteUrl: 'https://www.valiantdoor.com/quote',
-  alexaUrl: 'https://www.valiantdoor.com/amazon-alexa',
   cities: 'Pleasanton, Dublin, Livermore, Fremont, San Ramon, Danville, Sunol, and nearby East Bay communities'
 };
 
@@ -117,9 +116,9 @@ function hoursResponse() {
 }
 
 function websiteResponse() {
-  return endResponse(`The official website is valiant door dot com. The Alexa support page is valiant door dot com slash amazon dash alexa.`, {
+  return endResponse(`The official website is valiant door dot com. For service requests, use valiant door dot com slash quote.`, {
     cardTitle: 'Valiant Website',
-    cardContent: `${BUSINESS.website}\nAlexa support: ${BUSINESS.alexaUrl}`
+    cardContent: `${BUSINESS.website}\nRequest service: ${BUSINESS.quoteUrl}`
   });
 }
 
