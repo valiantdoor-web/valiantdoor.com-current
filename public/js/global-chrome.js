@@ -388,7 +388,7 @@
       <div class="global-footer-bottom"><span>&copy; 2026 Valiant Garage Door LLC. All Rights Reserved.</span><span><a href="/privacy">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="/terms">Terms of Service</a></span></div>
     </div>`;
 
-  const noChrome = currentPath === "/business-card";
+  const noChrome = document.body?.dataset.chrome === "off";
 
   if (!noChrome) {
     const existingHeader = document.querySelector("header.site-header, header.global-site-header");

@@ -16,6 +16,10 @@
     <meta name="twitter:title" content="Valiant Garage Door Digital Business Card">
     <meta name="twitter:description" content="Save Valiant Garage Door for service requests, reviews, booking, and referrals.">
     <meta name="twitter:image" content="https://www.valiantdoor.com/assets/valiant-business-card.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/global-chrome.css">
     <style>
       :root {
         color-scheme: dark;
@@ -85,7 +89,16 @@
         filter: drop-shadow(0 10px 22px rgba(0,0,0,0.45));
       }
       .brand-kicker { margin: 0 0 4px; color: var(--gold-2); text-transform: uppercase; letter-spacing: .18em; font-size: .74rem; font-weight: 800; }
-      .brand-name { margin: 0; font-size: clamp(1.9rem, 7vw, 4.1rem); line-height: .92; letter-spacing: -.045em; }
+      .brand-name {
+        margin: 0;
+        color: var(--gold-2);
+        font-family: "Great Vibes", "Brush Script MT", "Snell Roundhand", "Segoe Script", cursive;
+        font-size: clamp(3rem, 8vw, 5.6rem);
+        font-weight: 400;
+        line-height: .82;
+        letter-spacing: .01em;
+        text-shadow: 0 8px 28px rgba(0, 0, 0, .58);
+      }
       .owner { margin: 12px 0 0; color: var(--muted); font-size: 1.04rem; }
       .owner strong { color: var(--text); }
       .summary { margin: 20px 0 0; max-width: 54ch; color: var(--muted); line-height: 1.65; }
@@ -300,7 +313,7 @@
 <meta name="valiant:high-intent-focus" content="same-day garage door repair; high-intent garage door service; Valiant Garage Door project proof; East Bay garage door repair">
 <meta name="valiant:service-area-focus" content="Pleasanton and the East Bay">
 <script type="application/ld+json" data-valiant-page-intent="">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.valiantdoor.com/business-card#valiant-page-intent","url":"https://www.valiantdoor.com/business-card","name":"Valiant Digital Business Card","keywords":["same-day garage door repair Pleasanton CA","same-day garage door repair","high-intent garage door service","Valiant Garage Door project proof","East Bay garage door repair"],"about":[{"@type":"Service","name":"same-day garage door repair","areaServed":"Pleasanton and the East Bay"},{"@type":"LocalBusiness","name":"Valiant Garage Door","telephone":"9254094974"}],"image":["https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp"],"dateModified":"2026-06-26"}</script></head>
-  <body>
+  <body class="page-business-card">
     <main class="wrap" aria-labelledby="card-title">
       <section class="card">
         <div class="hero">
@@ -410,5 +423,6 @@
     </script>
   <script src="/js/webmcp.js" defer></script>
   <script src="/js/site-bot.js?v=20260717-bot-reliability" defer></script>
+  <script src="/js/global-chrome.js?v=20260810-config-fix" defer></script>
 
 </body></html>

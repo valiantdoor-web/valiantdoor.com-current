@@ -39,6 +39,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:image" content="https://www.valiantdoor.com/assets/Valiant%20Services%20%20Hero%20Final%20.png">
     <!-- Structured data: connect the blog index to the site, business entity, and visible FAQ block. -->
 <link rel="stylesheet" href="/css/styles.min.css?v=20260703-header-buttons">
+<style>
+  .page-repair-guides .repair-guide-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .page-repair-guides .repair-guide-actions .btn {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    justify-content: center;
+    padding: 14px 18px;
+    border: 1px solid #c7a34b;
+    border-radius: 12px;
+    background: #c7a34b;
+    color: #08090b;
+    font-weight: 900;
+    letter-spacing: .035em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .34);
+    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+  }
+  .page-repair-guides .repair-guide-actions .btn.btn-outline {
+    border-color: rgba(245, 215, 138, .72);
+    background: rgba(8, 9, 12, .76);
+    color: #f5d78a;
+  }
+  .page-repair-guides .repair-guide-actions .btn:hover,
+  .page-repair-guides .repair-guide-actions .btn:focus-visible {
+    border-color: #f5d78a;
+    background: #f5d78a;
+    color: #08090b;
+    transform: translateY(-2px);
+  }
+  .page-repair-guides .repair-help-panel {
+    border: 1px solid rgba(233, 196, 106, .58);
+    background: radial-gradient(circle at 82% 16%, rgba(233, 196, 106, .16), transparent 26rem), linear-gradient(145deg, rgba(24, 22, 18, .98), rgba(8, 9, 12, .98));
+    box-shadow: 0 22px 54px rgba(0, 0, 0, .34);
+  }
+  .page-repair-guides .repair-help-panel h2 {
+    color: #f5d78a;
+    font-family: "Great Vibes", "Brush Script MT", "Snell Roundhand", "Segoe Script", cursive;
+    font-size: clamp(2.7rem, 6vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .01em;
+    text-transform: none;
+  }
+  .page-repair-guides .repair-help-panel p { max-width: 66ch; font-size: 1.05rem; }
+  @media (max-width: 720px) {
+    .page-repair-guides .repair-guide-actions { grid-template-columns: 1fr; }
+  }
+</style>
 
     <!-- Google tag (gtag.js) -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YH9SQLKHQ2"></script>
@@ -382,7 +438,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="valiant:service-area-focus" content="Pleasanton and the East Bay">
 <script type="application/ld+json" data-valiant-page-intent="">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.valiantdoor.com/repair-guides#valiant-page-intent","url":"https://www.valiantdoor.com/repair-guides","name":"Garage Door Repair Guides | Valiant Garage Door","keywords":["same-day garage door repair Pleasanton CA","same-day garage door repair","high-intent garage door service","Valiant Garage Door project proof","East Bay garage door repair"],"about":[{"@type":"Service","name":"same-day garage door repair","areaServed":"Pleasanton and the East Bay"},{"@type":"LocalBusiness","name":"Valiant Garage Door","telephone":"9254094974"}],"image":["https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp","https://www.valiantdoor.com/assets/logo/valiant-logo-gold.webp","https://www.valiantdoor.com/assets/icons/google.svg","https://www.valiantdoor.com/assets/icons/yelp.svg","https://www.valiantdoor.com/assets/icons/facebook.svg","https://www.valiantdoor.com/assets/icons/instagram.svg"],"dateModified":"2026-06-26"}</script><link rel="stylesheet" href="/css/global-chrome.css">
 </head>
-  <body class="page-services page-geo has-sticky-call">
+  <body class="page-services page-geo page-repair-guides has-sticky-call">
         <div class="home-sticky-call" role="region" aria-label="Emergency repair call button">
       <a class="home-sticky-call-button" href="tel:+19254094974">Tap to Call for Emergency Repair.</a>
     </div>
@@ -495,6 +551,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p class="geo-eyebrow">Serving Pleasanton, Dublin, San Ramon, Livermore, Fremont, and nearby East Bay communities</p>
         <h1>Garage Door Repair Guides</h1>
         <p>Practical guides from field experience to help homeowners make faster, safer garage door repair and maintenance decisions in the East Bay.</p>
+        <div class="repair-guide-actions" aria-label="Garage door service options">
+          <a class="btn" href="tel:+19254094974">Call for Repair</a>
+          <a class="btn btn-outline" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Free Estimate</a>
+          <a class="btn btn-outline" href="sms:+19254094974">Text Valiant</a>
+        </div>
       </section>
       
 <section class="geo-stats" aria-label="Company trust signals">
@@ -531,9 +592,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a class="geo-link-card" href="/faq"><h3>Garage Door FAQ</h3><p>See fast answers to common service questions.</p></a>
 <a class="geo-link-card" href="/service-areas"><h3>Garage Door Service Areas</h3><p>Find city coverage pages and local service details.</p></a>
 </div></section>
-      <section class="geo-section geo-cta-strip">
-        <h2>Need Help Right Now?</h2>
-        <p>Call <a href="tel:+19254094974">(925) 409-4974</a> Or <a href="/quote">Request garage door service online</a>, Or <a href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book free estimate instantly</a>.</p>
+      <section class="geo-section geo-cta-strip repair-help-panel">
+        <h2>Need A Technician, Not Another Guide?</h2>
+        <p>If your garage door is stuck, heavy, crooked, noisy, off track, or refusing to close safely, Valiant Garage Door can diagnose the full system and explain the repair before work begins. Same-day scheduling may be available across Pleasanton and nearby East Bay communities when route timing and parts availability allow.</p>
+        <div class="repair-guide-actions" aria-label="Get garage door help">
+          <a class="btn" href="tel:+19254094974">Call (925) 409-4974</a>
+          <a class="btn btn-outline" href="https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true" target="_blank" rel="noopener noreferrer">Book Free Estimate</a>
+          <a class="btn btn-outline" href="sms:+19254094974">Text Photos</a>
+        </div>
       </section><section class="geo-section"><h2>Problem Library</h2><div class="geo-link-grid"><a class="geo-link-card" href="/blog/garage-door-wont-open"><h3>Garage Door Won't Open</h3><p>Door is stuck, opener strains, or the manual release does not solve the problem.</p></a><a class="geo-link-card" href="/blog/garage-door-wont-close"><h3>Garage Door Won't Close</h3><p>Door reverses, stops short, or refuses to finish the closing cycle.</p></a><a class="geo-link-card" href="/blog/broken-garage-door-cable"><h3>Broken Garage Door Cable</h3><p>One cable is loose, hanging, bird-nested, or no longer wrapping evenly on the drum.</p></a><a class="geo-link-card" href="/blog/garage-door-off-track"><h3>Garage Door Off Track</h3><p>Rollers have left the track or the door is crooked, jammed, or unsafe to operate.</p></a><a class="geo-link-card" href="/blog/garage-door-making-noise"><h3>Garage Door Making Noise</h3><p>The door scrapes, pops, grinds, rattles, squeals, or shakes during travel.</p></a><a class="geo-link-card" href="/blog/garage-door-safety-sensor-how-to-fix-it"><h3>Garage Door Safety Sensor: How To Fix It</h3><p>Sensor alignment videos, warning signs, and safe troubleshooting steps.</p></a><a class="geo-link-card" href="/blog/garage-door-sensor-problems"><h3>Garage Door Sensor Problems</h3><p>The door reverses, blinks, or only closes when the wall button is held down.</p></a><a class="geo-link-card" href="/blog/liftmaster-troubleshooting"><h3>LiftMaster Troubleshooting</h3><p>LiftMaster opener flashes, clicks, hums, loses travel, or will not respond reliably.</p></a><a class="geo-link-card" href="/blog/garage-door-spring-replacement-cost"><h3>Garage Door Spring Replacement Cost</h3><p>Homeowners need a clear explanation of what drives spring replacement pricing.</p></a><a class="geo-link-card" href="/blog/emergency-garage-door-repair-guide"><h3>Emergency Garage Door Repair</h3><p>Door is stuck open, stuck closed, off track, or unsafe and needs priority response.</p></a><a class="geo-link-card" href="/blog/garage-door-maintenance-checklist"><h3>Garage Door Maintenance Checklist</h3><p>A practical maintenance checklist for safer, quieter, longer-lasting garage doors.</p></a></div></section>
     </main>
 
