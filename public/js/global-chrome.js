@@ -18,6 +18,42 @@
     (document.head || document.documentElement).appendChild(s);
   })();
 
+  // ---- Google Analytics 4: initialize the current Valiant property sitewide ----
+  // Many legacy pages already load gtag.js for an older GA4/Ads destination.
+  // Reuse that library when present so the browser never downloads it twice.
+  (function loadValiantGa4() {
+    const measurementId = "G-R5068WB0YC";
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+      window.dataLayer.push(arguments);
+    };
+
+    const hasGtagLoader = Boolean(
+      document.querySelector('script[src*="googletagmanager.com/gtag/js"]')
+    );
+    if (!hasGtagLoader) {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src =
+        "https://www.googletagmanager.com/gtag/js?id=" +
+        encodeURIComponent(measurementId);
+      script.dataset.valiantGa4 = measurementId;
+      (document.head || document.documentElement).appendChild(script);
+    }
+
+    const alreadyConfigured = window.dataLayer.some((entry) => {
+      try {
+        return entry && entry[0] === "config" && entry[1] === measurementId;
+      } catch (_error) {
+        return false;
+      }
+    });
+    if (!alreadyConfigured) {
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId);
+    }
+  })();
+
   // ---- Nextdoor ad click ID (ndclid) capture ----
   // Nextdoor appends ?ndclid=... to our URL when someone clicks a Nextdoor ad.
   // We store it in a long-lived cookie so it survives across pages/sessions
