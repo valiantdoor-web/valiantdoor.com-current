@@ -508,6 +508,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       .page-services .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: clamp(16px, 2vw, 26px);
       }
 
@@ -532,6 +533,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .page-services .service-card--exact-install .service-media img {
         object-position: center 42%;
+      }
+
+      .page-services .service-card--spring-replacement .service-media img {
+        object-position: center 48%;
       }
 
       .page-services .service-content {
@@ -764,6 +769,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <h1 class="services-page-heading">Garage Door Repair In Pleasanton &mdash; Tri-Valley &amp; Bay Area</h1>
 
           <div class="services-grid">
+            <article class="service-card service-new service-card--spring-replacement">
+              <div class="service-media">
+                <img src="/assets/lp/service-springs.webp" alt="Valiant Signature high-cycle torsion springs stocked for broken spring replacement" loading="lazy" decoding="async" width="1536" height="1024">
+              </div>
+              <div class="service-content">
+                <h3>Broken Spring Replacement</h3>
+                <p>Replace a failed torsion or extension spring, restore safe door balance, and verify the complete lift system before the opener returns to service.</p>
+                <p class="service-offer">Same-day scheduling &bull; premium DuraMaster options</p>
+                <a class="btn outline small" href="/garage-door-spring-replacement">VIEW SPRING REPLACEMENT</a>
+              </div>
+            </article>
+
             <article class="service-card service-new service-card--exact-install">
               <div class="service-media">
                 <img src="/assets/lp/liftmaster-opener-myq-800.webp" alt="LiftMaster garage door opener powered by myQ" loading="lazy" decoding="async" width="800" height="917">
