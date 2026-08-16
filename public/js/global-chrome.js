@@ -349,6 +349,7 @@
     ["/garage-door-openers", "Opener Installation"],
     ["/garage-door-cable-repair", "Cable Repair"],
     ["/garage-door-opener-repair", "Opener Repair"],
+    ["/wayne-dalton-torsion-conversion", "Wayne-Dalton Conversion"],
     ["/services/garage-door-maintenance", "Maintenance & Tune-Ups"],
     ["/safety-sensors", "Safety Sensors"],
     ["/emergency-garage-door-repair", "After-Hours Emergency"],
