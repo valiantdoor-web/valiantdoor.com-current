@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.valiantdoor.com/valiant-carriage-door-restorations</loc>
+    <image:image>
+      <image:loc>https://www.valiantdoor.com/assets/projects/pleasanton-carriage-door-restoration-poster.jpg</image:loc>
+      <image:title>Carriage door restoration in progress on a Pleasanton home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.valiantdoor.com/assets/projects/pleasanton-carriage-door-restoration-card.jpg</image:loc>
+      <image:title>Valiant carriage door restoration project in Pleasanton, CA</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.valiantdoor.com/Garage-Door-Service-Excellence</loc>
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp</image:loc>
@@ -2084,36 +2095,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.valiantdoor.com/case-studies/pleasanton-garage-door-spring-repair</loc>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/gallery-before-after/pleasanton-garage-door-end-plate-repair-before-after.webp</image:loc>
-      <image:title>Pleasanton garage door end plate before and after</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/gallery-before-after/pleasanton-garage-door-spring-plate-repair-before-after.webp</image:loc>
-      <image:title>Pleasanton garage door spring plate before and after</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/gallery-before-after/pleasanton-garage-door-spring-replacement-before-after.webp</image:loc>
-      <image:title>Pleasanton garage door spring replacement before and after</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.valiantdoor.com/blog/pleasanton-garage-door-spring-repair-case-study</loc>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/gallery-before-after/pleasanton-garage-door-end-plate-repair-before-after.webp</image:loc>
-      <image:title>Pleasanton garage door end plate before and after</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/gallery-before-after/pleasanton-garage-door-spring-plate-repair-before-after.webp</image:loc>
-      <image:title>Pleasanton garage door spring plate before and after</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/gallery-before-after/pleasanton-garage-door-spring-replacement-before-after.webp</image:loc>
-      <image:title>Pleasanton garage door spring replacement before and after</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.valiantdoor.com/case-studies/san-ramon-garage-door-project</loc>
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/home-optimized/shield-192.webp</image:loc>
@@ -2216,53 +2197,6 @@
       <image:loc>https://www.valiantdoor.com/assets/community/community-garage-door-after.webp</image:loc>
       <image:title>After photo of completed community garage door project</image:title>
       <image:caption>After: completed replacement door for safer daily access.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.valiantdoor.com/emergency-after-hours</loc>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp</image:loc>
-      <image:title>Valiant shield</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/logo/valiant-logo-gold.webp</image:loc>
-      <image:title>Valiant Garage Door</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/google.svg</image:loc>
-      <image:title>Google Business Profile</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/yelp.svg</image:loc>
-      <image:title>Yelp Reviews</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/facebook.svg</image:loc>
-      <image:title>Valiant Garage Door on Facebook</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/instagram.svg</image:loc>
-      <image:title>Valiant Garage Door on Instagram</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/youtube.svg</image:loc>
-      <image:title>Valiant Garage Door on YouTube</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/tiktok.svg</image:loc>
-      <image:title>Valiant Garage Door on TikTok</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/nextdoor.svg</image:loc>
-      <image:title>Valiant Garage Door on Nextdoor</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/thumbtack.svg</image:loc>
-      <image:title>Valiant Garage Door on Thumbtack</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/logo/valiant-v-polished.webp</image:loc>
-      <image:title>Valiant V</image:title>
     </image:image>
   </url>
   <url>
@@ -3597,49 +3531,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.valiantdoor.com/how-to-emergency-repair</loc>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/home-optimized/shield-192.webp</image:loc>
-      <image:title>Valiant shield</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/home-optimized/wordmark-320.webp</image:loc>
-      <image:title>Valiant Garage Door</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/google.svg</image:loc>
-      <image:title>Google Business Profile</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/yelp.svg</image:loc>
-      <image:title>Yelp Reviews</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/facebook.svg</image:loc>
-      <image:title>Valiant Garage Door on Facebook</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/instagram.svg</image:loc>
-      <image:title>Valiant Garage Door on Instagram</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/youtube.svg</image:loc>
-      <image:title>Valiant Garage Door on YouTube</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/tiktok.svg</image:loc>
-      <image:title>Valiant Garage Door on TikTok</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/nextdoor.svg</image:loc>
-      <image:title>Valiant Garage Door on Nextdoor</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/thumbtack.svg</image:loc>
-      <image:title>Valiant Garage Door on Thumbtack</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.valiantdoor.com/idea-certified-garage-door-technician</loc>
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/home-optimized/shield-192.webp</image:loc>
@@ -4644,68 +4535,6 @@
       <image:loc>https://www.valiantdoor.com/assets/commercial/commercial-hoist-2.webp</image:loc>
       <image:title>Valiant technician on a ladder servicing a commercial overhead door chain system</image:title>
       <image:caption>Commercial overhead door service in progress with technician access and chain-drive adjustment.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/logo/valiant-v-polished.webp</image:loc>
-      <image:title>Valiant Garage Door V mark</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.valiantdoor.com/services/emergency</loc>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/Valiant%20Shield%20Final.webp</image:loc>
-      <image:title>Valiant Garage Door shield logo</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/logo/valiant-logo-gold.webp</image:loc>
-      <image:title>Valiant Garage Door</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/google.svg</image:loc>
-      <image:title>Google Business Profile</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/yelp.svg</image:loc>
-      <image:title>Yelp Reviews</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/facebook.svg</image:loc>
-      <image:title>Valiant Garage Door on Facebook</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/instagram.svg</image:loc>
-      <image:title>Valiant Garage Door on Instagram</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/youtube.svg</image:loc>
-      <image:title>Valiant Garage Door on YouTube</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/tiktok.svg</image:loc>
-      <image:title>Valiant Garage Door on TikTok</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/nextdoor.svg</image:loc>
-      <image:title>Valiant Garage Door on Nextdoor</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/icons/thumbtack.svg</image:loc>
-      <image:title>Valiant Garage Door on Thumbtack</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/gallery-before-after/san-ramon-garage-door-spring-repair-before-after.webp</image:loc>
-      <image:title>San Ramon garage door spring repair before and after by Valiant Garage Door for 24/7 emergency garage door repair Pleasanton CA</image:title>
-      <image:caption>Before and after view of a San Ramon garage door spring repair documented in CompanyCam. CompanyCam project record</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/gallery-before-after/danville-garage-door-repair-spring-hardware-before-after.webp</image:loc>
-      <image:title>Danville garage door repair before and after — spring and hardware repair by Valiant Garage Door for 24/7 emergency garage door repair Pleasanton CA</image:title>
-      <image:caption>Before and after view of a Danville garage door spring and hardware repair from the CompanyCam project record. CompanyCam project record</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/gallery-before-after/dublin-garage-door-repair-section-hardware-before-after.webp</image:loc>
-      <image:title>Dublin garage door repair before and after — section saver, bracket, strut, and hinge repair by Valiant Garage Door for 24/7 emergency garage door repair Pleasanton CA</image:title>
-      <image:caption>Before and after view of a Dublin section saver, bracket, strut, and hinge repair documented in CompanyCam. CompanyCam project record</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/logo/valiant-v-polished.webp</image:loc>
