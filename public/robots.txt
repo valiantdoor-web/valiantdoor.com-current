@@ -1,10 +1,17 @@
 # Valiant Garage Door — robots.txt
 # All crawlers, search engines, and AI/LLM agents are welcome to crawl, index,
-# train on, and cite the full site. Nothing is disallowed.
+# train on, and cite the full public site. The only exclusions below are
+# retired pages and internal admin/auth endpoints that intentionally return
+# 404 or are noindex — blocking them stops crawlers from repeatedly hitting
+# dead URLs and keeps Search Console's coverage report clean.
 
 # --- Default: allow every user agent full access ---
 User-agent: *
 Allow: /
+# Retired resource (now handled by the assistant, no standalone page):
+Disallow: /amazon-alexa
+# Internal Thumbtack OAuth endpoints (server-only, not user-facing pages):
+Disallow: /api/auth/thumbtack/
 
 # --- Search engine crawlers ---
 User-agent: Googlebot
