@@ -110,7 +110,7 @@
       "telephone": "9254094974",
       "email": "vm@valiantdoor.com",
       "description": "Valiant Garage Door Is Pleasanton-Based, Serving Danville, Fremont, Sunol and Surrounding Areas With Expert Garage Door Repair, Emergency Service, Spring Replacement, Openers, Complex Systems, And Precision System Upgrades. We're Known For Fast Response, Honest Pricing, Clear Long-Term Solutions, And Repair-First Service.",
-      "priceRange": "$$",
+      "priceRange": "$",
       "logo": "https://www.valiantdoor.com/assets/logo/valiant-logo-gold.png",
       "image": "https://www.valiantdoor.com/assets/home-optimized/shield-192.webp",
       "address": {
@@ -263,6 +263,44 @@
       "about": {
         "@id": "https://www.valiantdoor.com/#business"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.valiantdoor.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you provide same-day garage door repair in Pleasanton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Valiant offers same-day appointments when availability allows and provides 24/7 after-hours dispatch for urgent garage door problems in Pleasanton and nearby East Bay communities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What garage door problems do you repair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Valiant repairs broken springs, damaged cables, off-track doors, noisy rollers, safety sensors, garage door openers, hinges, tracks, panels, and other structural or operating problems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which East Bay cities do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Core service areas include Pleasanton, Dublin, Livermore, San Ramon, Danville, Fremont, Sunol, Hayward, and nearby Tri-Valley and East Bay communities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why choose an IDEA-certified garage door technician?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IDEA certification demonstrates tested industry knowledge. Valiant combines that credential with diagnosis-first service, photo and video documentation, clear options, and warranties on qualifying repairs."
+          }
+        }
+      ]
     }
   ]
 }
@@ -971,6 +1009,50 @@
 </section>
 
 <!-- REVIEWS / CTA -->
+
+<style>
+  .home-video-guide .home-video-grid { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr); gap:28px; align-items:center; }
+  .home-video-guide .home-video-player { overflow:hidden; border:1px solid rgba(214,180,90,.42); border-radius:18px; background:#050608; box-shadow:0 18px 42px rgba(0,0,0,.3); }
+  .home-video-guide video { display:block; width:100%; aspect-ratio:16/9; object-fit:contain; background:#050608; }
+  .home-video-guide .video-link { display:inline-flex; margin-top:16px; color:#e4c56f; font-weight:850; }
+  .home-faq-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:24px; }
+  .home-faq-grid details { padding:18px 20px; border:1px solid rgba(214,180,90,.24); border-radius:13px; background:rgba(20,22,25,.86); }
+  .home-faq-grid summary { color:#fff; font-weight:850; cursor:pointer; }
+  .home-faq-grid p { color:#c9c9c6; line-height:1.65; }
+  @media (max-width:820px) { .home-video-guide .home-video-grid,.home-faq-grid { grid-template-columns:1fr; } }
+</style>
+<section class="block home-video-guide" id="home-video-guide">
+  <div class="wrap">
+    <p class="eyebrow">Watch a master technician explain the system</p>
+    <div class="home-video-grid">
+      <div class="home-video-player">
+        <video controls preload="metadata" playsinline poster="/assets/maintenance/The_Valiant_PreventiveOverview.jpg" aria-label="Garage door preventive maintenance overview">
+          <source src="/assets/maintenance/The_Valiant_PreventiveOverview.mp4" type="video/mp4">
+          <a href="/assets/maintenance/The_Valiant_PreventiveOverview.mp4">Watch the preventive maintenance overview</a>
+        </video>
+      </div>
+      <div>
+        <p class="eyebrow">Valiant Video Library</p>
+        <h2>See How We Diagnose, Repair &amp; Protect Garage Doors</h2>
+        <p class="lead">Watch real Pleasanton projects, garage door maintenance guidance, spring and hardware upgrades, commercial-door instruction, and technician explanations from Valiant Garage Door.</p>
+        <a class="video-link" href="/short-repair-videos">Explore all garage door repair videos →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="block home-faq" id="home-garage-door-faq">
+  <div class="wrap">
+    <p class="eyebrow">Local Garage Door Questions</p>
+    <h2>Fast Answers For Pleasanton &amp; Tri-Valley Homeowners</h2>
+    <div class="home-faq-grid">
+      <details><summary>Do you provide same-day garage door repair in Pleasanton?</summary><p>Yes. Valiant offers same-day appointments when availability allows and provides 24/7 after-hours dispatch for urgent garage door problems in Pleasanton and nearby East Bay communities.</p></details>
+      <details><summary>What garage door problems do you repair?</summary><p>Valiant repairs broken springs, damaged cables, off-track doors, noisy rollers, safety sensors, garage door openers, hinges, tracks, panels, and other structural or operating problems.</p></details>
+      <details><summary>Which East Bay cities do you serve?</summary><p>Core service areas include Pleasanton, Dublin, Livermore, San Ramon, Danville, Fremont, Sunol, Hayward, and nearby Tri-Valley and East Bay communities.</p></details>
+      <details><summary>Why choose an IDEA-certified garage door technician?</summary><p>IDEA certification demonstrates tested industry knowledge. Valiant combines that credential with diagnosis-first service, photo and video documentation, clear options, and warranties on qualifying repairs.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="block rev">
   <div class="wrap rev-inner">
     <div class="rev-card">

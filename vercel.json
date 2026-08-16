@@ -173,6 +173,11 @@
   ],
   "redirects": [
     {
+      "source": "/garage-door-service-excellence",
+      "destination": "/Garage-Door-Service-Excellence",
+      "permanent": true
+    },
+    {
       "source": "/how-to-emergency-repair.html",
       "destination": "/how-to-emergency-repair",
       "permanent": true
@@ -276,11 +281,6 @@
       "source": "/garage-door-repair-pleasanton/",
       "destination": "/garage-door-repair-pleasanton",
       "permanent": true
-    },
-    {
-      "source": "/agents.json",
-      "destination": "/api/agents",
-      "permanent": false
     },
     {
       "source": "/:path*",
