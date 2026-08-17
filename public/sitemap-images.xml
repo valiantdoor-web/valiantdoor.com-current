@@ -5033,24 +5033,19 @@
   <url>
     <loc>https://www.valiantdoor.com/wayne-dalton-torsion-conversion</loc>
     <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/wayne-dalton-conversion/customer-case-study/wayne-dalton-torquemaster-removal-comparison.webp</image:loc>
-      <image:title>Wayne Dalton TorqueMaster customer case study</image:title>
-      <image:caption>The enclosed TorqueMaster assembly before service and the proprietary spring tube components after removal.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/wayne-dalton-conversion/customer-case-study/wayne-dalton-end-bracket-cable-before-after.webp</image:loc>
-      <image:title>Wayne Dalton TorqueMaster customer case study</image:title>
-      <image:caption>Close-up documentation of the TorqueMaster end bracket, tube, and cable condition before disassembly.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/wayne-dalton-conversion/customer-case-study/wayne-dalton-failed-spring-removal-before-after.webp</image:loc>
+      <image:loc>https://www.valiantdoor.com/assets/wayne-dalton-conversion/customer-case-study/wayne-dalton-failed-spring-removal-documentation.webp</image:loc>
       <image:title>Wayne Dalton TorqueMaster customer case study</image:title>
       <image:caption>The damaged enclosed spring before service and the removed internal spring and tube parts staged for replacement.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/wayne-dalton-conversion/customer-case-study/wayne-dalton-spring-tube-removal-before-after.webp</image:loc>
+      <image:loc>https://www.valiantdoor.com/assets/wayne-dalton-conversion/customer-case-study/wayne-dalton-end-bracket-cable-documentation.webp</image:loc>
       <image:title>Wayne Dalton TorqueMaster customer case study</image:title>
-      <image:caption>A second close-up of the failed TorqueMaster spring and the removed proprietary components.</image:caption>
+      <image:caption>The TorqueMaster end bracket, tube, and cable condition shown in full before disassembly, without cropping out the operating hardware.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.valiantdoor.com/assets/wayne-dalton-conversion/customer-case-study/wayne-dalton-spring-tube-components-documentation.webp</image:loc>
+      <image:title>Wayne Dalton TorqueMaster customer case study</image:title>
+      <image:caption>The failed enclosed spring and removed proprietary tube components, reframed to keep the complete hardware visible.</image:caption>
     </image:image>
   </url>
 </urlset>
