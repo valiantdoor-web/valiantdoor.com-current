@@ -23,6 +23,7 @@
   // Reuse that library when present so the browser never downloads it twice.
   (function loadValiantGa4() {
     const measurementId = "G-R5068WB0YC";
+    const adsDestinations = ["AW-17968443655", "AW-17909190639"];
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () {
       window.dataLayer.push(arguments);
@@ -48,10 +49,31 @@
         return false;
       }
     });
-    if (!alreadyConfigured) {
+    const hasJsInitialization = window.dataLayer.some((entry) => {
+      try {
+        return entry && entry[0] === "js";
+      } catch (_error) {
+        return false;
+      }
+    });
+    if (!hasJsInitialization) {
       window.gtag("js", new Date());
+    }
+    if (!alreadyConfigured) {
       window.gtag("config", measurementId);
     }
+    adsDestinations.forEach((destinationId) => {
+      const destinationConfigured = window.dataLayer.some((entry) => {
+        try {
+          return entry && entry[0] === "config" && entry[1] === destinationId;
+        } catch (_error) {
+          return false;
+        }
+      });
+      if (!destinationConfigured) {
+        window.gtag("config", destinationId);
+      }
+    });
   })();
 
   // ---- Nextdoor ad click ID (ndclid) capture ----
