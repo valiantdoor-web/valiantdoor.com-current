@@ -199,6 +199,21 @@
   ],
   "redirects": [
     {
+      "source": "/emergency-repair",
+      "destination": "/emergency-garage-door-repair",
+      "permanent": true
+    },
+    {
+      "source": "/spring-replacement",
+      "destination": "/garage-door-spring-replacement",
+      "permanent": true
+    },
+    {
+      "source": "/about-valentino",
+      "destination": "/about-valentino-ramirez",
+      "permanent": true
+    },
+    {
       "source": "/same-day-garage-door-repair-pleasanton",
       "destination": "/garage-door-repair-pleasanton",
       "permanent": true
