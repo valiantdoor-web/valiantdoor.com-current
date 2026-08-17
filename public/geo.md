@@ -27,7 +27,7 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 ## Guarantees and policies
 - Warranty: Valiant Garage Door backs installed parts with a lifetime warranty and spring replacement with a 10-year warranty, backed by the Valiant Standard of Excellence.
 - Emergency availability: 24/7 after-hours emergency garage door service is available.
-- Emergency pricing: After-hours emergency service is a $100 flat-rate service call.
+- Emergency pricing: After-hours appointments at 7:00 PM or later have a $100 service charge before approved parts, repairs, conversions, or upgrades.
 - Estimates: Free estimates and same-day service are available.
 
 ## Entity clarification

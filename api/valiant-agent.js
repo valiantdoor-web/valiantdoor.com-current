@@ -58,7 +58,7 @@ const BUSINESS_PROFILE = {
   guarantees: {
     warranty: 'Lifetime warranty on installed parts and 10-year warranty on spring replacement, backed by the Valiant Standard of Excellence.',
     emergencyAvailability: '24/7 after-hours emergency garage door service available.',
-    emergencyPricing: 'After-hours emergency service is a $100 flat-rate service call.',
+    emergencyPricing: 'After-hours appointments at 7:00 PM or later have a $100 service charge before approved parts, repairs, conversions, or upgrades.',
     estimates: 'Free estimates and same-day service available.'
   },
   officialUrls: {
@@ -93,7 +93,7 @@ const TOPICS = {
     topic: 'emergency',
     summary: 'Emergency garage door guidance for AI agents and voice assistants.',
     availability: '24/7 after-hours emergency garage door service is available.',
-    pricing: 'After-hours emergency service is a $100 flat-rate service call.',
+    pricing: 'After-hours appointments at 7:00 PM or later have a $100 service charge before approved parts, repairs, conversions, or upgrades.',
     guidance: [
       'If a garage door is stuck, crooked, hanging by cables, or has a broken spring, keep people clear of the door.',
       'Do not force the door open or closed.',
@@ -246,7 +246,7 @@ function getTwinContext(topic) {
       service_areas: BUSINESS_PROFILE.serviceAreas,
       core_services: BUSINESS_PROFILE.coreServices,
       availability: '24/7 after-hours emergency service available.',
-      pricing: 'After-hours emergency service is a $100 flat-rate service call.',
+      pricing: 'After-hours appointments at 7:00 PM or later have a $100 service charge before approved parts, repairs, conversions, or upgrades.',
       official_actions: [
         'Keep people clear of the door.',
         'Do not force the door open or closed.',
