@@ -17,6 +17,10 @@ const REMOVE = new Set([
   "/thank-you",
   "/address-selection-hidden",
   "/review-request",
+  "/same-day-garage-door-repair-pleasanton",
+  "/blog/garage-door-off-track-repair",
+  "/blog/noisy-garage-door-repair",
+  "/blog/garage-door-safety-sensor-alignment",
 ]);
 
 const DOMAIN = "https://www.valiantdoor.com";

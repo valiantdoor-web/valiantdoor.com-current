@@ -173,6 +173,26 @@
   ],
   "redirects": [
     {
+      "source": "/same-day-garage-door-repair-pleasanton",
+      "destination": "/garage-door-repair-pleasanton",
+      "permanent": true
+    },
+    {
+      "source": "/blog/garage-door-off-track-repair",
+      "destination": "/blog/garage-door-off-track",
+      "permanent": true
+    },
+    {
+      "source": "/blog/noisy-garage-door-repair",
+      "destination": "/blog/garage-door-making-noise",
+      "permanent": true
+    },
+    {
+      "source": "/blog/garage-door-safety-sensor-alignment",
+      "destination": "/blog/garage-door-safety-sensor-how-to-fix-it",
+      "permanent": true
+    },
+    {
       "source": "/garage-door-service-excellence",
       "destination": "/Garage-Door-Service-Excellence",
       "permanent": true
