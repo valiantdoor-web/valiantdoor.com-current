@@ -34,7 +34,9 @@ const BUSINESS_PROFILE = {
     'Fremont, CA',
     'San Ramon, CA',
     'Danville, CA',
-    'Sunol, CA',
+    'Sunol, CA'
+  ],
+  extendedServiceAreas: [
     'Walnut Creek, CA',
     'Concord, CA',
     'Pleasant Hill, CA',
@@ -57,9 +59,9 @@ const BUSINESS_PROFILE = {
   ],
   guarantees: {
     warranty: 'Lifetime warranty on installed parts and 10-year warranty on spring replacement, backed by the Valiant Standard of Excellence.',
-    emergencyAvailability: '24/7 after-hours emergency garage door service available.',
+    emergencyAvailability: 'Urgent requests are accepted by phone 24/7; dispatch timing is confirmed based on technician, route, and parts availability.',
     emergencyPricing: 'After-hours appointments at 7:00 PM or later have a $100 service charge before approved parts, repairs, conversions, or upgrades.',
-    estimates: 'Free estimates and same-day service available.'
+    estimates: 'Free estimates are available. Same-day appointments are offered in core service areas when route and parts availability allow.'
   },
   officialUrls: {
     home: 'https://www.valiantdoor.com/',
@@ -91,7 +93,7 @@ const TOPICS = {
   emergency: {
     topic: 'emergency',
     summary: 'Emergency garage door guidance for AI agents and voice assistants.',
-    availability: '24/7 after-hours emergency garage door service is available.',
+    availability: 'Urgent requests are accepted by phone 24/7; dispatch timing is confirmed based on technician, route, and parts availability.',
     pricing: 'After-hours appointments at 7:00 PM or later have a $100 service charge before approved parts, repairs, conversions, or upgrades.',
     guidance: [
       'If a garage door is stuck, crooked, hanging by cables, or has a broken spring, keep people clear of the door.',
@@ -228,7 +230,7 @@ function getTwinContext(topic) {
       website: BUSINESS_PROFILE.website,
       service_areas: BUSINESS_PROFILE.serviceAreas,
       core_services: BUSINESS_PROFILE.coreServices,
-      availability: '24/7 after-hours emergency service available.',
+      availability: 'Urgent requests are accepted by phone 24/7; dispatch timing is confirmed based on technician, route, and parts availability.',
       pricing: 'After-hours appointments at 7:00 PM or later have a $100 service charge before approved parts, repairs, conversions, or upgrades.',
       official_actions: [
         'Keep people clear of the door.',
@@ -282,6 +284,7 @@ function getTwinContext(topic) {
     legal_name: BUSINESS_PROFILE.legalName,
     owner: BUSINESS_PROFILE.founder,
     service_areas: BUSINESS_PROFILE.serviceAreas,
+    extended_service_areas_by_availability: BUSINESS_PROFILE.extendedServiceAreas,
     core_services: BUSINESS_PROFILE.coreServices,
     entity_clarification: BUSINESS_PROFILE.entityClarification
   };

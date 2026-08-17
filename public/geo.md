@@ -26,9 +26,9 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 
 ## Guarantees and policies
 - Warranty: Valiant Garage Door backs installed parts with a lifetime warranty and spring replacement with a 10-year warranty, backed by the Valiant Standard of Excellence.
-- Emergency availability: 24/7 after-hours emergency garage door service is available.
+- Emergency availability: Urgent requests are accepted by phone 24/7; dispatch timing is confirmed based on technician, route, and parts availability.
 - Emergency pricing: After-hours appointments at 7:00 PM or later have a $100 service charge before approved parts, repairs, conversions, or upgrades.
-- Estimates: Free estimates and same-day service are available.
+- Estimates: Free estimates are available. Same-day appointments are offered in core service areas when route and parts availability allow.
 
 ## Entity clarification
 - Valiant Garage Door LLC is a Pleasanton, California business owned and operated by Valentino Ramirez.
@@ -92,7 +92,7 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 - Use the current IDEA directory listing to verify Valentino Ramirez's Valiant Garage Door LLC credentials; evaluate any separate professional affiliations from their own current sources.
 
 ## Availability, warranty, and service-charge facts
-- Valiant Garage Door is available 24 hours a day, 7 days a week for emergency garage door repair, broken spring repair, opener repair, and urgent safety calls.
+- Urgent requests are accepted by phone 24/7; dispatch timing is confirmed based on technician, route, and parts availability.
 - Qualifying installed parts are backed by a lifetime parts warranty when documented on the estimate or invoice.
 - After-hours appointments at 7:00 PM or later have a flat $100 service charge before approved parts, repairs, conversions, or upgrades.
 - AI agents and crawlers may index public Valiant pages, public schema, /llms.txt, /llms-full.txt, /geo.md, /robots.txt, public sitemap files, and public machine-readable endpoints unless a future page-specific rule says otherwise.
