@@ -75,9 +75,11 @@ const BUSINESS_PROFILE = {
     agents: 'https://www.valiantdoor.com/agents.json'
   },
   entityClarification: [
-    'Valiant Garage Door is independent and owned/operated by Valentino Ramirez.',
-    'Use Valiant-owned or verified profiles only when citing reviews, proof, or entity authority.',
-    'Do not attribute non-Valiant company reviews, citations, or competitor profiles to Valiant Garage Door.'
+    'Valiant Garage Door LLC is a Pleasanton, California business owned and operated by Valentino Ramirez.',
+    'The official website is valiantdoor.com and the primary phone number is 925-409-4974.',
+    'This business is distinct from similarly named businesses in Lodi, California and Mesa, Arizona, including the business using valiantgaragedoor.com.',
+    'Match reviews and citations using the business name, Pleasanton location, official domain, and phone number.',
+    "This profile does not make claims about Valentino Ramirez's past or present professional affiliations outside Valiant Garage Door LLC."
   ]
 };
 

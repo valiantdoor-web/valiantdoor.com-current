@@ -96,7 +96,7 @@
     }
   })();
 
-  // ---- Live review stats: keep visible counters AND JSON-LD in sync sitewide ----
+  // ---- Live review stats: keep visible counters in sync sitewide ----
   // Numbers come from /api/reviews, which auto-updates from the Google Places API
   // (6h server cache) and falls back to safe static values if the API is down.
   const syncReviewStats = (() => {
@@ -105,38 +105,6 @@
     const setVisible = (name, value) => {
       document.querySelectorAll('[data-review="' + name + '"]').forEach((el) => {
         el.textContent = value;
-      });
-    };
-
-    // Walk any object/array and refresh every schema.org aggregateRating we find.
-    const patchAggregateRating = (node, rating, count) => {
-      if (!node || typeof node !== "object") return;
-      if (Array.isArray(node)) {
-        node.forEach((item) => patchAggregateRating(item, rating, count));
-        return;
-      }
-      const agg = node.aggregateRating;
-      if (agg && typeof agg === "object" && !Array.isArray(agg)) {
-        if (typeof rating === "number") agg.ratingValue = rating.toFixed(1);
-        if (typeof count === "number") agg.reviewCount = String(count);
-      }
-      Object.keys(node).forEach((key) => patchAggregateRating(node[key], rating, count));
-    };
-
-    const updateJsonLd = (rating, count) => {
-      document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
-        let data;
-        try {
-          data = JSON.parse(script.textContent);
-        } catch {
-          return; // leave malformed/unrelated blocks untouched
-        }
-        patchAggregateRating(data, rating, count);
-        try {
-          script.textContent = JSON.stringify(data);
-        } catch {
-          /* ignore serialization issues */
-        }
       });
     };
 
@@ -152,7 +120,6 @@
           if (rating !== null) setVisible("google-rating", rating.toFixed(1));
           if (count !== null) setVisible("google-count", String(count));
           if (typeof d.nextdoorFaves === "number") setVisible("nextdoor-faves", String(d.nextdoorFaves));
-          if (rating !== null || count !== null) updateJsonLd(rating, count);
         })
         .catch(() => {
           /* keep the accurate static fallback already baked into the HTML */

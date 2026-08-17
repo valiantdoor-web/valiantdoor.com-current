@@ -2,13 +2,13 @@
 /**
  * sync-review-schema.mjs
  *
- * Stamps the current Google review rating + count into every page's JSON-LD
- * schema (aggregateRating) and the static visible fallback text sitewide.
+ * Stamps the current Google review rating + count into visible fallback text
+ * sitewide. LocalBusiness aggregateRating markup is intentionally excluded
+ * because Google's review-snippet policy does not support self-serving
+ * business reviews.
  *
- * WHY: the visible on-page numbers already auto-update client-side via
- * /api/reviews, but JSON-LD structured data (what Google reads for star
- * rich-results) cannot be reliably updated with client JS. This script keeps
- * the schema and the static fallbacks in sync at deploy time.
+ * WHY: the visible on-page numbers auto-update client-side via /api/reviews,
+ * while this script keeps the static visible fallbacks accurate at deploy time.
  *
  * Usage:
  *   node scripts/sync-review-schema.mjs                 # fetch live from Google
@@ -84,13 +84,7 @@ async function main() {
     const before = await readFile(abs, "utf8");
     let after = before;
 
-    // 1) JSON-LD aggregateRating reviewCount (quoted string form used sitewide)
-    after = after.replace(/("reviewCount"\s*:\s*")\d+(")/g, `$1${count}$2`);
-    // 2) JSON-LD ratingValue (only if we have a live rating)
-    if (ratingStr) {
-      after = after.replace(/("ratingValue"\s*:\s*")\d+(?:\.\d+)?(")/g, `$1${ratingStr}$2`);
-    }
-    // 3) Visible static fallback text inside data-review spans
+    // Visible static fallback text inside data-review spans.
     after = after.replace(/(data-review="google-count"[^>]*>)\d+(<)/g, `$1${count}$2`);
     if (ratingStr) {
       after = after.replace(/(data-review="google-rating"[^>]*>)\d+(?:\.\d+)?(<)/g, `$1${ratingStr}$2`);
