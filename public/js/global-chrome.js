@@ -378,6 +378,7 @@
         ${servicesMenu}
         ${navLink("/service-areas", "Service Areas")}
         ${navLink("/repair-guides", "Repair Guides")}
+        ${navLink("/garage-door-before-after", "Before & After")}
         ${navLink("/community-garage-door-project", "Community Project")}
         ${navLink("/reviews-and-proof", "Reviews & Proof")}
         ${navLink("/idea-certified-garage-door-technician", "About Us")}
@@ -499,15 +500,15 @@
   };
   toggle.addEventListener("click", () => setOpen(!nav.classList.contains("is-open")));
   servicesToggle.addEventListener("click", () => {
-    const desktopHover = window.matchMedia("(min-width: 761px) and (hover: hover)").matches;
+    const desktopHover = window.matchMedia("(min-width: 881px) and (hover: hover)").matches;
     if (desktopHover && services.classList.contains("is-open")) return;
     setServicesOpen(!services.classList.contains("is-open"));
   });
   services.addEventListener("mouseenter", () => {
-    if (window.matchMedia("(min-width: 761px) and (hover: hover)").matches) setServicesOpen(true);
+    if (window.matchMedia("(min-width: 881px) and (hover: hover)").matches) setServicesOpen(true);
   });
   services.addEventListener("mouseleave", () => {
-    if (window.matchMedia("(min-width: 761px) and (hover: hover)").matches && !services.contains(document.activeElement)) setServicesOpen(false);
+    if (window.matchMedia("(min-width: 881px) and (hover: hover)").matches && !services.contains(document.activeElement)) setServicesOpen(false);
   });
   services.addEventListener("focusout", (event) => {
     if (!services.contains(event.relatedTarget)) setServicesOpen(false);
