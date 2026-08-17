@@ -16,6 +16,7 @@ const SITEMAPS = ["sitemap-pages.xml", "sitemap-images.xml", "sitemap-blog.xml"]
 const REMOVE = new Set([
   "/thank-you",
   "/address-selection-hidden",
+  "/review-request",
 ]);
 
 const DOMAIN = "https://www.valiantdoor.com";
