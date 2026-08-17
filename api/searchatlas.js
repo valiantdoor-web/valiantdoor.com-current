@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { sendJson, allowMethods } = require('../lib/listings/security');
+const { sendJson, requireListingsAdmin, allowMethods } = require('../lib/listings/security');
 
 const ROOT = path.resolve(__dirname, '..');
 const SEARCH_ATLAS_DIR = path.join(ROOT, 'data', 'searchatlas', 'valiantdoor.com');
@@ -129,6 +129,9 @@ function buildLocalRankings(visibility) {
 
 module.exports = async (req, res) => {
   if (!allowMethods(req, res, ['GET'])) return;
+  res.setHeader('X-Robots-Tag', 'noindex, nofollow, noarchive');
+  res.setHeader('Cache-Control', 'private, no-store');
+  if (!requireListingsAdmin(req, res)) return;
 
   const overview = readJsonSafe(path.join(SEARCH_ATLAS_DIR, 'llm-overview.json'), null);
   const visibility = readJsonSafe(path.join(SEARCH_ATLAS_DIR, 'llm-visibility.json'), []);

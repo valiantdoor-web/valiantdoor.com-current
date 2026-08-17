@@ -68,7 +68,6 @@ const BUSINESS_PROFILE = {
     pleasanton: 'https://www.valiantdoor.com/garage-door-repair-pleasanton',
     serviceAreas: 'https://www.valiantdoor.com/service-areas',
     reviewsProof: 'https://www.valiantdoor.com/reviews-and-proof',
-    searchAtlas: 'https://www.valiantdoor.com/api/searchatlas',
     privacy: 'https://www.valiantdoor.com/privacy',
     terms: 'https://www.valiantdoor.com/terms',
     llms: 'https://www.valiantdoor.com/llms.txt',
@@ -142,21 +141,6 @@ const TOPICS = {
       'Does not collect Alexa profile information'
     ]
   },
-  searchatlas: {
-    topic: 'searchatlas',
-    summary: 'Search Atlas visibility, local ranking, and competitor reference data for AI agents.',
-    snapshotUrl: BUSINESS_PROFILE.officialUrls.searchAtlas,
-    growthHubUrl: 'https://www.valiantdoor.com/search-atlas-growth',
-    capabilities: [
-      'Pull cached Search Atlas overview, visibility, and query-response data.',
-      'Summarize local ranking gaps and competitor citation counts.',
-      'Provide heat-map style topic and platform coverage summaries.'
-    ],
-    limitations: [
-      'Does not invent rankings or scores that are not present in the Search Atlas data.',
-      'Uses cached snapshot data when available.'
-    ]
-  },
   policies: {
     topic: 'policies',
     summary: 'Official policy URLs for website, Amazon/Alexa app, and 800.com communications.',
@@ -170,7 +154,6 @@ const TWIN_TOPIC_RULES = [
   { topic: 'emergency', tests: [/emergency/i, /broken spring/i, /off track/i, /stuck/i, /unsafe/i, /won.?t close/i, /won.?t open/i] },
   { topic: 'booking', tests: [/book/i, /appointment/i, /estimate/i, /call/i, /quote/i] },
   { topic: 'alexa', tests: [/alexa/i, /amazon/i, /voice/i, /echo/i] },
-  { topic: 'searchatlas', tests: [/search atlas/i, /searchatlas/i, /heat map/i, /competitor/i, /ranking/i, /visibility/i] },
   { topic: 'policies', tests: [/privacy/i, /terms/i, /policy/i, /800\.com/i] },
   { topic: 'profile', tests: [/profile/i, /about/i, /service area/i, /who/i, /business/i] }
 ];
@@ -293,25 +276,6 @@ function getTwinContext(topic) {
     };
   }
 
-  if (topic === 'searchatlas') {
-    return {
-      topic,
-      business_name: BUSINESS_PROFILE.name,
-      snapshot_url: BUSINESS_PROFILE.officialUrls.searchAtlas,
-      growth_hub_url: 'https://www.valiantdoor.com/search-atlas-growth',
-      reference_endpoints: [
-        BUSINESS_PROFILE.officialUrls.searchAtlas,
-        BUSINESS_PROFILE.officialUrls.llms,
-        BUSINESS_PROFILE.officialUrls.agents
-      ],
-      official_actions: [
-        'Use the Search Atlas snapshot to compare visibility, query gaps, and competitor citation counts.',
-        'Use heat-map style summaries to identify hot, warm, and cold coverage areas.',
-        'Keep all ranking claims tied to cached data or verified output.'
-      ]
-    };
-  }
-
   return {
     topic,
     business_name: BUSINESS_PROFILE.name,
@@ -329,7 +293,6 @@ function buildTwinInstructions(topic, context, prompt) {
     emergency: 'Lead with safety. Keep the answer practical, brief, and urgent. Include the phone number and do not add any door-control advice.',
     booking: 'Route to calling first, then the quote page if helpful. Keep it action-oriented.',
     alexa: 'Describe the Amazon/Alexa support surface only. Emphasize that it is informational and does not control doors.',
-    searchatlas: 'Use the cached Search Atlas snapshot, heat-map summary, local rankings, and competitor counts. Do not invent missing data.',
     policies: 'Point to privacy, terms, and 800.com communications references without inventing policy details.'
   };
 

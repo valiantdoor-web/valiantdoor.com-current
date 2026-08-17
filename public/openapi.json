@@ -3,7 +3,7 @@
   "info": {
     "title": "Valiant Garage Door AI Agent API",
     "version": "2026-06-23",
-    "description": "Official public, read-only API for AI agents and assistants to retrieve Valiant Garage Door business facts, emergency guidance, booking routes, Amazon/Alexa app details, policy URLs, and cached Search Atlas visibility data."
+    "description": "Official public, read-only API for AI agents and assistants to retrieve Valiant Garage Door business facts, emergency guidance, booking routes, Amazon/Alexa app details, and policy URLs."
   },
   "servers": [
     {
@@ -69,57 +69,6 @@
                     "topic",
                     "summary"
                   ]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/searchatlas": {
-      "get": {
-        "operationId": "getSearchAtlasSnapshot",
-        "summary": "Get cached Search Atlas visibility, local ranking, and competitor data",
-        "description": "Returns cached Search Atlas overview, visibility rows, query responses, heat-map summaries, local rankings, and competitor counts for Valiant Garage Door. This endpoint is read-only.",
-        "responses": {
-          "200": {
-            "description": "Cached Search Atlas snapshot for AI agents.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "ok": {
-                      "type": "boolean"
-                    },
-                    "source": {
-                      "type": "string"
-                    },
-                    "summary": {
-                      "type": "object"
-                    },
-                    "heatMap": {
-                      "type": "object"
-                    },
-                    "competitorLeaderboard": {
-                      "type": "array",
-                      "items": {
-                        "type": "object"
-                      }
-                    },
-                    "localRankings": {
-                      "type": "array",
-                      "items": {
-                        "type": "object"
-                      }
-                    },
-                    "zeroVisibilityGaps": {
-                      "type": "array",
-                      "items": {
-                        "type": "object"
-                      }
-                    }
-                  }
                 }
               }
             }
