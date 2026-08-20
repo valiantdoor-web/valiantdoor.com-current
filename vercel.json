@@ -199,6 +199,11 @@
   ],
   "redirects": [
     {
+      "source": "/sitemap-videos.xml",
+      "destination": "/sitemap-video.xml",
+      "permanent": true
+    },
+    {
       "source": "/emergency-repair",
       "destination": "/emergency-garage-door-repair",
       "permanent": true
