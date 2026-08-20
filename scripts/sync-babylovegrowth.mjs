@@ -100,7 +100,7 @@ function buildSchema(a, url) {
           addressCountry: 'US',
         },
         areaServed: ['Pleasanton, CA', 'Dublin, CA', 'Livermore, CA', 'Fremont, CA', 'San Ramon, CA', 'Danville, CA', 'Sunol, CA'].map((n) => ({ '@type': 'City', name: n })),
-        geo: { '@type': 'GeoCoordinates', latitude: 37.676357, longitude: -121.894745 },
+        geo: { '@type': 'GeoCoordinates', latitude: 37.6980775, longitude: -121.8631748 },
         sameAs: [
           'https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w',
           'https://www.yelp.com/biz/valiant-garage-door-pleasanton',
