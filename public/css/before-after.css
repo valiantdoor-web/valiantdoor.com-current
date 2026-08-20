@@ -34,3 +34,8 @@
 .before-after-proof-card a{color:#e5c66d;font-weight:850}
 @media(max-width:900px){.before-after-proof-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.ba-grid,.before-after-proof-grid{grid-template-columns:1fr}.ba-images{grid-template-columns:1fr 1fr}.ba-copy{padding:19px}}
+
+.ba-images.ba-premade{display:block;background:#fff}
+.ba-images.ba-premade .ba-figure img{aspect-ratio:4/3;object-fit:contain;background:#fff}
+.ba-source-label{position:absolute;right:10px;bottom:10px;padding:6px 9px;border-radius:7px;background:rgba(4,5,7,.88);color:#f0d98c;font-size:.68rem;font-weight:900;letter-spacing:.06em}
+.before-after-proof-card.is-premade img{object-fit:contain;background:#fff}
