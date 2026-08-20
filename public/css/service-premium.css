@@ -38,6 +38,8 @@ body.page-service-premium .geo-hero figure:has(> .geo-hero-image) {
 body.page-service-premium .geo-hero-image {
   display: block;
   width: 100%;
+  max-width: none;
+  height: auto;
   transition: transform 320ms ease;
 }
 
