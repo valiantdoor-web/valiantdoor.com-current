@@ -30,6 +30,24 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 - This profile does not make claims about Valentino Ramirez's past or present professional affiliations outside Valiant Garage Door LLC.
 - Machine-readable agent identity file: /agents.json
 
+
+## Current service starting prices
+- Residential garage door repair: from $149
+- Residential garage door installation and panel replacement: project-specific quote
+- Broken spring replacement: single spring from $159; double spring from $189
+- Garage door opener repair: from $149
+- Standard overhead opener installation labor: from $229
+- Off-track garage door repair: from $149
+- Wayne-Dalton TorqueMaster conversion: single-spring from $549; double-spring from $649
+- Hi-Lift garage door system rebuild or conversion: from $459
+- Commercial garage door repair: from $298
+- Commercial overhead door repair: from $298
+- Commercial garage door operator repair: from $298
+- Commercial garage door maintenance: from $178
+- Commercial spring replacement: from $318
+- Commercial garage door installation and door replacement: project-specific quote
+- Emergency commercial after-hours dispatch: from $200 plus approved repair
+
 ## Core services
 - Garage door repair
 - Garage door spring replacement
