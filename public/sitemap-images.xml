@@ -4963,4 +4963,12 @@
       <image:caption>The failed enclosed spring and removed proprietary tube components, reframed to keep the complete hardware visible.</image:caption>
     </image:image>
   </url>
+
+  <url>
+    <loc>https://www.valiantdoor.com/services/commercial</loc>
+    <!-- valiant-documentation-proof -->
+    <image:image><image:loc>https://www.valiantdoor.com/assets/commercial/documented-repair/commercial-repair-report-scope.webp</image:loc><image:title>Valiant commercial garage door repair documentation sample</image:title><image:caption>Customer-facing commercial repair scope and completion report.</image:caption></image:image>
+    <image:image><image:loc>https://www.valiantdoor.com/assets/commercial/documented-repair/commercial-track-reset-before-after.webp</image:loc><image:title>Commercial track reset before and after report</image:title><image:caption>Location-redacted before-and-after documentation for a commercial track reset and alignment.</image:caption></image:image>
+    <image:image><image:loc>https://www.valiantdoor.com/assets/commercial/documented-repair/repaired-rdrg-rolling-steel-door.webp</image:loc><image:title>Repaired rolling steel commercial door hardware</image:title><image:caption>Completed RDRG dead shaft retainer and commercial door hardware after repair.</image:caption></image:image>
+  </url>
 </urlset>
