@@ -35,7 +35,8 @@ body.page-service-premium .geo-hero figure:has(> .geo-hero-image) {
   box-shadow: 0 18px 44px rgba(0, 0, 0, .42);
 }
 
-body.page-service-premium .geo-hero-image {
+body.page-service-premium .geo-hero-image,
+body.page-service-premium .geo-hero > figure.geo-section > img:only-child {
   display: block;
   width: 100%;
   max-width: none;
