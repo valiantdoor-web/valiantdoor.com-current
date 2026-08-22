@@ -987,7 +987,7 @@
       <video:description>This close-up shows wear around a garage door opener drive assembly after excessive belt or chain tension. Learn why over-tightening loads the sprocket, bearings, and motor instead of improving door travel.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/how-to-videos/can-an-overtightened-opener-belt-cause-premature-failure.mp4</video:content_loc>
       <video:duration>21</video:duration>
-      <video:upload_date>2026-08-20</video:upload_date>
+      <video:publication_date>2026-08-20</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -999,7 +999,7 @@
       <video:description>This field video demonstrates a rapid professional roller change while the door remains controlled. Learn why roller replacement requires correct positioning, track awareness, and separation from spring or cable adjustments.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/how-to-videos/how-do-professionals-change-garage-door-rollers-quickly.mp4</video:content_loc>
       <video:duration>26</video:duration>
-      <video:upload_date>2026-08-20</video:upload_date>
+      <video:publication_date>2026-08-20</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1011,7 +1011,7 @@
       <video:description>This visual explainer shows how enclosed DuraMaster-style spring components are designed to limit exposure to moisture and contaminants. Learn what corrosion protection can and cannot prevent.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/how-to-videos/how-do-duramaster-springs-reduce-rust-exposure.mp4</video:content_loc>
       <video:duration>76</video:duration>
-      <video:upload_date>2026-08-20</video:upload_date>
+      <video:publication_date>2026-08-20</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1023,7 +1023,7 @@
       <video:description>This customer walkthrough compares earlier sensor-related repairs with Valiant’s corrected installation. It documents bracket positioning, wiring condition, alignment, and the final safety-sensor area.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/how-to-videos/what-does-a-proper-garage-door-sensor-repair-look-like.mp4</video:content_loc>
       <video:duration>45</video:duration>
-      <video:upload_date>2026-08-20</video:upload_date>
+      <video:publication_date>2026-08-20</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1035,7 +1035,7 @@
       <video:description>Watch a trained technician replace and tension a garage door torsion spring using controlled tools and a repeatable sequence. The video demonstrates professional workflow, not a homeowner DIY procedure.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/how-to-videos/how-does-a-professional-replace-a-broken-garage-door-spring.mp4</video:content_loc>
       <video:duration>53</video:duration>
-      <video:upload_date>2026-08-20</video:upload_date>
+      <video:publication_date>2026-08-20</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1047,7 +1047,7 @@
       <video:description>This step-by-step video shows a LiftMaster-compatible wall control being wired, mounted, and tested. It covers conductor placement, wall preparation, final mounting, and normal control operation.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/how-to-videos/how-do-you-install-a-liftmaster-garage-door-wall-control.mp4</video:content_loc>
       <video:duration>116</video:duration>
-      <video:upload_date>2026-08-20</video:upload_date>
+      <video:publication_date>2026-08-20</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1059,7 +1059,7 @@
       <video:description>This repair walkthrough shows damaged garage door safety-sensor wiring being corrected, secured, and concealed along the opening. It emphasizes clean routing, protected splices, and restored sensor function.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/how-to-videos/how-do-you-repair-and-hide-garage-door-sensor-wiring.mp4</video:content_loc>
       <video:duration>123</video:duration>
-      <video:upload_date>2026-08-20</video:upload_date>
+      <video:publication_date>2026-08-20</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1071,7 +1071,7 @@
       <video:description>This short field demonstration shows a SureWinder-style tool used during professional torsion-spring service. It highlights controlled spring handling without presenting the work as a DIY procedure.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/how-to-videos/how-is-a-surewinder-used-for-garage-door-spring-service.mp4</video:content_loc>
       <video:duration>12</video:duration>
-      <video:upload_date>2026-08-20</video:upload_date>
+      <video:publication_date>2026-08-20</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1083,8 +1083,15 @@
       <video:description>This field video shows a trained technician releasing tension from a garage door torsion spring on a wood door. It demonstrates why stored spring energy requires proper tools, positioning, and experience.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/how-to-videos/how-do-professionals-release-tension-from-a-garage-door-spring.mp4</video:content_loc>
       <video:duration>18</video:duration>
-      <video:upload_date>2026-08-20</video:upload_date>
+      <video:publication_date>2026-08-20</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
+  <url><loc>https://www.valiantdoor.com/videos/companycam/21998887</loc><video:video><video:thumbnail_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21998887-poster.webp</video:thumbnail_loc><video:title>Garage Door Frame Repair in San Leandro: Wood Damage Close-Up</video:title><video:description>This close-up documents weathered, pitted wood beside painted trim on a garage-door project. It gives homeowners a focused view of the framing condition visible before any repair work is shown.</video:description><video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21998887.mp4</video:content_loc><video:duration>30</video:duration><video:publication_date>2026-08-21</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://www.valiantdoor.com/videos/companycam/21963465</loc><video:video><video:thumbnail_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21963465-poster.webp</video:thumbnail_loc><video:title>What Does a Garage Door Torsion Spring Assembly Look Like?</video:title><video:description>This close-up shows the torsion-spring assembly above a garage door, including the coiled spring, shaft, cable drum, and nearby support hardware. It provides a clear reference view of the system.</video:description><video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21963465.mp4</video:content_loc><video:duration>46</video:duration><video:publication_date>2026-08-21</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://www.valiantdoor.com/videos/companycam/21962867</loc><video:video><video:thumbnail_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962867-poster.webp</video:thumbnail_loc><video:title>What Does a Garage Door Roller Look Like in the Track?</video:title><video:description>This close-up video shows a black garage door roller beside the metal track and hinge hardware. It offers a focused reference view of the small rolling component in its installed position.</video:description><video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962867.mp4</video:content_loc><video:duration>27</video:duration><video:publication_date>2026-08-21</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://www.valiantdoor.com/videos/companycam/21962667</loc><video:video><video:thumbnail_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962667-poster.webp</video:thumbnail_loc><video:title>How Is a Level Used Near Garage Door Hardware?</video:title><video:description>This video shows a level positioned beside metal garage door hardware inside a garage. The close view highlights the tool's green bubble vials next to the installed components.</video:description><video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962667.mp4</video:content_loc><video:duration>11</video:duration><video:publication_date>2026-08-21</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://www.valiantdoor.com/videos/companycam/21962658</loc><video:video><video:thumbnail_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962658-poster.webp</video:thumbnail_loc><video:title>What Does Garage Door Hinge Hardware Look Like?</video:title><video:description>The video focuses on a galvanized hinge plate, its fasteners, and an adjacent vertical metal component. The tight view provides a clear reference for the hardware visible on a sectional garage door.</video:description><video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962658.mp4</video:content_loc><video:duration>17</video:duration><video:publication_date>2026-08-21</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://www.valiantdoor.com/videos/companycam/21962561</loc><video:video><video:thumbnail_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962561-poster.webp</video:thumbnail_loc><video:title>What Do Garage Door Torsion Springs Look Like in Danville?</video:title><video:description>This video provides a clear close-up of several coiled garage door torsion springs grouped beside the door hardware area. The view focuses on the springs themselves, making their tightly wound coils and different finishes easy to see.</video:description><video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962561.mp4</video:content_loc><video:duration>53</video:duration><video:publication_date>2026-08-21</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://www.valiantdoor.com/videos/companycam/21962334</loc><video:video><video:thumbnail_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962334-poster.webp</video:thumbnail_loc><video:title>What Is a Garage Door Cable Drum? Danville Close-Up</video:title><video:description>This close-up focuses on a circular garage door cable drum fitted around a torsion shaft near the end of the door system. The footage gives a detailed view of the drum, shaft, and adjacent mounting hardware without showing the broader property.</video:description><video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21962334.mp4</video:content_loc><video:duration>36</video:duration><video:publication_date>2026-08-21</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
 </urlset>

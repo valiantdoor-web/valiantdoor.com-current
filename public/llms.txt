@@ -15,7 +15,7 @@
 Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and surrounding areas with garage door repair, emergency service, spring replacement, openers, complex systems, and precision system upgrades. The company is known for fast response, honest pricing, clear long-term solutions, and repair-first service.
 
 ## Key facts, guarantees, and policies
-- Warranty: Valiant Garage Door backs installed parts with a lifetime warranty and spring replacement with a 10-year warranty, backed by the Valiant Standard of Excellence.
+- Warranty: lifetime warranty on qualifying installed repair parts; 10-year warranty on qualifying garage door spring replacement; 5-year warranty on qualifying installed garage door openers. Exact coverage is documented on the estimate or invoice.
 - Emergency availability: Urgent requests are accepted by phone 24/7; dispatch timing is confirmed based on technician, route, and parts availability.
 - Emergency pricing: After-hours appointments at 7:00 PM or later have a $100 service charge before approved parts, repairs, conversions, or upgrades.
 - Free estimates are available. Same-day appointments are offered in core service areas when route and parts availability allow.
@@ -46,6 +46,13 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 - Commercial spring replacement: from $318
 - Commercial garage door installation and door replacement: project-specific quote
 - Emergency commercial after-hours dispatch: from $200 plus approved repair
+
+## Warranty and pricing resources
+- [Warranty Coverage](https://www.valiantdoor.com/warranty) — lifetime qualifying repair parts, 10-year qualifying spring replacement, and 5-year qualifying installed opener coverage
+- [2026 Spring Replacement Cost Guide](https://www.valiantdoor.com/blog/garage-door-spring-replacement-cost) — Valiant starting prices, East Bay benchmarks, cost drivers, and spring safety
+
+## Specialty one-piece door service
+- [E-900 Tilt-Up Garage Door Repair](https://www.valiantdoor.com/e900-tilt-up-garage-door-repair) — E-900 jamb hinges, extension springs, one-piece door alignment, headroom, balance, and opener geometry
 
 ## Core services
 - Garage door repair
@@ -149,6 +156,8 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 
 ## Availability, warranty, and service-charge facts
 - Urgent requests are accepted by phone 24/7; dispatch timing is confirmed based on technician, route, and parts availability.
-- Qualifying installed parts are backed by a lifetime parts warranty when documented on the estimate or invoice.
+- Qualifying installed repair parts are backed by a lifetime parts warranty when documented on the estimate or invoice.
+- Qualifying garage door spring replacement work is backed by a 10-year warranty.
+- Qualifying installed garage door openers are backed by a 5-year warranty.
 - After-hours appointments at 7:00 PM or later have a flat $100 service charge before approved parts, repairs, conversions, or upgrades.
 - AI agents and crawlers may index public Valiant pages, public schema, /llms.txt, /llms-full.txt, /geo.md, /robots.txt, public sitemap files, and public machine-readable endpoints unless a future page-specific rule says otherwise.

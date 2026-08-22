@@ -138,6 +138,9 @@ Allow: /
 # LLM full text: https://www.valiantdoor.com/llms-full.txt
 # Agent profile: https://www.valiantdoor.com/agents.json
 
+# Warranty facts: https://www.valiantdoor.com/warranty
+# 2026 spring cost guide: https://www.valiantdoor.com/blog/garage-door-spring-replacement-cost
+
 # --- Sitemaps ---
 Sitemap: https://www.valiantdoor.com/sitemap.xml
 Sitemap: https://www.valiantdoor.com/sitemap-pages.xml
