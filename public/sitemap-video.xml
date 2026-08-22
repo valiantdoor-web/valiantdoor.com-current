@@ -9,7 +9,7 @@
       <video:description>Demonstration of chain hoist operation for commercial garage door service and repair.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/gallery/chain-hoist-instruction-mobile.mp4</video:content_loc>
       <video:duration>110</video:duration>
-      <video:upload_date>2026-06-15</video:upload_date>
+      <video:publication_date>2026-06-15T00:00:00-07:00</video:publication_date>
     </video:video>
   </url>
   <url>
@@ -20,7 +20,7 @@
       <video:description>A comprehensive walkthrough of Valiant Garage Door's preventive maintenance service for Pleasanton homeowners.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/maintenance/The_Valiant_PreventiveOverview.mp4</video:content_loc>
       <video:duration>334</video:duration>
-      <video:upload_date>2026-06-15</video:upload_date>
+      <video:publication_date>2026-06-15T00:00:00-07:00</video:publication_date>
     </video:video>
   </url>
   <url>
@@ -31,7 +31,7 @@
       <video:description>A homeowner-friendly walkthrough showing the most common safety sensor warning signs and how to inspect alignment before calling for service.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-alignment-guide.mp4</video:content_loc>
       <video:duration>272</video:duration>
-      <video:upload_date>2026-06-23</video:upload_date>
+      <video:publication_date>2026-06-23T00:00:00-07:00</video:publication_date>
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-fix-explainer.webp</video:thumbnail_loc>
@@ -39,7 +39,7 @@
       <video:description>A second informational video for homeowners who want to understand what to check if the door still will not close safely after a basic sensor inspection.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-fix-explainer.mp4</video:content_loc>
       <video:duration>122</video:duration>
-      <video:upload_date>2026-06-23</video:upload_date>
+      <video:publication_date>2026-06-23T00:00:00-07:00</video:publication_date>
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-wire-splice-correctly.webp</video:thumbnail_loc>
@@ -47,7 +47,7 @@
       <video:description>Valiant Garage Door shows how a safety sensor wire splice should be handled correctly and when the repair should be completed by a technician.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-wire-splice-correctly.mp4</video:content_loc>
       <video:duration>5</video:duration>
-      <video:upload_date>2026-06-23</video:upload_date>
+      <video:publication_date>2026-06-23T00:00:00-07:00</video:publication_date>
     </video:video>
   </url>
   <url>
@@ -58,7 +58,7 @@
       <video:description>Showcase video highlighting Valiant Garage Door's master technician expertise and service quality.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-widescreen-optimized.mp4</video:content_loc>
       <video:duration>4</video:duration>
-      <video:upload_date>2026-06-12</video:upload_date>
+      <video:publication_date>2026-06-12T00:00:00-07:00</video:publication_date>
     </video:video>
   </url>
   <url>
@@ -69,7 +69,7 @@
       <video:description>Valiant Garage Door refinishing a carriage house garage door panel during a restoration in Pleasanton, California.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/projects/pleasanton-carriage-door-restoration.mp4</video:content_loc>
       <video:duration>30</video:duration>
-      <video:upload_date>2026-07-31</video:upload_date>
+      <video:publication_date>2026-07-31T00:00:00-07:00</video:publication_date>
     </video:video>
   </url>
 
@@ -81,7 +81,7 @@
       <video:description>A quick overview of the heavy-duty springs, rollers, bearings, cables, and hardware Valiant selects for dependable garage door repairs and long-term system performance.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/valiant-hardware-parts-accessories-card-exact.mp4</video:content_loc>
       <video:duration>11</video:duration>
-      <video:upload_date>2026-06-13</video:upload_date>
+      <video:publication_date>2026-06-13T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
     <video:video>
@@ -122,7 +122,7 @@
       <video:description>Watch a close-up inspection of hinges, rollers, and vertical-track hardware in Livermore. Learn which visible signs can indicate wear, looseness, or binding and when the door should be professionally evaluated.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21882642.mp4</video:content_loc>
       <video:duration>10</video:duration>
-      <video:upload_date>2026-08-19</video:upload_date>
+      <video:publication_date>2026-08-19T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -134,7 +134,7 @@
       <video:description>See two sectional garage doors cycle through an operating check in Fremont. Learn what smooth travel, consistent movement, track alignment, and overhead clearance should look like.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21871347.mp4</video:content_loc>
       <video:duration>15</video:duration>
-      <video:upload_date>2026-08-18</video:upload_date>
+      <video:publication_date>2026-08-18T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -146,7 +146,7 @@
       <video:description>See a LiftMaster opener, rail, torsion system, tracks, and lower safety-sensor area inspected in Fremont. Learn which components should be checked when the opener or door is not operating normally.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21870690.mp4</video:content_loc>
       <video:duration>41</video:duration>
-      <video:upload_date>2026-08-18</video:upload_date>
+      <video:publication_date>2026-08-18T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -158,7 +158,7 @@
       <video:description>See a close-up of torsion-spring hardware during professional service in Pleasanton. Learn why stored spring tension, tool kickback, and incorrect winding can make DIY replacement a serious injury risk.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21781287.mp4</video:content_loc>
       <video:duration>30</video:duration>
-      <video:upload_date>2026-08-14</video:upload_date>
+      <video:publication_date>2026-08-14T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -170,7 +170,7 @@
       <video:description>This Pleasanton, CA video shows the garage door track, roller, and hinge area. It documents components assessed for garage door track and roller inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21780507.mp4</video:content_loc>
       <video:duration>10</video:duration>
-      <video:upload_date>2026-08-14</video:upload_date>
+      <video:publication_date>2026-08-14T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -182,7 +182,7 @@
       <video:description>This Pleasanton, CA video shows the lower door area and bottom seal. It documents components assessed for garage door bottom seal inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21776849.mp4</video:content_loc>
       <video:duration>16</video:duration>
-      <video:upload_date>2026-08-14</video:upload_date>
+      <video:publication_date>2026-08-14T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -194,7 +194,7 @@
       <video:description>This Santa Clara, CA video shows the garage interior and overhead garage door system. It documents components assessed for garage door torsion system inspection Santa Clara CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21750839.mp4</video:content_loc>
       <video:duration>39</video:duration>
-      <video:upload_date>2026-08-14</video:upload_date>
+      <video:publication_date>2026-08-14T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -206,7 +206,7 @@
       <video:description>This Livermore, CA video shows the garage door opener and its mounting area. It documents components assessed for garage door opener inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21672440.mp4</video:content_loc>
       <video:duration>37</video:duration>
-      <video:upload_date>2026-08-12</video:upload_date>
+      <video:publication_date>2026-08-12T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -218,7 +218,7 @@
       <video:description>This Dublin, CA video shows the vertical track and side hardware. It documents components assessed for garage door vertical track inspection Dublin CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21389521.mp4</video:content_loc>
       <video:duration>1</video:duration>
-      <video:upload_date>2026-08-02</video:upload_date>
+      <video:publication_date>2026-08-02T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -230,7 +230,7 @@
       <video:description>This Dublin, CA video shows the door track and adjacent mounting hardware. It documents components assessed for garage door track hardware inspection Dublin CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21389520.mp4</video:content_loc>
       <video:duration>12</video:duration>
-      <video:upload_date>2026-08-02</video:upload_date>
+      <video:publication_date>2026-08-02T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -242,7 +242,7 @@
       <video:description>This Dublin, CA video shows the garage door track and roller path. It documents components assessed for garage door track and roller inspection Dublin CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21389518.mp4</video:content_loc>
       <video:duration>24</video:duration>
-      <video:upload_date>2026-08-02</video:upload_date>
+      <video:publication_date>2026-08-02T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -254,7 +254,7 @@
       <video:description>This San Ramon, CA video shows the torsion spring, cable, and end hardware. It documents components assessed for garage door torsion spring inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21073383.mp4</video:content_loc>
       <video:duration>52</video:duration>
-      <video:upload_date>2026-07-22</video:upload_date>
+      <video:publication_date>2026-07-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -266,7 +266,7 @@
       <video:description>This San Ramon, CA video shows the torsion spring assembly above the door. It documents components assessed for garage door torsion spring inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21073377.mp4</video:content_loc>
       <video:duration>22</video:duration>
-      <video:upload_date>2026-07-22</video:upload_date>
+      <video:publication_date>2026-07-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -278,7 +278,7 @@
       <video:description>This San Ramon, CA video shows the cable drum, end plate, and torsion hardware. It documents components assessed for garage door cable drum inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21071399.mp4</video:content_loc>
       <video:duration>4</video:duration>
-      <video:upload_date>2026-07-22</video:upload_date>
+      <video:publication_date>2026-07-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -290,7 +290,7 @@
       <video:description>This San Ramon, CA video shows the garage door opener and nearby overhead components. It documents components assessed for garage door opener inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21071171.mp4</video:content_loc>
       <video:duration>5</video:duration>
-      <video:upload_date>2026-07-22</video:upload_date>
+      <video:publication_date>2026-07-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -302,7 +302,7 @@
       <video:description>This San Ramon, CA video shows the garage door opener rail and its connection points. It documents components assessed for garage door opener rail inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21071111.mp4</video:content_loc>
       <video:duration>4</video:duration>
-      <video:upload_date>2026-07-22</video:upload_date>
+      <video:publication_date>2026-07-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -314,7 +314,7 @@
       <video:description>This San Ramon, CA video shows the opener rail, hanger, and adjacent door hardware. It documents components assessed for garage door opener rail inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-21071107.mp4</video:content_loc>
       <video:duration>11</video:duration>
-      <video:upload_date>2026-07-22</video:upload_date>
+      <video:publication_date>2026-07-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -326,7 +326,7 @@
       <video:description>This Dublin, CA video shows the garage door opener rail above the door. It documents components assessed for garage door opener rail inspection Dublin CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20992362.mp4</video:content_loc>
       <video:duration>6</video:duration>
-      <video:upload_date>2026-07-18</video:upload_date>
+      <video:publication_date>2026-07-18T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -338,7 +338,7 @@
       <video:description>This Dublin, CA video shows the upper garage door section and adjoining hardware. It documents components assessed for garage door upper section inspection Dublin CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20992359.mp4</video:content_loc>
       <video:duration>38</video:duration>
-      <video:upload_date>2026-07-18</video:upload_date>
+      <video:publication_date>2026-07-18T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -350,7 +350,7 @@
       <video:description>This Dublin, CA video shows the opener rail and upper door area. It documents components assessed for garage door opener rail inspection Dublin CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20992342.mp4</video:content_loc>
       <video:duration>9</video:duration>
-      <video:upload_date>2026-07-18</video:upload_date>
+      <video:publication_date>2026-07-18T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -362,7 +362,7 @@
       <video:description>This Dublin, CA video shows the garage door moving through an operation test. It documents components assessed for garage door operation test Dublin CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20992320.mp4</video:content_loc>
       <video:duration>13</video:duration>
-      <video:upload_date>2026-07-18</video:upload_date>
+      <video:publication_date>2026-07-18T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -374,7 +374,7 @@
       <video:description>This Dublin, CA video shows the exterior face and lower edge of the garage door. It documents components assessed for garage door exterior inspection Dublin CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20992316.mp4</video:content_loc>
       <video:duration>23</video:duration>
-      <video:upload_date>2026-07-18</video:upload_date>
+      <video:publication_date>2026-07-18T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -386,7 +386,7 @@
       <video:description>This Pleasanton, CA video shows a garage door roller and adjacent track hardware. It documents components assessed for garage door roller inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20908651.mp4</video:content_loc>
       <video:duration>12</video:duration>
-      <video:upload_date>2026-07-15</video:upload_date>
+      <video:publication_date>2026-07-15T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -398,7 +398,7 @@
       <video:description>This Pleasanton, CA video shows the end plate and torsion spring hardware. It documents components assessed for garage door end plate inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20908615.mp4</video:content_loc>
       <video:duration>1</video:duration>
-      <video:upload_date>2026-07-15</video:upload_date>
+      <video:publication_date>2026-07-15T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -410,7 +410,7 @@
       <video:description>This Pleasanton, CA video shows the garage door cable and overhead hardware. It documents components assessed for garage door cable inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20908614.mp4</video:content_loc>
       <video:duration>13</video:duration>
-      <video:upload_date>2026-07-15</video:upload_date>
+      <video:publication_date>2026-07-15T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -422,7 +422,7 @@
       <video:description>This Pleasanton, CA video shows a garage door bracket and nearby support hardware. It documents components assessed for garage door bracket inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20908605.mp4</video:content_loc>
       <video:duration>5</video:duration>
-      <video:upload_date>2026-07-15</video:upload_date>
+      <video:publication_date>2026-07-15T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -434,7 +434,7 @@
       <video:description>This San Ramon, CA video shows the interior face of a residential garage door. It documents components assessed for residential garage door inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20750315.mp4</video:content_loc>
       <video:duration>32</video:duration>
-      <video:upload_date>2026-07-10</video:upload_date>
+      <video:publication_date>2026-07-10T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -446,7 +446,7 @@
       <video:description>This Pleasanton, CA video shows a carriage-style garage door from the exterior. It documents components assessed for carriage style garage door inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20412988.mp4</video:content_loc>
       <video:duration>22</video:duration>
-      <video:upload_date>2026-06-27</video:upload_date>
+      <video:publication_date>2026-06-27T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -458,7 +458,7 @@
       <video:description>This Pleasanton, CA video shows the garage door opening and exterior door area. It documents components assessed for garage door opening inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20413021.mp4</video:content_loc>
       <video:duration>19</video:duration>
-      <video:upload_date>2026-06-26</video:upload_date>
+      <video:publication_date>2026-06-26T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -470,7 +470,7 @@
       <video:description>This Pleasanton, CA video shows tools and materials staged for garage door service. It documents components assessed for garage door panel replacement preparation Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20403098.mp4</video:content_loc>
       <video:duration>66</video:duration>
-      <video:upload_date>2026-06-26</video:upload_date>
+      <video:publication_date>2026-06-26T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -482,7 +482,7 @@
       <video:description>This Pleasanton, CA video shows a garage door panel and its surface condition. It documents components assessed for garage door panel inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20402982.mp4</video:content_loc>
       <video:duration>47</video:duration>
-      <video:upload_date>2026-06-26</video:upload_date>
+      <video:publication_date>2026-06-26T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -494,7 +494,7 @@
       <video:description>This Pleasanton, CA video shows garage door service equipment prepared beside the work area. It documents components assessed for garage door repair preparation Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20413024.mp4</video:content_loc>
       <video:duration>4</video:duration>
-      <video:upload_date>2026-06-26</video:upload_date>
+      <video:publication_date>2026-06-26T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -506,7 +506,7 @@
       <video:description>This Pleasanton, CA video shows a technician working at a garage door panel. It documents components assessed for garage door panel repair Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20413027.mp4</video:content_loc>
       <video:duration>26</video:duration>
-      <video:upload_date>2026-06-26</video:upload_date>
+      <video:publication_date>2026-06-26T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -518,7 +518,7 @@
       <video:description>This Pleasanton, CA video shows a technician performing work along the garage door. It documents components assessed for garage door repair Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20413037.mp4</video:content_loc>
       <video:duration>29</video:duration>
-      <video:upload_date>2026-06-26</video:upload_date>
+      <video:publication_date>2026-06-26T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -530,7 +530,7 @@
       <video:description>This Pleasanton, CA video shows a garage door repair work area and door hardware. It documents components assessed for garage door repair inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20413044.mp4</video:content_loc>
       <video:duration>18</video:duration>
-      <video:upload_date>2026-06-26</video:upload_date>
+      <video:publication_date>2026-06-26T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -542,7 +542,7 @@
       <video:description>This Pleasanton, CA video shows a close look at the garage door during service work. It documents components assessed for garage door repair inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20426470.mp4</video:content_loc>
       <video:duration>3</video:duration>
-      <video:upload_date>2026-06-26</video:upload_date>
+      <video:publication_date>2026-06-26T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -554,7 +554,7 @@
       <video:description>This Hayward, CA video shows installation work and garage door components. It documents components assessed for garage door installation Hayward CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20367328.mp4</video:content_loc>
       <video:duration>47</video:duration>
-      <video:upload_date>2026-06-25</video:upload_date>
+      <video:publication_date>2026-06-25T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -566,7 +566,7 @@
       <video:description>This Hayward, CA video shows the garage door track area and overhead framing. It documents components assessed for garage door track inspection Hayward CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20331262.mp4</video:content_loc>
       <video:duration>15</video:duration>
-      <video:upload_date>2026-06-24</video:upload_date>
+      <video:publication_date>2026-06-24T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -578,7 +578,7 @@
       <video:description>This East Bay, CA video shows a garage door service visit documented on video. It documents components assessed for garage door service inspection East Bay CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20382061.mp4</video:content_loc>
       <video:duration>5</video:duration>
-      <video:upload_date>2026-06-23</video:upload_date>
+      <video:publication_date>2026-06-23T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -590,7 +590,7 @@
       <video:description>This Cupertino, CA video shows a sectional garage door installed in a garage opening. It documents components assessed for garage door installation Cupertino CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20031866.mp4</video:content_loc>
       <video:duration>17</video:duration>
-      <video:upload_date>2026-06-13</video:upload_date>
+      <video:publication_date>2026-06-13T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -602,7 +602,7 @@
       <video:description>This Cupertino, CA video shows the opener, rail, and upper track area. It documents components assessed for garage door opener inspection Cupertino CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-20031829.mp4</video:content_loc>
       <video:duration>27</video:duration>
-      <video:upload_date>2026-06-13</video:upload_date>
+      <video:publication_date>2026-06-13T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -614,7 +614,7 @@
       <video:description>This San Leandro, CA video shows commercial garage door hardware and a securing strap. It documents components assessed for commercial garage door hardware inspection San Leandro CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19843053.mp4</video:content_loc>
       <video:duration>9</video:duration>
-      <video:upload_date>2026-06-08</video:upload_date>
+      <video:publication_date>2026-06-08T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -626,7 +626,7 @@
       <video:description>This San Ramon, CA video shows the garage door opener and attached overhead hardware. It documents components assessed for garage door opener inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19832357.mp4</video:content_loc>
       <video:duration>12</video:duration>
-      <video:upload_date>2026-06-06</video:upload_date>
+      <video:publication_date>2026-06-06T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -638,7 +638,7 @@
       <video:description>This Livermore, CA video shows the garage door, track, opener rail, and related hardware. It documents components assessed for garage door system inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19867531.mp4</video:content_loc>
       <video:duration>36</video:duration>
-      <video:upload_date>2026-06-04</video:upload_date>
+      <video:publication_date>2026-06-04T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -650,7 +650,7 @@
       <video:description>This Livermore, CA video shows the full garage door system from inside the garage. It documents components assessed for garage door system inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19790697.mp4</video:content_loc>
       <video:duration>36</video:duration>
-      <video:upload_date>2026-06-04</video:upload_date>
+      <video:publication_date>2026-06-04T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -662,7 +662,7 @@
       <video:description>This San Leandro, CA video shows a commercial overhead door and its operating hardware. It documents components assessed for commercial garage door inspection San Leandro CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19759470.mp4</video:content_loc>
       <video:duration>26</video:duration>
-      <video:upload_date>2026-06-04</video:upload_date>
+      <video:publication_date>2026-06-04T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -674,7 +674,7 @@
       <video:description>This Livermore, CA video shows garage door opener hardware and the drive connection. It documents components assessed for garage door opener hardware inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19682863.mp4</video:content_loc>
       <video:duration>7</video:duration>
-      <video:upload_date>2026-06-02</video:upload_date>
+      <video:publication_date>2026-06-02T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -686,7 +686,7 @@
       <video:description>This Livermore, CA video shows the upper track and opener J-arm connection. It documents components assessed for garage door track inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439667.mp4</video:content_loc>
       <video:duration>1</video:duration>
-      <video:upload_date>2026-05-22</video:upload_date>
+      <video:publication_date>2026-05-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -698,7 +698,7 @@
       <video:description>This Livermore, CA video shows the garage door cable and bottom fixture area. It documents components assessed for garage door cable inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439666.mp4</video:content_loc>
       <video:duration>18</video:duration>
-      <video:upload_date>2026-05-22</video:upload_date>
+      <video:publication_date>2026-05-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -710,7 +710,7 @@
       <video:description>This Livermore, CA video shows the garage door cable connection and bottom bracket. It documents components assessed for garage door cable bracket inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439615.mp4</video:content_loc>
       <video:duration>20</video:duration>
-      <video:upload_date>2026-05-22</video:upload_date>
+      <video:publication_date>2026-05-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -722,7 +722,7 @@
       <video:description>This Livermore, CA video shows the garage door track and alignment at the upper section. It documents components assessed for garage door track alignment inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439521.mp4</video:content_loc>
       <video:duration>29</video:duration>
-      <video:upload_date>2026-05-22</video:upload_date>
+      <video:publication_date>2026-05-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -734,7 +734,7 @@
       <video:description>This Livermore, CA video shows the garage door track, retainer, and upper hardware. It documents components assessed for garage door track inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439496.mp4</video:content_loc>
       <video:duration>6</video:duration>
-      <video:upload_date>2026-05-22</video:upload_date>
+      <video:publication_date>2026-05-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -746,7 +746,7 @@
       <video:description>This Livermore, CA video shows the garage door being checked through its travel. It documents components assessed for garage door operation test Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439493.mp4</video:content_loc>
       <video:duration>14</video:duration>
-      <video:upload_date>2026-05-22</video:upload_date>
+      <video:publication_date>2026-05-22T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -758,7 +758,7 @@
       <video:description>This Pleasanton, CA video shows the garage door opener area during a service visit. It documents components assessed for garage door opener service Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19331120.mp4</video:content_loc>
       <video:duration>30</video:duration>
-      <video:upload_date>2026-05-17</video:upload_date>
+      <video:publication_date>2026-05-17T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -770,7 +770,7 @@
       <video:description>This Pleasanton, CA video shows an opener component and adjacent garage door hardware. It documents components assessed for garage door opener service Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439123.mp4</video:content_loc>
       <video:duration>30</video:duration>
-      <video:upload_date>2026-05-17</video:upload_date>
+      <video:publication_date>2026-05-17T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -782,7 +782,7 @@
       <video:description>This Pleasanton, CA video shows a garage door section and hinge connection. It documents components assessed for garage door section inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439125.mp4</video:content_loc>
       <video:duration>25</video:duration>
-      <video:upload_date>2026-05-17</video:upload_date>
+      <video:publication_date>2026-05-17T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -794,7 +794,7 @@
       <video:description>This Pleasanton, CA video shows the surface of a garage door panel. It documents components assessed for garage door panel inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439487.mp4</video:content_loc>
       <video:duration>18</video:duration>
-      <video:upload_date>2026-05-17</video:upload_date>
+      <video:publication_date>2026-05-17T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -806,7 +806,7 @@
       <video:description>This Pleasanton, CA video shows a garage door panel and its visible surface condition. It documents components assessed for garage door panel inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19395475.mp4</video:content_loc>
       <video:duration>18</video:duration>
-      <video:upload_date>2026-05-17</video:upload_date>
+      <video:publication_date>2026-05-17T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -818,7 +818,7 @@
       <video:description>This San Ramon, CA video shows an installed residential garage door viewed from outside. It documents components assessed for garage door installation San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19300551.mp4</video:content_loc>
       <video:duration>2</video:duration>
-      <video:upload_date>2026-05-17</video:upload_date>
+      <video:publication_date>2026-05-17T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -830,7 +830,7 @@
       <video:description>This Pleasanton, CA video shows a garage door panel finish and surface area. It documents components assessed for garage door panel inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19395484.mp4</video:content_loc>
       <video:duration>16</video:duration>
-      <video:upload_date>2026-05-17</video:upload_date>
+      <video:publication_date>2026-05-17T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -842,7 +842,7 @@
       <video:description>This Pleasanton, CA video shows a garage door panel repair area and finish detail. It documents components assessed for garage door panel inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19439491.mp4</video:content_loc>
       <video:duration>16</video:duration>
-      <video:upload_date>2026-05-17</video:upload_date>
+      <video:publication_date>2026-05-17T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -854,7 +854,7 @@
       <video:description>This Livermore, CA video shows a garage door lock, latch, and nearby hardware. It documents components assessed for garage door lock inspection Livermore CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19181709.mp4</video:content_loc>
       <video:duration>9</video:duration>
-      <video:upload_date>2026-05-13</video:upload_date>
+      <video:publication_date>2026-05-13T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -866,7 +866,7 @@
       <video:description>This San Ramon, CA video shows the bottom bracket, end plate, and nearby door hardware. It documents components assessed for garage door bottom bracket inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19174153.mp4</video:content_loc>
       <video:duration>23</video:duration>
-      <video:upload_date>2026-05-12</video:upload_date>
+      <video:publication_date>2026-05-12T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -878,7 +878,7 @@
       <video:description>This Dublin, CA video shows the garage door roller, hinge, and section hardware. It documents components assessed for garage door roller and hinge inspection Dublin CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19111790.mp4</video:content_loc>
       <video:duration>15</video:duration>
-      <video:upload_date>2026-05-11</video:upload_date>
+      <video:publication_date>2026-05-11T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -890,7 +890,7 @@
       <video:description>This Danville, CA video shows the garage door cable, bottom fixture, and track area. It documents components assessed for garage door cable repair inspection Danville CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19089326.mp4</video:content_loc>
       <video:duration>5</video:duration>
-      <video:upload_date>2026-05-08</video:upload_date>
+      <video:publication_date>2026-05-08T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -902,7 +902,7 @@
       <video:description>This Pleasanton, CA video shows the garage door during a temporary repair assessment. It documents components assessed for garage door temporary repair inspection Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19084361.mp4</video:content_loc>
       <video:duration>1</video:duration>
-      <video:upload_date>2026-05-08</video:upload_date>
+      <video:publication_date>2026-05-08T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -914,7 +914,7 @@
       <video:description>This Pleasanton, CA video shows the garage door moving during an operation test. It documents components assessed for garage door operation test Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19084356.mp4</video:content_loc>
       <video:duration>16</video:duration>
-      <video:upload_date>2026-05-08</video:upload_date>
+      <video:publication_date>2026-05-08T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -926,7 +926,7 @@
       <video:description>This Pleasanton, CA video shows the torsion spring and overhead garage door hardware. It documents components assessed for garage door torsion spring repair Pleasanton CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-19084263.mp4</video:content_loc>
       <video:duration>11</video:duration>
-      <video:upload_date>2026-05-08</video:upload_date>
+      <video:publication_date>2026-05-08T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -938,7 +938,7 @@
       <video:description>This San Ramon, CA video shows the garage door moving through an operation test after spring work. It documents components assessed for garage door operation test San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-18976484.mp4</video:content_loc>
       <video:duration>14</video:duration>
-      <video:upload_date>2026-05-05</video:upload_date>
+      <video:publication_date>2026-05-05T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -950,7 +950,7 @@
       <video:description>This San Ramon, CA video shows the garage door end plate and adjacent hardware. It documents components assessed for garage door end plate inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-18976263.mp4</video:content_loc>
       <video:duration>4</video:duration>
-      <video:upload_date>2026-05-05</video:upload_date>
+      <video:publication_date>2026-05-05T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -962,7 +962,7 @@
       <video:description>This San Ramon, CA video shows the garage door section, hinge, and connecting hardware. It documents components assessed for garage door section inspection San Ramon CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-18975048.mp4</video:content_loc>
       <video:duration>11</video:duration>
-      <video:upload_date>2026-05-05</video:upload_date>
+      <video:publication_date>2026-05-05T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -974,7 +974,7 @@
       <video:description>This Danville, CA video shows the garage door system viewed from inside the garage. It documents components assessed for garage door system inspection Danville CA and helps clarify their visible condition and service needs.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/companycam-videos/companycam-18972941.mp4</video:content_loc>
       <video:duration>18</video:duration>
-      <video:upload_date>2026-05-04</video:upload_date>
+      <video:publication_date>2026-05-04T00:00:00-07:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
