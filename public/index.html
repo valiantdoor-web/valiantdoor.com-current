@@ -193,6 +193,54 @@
       },
       "about": {
         "@id": "https://www.valiantdoor.com/#business"
+      },
+      "mentions": {
+        "@id": "https://www.valiantdoor.com/#trades-thursday-las-vegas-2026"
+      }
+    },
+    {
+      "@type": "Event",
+      "@id": "https://www.valiantdoor.com/#trades-thursday-las-vegas-2026",
+      "name": "Trades Thursday — Las Vegas Regional Hub",
+      "description": "A free afternoon for Las Vegas trade professionals featuring hands-on growth sessions, breakout workshops, networking, food, drinks, professional headshots, swag, giveaways, and a Housecall Pro product preview.",
+      "startDate": "2026-10-01T14:00:00-07:00",
+      "endDate": "2026-10-01T18:00:00-07:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "isAccessibleForFree": true,
+      "url": "https://events.housecallpro.com/register-tradesthursday-lasvegas-regional-hub/",
+      "image": [
+        "https://www.valiantdoor.com/assets/events/trades-thursday-las-vegas-960.webp"
+      ],
+      "location": {
+        "@type": "Place",
+        "name": "Near Chinatown, Las Vegas",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Las Vegas",
+          "addressRegion": "NV",
+          "addressCountry": "US"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://events.housecallpro.com/register-tradesthursday-lasvegas-regional-hub/",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "organizer": {
+        "@type": "Person",
+        "name": "Valentino Ramirez",
+        "url": "https://www.valiantdoor.com/about-valentino-ramirez",
+        "worksFor": {
+          "@id": "https://www.valiantdoor.com/#business"
+        }
+      },
+      "sponsor": {
+        "@type": "Organization",
+        "name": "Housecall Pro",
+        "url": "https://www.housecallpro.com/"
       }
     },
     {
@@ -766,15 +814,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         alt="Valiant Garage Door and Housecall Pro Trades Thursday Las Vegas event flyer. Free event October 1, 2026, from 2 to 6 PM near Chinatown, hosted by Valentino Ramirez."
       >
     </a>
+    <div class="press-event-details">
+      <p class="press-event-name">Trades Thursday — Las Vegas Regional Hub</p>
+      <p class="press-event-summary"><time datetime="2026-10-01T14:00:00-07:00">October 1, 2026, 2–6 PM</time> <span aria-hidden="true">&bull;</span> Near Chinatown, Las Vegas <span aria-hidden="true">&bull;</span> Free to attend</p>
+      <a class="press-event-cta" href="https://events.housecallpro.com/register-tradesthursday-lasvegas-regional-hub/" target="_blank" rel="noopener noreferrer">Register Free</a>
+    </div>
   </div>
 </section>
 <style>
   .press { background: var(--bg); padding: 0 0 clamp(30px,5vw,52px); }
-  .press-inner { display: flex; justify-content: center; }
+  .press-inner { display: flex; flex-direction: column; align-items: center; gap: 18px; }
   .press-event-link { display: block; width: min(100%, 760px); border: 1px solid rgba(213,163,67,.55); border-radius: 16px; overflow: hidden; background: #080808; box-shadow: 0 18px 44px rgba(0,0,0,.28); text-decoration: none; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
   .press-event-link:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: 0 22px 50px rgba(0,0,0,.36); }
   .press-event-link:focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 4px; }
   .press-event-image { display: block; width: 100%; height: auto; }
+  .press-event-details { width: min(100%, 760px); display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 5px 20px; padding: 2px 2px 0; }
+  .press-event-name { grid-column: 1; margin: 0; color: var(--ink); font-family: "Cinzel", serif; font-size: clamp(1rem,2vw,1.2rem); font-weight: 800; }
+  .press-event-summary { grid-column: 1; margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.6; }
+  .press-event-summary span { color: var(--gold); padding: 0 .3em; }
+  .press-event-cta { grid-column: 2; grid-row: 1 / span 2; display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0 22px; border: 1px solid var(--gold); border-radius: 9px; background: var(--gold); color: #090909; font-size: .82rem; font-weight: 800; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+  .press-event-cta:hover { background: var(--gold-bright); border-color: var(--gold-bright); }
+  .press-event-cta:focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 4px; }
+  @media (max-width: 640px) {
+    .press-event-details { grid-template-columns: 1fr; gap: 8px; text-align: center; }
+    .press-event-name, .press-event-summary, .press-event-cta { grid-column: 1; grid-row: auto; }
+    .press-event-cta { width: 100%; margin-top: 4px; }
+  }
   @media (prefers-reduced-motion: reduce) {
     .press-event-link { transition: none; }
     .press-event-link:hover { transform: none; }
