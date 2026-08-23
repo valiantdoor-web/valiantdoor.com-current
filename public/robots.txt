@@ -39,7 +39,7 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# --- Google (Gemini / AI training + AI Overviews) ---
+# --- Google (Gemini model training/grounding only — does NOT control AI Overviews or standard Search visibility) ---
 User-agent: Google-Extended
 Allow: /
 
