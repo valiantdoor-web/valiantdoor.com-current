@@ -746,21 +746,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- SYNDICATED PRESS RELEASE -->
-<section class="press" aria-label="Valiant Garage Door syndicated press release">
+<!-- TRADES THURSDAY LAS VEGAS -->
+<section class="press" aria-label="Trades Thursday Las Vegas event">
   <div class="wrap press-inner">
-    <span class="press-eyebrow">Syndicated Press Release</span>
-    <p class="press-quote">&ldquo;Pleasanton Founder Publishes Local vs. Chain Garage Door Breakdown&rdquo;</p>
-    <a class="press-link" href="https://www.azcentral.com/press-release/story/93168/pleasanton-founder-publishes-local-vs-chain-garage-door-breakdown/" target="_blank" rel="noopener noreferrer">Read the press release distributed on AZcentral &rarr;</a>
+    <a class="press-event-link" href="https://events.housecallpro.com/register-tradesthursday-lasvegas-regional-hub/" target="_blank" rel="noopener noreferrer" aria-label="Register free for Trades Thursday at the Housecall Pro Las Vegas Regional Hub on October 1, 2026">
+      <img
+        class="press-event-image"
+        src="assets/events/trades-thursday-las-vegas-960.webp"
+        srcset="assets/events/trades-thursday-las-vegas-640.webp 640w, assets/events/trades-thursday-las-vegas-960.webp 960w"
+        sizes="(max-width: 760px) calc(100vw - 32px), 760px"
+        width="960"
+        height="1200"
+        loading="lazy"
+        decoding="async"
+        alt="Valiant Garage Door and Housecall Pro Trades Thursday Las Vegas event flyer. Free event October 1, 2026, from 2 to 6 PM near Chinatown, hosted by Valentino Ramirez."
+      >
+    </a>
   </div>
 </section>
 <style>
   .press { background: var(--bg); padding: 0 0 clamp(30px,5vw,52px); }
-  .press-inner { border: 1px solid rgba(255,255,255,.08); border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.2)); padding: clamp(20px,3vw,32px); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  .press-eyebrow { font-size: .72rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
-  .press-quote { font-size: clamp(1.05rem, 2.2vw, 1.4rem); font-weight: 700; color: var(--ink); max-width: 60ch; margin: 0; text-wrap: balance; }
-  .press-link { font-size: .95rem; font-weight: 700; color: var(--gold-bright); text-decoration: none; }
-  .press-link:hover { text-decoration: underline; }
+  .press-inner { display: flex; justify-content: center; }
+  .press-event-link { display: block; width: min(100%, 760px); border: 1px solid rgba(213,163,67,.55); border-radius: 16px; overflow: hidden; background: #080808; box-shadow: 0 18px 44px rgba(0,0,0,.28); text-decoration: none; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+  .press-event-link:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: 0 22px 50px rgba(0,0,0,.36); }
+  .press-event-link:focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 4px; }
+  .press-event-image { display: block; width: 100%; height: auto; }
+  @media (prefers-reduced-motion: reduce) {
+    .press-event-link { transition: none; }
+    .press-event-link:hover { transform: none; }
+  }
 </style>
 
 <!-- PROVE IT -->
