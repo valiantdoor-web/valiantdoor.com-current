@@ -2,118 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://www.valiantdoor.com/services/commercial</loc>
+    <loc>https://www.valiantdoor.com/videos/how-to/how-to-operate-commercial-garage-door-chain-hoist</loc>
     <video:video>
       <video:thumbnail_loc>https://www.valiantdoor.com/assets/gallery/chain-hoist-instruction-poster.webp</video:thumbnail_loc>
-      <video:title>How to Operate a Commercial Chain Hoist Garage Door | Valiant Garage Door</video:title>
-      <video:description>Step-by-step demonstration of chain hoist operation on a commercial rolling steel garage door in the East Bay. Valiant Garage Door shows warehouse and shop owners how to safely raise, lower, and troubleshoot a stuck chain hoist door — including what to do when the door will not close. Covers common issues like slipped chain, worn sprocket, and out-of-plumb tracks that Valiant repairs across Pleasanton, Livermore, San Ramon, and Dublin.</video:description>
+      <video:title>How to Operate a Commercial Garage Door Chain Hoist | Valiant Garage Door</video:title>
+      <video:description>Watch a step-by-step demonstration of manual chain-hoist operation on a commercial rolling steel garage door, including safe raising, lowering, and control checks.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/gallery/chain-hoist-instruction-mobile.mp4</video:content_loc>
       <video:duration>110</video:duration>
       <video:publication_date>2026-06-15T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
   <url>
-    <loc>https://www.valiantdoor.com/blog/essential-garage-door-maintenance-tips-pleasanton-homes</loc>
+    <loc>https://www.valiantdoor.com/videos/how-to/what-does-professional-garage-door-maintenance-include</loc>
     <video:video>
       <video:thumbnail_loc>https://www.valiantdoor.com/assets/maintenance/maintenance-overview-poster.jpg</video:thumbnail_loc>
-      <video:title>Garage Door Preventive Maintenance Explained — Pleasanton Homeowner Guide</video:title>
-      <video:description>A five-minute animated overview of what a professional garage door preventive maintenance visit actually covers: torsion spring inspection, cable and drum wear check, track alignment, roller and hinge condition, lubrication, safety sensor test, force and travel calibration, and full balance test. Explains why annual maintenance prevents broken springs and stuck doors in Pleasanton homes, and what Valiant Garage Door's 10-year master technician checklist includes on every tune-up.</video:description>
+      <video:title>What Does Professional Garage Door Maintenance Include? | Valiant Garage Door</video:title>
+      <video:description>Watch Valiant Garage Door’s preventive-maintenance overview covering springs, cables, rollers, hinges, tracks, opener settings, safety sensors, lubrication, and balance testing.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/maintenance/The_Valiant_PreventiveOverview.mp4</video:content_loc>
       <video:duration>334</video:duration>
       <video:publication_date>2026-06-15T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
   <url>
-    <loc>https://www.valiantdoor.com/blog/garage-door-safety-sensor-how-to-fix-it</loc>
+    <loc>https://www.valiantdoor.com/videos/how-to/how-to-align-garage-door-safety-sensors</loc>
     <video:video>
       <video:thumbnail_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-alignment-guide.webp</video:thumbnail_loc>
-      <video:title>How to Fix Garage Door Safety Sensors That Won't Let the Door Close</video:title>
-      <video:description>Full walkthrough for homeowners whose garage door reverses, blinks, or refuses to close because of misaligned safety sensors. Valiant's master technician shows how to inspect the photo-eye brackets, re-align the two sensor lenses so the LEDs go solid, clean debris off the lens, check the low-voltage wiring for damage, and confirm the fix with an operation test. Covers the exact issue behind most "garage door won't close, light blinks 10 times" service calls in the Tri-Valley.</video:description>
+      <video:title>How to Align Garage Door Safety Sensors | Valiant Garage Door</video:title>
+      <video:description>Watch a complete walkthrough for inspecting and aligning garage door photo-eye safety sensors when the door reverses, blinks, or refuses to close.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-alignment-guide.mp4</video:content_loc>
       <video:duration>272</video:duration>
       <video:publication_date>2026-06-23T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
     </video:video>
+  </url>
+  <url>
+    <loc>https://www.valiantdoor.com/videos/how-to/garage-door-still-wont-close-after-sensor-alignment</loc>
     <video:video>
       <video:thumbnail_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-fix-explainer.webp</video:thumbnail_loc>
-      <video:title>Garage Door Still Won't Close After Sensor Alignment? Next Steps to Check</video:title>
-      <video:description>Follow-up guide for Pleasanton and East Bay homeowners whose garage door still won't close after realigning the safety photo eyes. Covers the second layer of diagnosis: staples pinching the sensor wire, corroded splice connectors, damaged pigtail at the sensor, wet or crushed low-voltage wire runs, and signs the sensor itself has failed and needs replacement. Explains when a homeowner should stop DIY and call a garage door technician.</video:description>
+      <video:title>Garage Door Still Won’t Close After Sensor Alignment? | Valiant Garage Door</video:title>
+      <video:description>Watch the next diagnostic checks when a garage door still refuses to close after sensor alignment, including damaged wiring, failed splices, corrosion, and sensor failure.</video:description>
       <video:content_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-fix-explainer.mp4</video:content_loc>
-      <video:duration>122</video:duration>
+      <video:duration>123</video:duration>
       <video:publication_date>2026-06-23T00:00:00-07:00</video:publication_date>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-wire-splice-correctly.webp</video:thumbnail_loc>
-      <video:title>Quick Tip: Why a Garage Door Safety Sensor Splice Needs a Technician</video:title>
-      <video:description>A 5-second field note from Valiant Garage Door's master technician: what a properly repaired garage door safety sensor wire splice actually looks like, and why twist-and-tape or backyard splices cause repeat sensor failures. Points homeowners in Pleasanton to the right fix instead of a recurring "my garage door won't close" service call.</video:description>
-      <video:content_loc>https://www.valiantdoor.com/assets/blog/garage-door-safety-sensor-how-to-fix-it/safety-sensor-wire-splice-correctly.mp4</video:content_loc>
-      <video:duration>5</video:duration>
-      <video:publication_date>2026-06-23T00:00:00-07:00</video:publication_date>
-    </video:video>
-  </url>
-  <url>
-    <loc>https://www.valiantdoor.com/mastertech</loc>
-    <video:video>
-      <video:thumbnail_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-bg-1536.webp</video:thumbnail_loc>
-      <video:title>Valiant Garage Door — IDEA Master Certified Technician Serving Pleasanton, CA</video:title>
-      <video:description>Brand hero video introducing Valiant Garage Door: a Pleasanton-based, IDEA Master Certified garage door repair company with 10+ years of experience and 693 five-star reviews across Google and Yelp. Serving homeowners and businesses across Pleasanton, Livermore, Dublin, San Ramon, Danville, and the greater East Bay for spring replacement, opener repair, new door installation, and 24-hour emergency service. Call (925) 409-4974.</video:description>
-      <video:content_loc>https://www.valiantdoor.com/assets/mastertech/mastertech-hero-widescreen-optimized.mp4</video:content_loc>
-      <video:duration>4</video:duration>
-      <video:publication_date>2026-06-12T00:00:00-07:00</video:publication_date>
-    </video:video>
-  </url>
-  <url>
-    <loc>https://www.valiantdoor.com/valiant-carriage-door-restorations</loc>
-    <video:video>
-      <video:thumbnail_loc>https://www.valiantdoor.com/assets/projects/pleasanton-carriage-door-restoration-poster.jpg</video:thumbnail_loc>
-      <video:title>Wooden Carriage Garage Door Restoration in Pleasanton, CA — Panel Refinishing</video:title>
-      <video:description>Valiant Garage Door restoring a wooden carriage-house garage door panel in Pleasanton, California. Field footage shows the master technician using a variable-speed sander to strip the failing finish and prepare the panel for refinishing — part of Valiant's specialty carriage door restoration service for high-end East Bay homes. Preserves the original character of the door while restoring weather protection and curb appeal.</video:description>
-      <video:content_loc>https://www.valiantdoor.com/assets/projects/pleasanton-carriage-door-restoration.mp4</video:content_loc>
-      <video:duration>30</video:duration>
-      <video:publication_date>2026-07-31T00:00:00-07:00</video:publication_date>
-    </video:video>
-  </url>
-
-  <url>
-    <loc>https://www.valiantdoor.com/short-repair-videos</loc>
-    <video:video>
-      <video:thumbnail_loc>https://www.valiantdoor.com/assets/valiant-business-card.webp</video:thumbnail_loc>
-      <video:title>Heavy-Duty Garage Door Springs, Rollers, and Hardware Used by Valiant Garage Door</video:title>
-      <video:description>Quick overview of the heavy-duty garage door parts Valiant Garage Door installs on every repair in Pleasanton and the East Bay: 25,000-cycle powder-coated torsion springs, 6200ZZ nylon-coated bearing rollers, D400 cable drums, and reinforced end bearing plates. These are the same commercial-grade components used on Valiant's residential and light-commercial service calls — engineered for silent operation and long-term reliability instead of standard builder-grade parts.</video:description>
-      <video:content_loc>https://www.valiantdoor.com/assets/valiant-hardware-parts-accessories-card-exact.mp4</video:content_loc>
-      <video:duration>11</video:duration>
-      <video:publication_date>2026-06-13T00:00:00-07:00</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://i.ytimg.com/vi/YA9igp_b6dQ/hqdefault.jpg</video:thumbnail_loc>
-      <video:title>Precision Garage Door Installation with Laser-Aligned Tracks — Pleasanton, CA</video:title>
-      <video:description>Short field showcase of Valiant Garage Door's detail-focused installation work in Pleasanton, California. Watch our technicians use professional laser levels to align vertical and horizontal tracks, reinforce mounting brackets, and calibrate the LiftMaster motor unit for smooth, quiet operation. Proper track alignment is critical for garage door safety and long-term reliability — this is the standard Valiant brings to every install across the Tri-Valley.</video:description>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/YA9igp_b6dQ</video:player_loc>
-      <video:duration>12</video:duration>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://i.ytimg.com/vi/1d5ZuIe5uDs/hqdefault.jpg</video:thumbnail_loc>
-      <video:title>Full Wooden Carriage Garage Door Restoration Project in Pleasanton, CA</video:title>
-      <video:description>Complete garage door system overhaul on a wooden carriage door in Pleasanton, CA. Valiant Garage Door replaced worn components with 25,000-cycle powder-coated torsion springs, D400 heavy-duty cable drums, and a reinforced T-rail mounting system, then performed a full balance tune-up, limit adjustment, and opener overhaul. Serving Pleasanton, Livermore, Dublin, and San Ramon homeowners who want their existing carriage door restored instead of replaced.</video:description>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/1d5ZuIe5uDs</video:player_loc>
-      <video:duration>12</video:duration>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://i.ytimg.com/vi/frlROiIkH68/hqdefault.jpg</video:thumbnail_loc>
-      <video:title>Torsion Spring Replacement and Hardware Upgrade in Pleasanton — 25,000-Cycle Springs</video:title>
-      <video:description>Professional torsion spring replacement and full hardware upgrade completed in Pleasanton, CA by Valiant Garage Door. We install 25,000-cycle powder-coated torsion springs and 6200ZZ nylon-coated bearing rollers for silent, smooth operation, and integrated a Wi-Fi wall-mounted control panel. If your garage door spring broke, is making loud noises, or the door feels heavy to lift by hand, this is the exact repair Valiant provides for East Bay homeowners.</video:description>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/frlROiIkH68</video:player_loc>
-      <video:duration>12</video:duration>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://i.ytimg.com/vi/toKyd_K0c5s/hqdefault.jpg</video:thumbnail_loc>
-      <video:title>Wood-Grain Garage Door + LiftMaster Smart Opener Installation — Pleasanton, CA</video:title>
-      <video:description>Full garage door system upgrade in Pleasanton, CA: Valiant Garage Door removed an outdated motor and installed a modern LiftMaster smart opener with integrated HD camera, myQ smartphone control, and full hardware overhaul including heavy-duty torsion springs and updated tracks. Paired with a wood-grain sectional garage door for curb appeal and quiet, secure daily operation. The complete Bay Area smart-garage upgrade Valiant recommends for homes in Pleasanton, Danville, and San Ramon.</video:description>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/toKyd_K0c5s</video:player_loc>
-      <video:duration>16</video:duration>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
