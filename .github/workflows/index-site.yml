@@ -1,25 +1,25 @@
-name: Index Site
+name: Search Console Sitemap and Inspection
 
-# Notify Google (Indexing API) to re-crawl pages.
-# - push to main: submit ONLY the pages that changed in that push.
-# - manual run:   submit ALL canonical pages (full re-index).
+# Supported Google Search Console workflow:
+# - every run submits the canonical sitemap;
+# - push runs inspect only changed canonical pages;
+# - manual runs inspect every canonical page.
+# URL Inspection reports status; it does not request indexing.
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-# Avoid overlapping submissions if pushes land close together.
 concurrency:
-  group: index-site
+  group: search-console-site
   cancel-in-progress: false
 
 jobs:
-  index-site:
+  search-console:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          # Need history so we can diff the pushed commits and find changed pages.
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
@@ -28,8 +28,6 @@ jobs:
 
       - run: npm ci
 
-      # On push: map the changed public/*.html files to canonical URLs.
-      # (The script re-validates these against the sitemaps before submitting.)
       - name: Determine changed page URLs
         if: github.event_name == 'push'
         env:
@@ -41,7 +39,7 @@ jobs:
             if git rev-parse HEAD~1 >/dev/null 2>&1; then BASE="HEAD~1"; else BASE=""; fi
           fi
           if [ -z "$BASE" ]; then
-            echo "No base commit to diff; submitting nothing (use a manual run for a full re-index)."
+            echo "No base commit to diff; inspecting nothing (use a manual run for full inspection)."
             FILES=""
           else
             echo "Diffing $BASE..$AFTER"
@@ -55,7 +53,7 @@ jobs:
             rl.on("line",(f)=>{
               f=f.trim();
               if(!f.startsWith("public/")||!f.endsWith(".html")) return;
-              let p=f.slice("public".length).replace(/index\.html$/,"").replace(/\.html$/,"");
+              let p=f.slice("public".length).replace(/index\.html$/,"/").replace(/\.html$/,"");
               if(p!=="/"&&p.endsWith("/")) p=p.slice(0,-1);
               out.add(base+(p===""?"/":p));
             });
@@ -69,15 +67,15 @@ jobs:
             echo "INDEX_EOF"
           } >> "$GITHUB_ENV"
 
-      # Materialize the service-account key from the repo secret, run, then remove it.
-      - name: Submit URLs to Google Indexing API
+      - name: Submit sitemap and inspect selected URLs
         env:
-          INDEXING_KEY: ${{ secrets.INDEXING_KEY }}
+          GOOGLE_SEARCH_CONSOLE_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_KEY }}
+          LEGACY_INDEXING_KEY: ${{ secrets.INDEXING_KEY }}
         run: |
-          if [ -z "$INDEXING_KEY" ]; then
-            echo "::error::INDEXING_KEY secret is not set. Add it in Settings > Secrets and variables > Actions."
+          KEY="${GOOGLE_SEARCH_CONSOLE_KEY:-$LEGACY_INDEXING_KEY}"
+          if [ -z "$KEY" ]; then
+            echo "::error::Set the GOOGLE_SEARCH_CONSOLE_KEY repository secret. INDEXING_KEY remains a temporary fallback."
             exit 1
           fi
-          printf '%s' "$INDEXING_KEY" > service-account.json
-          trap 'rm -f service-account.json' EXIT
+          export GOOGLE_SEARCH_CONSOLE_KEY="$KEY"
           node index-site.js
