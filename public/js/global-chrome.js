@@ -333,6 +333,7 @@
     `<a href="${href}"${active(href) ? ' aria-current="page"' : ""}>${label}</a>`;
 
   const serviceLinks = [
+    ["/new-garage-door-installation", "New Door Installation"],
     ["/garage-door-repair", "Garage Door Repair"],
     ["/garage-door-spring-replacement", "Broken Spring Replacement"],
     ["/garage-door-openers", "Opener Installation"],
@@ -354,7 +355,7 @@
       </button>
       <div class="global-services-menu" id="globalServicesMenu" aria-labelledby="globalServicesToggle">
         <a class="global-services-all" href="/services"${currentPath === "/services" ? ' aria-current="page"' : ""}>
-          <span><strong>Services Overview</strong><small>Compare repair, opener, maintenance &amp; emergency options</small></span>
+          <span><strong>Services Overview</strong><small>Compare installation, replacement, repair, opener &amp; emergency options</small></span>
           <span aria-hidden="true">→</span>
         </a>
         <div class="global-services-grid">
@@ -400,7 +401,7 @@
       <div class="global-footer-grid">
         <div class="global-footer-brand">
           ${brand}
-          <p>Certified garage door repair, opener service, and safety-focused recommendations for Pleasanton, the Tri-Valley, and surrounding East Bay communities.</p>
+          <p>New garage door installation, certified repair, opener service, and safety-focused recommendations for Pleasanton, the Tri-Valley, and surrounding East Bay communities.<br><strong>C.H.I. Certified Dealer • Amarr Dealer • AlumaDoor Dealer</strong></p>
           <div class="global-socials" aria-label="Valiant Garage Door social profiles">
             <a href="https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-.7-.1-1.4-.2-2H12v4h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4C20.8 18 22 15.3 22 12z"/></svg></a>
             <a href="https://nextdoor.com/page/valiant-garage-door-pleasanton/" target="_blank" rel="noopener noreferrer" aria-label="Nextdoor"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg></a>
@@ -409,7 +410,7 @@
             <a href="https://www.youtube.com/@Valiantdoor" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12s0-3-.4-4.4a2.6 2.6 0 0 0-1.8-1.8C18.4 5.4 12 5.4 12 5.4s-6.4 0-7.8.4A2.6 2.6 0 0 0 2.4 7.6C2 9 2 12 2 12s0 3 .4 4.4a2.6 2.6 0 0 0 1.8 1.8c1.4.4 7.8.4 7.8.4s6.4 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8C22 15 22 12 22 12zm-12 3V9l5 3z"/></svg></a>
           </div>
         </div>
-        <nav class="global-footer-column" aria-label="Footer services"><h2>Services</h2><ul><li><a href="/garage-door-repair">Garage Door Repair</a></li><li><a href="/garage-door-spring-replacement">Spring Replacement</a></li><li><a href="/garage-door-openers">Garage Door Openers</a></li><li><a href="/services/garage-door-maintenance">Maintenance</a></li><li><a href="/emergency-garage-door-repair">Emergency Repair</a></li></ul></nav>
+        <nav class="global-footer-column" aria-label="Footer services"><h2>Services</h2><ul><li><a href="/new-garage-door-installation">New Door Installation</a></li><li><a href="/garage-door-repair">Garage Door Repair</a></li><li><a href="/garage-door-spring-replacement">Spring Replacement</a></li><li><a href="/garage-door-openers">Garage Door Openers</a></li><li><a href="/services/garage-door-maintenance">Maintenance</a></li><li><a href="/emergency-garage-door-repair">Emergency Repair</a></li></ul></nav>
         <nav class="global-footer-column" aria-label="Footer service areas"><h2>Service Areas</h2><ul><li><a href="/garage-door-repair-pleasanton">Pleasanton</a></li><li><a href="/garage-door-repair-dublin-ca">Dublin</a></li><li><a href="/garage-door-repair-livermore">Livermore</a></li><li><a href="/garage-door-repair-san-ramon">San Ramon</a></li><li><a href="/garage-door-repair-pleasant-hill">Pleasant Hill</a></li><li><a href="/service-areas">View All Areas</a></li></ul></nav>
         <div class="global-footer-column"><h2>Contact</h2><ul><li><a class="js-tel" href="${PHONE_HREF}"><span class="js-phone">${PHONE}</span></a></li><li><a href="mailto:vm@valiantdoor.com">vm@valiantdoor.com</a></li><li><address style="font-style:normal;display:inline;">3588 Pimlico Dr, Pleasanton, CA 94588</address></li><li>Insured</li><li><a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer">Book Free Estimate</a></li></ul></div>
       </div>
