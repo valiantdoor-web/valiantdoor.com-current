@@ -401,7 +401,7 @@
       <div class="global-footer-grid">
         <div class="global-footer-brand">
           ${brand}
-          <p>New garage door installation, certified repair, opener service, and safety-focused recommendations for Pleasanton, the Tri-Valley, and surrounding East Bay communities.</p>
+          <p>New garage door installation, certified repair, opener service, and safety-focused recommendations for Pleasanton, the Tri-Valley, and surrounding East Bay communities.<br><strong>C.H.I. Certified Dealer • Amarr Dealer • AlumaDoor Dealer</strong></p>
           <div class="global-socials" aria-label="Valiant Garage Door social profiles">
             <a href="https://www.google.com/maps/search/?api=1&query=Valiant%20Garage%20Door%203588%20Pimlico%20Dr%20Pleasanton%20CA%2094588&query_place_id=ChIJreu0MBcWcgMRQnyWHvhS94w" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-.7-.1-1.4-.2-2H12v4h5.6c-.2 1.3-1 2.4-2.1 3.1v2.6h3.4C20.8 18 22 15.3 22 12z"/></svg></a>
             <a href="https://nextdoor.com/page/valiant-garage-door-pleasanton/" target="_blank" rel="noopener noreferrer" aria-label="Nextdoor"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg></a>
