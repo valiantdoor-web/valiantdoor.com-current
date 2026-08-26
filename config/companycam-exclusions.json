@@ -58,7 +58,14 @@
     "22017599",
     "22017601",
     "22017604",
-    "22017605"
+    "22017605",
+    "22080017",
+    "22087887",
+    "22088184",
+    "22088340",
+    "22088344",
+    "22088359",
+    "22088529"
   ],
   "reasons": {
     "20361027": "Removed by owner because the footage quality and content value were not suitable for the public website.",
@@ -119,6 +126,13 @@
     "22017599": "Publication hold for the Wayne Dalton project pending owner approval of the corrected edit.",
     "22017601": "Publication hold for the Wayne Dalton project pending owner approval of the corrected edit.",
     "22017604": "Publication hold for the Wayne Dalton project pending owner approval of the corrected edit.",
-    "22017605": "Publication hold for the Wayne Dalton project pending owner approval of the corrected edit."
+    "22017605": "Publication hold for the Wayne Dalton project pending owner approval of the corrected edit.",
+    "22080017": "Publication hold: visible technician picture-in-picture overlay and unreviewed audio; owner approval required.",
+    "22087887": "Publication hold: obstructed low-value spring close-up with unreviewed audio; owner approval required.",
+    "22088184": "Publication hold: repetitive system walkthrough with unreviewed audio; owner approval required before any edited use.",
+    "22088340": "Publication hold: long unedited hardware close-up footage with unreviewed audio; owner approval required.",
+    "22088344": "Publication hold: alignment-check footage is a possible edit candidate, but audio and customer-facing context require owner approval.",
+    "22088359": "Publication hold: spring-comparison footage is tied to promotional claims that require owner editorial approval.",
+    "22088529": "Publication hold: long unedited bearing and drum inspection footage with unreviewed audio; owner approval required."
   }
 }
