@@ -1392,7 +1392,7 @@ const setupNextdoorCapiLead = () => {
   writeStorage(window.sessionStorage, eventStorageKey, eventId);
 
   const payload = {
-    event_name: "LEAD",
+    event_name: "lead",
     event_id: eventId,
     action_source: "website",
     action_source_url: `${window.location.origin}${window.location.pathname}`,
@@ -1412,10 +1412,20 @@ const setupNextdoorCapiLead = () => {
       click_id: params.get("ndclid") || readStorage(window.localStorage, "valiant_nextdoor_click_id")
     },
     custom: {
+      conversion_type: "service_booking",
+      booking_status: "booked",
       problem_type: params.get("problem_type") || "",
       source_path: window.location.pathname
     }
   };
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "service_booking_complete",
+    booking_status: "booked",
+    traffic_source: params.get("utm_source") || "",
+    problem_type: params.get("problem_type") || ""
+  });
 
   fetch("/api/nextdoor-capi", {
     method: "POST",

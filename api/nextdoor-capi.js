@@ -168,7 +168,9 @@ function safeActionSourceUrl(value, req) {
 }
 
 function buildPayload(body, req) {
-  const eventName = cleanText(body.event_name || body.eventName || 'LEAD').toUpperCase();
+  const supportedEvents = new Set(['purchase','lead','sign_up','initiate_checkout','page_view','view_content','add_to_cart','add_payment_info','search']);
+  const requestedEvent = cleanText(body.event_name || body.eventName || 'lead').toLowerCase();
+  const eventName = supportedEvents.has(requestedEvent) ? requestedEvent : 'lead';
   const eventId = cleanText(body.event_id || body.eventId) || crypto.randomUUID();
   const customer = buildCustomer(body.customer, req);
   const custom = body.custom && typeof body.custom === 'object' ? body.custom : undefined;
@@ -187,6 +189,7 @@ function buildPayload(body, req) {
   };
 
   if (custom) payload.custom = custom;
+  if (body.test_event === true) payload.test_event = true;
   return payload;
 }
 
@@ -264,3 +267,5 @@ module.exports = async (req, res) => {
     sendJson(res, 502, { ok: false, error: 'Nextdoor CAPI request failed.' });
   }
 };
+
+module.exports._test = { buildPayload, normalizeEmail, normalizePhoneE164 };
