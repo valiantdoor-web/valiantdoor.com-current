@@ -9,6 +9,7 @@ Updated on May 26, 2026.
 - Website: https://www.valiantdoor.com/
 - Address: 3588 Pimlico Dr, Pleasanton, CA 94588
 - Primary phone: 9254094974
+- CSLB license: 116-0068
 - Email: vm@valiantdoor.com
 - Owner and operator: Valentino Ramirez
 - Owner/operator profile: https://www.valiantdoor.com/mastertech

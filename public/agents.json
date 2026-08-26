@@ -2,6 +2,11 @@
   "name": "Valiant Garage Door",
   "website": "https://www.valiantdoor.com",
   "business_type": "Garage door repair and installation company",
+  "license": {
+    "type": "CSLB",
+    "number": "116-0068",
+    "display": "CSLB License #116-0068"
+  },
   "owner_operator": {
     "name": "Valentino Ramirez",
     "role": "Owner, Operator, Founder, and Master Technician",

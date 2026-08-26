@@ -3,8 +3,31 @@
 
   const PHONE = "(925) 409-4974";
   const PHONE_HREF = "tel:+19254094974";
+  const LICENSE_NUMBER = "116-0068";
+  const LICENSE_LABEL = `CSLB License #${LICENSE_NUMBER}`;
   const BOOK_URL = "https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true";
   const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
+
+  if (!document.querySelector('script[data-valiant-license-schema]')) {
+    const licenseSchema = document.createElement("script");
+    licenseSchema.type = "application/ld+json";
+    licenseSchema.dataset.valiantLicenseSchema = "";
+    licenseSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://www.valiantdoor.com/#business",
+      name: "Valiant Garage Door LLC",
+      url: "https://www.valiantdoor.com/",
+      telephone: "+1-925-409-4974",
+      identifier: LICENSE_LABEL,
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        name: LICENSE_LABEL,
+        credentialCategory: "Contractor license"
+      }
+    });
+    document.head.appendChild(licenseSchema);
+  }
 
   // ---- Microsoft Clarity: load on ALL pages, not just homepage ----
   // Previously this was trapped inside setupDeferredHomepageTracking() which
@@ -412,9 +435,9 @@
         </div>
         <nav class="global-footer-column" aria-label="Footer services"><h2>Services</h2><ul><li><a href="/new-garage-door-installation">New Door Installation</a></li><li><a href="/garage-door-repair">Garage Door Repair</a></li><li><a href="/garage-door-spring-replacement">Spring Replacement</a></li><li><a href="/garage-door-openers">Garage Door Openers</a></li><li><a href="/services/garage-door-maintenance">Maintenance</a></li><li><a href="/emergency-garage-door-repair">Emergency Repair</a></li></ul></nav>
         <nav class="global-footer-column" aria-label="Footer service areas"><h2>Service Areas</h2><ul><li><a href="/garage-door-repair-pleasanton">Pleasanton</a></li><li><a href="/garage-door-repair-dublin-ca">Dublin</a></li><li><a href="/garage-door-repair-livermore">Livermore</a></li><li><a href="/garage-door-repair-san-ramon">San Ramon</a></li><li><a href="/garage-door-repair-pleasant-hill">Pleasant Hill</a></li><li><a href="/service-areas">View All Areas</a></li></ul></nav>
-        <div class="global-footer-column"><h2>Contact</h2><ul><li><a class="js-tel" href="${PHONE_HREF}"><span class="js-phone">${PHONE}</span></a></li><li><a href="mailto:vm@valiantdoor.com">vm@valiantdoor.com</a></li><li><address style="font-style:normal;display:inline;">3588 Pimlico Dr, Pleasanton, CA 94588</address></li><li>Insured</li><li><a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer">Book Free Estimate</a></li></ul></div>
+        <div class="global-footer-column"><h2>Contact</h2><ul><li><a class="js-tel" href="${PHONE_HREF}"><span class="js-phone">${PHONE}</span></a></li><li><a href="mailto:vm@valiantdoor.com">vm@valiantdoor.com</a></li><li><address style="font-style:normal;display:inline;">3588 Pimlico Dr, Pleasanton, CA 94588</address></li><li><strong>${LICENSE_LABEL}</strong></li><li>Insured</li><li><a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer">Book Free Estimate</a></li></ul></div>
       </div>
-      <div class="global-footer-bottom"><span>&copy; 2026 Valiant Garage Door LLC. All Rights Reserved.</span><span><a href="/privacy">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="/terms">Terms of Service</a></span></div>
+      <div class="global-footer-bottom"><span>&copy; 2026 Valiant Garage Door LLC. All Rights Reserved. &nbsp;&bull;&nbsp; ${LICENSE_LABEL}</span><span><a href="/privacy">Privacy Policy</a> &nbsp;&bull;&nbsp; <a href="/terms">Terms of Service</a></span></div>
     </div>`;
 
   const noChrome = document.body?.dataset.chrome === "off";

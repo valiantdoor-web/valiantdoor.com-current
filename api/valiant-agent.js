@@ -15,6 +15,11 @@ const BUSINESS_PROFILE = {
   website: 'https://www.valiantdoor.com',
   phone: '9254094974',
   email: 'vm@valiantdoor.com',
+  license: {
+    type: 'CSLB',
+    number: '116-0068',
+    display: 'CSLB License #116-0068'
+  },
   address: {
     streetAddress: '3588 Pimlico Dr',
     addressLocality: 'Pleasanton',
