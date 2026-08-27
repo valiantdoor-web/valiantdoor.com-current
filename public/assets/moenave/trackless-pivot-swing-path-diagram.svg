@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img" aria-labelledby="title desc">
+  <title id="title">Trackless pivot garage door swing path</title>
+  <desc id="desc">Side-view planning diagram showing the closed door at the opening and the open door rotating approximately half its height outside and half inside.</desc>
+  <rect width="960" height="760" fill="#f4f0e7"/>
+  <g stroke="#1b1a17" stroke-width="8" fill="none">
+    <path d="M110 620H850"/>
+    <path d="M480 620V115H820"/>
+    <path d="M480 115V620"/>
+  </g>
+  <path d="M480 620V180" stroke="#cda349" stroke-width="28" opacity=".8"/>
+  <path d="M154 410L806 410" stroke="#1b1a17" stroke-width="28" stroke-linecap="square"/>
+  <circle cx="480" cy="410" r="18" fill="#cda349" stroke="#1b1a17" stroke-width="6"/>
+  <path d="M480 180A320 320 0 0 0 160 500" stroke="#8b6a21" stroke-width="5" stroke-dasharray="14 12" fill="none"/>
+  <path d="M480 180A320 320 0 0 1 800 500" stroke="#8b6a21" stroke-width="5" stroke-dasharray="14 12" fill="none"/>
+  <path d="M210 660H475M485 660H750" stroke="#625d53" stroke-width="3"/>
+  <path d="M210 648V672M475 648V672M485 648V672M750 648V672" stroke="#625d53" stroke-width="3"/>
+  <g fill="#1b1a17" font-family="Arial, sans-serif">
+    <text x="480" y="82" text-anchor="middle" font-size="25" font-weight="700">SIDE VIEW — PIVOT PATH</text>
+    <text x="105" y="700" font-size="22" font-weight="700">DRIVEWAY / OUTSIDE</text>
+    <text x="602" y="700" font-size="22" font-weight="700">GARAGE / INSIDE</text>
+    <text x="499" y="215" font-size="20">Closed position</text>
+    <text x="356" y="382" font-size="20">Open position</text>
+    <text x="265" y="647" text-anchor="middle" font-size="18">≈ ½ door height</text>
+    <text x="620" y="647" text-anchor="middle" font-size="18">≈ ½ door height</text>
+    <text x="154" y="386" font-size="17">outward arc</text>
+    <text x="687" y="386" font-size="17">inward arc</text>
+  </g>
+  <g fill="#625d53" font-family="Arial, sans-serif" font-size="16">
+    <text x="480" y="732" text-anchor="middle">Conceptual planning diagram. Not to scale. Verify all dimensions for the configured project.</text>
+  </g>
+</svg>

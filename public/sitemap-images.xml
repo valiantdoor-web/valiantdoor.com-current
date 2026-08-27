@@ -3697,20 +3697,9 @@
       <image:title>Valiant Garage Door on Thumbtack</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/moenave/official-trackless-pivot.webp</image:loc>
-      <image:title>Official Moenave media showing trackless pivot garage door systems</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/moenave/official-dsc04132.webp</image:loc>
-      <image:title>Official Moenave exterior garage door media used on the Moenave site</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/moenave/official-dsc04169.webp</image:loc>
-      <image:title>Official Moenave installed garage door media used on the Moenave site</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.valiantdoor.com/assets/moenave/official-dsc04171.webp</image:loc>
-      <image:title>Official Moenave architectural garage door media used on the Moenave site</image:title>
+      <image:loc>https://www.valiantdoor.com/assets/moenave/trackless-pivot-swing-path-diagram.svg</image:loc>
+      <image:title>Trackless pivot garage door swing-path planning diagram</image:title>
+      <image:caption>Original Valiant diagram showing the outward and inward rotation of a trackless pivot garage door.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.valiantdoor.com/assets/logo/valiant-v-polished.webp</image:loc>
