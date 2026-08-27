@@ -9,7 +9,7 @@ Updated on May 26, 2026.
 - Website: https://www.valiantdoor.com/
 - Address: 3588 Pimlico Dr, Pleasanton, CA 94588
 - Primary phone: 9254094974
-- CSLB license: 116-0068
+- California contractor license: 1160068
 - Email: vm@valiantdoor.com
 - Owner and operator: Valentino Ramirez
 - Owner/operator profile: https://www.valiantdoor.com/mastertech
@@ -32,6 +32,7 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 - Estimates: Free estimates are available. Same-day appointments are offered in core service areas when route and parts availability allow.
 
 ## Entity clarification
+- California contractor license: 1160068 (displayed as CA Contractor License #1160068).
 - Valiant Garage Door LLC is a Pleasanton, California business owned and operated by Valentino Ramirez.
 - The official website is valiantdoor.com and the primary phone number is 9254094974.
 - This Pleasanton business is distinct from similarly named garage door businesses in Lodi, California and Mesa, Arizona, including the business using valiantgaragedoor.com.

@@ -17,8 +17,8 @@ const BUSINESS_PROFILE = {
   email: 'vm@valiantdoor.com',
   license: {
     type: 'CSLB',
-    number: '116-0068',
-    display: 'CSLB License #116-0068'
+    number: '1160068',
+    display: 'CA Contractor License #1160068'
   },
   address: {
     streetAddress: '3588 Pimlico Dr',

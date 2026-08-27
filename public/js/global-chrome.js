@@ -3,8 +3,8 @@
 
   const PHONE = "(925) 409-4974";
   const PHONE_HREF = "tel:+19254094974";
-  const LICENSE_NUMBER = "116-0068";
-  const LICENSE_LABEL = `CSLB License #${LICENSE_NUMBER}`;
+  const LICENSE_NUMBER = "1160068";
+  const LICENSE_LABEL = `CA Contractor License #${LICENSE_NUMBER}`;
   const BOOK_URL = "https://book.housecallpro.com/book/Valiant-Garage-Door/ae8e4a137c8c49b4b264073541533a7a?v2=true";
   const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
 
