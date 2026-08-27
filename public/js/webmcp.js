@@ -25,7 +25,7 @@
     phone: "9254094974",
     phoneDisplay: "(925) 409-4974",
     email: "vm@valiantdoor.com",
-    license: "CA Contractor License #1160068",
+    license: "CA Contractor License #116-0068",
     address: "3588 Pimlico Dr, Pleasanton, CA 94588",
     bookingUrl:
       "https://book.housecallpro.com/book/Valiant-garage-door/ae8e4a137c8c49b4b264073541533a7a?v2=true",
