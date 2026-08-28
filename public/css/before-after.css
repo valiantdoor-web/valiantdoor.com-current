@@ -37,5 +37,7 @@
 
 .ba-images.ba-premade{display:block;background:#fff}
 .ba-images.ba-premade .ba-figure img{aspect-ratio:4/3;object-fit:contain;background:#fff}
+.ba-images.ba-comparison-single{display:block;background:#050608}
+.ba-images.ba-comparison-single .ba-figure img{aspect-ratio:16/9;object-fit:contain;background:#050608}
 .ba-source-label{position:absolute;right:10px;bottom:10px;padding:6px 9px;border-radius:7px;background:rgba(4,5,7,.88);color:#f0d98c;font-size:.68rem;font-weight:900;letter-spacing:.06em}
 .before-after-proof-card.is-premade img{object-fit:contain;background:#fff}
