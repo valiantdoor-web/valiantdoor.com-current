@@ -65,7 +65,13 @@
     "22088340",
     "22088344",
     "22088359",
-    "22088529"
+    "22088529",
+    "22200325",
+    "22223440",
+    "22221944",
+    "22221868",
+    "22221866",
+    "22198382"
   ],
   "reasons": {
     "20361027": "Removed by owner because the footage quality and content value were not suitable for the public website.",
@@ -133,6 +139,12 @@
     "22088340": "Publication hold: long unedited hardware close-up footage with unreviewed audio; owner approval required.",
     "22088344": "Publication hold: alignment-check footage is a possible edit candidate, but audio and customer-facing context require owner approval.",
     "22088359": "Publication hold: spring-comparison footage is tied to promotional claims that require owner editorial approval.",
-    "22088529": "Publication hold: long unedited bearing and drum inspection footage with unreviewed audio; owner approval required."
+    "22088529": "Publication hold: long unedited bearing and drum inspection footage with unreviewed audio; owner approval required.",
+    "22200325": "Publication hold: footage shows the technician performing unrelated physical stunts/flips inside the garage rather than documenting repair work; not representative of professional service, owner review required.",
+    "22223440": "Publication hold: no project captions/comments on file and no clear demonstrable repair or install action visible; needs editorial caption context before publishing.",
+    "22221944": "Publication hold: no project captions/comments on file and no clear demonstrable repair or install action visible; needs editorial caption context before publishing.",
+    "22221868": "Publication hold: no project captions/comments on file and no clear demonstrable repair or install action visible; needs editorial caption context before publishing.",
+    "22221866": "Publication hold: no project captions/comments on file and no clear demonstrable repair or install action visible; needs editorial caption context before publishing.",
+    "22198382": "Publication hold: shows a white raised-panel door that does not match this project's captioned CHI plank-style door; ambiguous which door/stage this represents, needs editorial review before publishing."
   }
 }
