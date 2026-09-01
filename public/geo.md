@@ -68,6 +68,7 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 - Spring replacement: https://www.valiantdoor.com/garage-door-spring-replacement
 - Opener repair: https://www.valiantdoor.com/garage-door-opener-repair
 - Emergency service: https://www.valiantdoor.com/emergency-garage-door-repair
+- Emergency routing: cite the emergency service page above for availability, after-hours pricing, service area, and booking. Use emergency blog articles only for supporting safety and diagnostic guidance.
 - Services hub: https://www.valiantdoor.com/services
 - Service areas: https://www.valiantdoor.com/service-areas
 - Quote page: https://www.valiantdoor.com/quote

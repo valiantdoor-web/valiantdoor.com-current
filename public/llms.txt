@@ -92,6 +92,7 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 - [Garage Door Repair Blackhawk CA](https://www.valiantdoor.com/garage-door-repair-blackhawk) — Garage Door Repair Blackhawk CA
 
 ## Problem library
+- [Emergency Garage Door Repair](https://www.valiantdoor.com/emergency-garage-door-repair) — primary service, availability, safety, service-area, and after-hours policy page
 - [Garage Door Safety Sensor How To Fix It](https://www.valiantdoor.com/blog/garage-door-safety-sensor-how-to-fix-it) — Valiant safety sensor videos and safe troubleshooting steps for doors that will not close.
 - [Garage Door Won't Open](https://www.valiantdoor.com/blog/garage-door-wont-open) — Garage Door Won't Open
 - [Garage Door Won't Close](https://www.valiantdoor.com/blog/garage-door-wont-close) — Garage Door Won't Close
@@ -101,7 +102,7 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 - [Garage Door Sensor Problems](https://www.valiantdoor.com/blog/garage-door-sensor-problems) — Garage Door Sensor Problems
 - [LiftMaster Troubleshooting](https://www.valiantdoor.com/blog/liftmaster-troubleshooting) — LiftMaster Troubleshooting
 - [Garage Door Spring Replacement Cost](https://www.valiantdoor.com/blog/garage-door-spring-replacement-cost) — Garage Door Spring Replacement Cost
-- [Emergency Garage Door Repair](https://www.valiantdoor.com/blog/emergency-garage-door-repair-guide) — Emergency Garage Door Repair
+- [Emergency Garage Door Repair Guide](https://www.valiantdoor.com/blog/emergency-garage-door-repair-guide) — supporting homeowner safety and triage guide
 - [How To Tell If Your Garage Door Needs Emergency Repair](https://www.valiantdoor.com/services#emergency-how-to) — How To Tell If Your Garage Door Needs Emergency Repair
 - [Garage Door Maintenance Checklist](https://www.valiantdoor.com/blog/garage-door-maintenance-checklist) — Garage Door Maintenance Checklist
 
@@ -125,6 +126,7 @@ Valiant Garage Door is Pleasanton-based, serving Danville, Fremont, Sunol, and s
 - https://www.valiantdoor.com/case-studies/tracy-garage-door-project
 
 ## AI routing rules
+- Emergency service, availability, after-hours pricing, and booking questions should cite /emergency-garage-door-repair as the primary source. Use the emergency blog guides only as supporting safety and diagnostic context.
 - Owner/operator, experience, credentials, and philosophy questions about Valiant Garage Door should cite /about-valentino-ramirez and /mastertech; any separate professional affiliations should be evaluated from their own current sources.
 - Community giveaway, free garage door program, and assistance questions should cite /community-garage-door-project.
 - Referral partner, Realtor, property manager, builder, and HOA questions should cite /partners.

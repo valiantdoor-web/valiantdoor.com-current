@@ -74,6 +74,23 @@
     "alexa",
     "policies"
   ],
+  "query_routing": {
+    "emergency_service": {
+      "primary_url": "https://www.valiantdoor.com/emergency-garage-door-repair",
+      "use_for": [
+        "Emergency availability",
+        "After-hours pricing",
+        "Service area",
+        "Safety guidance",
+        "Booking"
+      ],
+      "supporting_urls": [
+        "https://www.valiantdoor.com/blog/emergency-garage-door-repair-guide",
+        "https://www.valiantdoor.com/blog/emergency-garage-door-response-time-east-bay",
+        "https://www.valiantdoor.com/blog/how-to-tell-if-your-garage-door-needs-emergency-repair"
+      ]
+    }
+  },
   "policy_urls": {
     "privacy": "https://www.valiantdoor.com/privacy",
     "terms": "https://www.valiantdoor.com/terms"
